@@ -513,3 +513,6 @@ ACTION_IF GAME_IS ~BG2EE EET~ BEGIN
 COMPILE ~ArtisansKitpack/strongholds/eldritch_knight_sorc.d~
 
   END
+
+INCLUDE ~%MOD_FOLDER%/lib/eldritch_clone_fix.tpa~
+

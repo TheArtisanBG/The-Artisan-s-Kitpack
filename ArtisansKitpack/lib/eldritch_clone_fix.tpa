@@ -1,0 +1,42 @@
+// Images can rebuild armour's op177 before their copied op318 protections take
+// effect. Repair only an already-exempt Eldritch Knight's rebuilt restriction.
+// Keep the non-EEex Fighter/Mage component usable without introducing op402.
+ACTION_IF FILE_EXISTS_IN_GAME ~M___EEex.lua~ BEGIN
+  COPY_EXISTING ~C0ARCAS1.EFF~ ~override~ ~C0ARCAS2.EFF~ ~override~
+    PATCH_IF SOURCE_SIZE != 0x110 BEGIN
+      PATCH_FAIL ~Unsupported Artisan armour EFF size.~
+    END
+    READ_ASCII 0 signature (8)
+    READ_LONG 0x10 effect_opcode
+    READ_LONG 0x20 spell_type
+    READ_LONG 0x24 effect_timing
+    READ_ASCII 0x94 parent (8) NULL
+    PATCH_IF NOT (~%signature%~ STRING_EQUAL ~EFF V2.0~)
+      OR effect_opcode != 145 OR spell_type != 0 OR effect_timing != 2
+      OR NOT (~%parent%~ STRING_EQUAL_CASE ~%SOURCE_RES%~) BEGIN
+      PATCH_FAIL ~Unsupported Artisan armour restriction implementation.~
+    END
+  BUT_ONLY_IF_IT_CHANGES
+
+  COPY ~%MOD_FOLDER%/eeex/M_EKCF.lua~ ~override/M_EKCF.lua~
+
+  COPY_EXISTING ~PROJIMAG.SPL~ ~override~ ~SIMULACR.SPL~ ~override~
+    // Both kit components may be installed, possibly in separate setup runs.
+    // Preserve one callback per ability rather than appending it twice.
+    READ_LONG 0x6a effects_offset
+    SET has_callback = 0
+    FOR (effect = effects_offset; effect + 0x30 <= SOURCE_SIZE; effect += 0x30) BEGIN
+      READ_SHORT effect effect_opcode
+      READ_ASCII (effect + 0x14) effect_resource (8) NULL
+      PATCH_IF effect_opcode = 402 AND (~%effect_resource%~ STRING_EQUAL_CASE ~EKCLNFIX~) BEGIN
+        SET has_callback = 1
+      END
+    END
+    PATCH_IF has_callback = 0 BEGIN
+      LPF ADD_SPELL_EFFECT
+        INT_VAR opcode = 402 target = 1 timing = 0 duration = 1 resist_dispel = 2
+        STR_VAR resource = ~EKCLNFIX~
+      END
+    END
+  BUT_ONLY_IF_IT_CHANGES
+END
