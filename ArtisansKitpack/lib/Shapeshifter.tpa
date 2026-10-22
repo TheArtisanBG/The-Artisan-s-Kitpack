@@ -36,54 +36,54 @@ COPY_EXISTING ~CLABDR01.2DA~ ~OVERRIDE/CLABDR03.2DA~
   PRETTY_PRINT_2DA
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~SHAPESHIFTER~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~SHAPESHIFTER: This Druid is not called Shapeshifter because <PRO_HESHE> has access to a great variety of forms, but rather because of <PRO_HISHER> complete dedication to a single alternate form. This Druid has willingly allowed <PRO_HIMHER>self to become infected with lycanthropy, but due to intense study and training <PRO_HESHE> has the ability to control <PRO_HISHER> affliction. The creature <PRO_HESHE> becomes is that of the werewolf, the most famous of the lycanthrope shape changers.
+STRING_SET_EVALUATE kit_strref ~变形者：这名德鲁伊之所以被称为变形者，并非因为<PRO_HESHE>能变化多种形态，恰恰相反，是出于<PRO_HISHER>对单一变身形态的全心投入。这名德鲁伊自愿让<PRO_HIMHER>自身感染兽化症，但通过刻苦的钻研与修炼<PRO_HESHE>，已能完全掌控这份<PRO_HESHE>诅咒。<PRO_HESHE>所化的形态是狼人——所有兽化变形者中最负盛名的一种。
 
-Advantages:
-– Wolf's Eye: Gains Infravision. 
-– May shapeshift into the form of a wolf once per day. Gains additional uses at 3rd, 6th and 9th level.
+职业优势：
+-狼眼：获得黑暗视觉。
+-每日可变形为巨狼一次。3级、6级、9级时各额外获得一次使用次数。
 
-WOLF SHAPE: The wolf form grants the shapeshifter the greater value between +1 and 18 to their Strength and Dexterity, a base Armor Class of 4, two attacks per round, 1d8 piercing or slashing damage (whichever is greater) striking as a +1 weapon, and the ability to knock opponents prone for one round unless a Save vs. Death is made. Additionally, the shapeshifter loses the ability to cast spells while transformed, but gains the ability to use the thieving skills Detect Traps, Detect Illusions and Stealth. The shapeshifter's thieving bonuses in this form improve with level and Dexterity.
+巨狼形态：变形者化身为狼时，力量与敏捷取「+1」与「18」中的较高值，基础护甲等级为4，每回合两次攻击，造成1d8穿刺或挥砍伤害（取较高者），视为+1武器；并可将敌人击倒，目标死亡豁免失败则倒地一回合。此外，变形期间无法施法，但可使用游荡者技能：查找陷阱、识破幻象、潜行。该形态下游荡者技能的加值随等级与敏捷提升。
 
-– 4th level: May shapeshift into the form of a werewolf once per day. Gains additional uses at 7th, 10th and 13th level.
+-4级：每日可变形为狼人一次。7级、10级、13级时各额外获得一次使用次数。
 
-WEREWOLF SHAPE: The wolf form grants the shapeshifter the greater value between +2 and 20 to their Strength and Dexterity, a base Armor Class of 2, two attacks per round, 2d4+1 piercing or slashing damage (whichever is greater) striking as a +1 weapon, and inflict bleeding damage on their attacks, dealing one point of unmitigated piercing damage per round for three rounds unless a Save vs. Death is made. Targets without blood are immune to bleeding damage.
+狼人形态：变形者化身为狼人时，力量与敏捷取「+2」与「20」中的较高值，基础护甲等级为2，每回合两次攻击，造成2d4+1穿刺或挥砍伤害（取较高者），视为+1武器；攻击会造成流血效果，每回合造成1点无法减免的穿刺伤害，持续3回合，目标死亡豁免失败则持续生效。无血液的目标免疫流血伤害。
 
-The attributes of the werewolf form improve with level.
-  5th level: +2 bonus to Movement Rate.
-  6th level: +10% Magic Resistance.
-  7th level: Bleed deals 2 damage per round and attacks strike as a +2 weapon.
-  8th level: Base Armor Class improves to -1.
-  9th level: Saving Throw modifier on bleed becomes -2.
-  10th level: Movement rate bonus increased to +4. Magic Resistance improves to +20%.
-  11th level: Base Armor Class improves to -4. Gains +15% resistance to Piercing, Slashing, Crushing and Missile damage.
-  12th level: Bleed deals 3 damage per round and attacks strike as a +3 weapon. Gains +40% resistance to Fire, Cold, Electricity and Acid damage.
-  13th level: Gains an additional attack per round.
-  14th level: Immunity to weapons of +1 enchantment and below. Magic Resistance improves to +50%.
-  15th level: Bleed deals 5 damage per round and attacks strike as a +4 weapon. Saving Throw modifier on bleed becomes -4.
+狼人形态的属性随等级提升：
+  5级：移动速度+2
+  6级：魔法抗性+10%
+  7级：流血每回合造成2点伤害，攻击视为+2武器
+  8级：基础护甲等级提升至-1
+  9级：流血的豁免惩罚变为-2
+  10级：移动速度加值提升至+4，魔法抗性提升至+20%
+  11级：基础护甲等级提升至-4，获得穿刺、挥砍、钝击、远程伤害抗性+15%
+  12级：流血每回合造成3点伤害，攻击视为+3武器；获得火焰、寒冷、电击、强酸伤害抗性+40%
+  13级：每回合额外获得一次攻击
+  14级：免疫+1及以下附魔的武器，魔法抗性提升至+50%
+  15级：流血每回合造成5点伤害，攻击视为+4武器；流血的豁免惩罚变为-4
 
-– 6th level: Gains the Primal Howl passive ability.
+-6级：获得被动能力「原初怒嚎」。
 
-PRIMAL HOWL: The shapeshifter, upon taking on their werewolf form, unleashes a terrifying howl which grants one and a half bonus attacks per round and a +3 bonus to armor class, hit and damage for the first three rounds of transformation. The bonuses decrease incrementally by half an attack and -1 to armor class, hit and damage per round of the duration, and the shapeshifter must wait six rounds before Primal Howl may activate again upon their next transformation. Additionally, the shapeshifter loses their bonuses immediately upon reverting to their natural form. Primal Howl's bonuses improve with level.
-  8th level: Greatly reduces morale in all enemies within a 25-ft. radius of the shapeshifter for 2 rounds unless a Save vs. Death is made. Targets may only be affected once per turn.
-  10th level: Bonuses increase to two attacks per round and +4 to hit and damage, and its duration is increased to 4 rounds. Additionally, upon killing a target, the shapeshifter has a 40% chance to immediately use Primal Howl again.
-  12th level: Saving Throw modifier on morale failure becomes -3.
-  14th level: Primal Howl grants half of its bonuses to all allies within a 25-ft. radius for half the duration.
-  15th level: The shapeshifter has a 100% chance to use Primal Howl on kill.
-  16th level: Induces stun in addition to fear with the same modifier and conditions.
+原初怒嚎：变形者化身为狼人时，会发出震慑心神的怒嚎，变形的前三回合内，每回合额外获得半次攻击，护甲等级、攻击检定与伤害获得+3加值。之后每回合，攻击次数减少半次、护甲/攻击/伤害加值-1，逐步递减；下次变形时，需等待6回合才能再次触发原初怒嚎。此外，变回原生形态时，加值立即消失。原初怒嚎的加值随等级提升。
+  8级：25尺范围内所有敌人士气大幅降低，持续2回合，目标死亡豁免失败则生效。每个目标每回合仅受一次影响。
+  10级：加值提升为每回合两次攻击，攻击与伤害+4，持续时间延长至4回合。此外，击杀目标时，变形者有40%几率立即再次触发原初怒嚎。
+  12级：士气崩溃的豁免惩罚变为-3。
+  14级：原初怒嚎会将一半加值赋予25尺范围内的所有友军，持续一半时间。
+  15级：击杀目标时100%触发原初怒嚎。
+  16级：除恐惧外，还会附带震慑效果，惩罚与生效条件和恐惧相同。
 
-– 8th level: Wolf's Blood: The shapeshifter regenerates for one hit point per 3 rounds, which becomes tripled while in werewolf form.
-– 10th level: The shapeshifter's transformations no longer take up their action per round.
-– 12th level: The shapeshifter may transform into their wolf form at will.
-– 13th level: Greater Wolf's Blood: The shapeshifter's base regeneration rate is increased to one hit point per round.
-– 14th level: Natural Spell: The shapeshifter may cast priest spells while in their werewolf form, though at a -2 casting speed penalty.
-– 15th level: The shapeshifter may transform into their werewolf form at will and no longer receives a penalty to casting speed while transformed.
+-8级：狼血：变形者每3回合恢复1点生命值，狼人形态时恢复量翻三倍。
+-10级：变形不再占用每回合的行动。
+-12级：可随意变形为狼形。
+-13级：强化狼血：基础恢复速率提升至每回合1点生命值。
+-14级：本能施法：狼人形态下可施展牧师法术，但施法速度受-2惩罚。
+-15级：可随意变形为狼人形态，且变形期间不再受施法速度惩罚。
 
-Disadvantages:
-– May not cast any spells of the Animal and Summoning Spheres.
-– May not wear any armor.
-– No other shapeshifting abilities due to the effort required in maintaining balance in <PRO_HISHER> primary forms.
-– May not select the Elemental Summoning and Elemental Transformation High Level Abilities.~
-	
+职业限制：
+-无法施展动物学派与召唤学派的任何法术。
+-无法穿戴任何护甲。
+–为了维持与<PRO_HISHER>人形间的平衡所以无法使用其它变形能力。
+-无法选择「元素召唤」与「元素变形」高阶能力。~
+
   COPY_EXISTING ~luabbr.2da~ ~override~
 	COUNT_2DA_COLS cols // amount of columns
 	READ_2DA_ENTRIES_NOW rows cols // read all file into memory  
@@ -94,7 +94,7 @@ Disadvantages:
 		SET_2DA_ENTRY (%patch_row%) 1 cols ~C0-SS~
 	  END
 	END
-	
+
 COPY_EXISTING ~LUDR0.2da~ ~override/LUC0-SS.2DA~
 LPF patch_remove_hla STR_VAR remove_ability = ~GA_SPPR723~ END
 LPF patch_remove_hla STR_VAR remove_ability = ~GA_SPPR724~ END
@@ -124,64 +124,64 @@ COPY_EXISTING ~SPCL644.SPL~ ~OVERRIDE~
 LPF ALTER_SPELL_HEADER INT_VAR location = 0 END
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-W.itm~ ~override~
-SAY NAME1 ~Wolf's Claw~
+SAY NAME1 ~狼爪~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-F.itm~ ~override~
-SAY NAME1 ~Werewolf's Claw~
+SAY NAME1 ~狼人爪~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-F.spl~ ~override~
-SAY NAME1 ~Shapeshift: Werewolf~
-SAY UNIDENTIFIED_DESC ~WEREWOLF SHAPE
-The wolf form grants the shapeshifter the greater value between +2 and base 20 to their Strength and Dexterity, a base Armor Class of 2, two attacks per round, 2d4+1 piercing or slashing damage (whichever is greater) striking as a +1 weapon, and inflict bleeding damage on their attacks, dealing one point of unmitigated piercing damage per round for three rounds unless a Save vs. Death is made. Targets without blood are immune to bleeding damage.
+SAY NAME1 ~变形：狼人~
+SAY UNIDENTIFIED_DESC ~狼人形态
+变形者化身为狼人时，力量与敏捷取「+2」与「20」中的较高值，基础护甲等级为2，每回合两次攻击，造成2d4+1穿刺或挥砍伤害（取较高者），视为+1武器；攻击会造成流血效果，每回合造成1点无法减免的穿刺伤害，持续3回合，目标死亡豁免失败则持续生效。无血液的目标免疫流血伤害。
 
-The attributes of the werewolf form improve with level.
-  5th level: +2 bonus to Movement Rate.
-  6th level: +10% Magic Resistance.
-  7th level: Bleed deals 2 damage per round and attacks strike as a +2 weapon.
-  8th level: Base Armor Class improves to -1.
-  9th level: Saving Throw modifier on bleed becomes -2.
-  10th level: Movement rate bonus increased to +4. Magic Resistance improves to +20%.
-  11th level: Base Armor Class improves to -4. Gains +15% resistance to Piercing, Slashing, Crushing and Missile damage.
-  12th level: Bleed deals 3 damage per round and attacks strike as a +3 weapon. Gains +40% resistance to Fire, Cold, Electricity and Acid damage.
-  13th level: Gains an additional attack per round.
-  14th level: Immunity to weapons of +1 enchantment and below. Magic Resistance improves to +50%.
-  15th level: Bleed deals 5 damage per round and attacks strike as a +4 weapon. Saving Throw modifier on bleed becomes -4.~
+狼人形态的属性随等级提升：
+  5级：移动速度+2
+  6级：魔法抗性+10%
+  7级：流血每回合造成2点伤害，攻击视为+2武器
+  8级：基础护甲等级提升至-1
+  9级：流血的豁免惩罚变为-2
+  10级：移动速度加值提升至+4，魔法抗性提升至+20%
+  11级：基础护甲等级提升至-4，获得穿刺、挥砍、钝击、远程伤害抗性+15%
+  12级：流血每回合造成3点伤害，攻击视为+3武器；获得火焰、寒冷、电击、强酸伤害抗性+40%
+  13级：每回合额外获得一次攻击
+  14级：免疫+1及以下附魔的武器，魔法抗性提升至+50%
+  15级：流血每回合造成5点伤害，攻击视为+4武器；流血的豁免惩罚变为-4。~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-F2.spl~ ~override~
-SAY NAME1 ~Shapeshift: Werewolf~
-SAY UNIDENTIFIED_DESC ~WEREWOLF SHAPE
-The wolf form grants the shapeshifter the greater value between +2 and base 20 to their Strength and Dexterity, a base Armor Class of 2, two attacks per round, 2d4+1 piercing or slashing damage (whichever is greater) striking as a +1 weapon, and inflict bleeding damage on their attacks, dealing one point of unmitigated piercing damage per round for three rounds unless a Save vs. Death is made. Targets without blood are immune to bleeding damage.
+SAY NAME1 ~变形：狼人~
+SAY UNIDENTIFIED_DESC ~狼人形态
+变形者化身为狼人时，力量与敏捷取「+2」与「20」中的较高值，基础护甲等级为2，每回合两次攻击，造成2d4+1穿刺或挥砍伤害（取较高者），视为+1武器；攻击会造成流血效果，每回合造成1点无法减免的穿刺伤害，持续3回合，目标死亡豁免失败则持续生效。无血液的目标免疫流血伤害。
 
-The attributes of the werewolf form improve with level.
-  5th level: +2 bonus to Movement Rate.
-  6th level: +10% Magic Resistance.
-  7th level: Bleed deals 2 damage per round and attacks strike as a +2 weapon.
-  8th level: Base Armor Class improves to -1.
-  9th level: Saving Throw modifier on bleed becomes -2.
-  10th level: Movement rate bonus increased to +4. Magic Resistance improves to +20%.
-  11th level: Base Armor Class improves to -4. Gains +15% resistance to Piercing, Slashing, Crushing and Missile damage.
-  12th level: Bleed deals 3 damage per round and attacks strike as a +3 weapon. Gains +40% resistance to Fire, Cold, Electricity and Acid damage.
-  13th level: Gains an additional attack per round.
-  14th level: Immunity to weapons of +1 enchantment and below. Magic Resistance improves to +50%.
-  15th level: Bleed deals 5 damage per round and attacks strike as a +4 weapon. Saving Throw modifier on bleed becomes -4.~
+狼人形态的属性随等级提升：
+  5级：移动速度+2
+  6级：魔法抗性+10%
+  7级：流血每回合造成2点伤害，攻击视为+2武器
+  8级：基础护甲等级提升至-1
+  9级：流血的豁免惩罚变为-2
+  10级：移动速度加值提升至+4，魔法抗性提升至+20%
+  11级：基础护甲等级提升至-4，获得穿刺、挥砍、钝击、远程伤害抗性+15%
+  12级：流血每回合造成3点伤害，攻击视为+3武器；获得火焰、寒冷、电击、强酸伤害抗性+40%
+  13级：每回合额外获得一次攻击
+  14级：免疫+1及以下附魔的武器，魔法抗性提升至+50%
+  15级：流血每回合造成5点伤害，攻击视为+4武器；流血的豁免惩罚变为-4。~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-FH.spl~ ~override~
-SAY NAME1 ~Shapeshift: Werewolf~
-SAY UNIDENTIFIED_DESC ~WEREWOLF SHAPE
-The wolf form grants the shapeshifter the greater value between +2 and base 20 to their Strength and Dexterity, a base Armor Class of 2, two attacks per round, 2d4+1 piercing or slashing damage (whichever is greater) striking as a +1 weapon, and inflict bleeding damage on their attacks, dealing one point of unmitigated piercing damage per round for three rounds unless a Save vs. Death is made. Targets without blood are immune to bleeding damage.
+SAY NAME1 ~变形：狼人~
+SAY UNIDENTIFIED_DESC ~狼人形态
+变形者化身为狼人时，力量与敏捷取「+2」与「20」中的较高值，基础护甲等级为2，每回合两次攻击，造成2d4+1穿刺或挥砍伤害（取较高者），视为+1武器；攻击会造成流血效果，每回合造成1点无法减免的穿刺伤害，持续3回合，目标死亡豁免失败则持续生效。无血液的目标免疫流血伤害。
 
-The attributes of the werewolf form improve with level.
-  5th level: +2 bonus to Movement Rate.
-  6th level: +10% Magic Resistance.
-  7th level: Bleed deals 2 damage per round and attacks strike as a +2 weapon.
-  8th level: Base Armor Class improves to -1.
-  9th level: Saving Throw modifier on bleed becomes -2.
-  10th level: Movement rate bonus increased to +4. Magic Resistance improves to +20%.
-  11th level: Base Armor Class improves to -4. Gains +15% resistance to Piercing, Slashing, Crushing and Missile damage.
-  12th level: Bleed deals 3 damage per round and attacks strike as a +3 weapon. Gains +40% resistance to Fire, Cold, Electricity and Acid damage.
-  13th level: Gains an additional attack per round.
-  14th level: Immunity to weapons of +1 enchantment and below. Magic Resistance improves to +50%.
-  15th level: Bleed deals 5 damage per round and attacks strike as a +4 weapon. Saving Throw modifier on bleed becomes -4.~
+狼人形态的属性随等级提升：
+  5级：移动速度+2
+  6级：魔法抗性+10%
+  7级：流血每回合造成2点伤害，攻击视为+2武器
+  8级：基础护甲等级提升至-1
+  9级：流血的豁免惩罚变为-2
+  10级：移动速度加值提升至+4，魔法抗性提升至+20%
+  11级：基础护甲等级提升至-4，获得穿刺、挥砍、钝击、远程伤害抗性+15%
+  12级：流血每回合造成3点伤害，攻击视为+3武器；获得火焰、寒冷、电击、强酸伤害抗性+40%
+  13级：每回合额外获得一次攻击
+  14级：免疫+1及以下附魔的武器，魔法抗性提升至+50%
+  15级：流血每回合造成5点伤害，攻击视为+4武器；流血的豁免惩罚变为-4。~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-FB2.spl~ ~override~
   LPF ALTER_EFFECT
@@ -189,7 +189,7 @@ COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-FB2.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Bleeding~)
+	  parameter1 = RESOLVE_STR_REF (~流血~)
   END
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-H.spl~ ~override~
@@ -198,7 +198,7 @@ COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-H.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Primal Howl Ready~)
+	  parameter1 = RESOLVE_STR_REF (~原初怒嚎就绪~)
   END
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-H2.spl~ ~override~
@@ -211,24 +211,24 @@ END
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Stunned~)
+	  parameter1 = RESOLVE_STR_REF (~震慑~)
   END
-SAY NAME1 ~Primal Howl~
+SAY NAME1 ~原初怒嚎~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-W.spl~ ~override~
-SAY NAME1 ~Shapeshift: Wolf~
-SAY UNIDENTIFIED_DESC ~WOLF SHAPE
-The wolf form grants the shapeshifter the greater value between +1 and base 18 to their Strength and Dexterity, a base Armor Class of 4, two attacks per round, 1d8 piercing or slashing damage (whichever is greater) striking as a +1 weapon, and the ability to knock opponents prone for one round unless a Save vs. Death is made. Additionally, the shapeshifter loses the ability to cast spells while transformed, but gains the ability to use the thieving skills Detect Traps, Detect Illusions and Stealth. The shapeshifter's thieving bonuses in this form improve with level and Dexterity.~
+SAY NAME1 ~变形：巨狼~
+SAY UNIDENTIFIED_DESC ~巨狼形态
+变形者化身为狼时，力量与敏捷取「+1」与「18」中的较高值，基础护甲等级为4，每回合两次攻击，造成1d8穿刺或挥砍伤害（取较高者），视为+1武器；并可将敌人击倒，目标死亡豁免失败则倒地一回合。此外，变形期间无法施法，但可使用游荡者技能：查找陷阱、识破幻象、潜行。该形态下游荡者技能的加值随等级与敏捷提升。~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-W2.spl~ ~override~
-SAY NAME1 ~Shapeshift: Wolf~
-SAY UNIDENTIFIED_DESC ~WOLF SHAPE
-The wolf form grants the shapeshifter the greater value between +1 and base 18 to their Strength and Dexterity, a base Armor Class of 4, two attacks per round, 1d8 piercing or slashing damage (whichever is greater) striking as a +1 weapon, and the ability to knock opponents prone for one round unless a Save vs. Death is made. Additionally, the shapeshifter loses the ability to cast spells while transformed, but gains the ability to use the thieving skills Detect Traps, Detect Illusions and Stealth. The shapeshifter's thieving bonuses in this form improve with level and Dexterity.~
+SAY NAME1 ~变形：巨狼~
+SAY UNIDENTIFIED_DESC ~巨狼形态
+变形者化身为狼时，力量与敏捷取「+1」与「18」中的较高值，基础护甲等级为4，每回合两次攻击，造成1d8穿刺或挥砍伤害（取较高者），视为+1武器；并可将敌人击倒，目标死亡豁免失败则倒地一回合。此外，变形期间无法施法，但可使用游荡者技能：查找陷阱、识破幻象、潜行。该形态下游荡者技能的加值随等级与敏捷提升。~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HL1.spl~ ~override~
-SAY NAME1 ~Shared Gift~
-SAY UNIDENTIFIED_DESC ~Shared Gift
-The shapeshifter may, for a single use in their lifetime, impart the gift of lycanthropy to a trusted ally. This permanently grants the chosen ally a single use per day of shapeshift into the werewolf form, as well as permanent Infravision and regeneration at a rate of one hit point per 3 rounds. Due to the shapeshifter's influence, the ally has full control over their form. The target must be a party member, and must not be another shapeshifter or have received Shared Gift from another shapeshifter.~
+SAY NAME1 ~共感恩赐~
+SAY UNIDENTIFIED_DESC ~共感恩赐
+变形者一生可使用一次，将兽化的恩赐赠予一名信任的友军。目标将永久获得每日一次变形为狼人的能力，以及永久的黑暗视觉与每3回合1点的生命恢复。受变形者影响，目标可以完全掌控自身的形态。目标必须是队伍成员，且不能是另一名变形者，也不能已从其他变形者处获得过共感恩赐。~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HLA.spl~ ~override~
   LPF ALTER_EFFECT
@@ -236,20 +236,20 @@ COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HLA.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Permanently gained gift of Lycanthropy~)
+	  parameter1 = RESOLVE_STR_REF (~永久获得兽化恩赐~)
   END
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HL2.spl~ ~override~
-SAY NAME1 ~Wolf Pack~
-SAY UNIDENTIFIED_DESC ~Wolf Pack
-The shapeshifter passively grants all other allies in their werewolf form, whether they are a shapeshifter or bearer of the Shared Gift, within a 15-ft. radius a +2 bonus to hit and damage.
+SAY NAME1 ~狼群~
+SAY UNIDENTIFIED_DESC ~狼群
+变形者处于狼人形态时，15尺范围内所有其他处于狼人形态的友军（无论本身是变形者还是共感恩赐的受益者），攻击与伤害获得+2加值。
 
-Requires: Shared Gift~
+需求：共感恩赐~
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HL3.spl~ ~override~
-SAY NAME1 ~Elemental Fury~
-SAY UNIDENTIFIED_DESC ~Elemental Fury
-With this ability, the shapeshifter may choose one element (fire, cold, electrical, acid) once per day. Once chosen, the shapeshifter becomes permanently immune to that element while shapeshifted into their werewolf form, and deal an additional 2d6 damage on each hit. Elemental Fury may be used again to change the chosen element to another option.~
+SAY NAME1 ~元素狂怒~
+SAY UNIDENTIFIED_DESC ~元素狂怒
+每日可使用一次，变形者可选择一种元素（火焰、寒冷、电击、强酸）。选定后，变形者处于狼人形态时永久免疫该元素，且每次命中额外造成2d6点伤害。可再次使用本能力切换选定的元素。~
 
 DEFINE_ACTION_FUNCTION cd_new_portrait_icon
   INT_VAR string = 0
@@ -266,20 +266,20 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Fury: Firefang~) STR_VAR bam_file = C0SS-FII RET C0SS-FII = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Fury: Frostbite~) STR_VAR bam_file = C0SS-COI RET C0SS-COI = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Fury: Acidhide~) STR_VAR bam_file = C0SS-ACI RET C0SS-ACI = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Fury: Stormclaw~) STR_VAR bam_file = C0SS-ELI RET C0SS-ELI = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~狂怒：火牙~) STR_VAR bam_file = C0SS-FII RET C0SS-FII = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~狂怒：霜噬~) STR_VAR bam_file = C0SS-COI RET C0SS-COI = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~狂怒：酸蚀~) STR_VAR bam_file = C0SS-ACI RET C0SS-ACI = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~狂怒：雷爪~) STR_VAR bam_file = C0SS-ELI RET C0SS-ELI = icon END
 
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HLE.spl~ ~override~
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0SS-FII END
-SAY NAME1 ~Fury: Firefang~
+SAY NAME1 ~狂怒：火牙~
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HLF.spl~ ~override~
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0SS-COI END
-SAY NAME1 ~Fury: Frostbite~
+SAY NAME1 ~狂怒：霜噬~
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HLG.spl~ ~override~
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0SS-ACI END
-SAY NAME1 ~Fury: Acidhide~
+SAY NAME1 ~狂怒：酸蚀~
 COPY ~%MOD_FOLDER%/Druid/Shapeshifter/spells/C0SS-HLH.spl~ ~override~
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0SS-ELI END
-SAY NAME1 ~Fury: Stormclaw~
+SAY NAME1 ~狂怒：雷爪~

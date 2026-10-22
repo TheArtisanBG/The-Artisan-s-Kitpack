@@ -1,10 +1,10 @@
 CHAIN IF WEIGHT #-1 ~Global("C0SamuraiRegainKit","GLOBAL",1)~ THEN PLAYER1 samurai-d
-~Your defense of the keep as well as your fair rulership over your lands have served as an adequate fulfillment of duty. With these actions, you believe you may be able to regain your lost honor. Will you choose to become a samurai once more?
+~你守卫要塞、公正治领的功绩，已然尽到了分内之责。经此种种，你相信自己足以重拾失落的荣誉。你可愿再度成为一名武士？
 
-This is your one and only chance. Choose wisely!~
+这是你绝无仅有的机会。三思而行！~
 DO ~IncrementGlobal("C0SamuraiRegainKit","GLOBAL",1)~
 END
-  + ~Alignment(Player1,MASK_GOOD)~ + ~I wish to regain my samurai abilities.~ DO ~ChangeAlignment(Player1,LAWFUL_GOOD) AddKit(C0_SAMURAI)~ EXIT
-  + ~Alignment(Player1,MASK_GENEUTRAL)~ + ~I wish to regain my samurai abilities.~ DO ~ChangeAlignment(Player1,LAWFUL_NEUTRAL) AddKit(C0_SAMURAI)~ EXIT
-  + ~Alignment(Player1,MASK_EVIL)~ + ~I wish to regain my samurai abilities.~ DO ~ChangeAlignment(Player1,LAWFUL_EVIL) AddKit(C0_SAMURAI)~ EXIT
-  ++ ~No. What's done is done. I will continue as a ronin.~ EXIT
+  + ~Alignment(Player1,MASK_GOOD)~ + ~我愿重拾武士的能力。~ DO ~ChangeAlignment(Player1,LAWFUL_GOOD) AddKit(C0_SAMURAI)~ EXIT
+  + ~Alignment(Player1,MASK_GENEUTRAL)~ + ~我愿重拾武士的能力。~ DO ~ChangeAlignment(Player1,LAWFUL_NEUTRAL) AddKit(C0_SAMURAI)~ EXIT
+  + ~Alignment(Player1,MASK_EVIL)~ + ~我愿重拾武士的能力。~ DO ~ChangeAlignment(Player1,LAWFUL_EVIL) AddKit(C0_SAMURAI)~ EXIT
+  ++ ~不了。事已至此，我便继续做一名浪人。~ EXIT

@@ -34,30 +34,30 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~%CLASSTEXT%.2da~) BEGIN
 	  READ_2DA_ENTRY_FORMER rows row 0 ~text~ // read column value
 	  PATCH_IF ~%text%~ STRING_EQUAL_CASE ~PALADIN~ BEGIN
 	    SET patch_row = %row%
-		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~PALADIN: A Paladin is a warrior bold and pure, the exemplar of everything good and true. Like the Fighter, the Paladin is a person of action and combat. However, the Paladin lives for the ideals of righteousness, justice, honesty, piety, and chivalry and strives to be a living example of these virtues so that others may learn from <PRO_HIMHER> as well as gain by <PRO_HISHER> actions.
+		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~圣武士：圣武士是英勇高洁的战士，是一切良善与真诚的典范。与战士相同，圣武士长于行动与战斗。然而，圣武士毕生奉行正义、公正、诚实、虔诚与骑士精神的信条，并力求成为这些美德的鲜活榜样，让他人既能受其言传，也能蒙其行远益。
 
-CLASS FEATURES:
+职业特性：
 
-– May wear helmets.
-– May wear any armor and use any weapon.
-– May not exceed Specialization (two slots) in any weapon class.
-– May achieve Specialization (two slots) in any fighting style and allocate three slots in Two-Weapon Style.
-– May use Lay On Hands ability once per day to heal a target for 2 Hit Points per level of the Paladin.
-– May cast Detect Evil at will.
-– May use the Cure Disease ability once per day.
-– May use the Smite Evil ability once per day, causing their next successful attack to deal 1d6 + 1d6 additional damage for every 3 levels of the paladin to an evil-aligned creature.
-– May cast Protection From Evil once per day per level (starts at 1st level with one use).
-– May Turn Undead as a Cleric two levels lower, starting at level 3.
-– May cast priest spells starting at level 9.
-– Immunity to Disease.
-– Divine Grace: The paladin receives a +2 bonus to Saving Throws, with an additional +1 at 19 points of Charisma and every two points thereafter.
-– 3rd level: Gains Aura of Courage.
-– 15th level: Gains three additional uses of Smite Evil.
+–可以穿戴头盔。
+–可以穿戴任何种类的盔甲、使用全部类别的武器。
+–不能对任何武器类别达到精通（2星）以上的水准。
+–可以精通（2星）任何战斗方式，双持武器可分配3点。
+–圣武士每天可以使用一次圣疗术，能为目标治疗2hp/级。
+–可随意施展「侦测邪恶」。
+–每日可使用一次「治愈疾病」。
+–每日可使用一次「破邪斩」，下一次成功攻击对邪恶阵营生物额外造成1d6+每3等级1d6点伤害。
+–每日可施展「防护邪恶」，次数等于职业等级（1级时1次）。
+–可以驱散不死生物，效果等同于低2级的牧师，从3级开始。
+–自等级9开始能够施放牧师神术。
+–免疫疾病。
+–神恩：圣武士豁免检定+2；魅力达到19后，每再提升2点魅力，额外+1。
+–3级：获得「勇气灵光」。
 
-AURA OF COURAGE: The paladin permanently becomes immune to fear effects and passively grants half of their Divine Grace bonus (rounded up) to all allies within visual range.
+勇气灵光：圣武士永久免疫恐惧效果，并被动将自身神恩加值的一半（向上取整）赋予视野范围内的所有友军。
 
-– Alignment restricted to lawful good.
-– Hit Die: d10~)
+–15级：破邪斩每日额外获得3次使用次数。
+–阵营限制为守序善良。
+–生命骰：d10。~)
 	  END
 	END
   BUT_ONLY
@@ -79,7 +79,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Aura of Courage~) STR_VAR bam_file = c0pal00i RET c0pal00i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~勇气灵光~) STR_VAR bam_file = c0pal00i RET c0pal00i = icon END
 
 COPY_EXISTING ~C0PAL00.SPL~ OVERRIDE
       LPF ADD_SPELL_EFFECT
@@ -97,9 +97,9 @@ COPY_EXISTING ~C0PAL01.SPL~ OVERRIDE
 			silent = 1
 	END
 COPY_EXISTING ~C0PAL02.SPL~ OVERRIDE
-SAY NAME1 ~Smite Evil~
-SAY UNIDENTIFIED_DESC ~Smite Evil
-The paladin's next successful attack deals 1d6 + 1d6 additional damage for every 3 levels of the paladin to an evil-aligned creature.~
+SAY NAME1 ~破邪斩~
+SAY UNIDENTIFIED_DESC ~破邪斩
+圣武士下一次成功攻击对邪恶阵营生物额外造成1d6+每3等级1d6点伤害。~
 	
 ADD_PROJECTILE ~%MOD_FOLDER%/spells/C0INAREP.PRO~ ~C0 Instant Area Allies~
 
@@ -130,16 +130,16 @@ COPY ~%MOD_FOLDER%/Paladin/Spells/iwdee/#PALFEAR.SPL~ OVERRIDE
 END
 	
 COPY ~%MOD_FOLDER%/Paladin/Spells/C0PAL05.SPL~ OVERRIDE
-SAY NAME1 ~Cure Disease~
-SAY UNIDENTIFIED_DESC ~Cure Disease
-(Abjuration)
+SAY NAME1 ~治愈疾病~
+SAY UNIDENTIFIED_DESC ~治愈疾病
+（防护系）
 
-Level: 3
-Range: Touch
-Sphere: Necromantic
-Duration: Instant
-Casting Time: 9
-Area of Effect: 1 creature
-Saving Throw: None
+等级：3
+射程：触碰
+学派：死灵系
+持续时间：即时
+施法时间：9
+影响范围：1个生物
+豁免检定：无
 
-When this spell is placed on a diseased individual, it immediately cures them and restores 5 lost Hit Points. The cure is permanent, but does not grant the recipient of the spell immunity from further afflictions. Blindness and deafness are also cured with this spell. This spell has no effect on undead, constructs, or extraplanar creatures.~
+对患病目标施放本法术后，可立即治愈其疾病并恢复5点生命值。治愈效果永久，但不会使目标免疫后续的同类病症。目盲与耳聋也可借此术治愈。本法对不死生物、构装生物或异界生物无效。~

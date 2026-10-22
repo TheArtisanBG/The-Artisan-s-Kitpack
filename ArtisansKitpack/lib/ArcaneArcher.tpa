@@ -28,48 +28,48 @@ COPY_EXISTING ~CLABFI01.2DA~ ~OVERRIDE/C0AA.2DA~
 
 COPY ~%MOD_FOLDER%/2DAs/HPARCH.2da~ ~OVERRIDE~
 
-OUTER_SPRINT kit_description ~ARCANE ARCHER: Master of the elven warbands, the arcane archer is a warrior skilled in using magic to supplement their combat prowess. Beyond the woods, arcane archers gain renown throughout entire kingdoms for their supernatural accuracy with a bow and their ability to imbue their arrows with magic. In a group, they can strike fear into an entire enemy army. While human arcane archers are rare due to elvenkind withholding their secret techniques, they are not unheard of.
+OUTER_SPRINT kit_description ~魔射手：精灵战团的精锐，魔射手是擅长以魔法辅弼战技的战士。走出森林之外，魔射手凭借超凡的弓术与附魔箭矢的能力，在诸国间声名远扬。队伍之中，他们足以令整支敌军闻风丧胆。由于精灵族秘传其技，人类魔射手十分罕见，但也并非闻所未闻。
 
-Advantages:
-– +1 to hit with any missile weapon at level 1 and every 5 levels thereafter.
-– Gains the Enhance Arrow ability.
+职业优势：
+–1级起，所有远程武器命中+1，之后每提升5级再+1。
+–获得「附魔箭」能力。
 
-ENHANCE ARROW: The arcane archer passively imbues <PRO_HISHER> arrows with magic. Projectiles launched by the arcane archer are always treated as weapons of +1 enchantment and deal one extra point of magic damage, increasing by one for every five levels gained to a maximum of +5 enchantment and five magic damage at 20th level. Additional damage is affected by the target's magic resistance.
+附魔箭：魔射手被动为<PRO_HISHER>箭矢注入魔力。其射出的投射物始终视为+1附魔武器，并额外造成1点魔法伤害；每提升5级，附魔等级与魔法伤害各+1，20级时达到最高+5附魔与5点魔法伤害。额外伤害受目标魔法抗性减免。
 
-– 3rd level: May use Entropic Shield once per day.
+–3级：每日可使用一次「熵光护盾」。
 
-ENTROPIC SHIELD: A magical field glowing with a multicolored hue appears around the arcane archer, providing immunity to normal missiles and a -2 bonus to armor class against missile weapons for 1 round per level. This bonus increases to -4 at 10th level and -6 at 17th level.
+熵光护盾：魔射手周身浮现出五彩辉光的魔法力场，免疫普通远程武器，并对远程武器的护甲等级获得-2加值，持续时长为每等级1轮。10级时加值提升至-4，17级时提升至-6。
 
-– 5th level: May use Imbue Arrow ability three times per day.
+–5级：每日可使用三次「灌法箭」能力。
 
-IMBUE ARROW: Using arcane magic, the arcane archer enchants <PRO_HISHER> next missile within one round to explode, dealing 1d6 additional fire damage for every five levels gained thereafter in an area of effect.
+灌法箭：魔射手以奥术魔法为<PRO_HISHER>下一轮内射出的下一发箭矢附魔，使其命中后爆炸，每5级额外造成1d6点火焰范围伤害。
 
-– 9th level: May use Seeker Arrow ability once per day.
+–9级：每日可使用一次「追踪箭」能力。
 
-SEEKER ARROW: A skilled arcane archer can enchant <PRO_HISHER> arrows to strike its target unerringly. <PRO_HISHER> next missile attack within one round is a guaranteed critical hit and deals two points of extra damage for every five levels gained thereafter.
+追踪箭：技艺精湛的魔射手可为<PRO_HISHER>箭矢附魔，使其必中目标。<PRO_HISHER>下一轮内的下一次远程攻击必定暴击，且每提升5级额外造成2点伤害。
 
-– 13th level: May use Phase Arrow ability once per day.
+–13级：每日可使用一次「相位箭」能力。
 
-PHASE ARROW: An experienced arcane archer can enchant <PRO_HISHER> next arrow within one round to become an incorporeal missile that penetrates armor, dealing 4d6 bonus magical damage and reducing the target's missile resistance by 50% as well as their armor class vs. missiles by two points every five levels gained thereafter for 1 turn.
+相位箭：经验丰富的魔射手可为<PRO_HISHER>下一轮内的下一发箭矢附魔，使其化为虚体投射物穿透护甲，额外造成4d6点魔法伤害，同时目标的远程抗性降低50%，对远程武器的护甲等级每5级降低2点，持续1轮。
 
-– 17th level: May use Arrow of Death ability once per day.
+–17级：每日可使用一次「死亡箭」能力。
 
-ARROW OF DEATH: A master arcane archer can enchant <PRO_HISHER> next arrow within one round to instantly slay <PRO_HISHER> foe. Targets with more than 60 hit points may make a save vs. death to avoid the effect. Saving throw penalty increases by one for every five levels gained thereafter.
+死亡箭：魔射手大师可为<PRO_HISHER>下一轮内的下一发箭矢附魔，目标若未通过死亡豁免即被即刻斩杀。生命值超过60的目标可进行死亡豁免以抵消效果。每提升5级，目标的豁免惩罚增加1点。
 
-Disadvantages:
-– Hit Die: d8
-– THAC0 penalty of 3 when wielding a melee weapon.
-– Race restricted to human, elf or half-elf.KIT_DISADV_1
-– May not exceed proficiency (one slot) in weapons other than longbows, shortbows and crossbows.
-– May not exceed proficiency (one slot) in any weapon style.
-– May not wear armor heavier than elven chain mail.~
+职业限制：
+–生命骰：d8
+–手持近战武器时，零级命中值（THAC0）受-3惩罚。
+–仅限人类、精灵或半精灵种族。KIT_DISADV_1
+–除长弓、短弓与十字弓外，其他武器的熟练等级不得超过入门级（1点熟练槽）。
+–所有武器风格的熟练等级不得超过入门级（1点熟练槽）。
+–不得穿戴比精灵锁甲更重的护甲。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Power Attack or Expertise.
-– Does not gain Specialization in all weapons at 16th level.~
+–无法使用「猛力攻击」与「武器娴熟」。
+–16级时不会获得全武器专精。~
 
 END
 
@@ -106,13 +106,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 2
 	
-    mixed         = RESOLVE_STR_REF(~Arcane Archer~)
+    mixed         = RESOLVE_STR_REF(~魔射手~)
 	
-    lower         = RESOLVE_STR_REF(~arcane archer~)
+    lower         = RESOLVE_STR_REF(~魔射手~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 
-    briefdesc     = RESOLVE_STR_REF(~ARCANE ARCHER: Master of the elven warbands, the arcane archer is a warrior skilled in using magic to supplement their combat prowess. Beyond the woods, arcane archers gain renown throughout entire kingdoms for their supernatural accuracy with a bow and their ability to imbue their arrows with magic. In a group, they can strike fear into an entire enemy army. While human arcane archers are rare due to elvenkind withholding their secret techniques, they are not unheard of.~)
+    briefdesc     = RESOLVE_STR_REF(~魔射手：精灵战团的精锐，魔射手是擅长以魔法辅弼战技的战士。走出森林之外，魔射手凭借超凡的弓术与附魔箭矢的能力，在诸国间声名远扬。队伍之中，他们足以令整支敌军闻风丧胆。由于精灵族秘传其技，人类魔射手十分罕见，但也并非闻所未闻。~)
   STR_VAR
     kit_name      = ~C0AA~
 	
@@ -208,7 +208,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Enhance Arrow~) STR_VAR bam_file = c0aain3i RET c0aain3i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~附魔箭~) STR_VAR bam_file = c0aain3i RET c0aain3i = icon END
 
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aain3.spl~ ~override~
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0aain3i END
@@ -247,14 +247,14 @@ COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aaen1d.eff~ ~override/c0aaen5d.
 WRITE_SHORT 0x1c 5
 
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aain4.spl~ ~override~
-SAY NAME1 ~Enhance Arrow~
-SAY UNIDENTIFIED_DESC ~Enhance Arrow
-The arcane archer passively imbues <PRO_HISHER> arrows with magic. Projectiles launched by the arcane archer are always treated as weapons of +1 enchantment and deal one extra point of magic damage, increasing by one for every five levels gained to a maximum of +5 enchantment and five magic damage at 20th level. Additional damage is affected by the target's magic resistance.
+SAY NAME1 ~附魔箭~
+SAY UNIDENTIFIED_DESC ~附魔箭
+魔射手被动为<PRO_HISHER>箭矢注入魔力。其射出的投射物始终视为+1附魔武器，并额外造成1点魔法伤害；每提升5级，附魔等级与魔法伤害各+1，20级时达到最高+5附魔与5点魔法伤害。额外伤害受目标魔法抗性减免。
 
-This ability may be used to toggle Enhance Arrow at will.~
+本能力可随时开启或关闭附魔箭效果。~
 
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aain4a.spl~ ~override~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Enhance Arrow Deactivated~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~附魔箭已停用~) END
 
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp1.spl~ ~override~
   LPF ALTER_EFFECT
@@ -263,19 +263,19 @@ COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp1.spl~ ~override~
       check_headers = 1
       match_opcode = 139 // display string
       match_parameter1 = 26335
- parameter1 = RESOLVE_STR_REF (~Protected from Normal Missiles~)
+ parameter1 = RESOLVE_STR_REF (~免疫普通远程武器~)
   END
-SAY NAME1 ~Entropic Shield~
- SAY NAME2 ~Entropic Shield~
- SAY UNIDENTIFIED_DESC ~Entropic Shield
-A magical field glowing with a multicolored hue appears around the arcane archer, providing immunity to normal missiles and a -2 bonus to armor class against missile weapons for 1 round per level. This bonus increases to -4 at 10th level and -6 at 17th level.~
+SAY NAME1 ~熵光护盾~
+ SAY NAME2 ~熵光护盾~
+ SAY UNIDENTIFIED_DESC ~熵光护盾
+魔射手周身浮现出五彩辉光的魔法力场，免疫普通远程武器，并对远程武器的护甲等级获得-2加值，持续时长为每等级1轮。10级时加值提升至-4，17级时提升至-6。~
  
 ADD_PROJECTILE ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp2.PRO~
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp2.spl~ ~override~
-SAY NAME1 ~Imbue Arrow~
- SAY NAME2 ~Imbue Arrow~
- SAY UNIDENTIFIED_DESC ~Imbue Arrow
-Using arcane magic, the arcane archer enchants <PRO_HISHER> next missile to explode, dealing 1d6 additional fire damage for every five levels gained thereafter in an area of effect.~
+SAY NAME1 ~灌法箭~
+ SAY NAME2 ~灌法箭~
+ SAY UNIDENTIFIED_DESC ~灌法箭
+魔射手以奥术魔法为<PRO_HISHER>下一发箭矢附魔，使其命中后爆炸，每5级额外造成1d6点火焰范围伤害。~
  
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp2a.spl~ ~override~
 READ_LONG 0x64 "abil_off"
@@ -286,23 +286,23 @@ WRITE_SHORT (%abil_off% + (0x28 * %index%) + 0x26) ~%c0aasp2%~
 END
 
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp3.spl~ ~override~
-SAY NAME1 ~Seeker Arrow~
- SAY NAME2 ~Seeker Arrow~
- SAY UNIDENTIFIED_DESC ~Seeker Arrow
-A skilled arcane archer can enchant <PRO_HISHER> next arrow to strike its target unerringly. <PRO_HISHER> next missile attack is a guaranteed critical hit and deals two points of extra damage for every five levels gained thereafter.
- create an unerring arrow with a +20 bonus to hit and bonus piercing damage.~
+SAY NAME1 ~追踪箭~
+ SAY NAME2 ~追踪箭~
+ SAY UNIDENTIFIED_DESC ~追踪箭
+技艺精湛的魔射手可为<PRO_HISHER>下一发箭矢附魔，使其必中目标。<PRO_HISHER>下一次远程攻击必定暴击，且每提升5级额外造成2点伤害。
+生成一枚必中箭矢，获得+20命中加值与额外穿刺伤害。~
 
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp4.spl~ ~override~
-SAY NAME1 ~Phase Arrow~
- SAY NAME2 ~Phase Arrow~
- SAY UNIDENTIFIED_DESC ~Phase Arrow
-An experienced arcane archer can enchant <PRO_HISHER> next arrow to become an incorporeal missile that penetrates armor, reducing the target's missile resistance by 50% as well as their armor class vs. missiles by two points for every five levels gained thereafter.~
+SAY NAME1 ~相位箭~
+ SAY NAME2 ~相位箭~
+ SAY UNIDENTIFIED_DESC ~相位箭
+经验丰富的魔射手可为<PRO_HISHER>下一发箭矢附魔，使其化为虚体投射物穿透护甲，目标的远程抗性降低50%，同时对远程武器的护甲等级每5级降低2点。~
 
 COPY ~%MOD_FOLDER%/Fighter/ArcaneArcher/spells/c0aasp5.spl~ ~override~
-SAY NAME1 ~Arrow of Death~
- SAY NAME2 ~Arrow of Death~
- SAY UNIDENTIFIED_DESC ~Arrow of Death
-A master arcane archer can enchant <PRO_HISHER> next arrow to instantly slay <PRO_HISHER> foe on a failed save vs. death. Target's saving throw penalty is increased by one for every 5 levels gained thereafter.~
+SAY NAME1 ~死亡箭~
+ SAY NAME2 ~死亡箭~
+ SAY UNIDENTIFIED_DESC ~死亡箭
+魔射手大师可为<PRO_HISHER>下一发箭矢附魔，目标若未通过死亡豁免即被即刻斩杀。每提升5级，目标的豁免惩罚增加1点。~
 
 
 COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files

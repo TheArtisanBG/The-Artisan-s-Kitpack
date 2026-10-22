@@ -42,58 +42,58 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Aura of Despair~) STR_VAR bam_file = c0bgic01 RET c0bgic01 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Fiendish Reckoning~) STR_VAR bam_file = c0bgic02 RET c0bgic02 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~绝望暗气~) STR_VAR bam_file = c0bgic01 RET c0bgic01 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~邪祟清算~) STR_VAR bam_file = c0bgic02 RET c0bgic02 = icon END
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~BLACKGUARD~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~BLACKGUARD: The Blackguard epitomizes evil and is nothing short of a mortal fiend. The quintessential black knight, this villain carries a reputation of the foulest sort that is very well deserved. Consorting with demons and devils and serving dark deities, the Blackguard is hated and feared by all. Some people call these villains "anti-paladins" due to their completely evil nature.
+STRING_SET_EVALUATE kit_strref ~黑暗卫士：黑暗卫士是邪恶的化身，与凡间的魔物无异。作为典型的黑骑士，这类恶徒声名狼藉且完全咎由自取。他们与魔鬼恶魔为伍，侍奉黑暗神祇，为众生所憎惧。因其彻头彻尾的邪恶本质，世人常称其为“反圣武士”。
 
-Advantages
-– Immune to level drain and fear.
-– May turn undead as a Paladin of the same level.
-– May memorize a small selection of Mage spells:
-  Level 1: Blindness, Larloch's Minor Drain
-  Level 2: Horror, Invisibility
-  Level 3: Vampiric Touch, Hold Undead
-  Level 4: Improved Invisibility, Contagion
+职业优势：
+–免疫等级吸取与恐惧。
+–可如同同级圣武士般超度不死生物。
+–可记忆少量法师法术：
+  1环：目盲术、拉洛克的轻微吸取
+  2环：恐惧术、隐形术
+  3环：吸血之触、定身不死生物
+  4环：高等隐形术、瘟疫术
 
-– May use the Life Drain ability once per day. An extra use is gained at levels 8 and 12.
+–每日可使用一次「吸取生命」能力。8级与12级各额外获得一次使用次数。
 
-LIFE DRAIN: The blackguard saps the vitality of an unfortunate victim within touch range, draining 1 point of THAC0 and Damage (an additional point is drained per 5 levels up to a maximum of 5 points at 20th level), as well as 1 hit point per level, and adding it to <PRO_HISHER> maximum. The drained attributes last for 3 rounds + 1 round per level. Non-living beings, such as undead and constructs, are immune to the effects.
+吸取生命：黑暗卫士汲取接触范围内不幸目标的生命力，吸取1点零级命中值与伤害（每5级额外吸取1点，20级时最高5点），以及每等级1点生命值，并将其加至<PRO_HISHER>的最大值。被吸取的属性持续3回合，每等级额外持续1回合。不死生物与构装体等非活物免疫此效果。
 
-– May use the Poison Weapon ability once per day. Gains one use at level 1, one use at level 5, and an additional use every 5 levels thereafter.
+–每日可使用一次「淬毒武器」能力。1级获得1次，5级获得1次，之后每5级额外获得一次。
 
-POISON WEAPON: The blackguard is capable of coating <PRO_HISHER> weapon for the next eight hours with a slow-acting but extremely potent poison. This poison deals damage and reduces the target's Constitution immediately and every following round for at least four rounds. After four rounds have passed, the target must make a Saving Throw vs. Death or remain poisoned for another four rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
+淬毒武器：黑暗卫士可为<PRO_HISHER>武器涂抹起效缓慢但药性猛毒的剧毒，持续8小时。该毒素会立即造成伤害并降低目标体质，之后每回合持续生效，至少持续4回合。4回合过后，目标必须进行一次死亡豁免，否则将再中毒4回合。因此只要目标未能成功豁免，毒素就有可能无限期持续。目标不会因毒素造成的体质流失而死亡。
 
-1st level: Target suffers two poison damage and loses one point of Constitution. No save modifier.
-6th level: Target suffers four poison damage and loses one point of Constitution. Save modifier of -1.
-11th level: Target suffers six poison damage and loses two points of Constitution. Save modifier of -2.
-16th level: Target suffers eight poison damage and loses two points of Constitution. Save modifier of -3.
-21st level: Target suffers ten poison damage and loses three points of Constitution. Save modifier of -4.
+1级：目标受到2点毒素伤害，损失1点体质。无豁免惩罚。
+6级：目标受到4点毒素伤害，损失1点体质。豁免惩罚-1。
+11级：目标受到6点毒素伤害，损失2点体质。豁免惩罚-2。
+16级：目标受到8点毒素伤害，损失2点体质。豁免惩罚-3。
+21级：目标受到10点毒素伤害，损失3点体质。豁免惩罚-4。
 
-– 3rd level: Gains the Aura of Despair passive ability.
+–3级：获得「绝望暗气」被动能力。
 
-AURA OF DESPAIR: Blackguards perpetually radiate a malignant aura, inflicting negative effects on all enemies within 15 feet of <PRO_HIMHER> based on the Blackguard's level. Non-living beings, such as undead and constructs, are unaffected.	
-  3rd - All enemies suffer a -1 penalty to Saving Throws and Morale.
-  11th - All enemies suffer a -1 penalty to Saving Throws and Morale and a -5% penalty to all damage dealt.
-  19th - All enemies suffer a -2 penalty to Saving Throws and Morale and a -10% penalty to all damage dealt.
+绝望暗气：黑暗卫士会散发秽暗不洁的气息，根据黑暗卫士的等级，对<PRO_HIMHER>15尺范围内的所有敌人造成负面效果。不死生物与构装体等非活物不受影响。
+  3级：所有敌人的豁免检定与士气-1。
+  11级：所有敌人的豁免检定与士气-1，所有造成的伤害-5%。
+  19级：所有敌人的豁免检定与士气-2，所有造成的伤害-10%。
 
-– 11th level: May use Backstab at x2 modifier.
-– 12th level: May use the Fiendish Reckoning ability once per day.
+–11级：可使用背刺，倍率为2倍。
+–12级：每日可使用一次「邪祟清算」能力。
 
-FIENDISH RECKONING: The blackguard draws upon the power of their fiendish host, gaining a +4 bonus to THAC0, +20% damage dealt from all sources, and +20 bonus hit points for 3 rounds. Killing a creature while Fiendish Reckoning is in effect heals the blackguard for 20 hit points and resets the duration. However, if no creature is killed within the initial duration, the blackguard suffers 40 magical damage and incurs a -4 penalty to THAC0 and -50% penalty to all damage dealt for 6 rounds as punishment.
+邪祟清算：黑暗卫士汲取其邪性宿主的力量，获得+4零级命中值、所有来源造成的伤害+30%，以及+20点生命值，持续3回合。邪祟清算生效期间击杀生物，可为黑暗卫士回复20点生命值并重置持续时间。但若初始持续时间内未击杀任何生物，黑暗卫士将受到40点魔法伤害，且零级命中值-4、所有造成的伤害-50%，持续6回合作为惩罚。
 
-– 16th level: Backstab modifier improves to x3.
+–16级：背刺倍率提升至3倍。
 
-Disadvantages:
-– Incurs a -2 penalty to Reputation.
-– Alignment restricted to evil.
-– May not cast most spells of the Healing or Protection spheres.
-– Does not gain Aura of Courage.
-– May not cast Detect Evil.
-– May not use Smite Evil.
-– May not cast Protection From Evil as an innate ability.
-– May not use the Lay on Hands ability.~
+职业限制：
+–声望受-2惩罚。
+–仅限邪恶阵营。
+–无法施展多数治疗与防护领域的法术。
+–不获得勇气光环。
+–无法施展侦测邪恶。
+–无法使用破邪斩。
+–无法将防护邪恶作为天生能力施展。
+–无法使用圣疗术。~
 
 // backstab
 APPEND ~backstab.2da~ ~BLACKGUARD 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3~
@@ -127,14 +127,14 @@ COPY_EXISTING ~C0BG#00.spl~ ~override~
       END
 
 COPY_EXISTING ~SPCL102.spl~ ~override~
-SAY NAME1 ~Life Drain~
-SAY UNIDENTIFIED_DESC ~Life Drain
-The blackguard saps the vitality of an unfortunate victim within touch range, draining 1 point of THAC0 and Damage (an additional point is drained per 5 levels up to a maximum of 5 points at 20th level), as well as 1 hit point per level, and adding it to <PRO_HISHER> maximum. The drained attributes last for 3 rounds + 1 round per level. Non-living beings, such as undead and constructs, are immune to the effects.~
+SAY NAME1 ~吸取生命~
+SAY UNIDENTIFIED_DESC ~吸取生命
+黑暗卫士汲取接触范围内不幸目标的生命力，吸取1点零级命中值与伤害（每5级额外吸取1点，20级时最高5点），以及每等级1点生命值，并将其加至<PRO_HISHER>的最大值。被吸取的属性持续3回合，每等级额外持续1回合。不死生物与构装体等非活物免疫此效果。~
 
 ACTION_IF FILE_EXISTS ~C0TR#20A.spl~ THEN BEGIN
 COPY_EXISTING ~C0TR#20A.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER STR_VAR icon = C0BG#02 END
-SAY NAME1 ~Mimic: Life Drain~
+SAY NAME1 ~模仿：吸取生命~
 END
 
 INCLUDE ~%MOD_FOLDER%/effects/poison_weapon.tpa~
@@ -143,14 +143,14 @@ ACTION_IF FILE_EXISTS ~C0TR#30A.spl~ THEN BEGIN
 COPY_EXISTING ~C0TR#30A.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER STR_VAR icon = C0ASIN8B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = c0as#p1 END
-SAY NAME1 ~Mimic: Poison Weapon~
+SAY NAME1 ~模仿：淬毒武器~
 END
 
 COPY_EXISTING ~C0BG#00.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Gained Passive Ability: Aura of Despair~)
+	  parameter1 = RESOLVE_STR_REF (~获得被动能力：绝望暗气~)
 END
 
 COPY_EXISTING ~C0BG#03.spl~ ~override~
@@ -161,9 +161,9 @@ COPY_EXISTING ~C0BG#03.spl~ ~override~
       match_opcode = 142 // display string
       parameter2 = c0bgic02
   END
-SAY NAME1 ~Fiendish Reckoning~
-SAY UNIDENTIFIED_DESC ~Fiendish Reckoning
-The blackguard draws upon the power of their fiendish host, gaining a +4 bonus to THAC0, +30% damage dealt from all sources, and +20 bonus hit points for 3 rounds. Killing a creature while Fiendish Reckoning is in effect heals the blackguard for 20 hit points and resets the duration. However, if no creature is killed within the initial duration, the blackguard suffers 40 magical damage and incurs a -4 penalty to THAC0 and -50% penalty to all damage dealt for 6 rounds as punishment.~
+SAY NAME1 ~邪祟清算~
+SAY UNIDENTIFIED_DESC ~邪祟清算
+黑暗卫士汲取其邪性宿主的力量，获得+4零级命中值、所有来源造成的伤害+30%，以及+20点生命值，持续3回合。邪祟清算生效期间击杀生物，可为黑暗卫士回复20点生命值并重置持续时间。但若初始持续时间内未击杀任何生物，黑暗卫士将受到40点魔法伤害，且零级命中值-4、所有造成的伤害-50%，持续6回合作为惩罚。~
 
 COPY_EXISTING ~C0BG#03a.spl~ ~override~
   LPF ALTER_EFFECT
@@ -184,7 +184,7 @@ COPY_EXISTING ~C0BG#03c.spl~ ~override~
   END
   
 COPY_EXISTING ~C0BG#03b.spl~ ~override~
-SAY NAME1 ~Punishment~
+SAY NAME1 ~惩罚~
 
 //BLINDNESS
 COPY_EXISTING ~SPWI106.SPL~ ~OVERRIDE/C0BG106.SPL~
@@ -314,9 +314,9 @@ ACTION_FOR_EACH description IN
 //blackguard
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "BLACKGUARD" BEGIN
           READ_2DA_ENTRY index 4 col_count blackguard_desc
-          SPRINT old_blackguard ~– May turn undead as a Paladin of the same level.~
-          SPRINT new_blackguard ~– May turn undead as a Paladin of the same level.
-– May use Hide in Shadows.~
+          SPRINT old_blackguard ~–可如同同级圣武士般超度不死生物。~
+          SPRINT new_blackguard ~–可如同同级圣武士般超度不死生物。
+–可使用躲藏暗影。~
           GET_STRREF %blackguard_desc% blackguard_text
           INNER_PATCH_SAVE blackguard_text ~%blackguard_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_blackguard%~ ~%new_blackguard%~

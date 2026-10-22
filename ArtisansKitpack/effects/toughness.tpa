@@ -17,7 +17,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Tenacity~) STR_VAR bam_file = c0bari01 RET c0bari01 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~坚毅~) STR_VAR bam_file = c0bari01 RET c0bari01 = icon END
 
 COPY_EXISTING ~C0BAR#1X.SPL~ ~OVERRIDE~
   LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0bari01 END

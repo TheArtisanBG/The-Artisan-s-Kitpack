@@ -24,63 +24,63 @@ COPY_EXISTING ~CLABFI01.2DA~ ~OVERRIDE/C0DREADN.2DA~
 
  	PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~DREADNOUGHT: The dreadnought is a truly fearsome warrior that eschews finesse in favor of power and stamina, specializing in placing the entirety of their weight into their attacks, capable of felling even the strongest of opponents in a single blow. Despite their ferocity, however, only a fool would mistake the dreadnought's fighting style as simple brute force—rather, learning how to use their strength to its full potential and inflict the most damage possible is a difficult technique that few others can master.
+OUTER_SPRINT kit_description ~无畏战士：无畏战士是令人闻风丧胆的战场杀器，他们摒弃精巧战技，崇尚力量与耐力，专攻全力挥击的战法，仅凭一击便可击倒最强悍的对手。然而尽管他们打法凶悍，若以为这只是单纯的蛮力就大错特错–如何将自身力量发挥到极致、打出最高伤害，是一门极少有人能掌握的高深技艺。
 
-Advantages:
-– Gains a +1 bonus to Strength.
-– Gains the Power Strike, Massive Criticals and Unstoppable passive effects.
+职业优势：
+–力量属性获得+1加值。
+–获得「力量打击」「重击强化」与「势不可挡」三项被动效果。
 
-POWER STRIKE: The dreadnought may only ever make one attack per round outside of using certain abilities. However, they gain twice their Strength modifier for melee damage.
+力量打击：除非使用特定技能，否则无畏战士每回合只能进行一次攻击。但他们的近战伤害可获得两倍力量调整值加值。
 
-MASSIVE CRITICALS: The dreadnought's melee critical hits inflict additional crushing damage, increasing with level, plus their regular Strength modifier, and stun the target for ten seconds on a Save vs. Death at a penalty equal to half of the dreadnought's normal Strength damage modifier, rounded down. Additionally, a dreadnought's critical hits remove all layers of Stoneskin or any equivalent on their target.
-  1st-4th level: +1d6
-  5th-8th level: +1d8
-  9th-12th level: +1d10
-  13th-16th level: +1d12
-  17th-20th level: +2d8
-  21st-24th level: +2d10
-  25th-28th level: +2d12
-  29th-32nd level: +3d10
-  33rd-36th level: +3d12
-  37th level+: +4d10
+重击强化：无畏战士的近战重击会造成额外的钝击伤害，伤害随等级提升，额外加上常规力量调整值；目标需进行死亡豁免，豁免难度等于无畏战士常规力量伤害调整值的一半（向下取整），失败则震慑十秒。此外，无畏战士的重击可移除目标身上所有层数的石肤术及同类效果。
+  1-4级：+1d6
+  5-8级：+1d8
+  9-12级：+1d10
+  13-16级：+1d12
+  17-20级：+2d8
+  21-24级：+2d10
+  25-28级：+2d12
+  29-32级：+3d10
+  33-36级：+3d12
+  37级及以上：+4d10
 
-UNSTOPPABLE: The dreadnought is immune to most movement-affecting effects, including Haste, Slow, Web, Hold Person, Grease and Entangle. However, they may be affected by movement rate effects. Additionally, when the Dreadnought is afflicted with a Stun, they are immediately cured of the effect and gain a +10 bonus to melee damage for the next round and immunity to further stun effects for 6 rounds.
+势不可挡：无畏战士免疫大部分影响移动的效果，包括加速术、减速术、蛛网术、人类定身术、油腻术与纠缠术，但仍会受移动速率类效果影响。此外，当无畏战士遭到震慑时，会立刻解除该效果，并在下一回合获得+10近战伤害加值，同时在6回合内免疫后续震慑效果。
 
-– May use the Heavy Assault Stance ability modal ability.
+–可使用切换型技能「猛攻姿态」。
 
-HEAVY ASSAULT STANCE: The dreadnought reduces their base attacks per round to half per round, but deals an increased +50% slashing, piercing and crushing damage and each attack applies Massive Criticals on the target.
+猛攻姿态：无畏战士将每回合基础攻击次数减半，但挥砍、穿刺与钝击伤害提升+50%，且每次攻击都会对目标触发重击强化效果。
 
-– 3rd level: May use the All-Out Offense ability once per day. Gains additional uses every 8th level.
+–3级：每日可使用一次「全力进攻」技能。每提升8级获得额外一次使用次数。
 
-ALL-OUT OFFENSE: The dreadnought puts their full force behind every attack for the next three rounds, becoming Hasted, gaining a +100% bonus to melee physical damage dealt, and dealing maximum damage per hit for the duration. However, for the same duration, they suffer a -6 penalty to Armor Class, a -50% penalty to resistances to crushing, piercing and slashing damage, and incur a large fatigue penalty after the ability expires. Additionally, the dreadnought is unable to cast spells, use items or use thieving skills for the duration. This ability may not be active at the same time as Hardiness.
+全力进攻：接下来的三回合内，无畏战士将全身力量灌注于每一击，获得加速术效果，近战物理伤害提升+100%，期间每次攻击都造成最大伤害。但同一时间内，其护甲等级承受-6减值，钝击、穿刺与挥砍伤害抗性承受-50%减值，技能结束后还会承受严重的疲劳惩罚。此外，持续期间无畏战士无法施法、使用物品或游荡者技能。该技能无法与「坚韧」同时激活。
 
-– 5th level: May use the Earth-Shattering Strike ability once per day. Gains an additional use at 10th and 15th level.
+–5级：每日可使用一次「裂地一击」技能。10级与15级时各获得一次额外使用次数。
 
-EARTH-SHATTERING STRIKE: The dreadnought unleashes a heavy strike that inflicts damage upon the battlefield itself. For their next attack within three rounds, the dreadnought automatically rolls for a critical hit and applies Massive Critical's effect to secondary targets in a 10-ft. line in front of them and knocking all creatures aside from the attacked target slightly away. Additionally, the impact of the blow leaves a field in a 10-ft. radius for five rounds that halves the Dexterity and movement rate of all creatures except for the dreadnought standing within it.
+裂地一击：无畏战士挥出重击破地，连战场本身都会受其冲击。接下来三回合内的下一次攻击将自动判定为重击，并对自身前方10英尺直线上的次要目标触发重击强化效果，将除主目标外的所有生物略微击退。此外，重击的冲击会在原地留下一片半径10英尺的区域，持续五回合；除无畏战士自身外，站在区域内的所有生物敏捷属性与移动速率都会减半。
 
-– 7th level: The dreadnought gains an additional +2 bonus to melee damage.
-– 9th level: Massive Criticals now inflicts its additional damage and stun to all enemies within a 5-ft. radius centered on the dreadnought.
-– 12th level: Earth-Shattering Strike now applies for the next two attacks.
-– 13th level: The dreadnought gains an additional +2 bonus to melee damage.
-– 15th level: Heavy Assault Stance's damage bonus increases to +75%.
-– 16th level: Earth-Shattering Strike now applies for the next three attacks.
-– 20th level: Heavy Assault Stance's damage bonus increases to +100%.
+–7级：无畏战士额外获得+2近战伤害加值。
+–9级：重击强化的额外伤害与震慑效果现在会作用于无畏战士周围5英尺半径内的所有敌人。
+–12级：裂地一击现在可作用于接下来的两次攻击。
+–13级：无畏战士额外获得+2近战伤害加值。
+–15级：猛攻姿态的伤害加值提升至+75%。
+–16级：裂地一击现在可作用于接下来的三次攻击。
+–20级：猛攻姿态的伤害加值提升至+100%。
 
-– Hit Die: 2d10
+–生命骰：2d10
 
-Disadvantages:
-– -2 penalty to Armor Class.
-– May not dual-class.
-– May not use ranged weapons and incurs a -10 penalty to THAC0 when wielding a melee/ranged weapon in ranged mode.
-– May not attain proficiency in Sword and Shield or Two-Weapon Style.KIT_DISADV_1~
+职业限制：
+–护甲等级承受-2减值。
+–不可兼职。
+–不可使用远程武器；手持近战/远程武器切换为远程模式时，零级命中值承受-10减值。
+–无法获得剑盾风格或双武器风格的熟练等级。KIT_DISADV_1~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Expertise or Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.
-– Does not gain Improved Initiative.~
+–不可使用武器娴熟与快速射击。
+–16级时不会获得全武器专精。
+–不会获得精通先攻。~
 
 END
 
@@ -117,13 +117,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 2
 	
-    mixed         = RESOLVE_STR_REF(~Dreadnought~)
+    mixed         = RESOLVE_STR_REF(~无畏战士~)
 	
-    lower         = RESOLVE_STR_REF(~dreadnought~)
+    lower         = RESOLVE_STR_REF(~无畏战士~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~DREADNOUGHT: The dreadnought is a truly fearsome warrior that eschews finesse in favor of power and stamina, specializing in placing the entirety of their weight into their attacks, capable of felling even the strongest of opponents in a single blow. Despite their ferocity, however, only a fool would mistake the dreadnought's fighting style as simple brute force—rather, learning how to use their strength to its full potential and inflict the most damage possible is a difficult technique that few others can master.~)
+    briefdesc     = RESOLVE_STR_REF(~无畏战士：无畏战士是令人闻风丧胆的战场杀器，他们摒弃精巧战技，崇尚力量与耐力，专攻全力挥击的战法，仅凭一击便可击倒最强悍的对手。然而尽管他们打法凶悍，若以为这只是单纯的蛮力就大错特错–如何将自身力量发挥到极致、打出最高伤害，是一门极少有人能掌握的高深技艺。~)
 	
 	// fallen = 0
 	
@@ -321,7 +321,7 @@ ACTION_PHP_EACH	STR_EXTRA_91_99 AS one => two	BEGIN
 END
 
 COPY_EXISTING ~C0DRED0C.SPL~ OVERRIDE
-SAY NAME1 ~Unstoppable~
+SAY NAME1 ~势不可挡~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/Fighter/Dreadnought/spells/c0dredp1.PRO~ ~Dreadnought Whirlwind~
 ADD_PROJECTILE ~%MOD_FOLDER%/Fighter/Dreadnought/spells/c0dredp2.PRO~ ~Dreadnought Shattering Strike~
@@ -342,8 +342,8 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Heavy Assault Stance~) STR_VAR bam_file = c0dred3i RET c0dred3i = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Earth-Shattering Strike~) STR_VAR bam_file = c0dred5i RET c0dred5i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~猛攻姿态~) STR_VAR bam_file = c0dred3i RET c0dred3i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~裂地一击~) STR_VAR bam_file = c0dred5i RET c0dred5i = icon END
 
 COPY_EXISTING ~C0DREDC.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 match_special = 1 parameter2 = C0HTSTR END
@@ -411,9 +411,9 @@ LPF ALTER_EFFECT INT_VAR match_opcode = 326 parameter2 = STR_EXTRA_91_99 STR_VAR
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 parameter2 = C0HTSTREXTRA_EQUAL STR_VAR match_resource = C0DREDCE END
 
 COPY_EXISTING ~C0DRED3.SPL~ OVERRIDE
-SAY NAME1 ~Heavy Assault Stance~
-SAY UNIDENTIFIED_DESC ~Heavy Assault Stance
-The dreadnought reduces their base attacks per round to half per round, but deals an increased +120% slashing, piercing and crushing damage.~
+SAY NAME1 ~猛攻姿态~
+SAY UNIDENTIFIED_DESC ~猛攻姿态
+无畏战士将每回合基础攻击次数减半，但挥砍、穿刺与钝击伤害提升+120%。~
 
 COPY_EXISTING ~C0DRED3A.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Heavy Assault Stance Active~) END
@@ -423,14 +423,14 @@ COPY_EXISTING ~C0DRED3C.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Heavy Assault Stance Inactive~) END
 
 COPY_EXISTING ~C0DRED4.SPL~ OVERRIDE
-SAY NAME1 ~All-Out Offense~
-SAY UNIDENTIFIED_DESC ~All-Out Offense
-The dreadnought puts their full force behind every attack for the next three rounds, becoming Hasted, gaining a +100% bonus to melee physical damage dealt, and dealing maximum damage per hit for the duration. However, for the same duration, they suffer a -6 penalty to Armor Class, a -50% penalty to resistances to crushing, piercing and slashing damage, and incur a large fatigue penalty after the ability expires. Additionally, the dreadnought is unable to cast spells, use items or use thieving skills for the duration. This ability may not be active at the same time as Hardiness.~
+SAY NAME1 ~全力进攻~
+SAY UNIDENTIFIED_DESC ~全力进攻
+接下来的三回合内，无畏战士将全身力量灌注于每一击，获得加速术效果，近战物理伤害提升+100%，期间每次攻击都造成最大伤害。但同一时间内，其护甲等级承受-6减值，钝击、穿刺与挥砍伤害抗性承受-50%减值，技能结束后还会承受严重的疲劳惩罚。此外，持续期间无畏战士无法施法、使用物品或游荡者技能。该技能无法与「坚韧」同时激活。~
 
 COPY_EXISTING ~C0DRED5.SPL~ OVERRIDE
-SAY NAME1 ~Earth-Shattering Strike~
-SAY UNIDENTIFIED_DESC ~Earth-Shattering Strike
-The dreadnought unleashes a heavy strike that inflicts damage upon the battlefield itself. For their next attack within two rounds, the dreadnought automatically rolls for a critical hit and applies Massive Critical's effect to secondary targets in a 10-ft. line in front of them and knocking all creatures aside from the attacked target slightly away. Additionally, the impact of the blow leaves a field in a 10-ft. radius for five rounds that halves the Dexterity and movement rate of all creatures except for the dreadnought standing within it.~
+SAY NAME1 ~裂地一击~
+SAY UNIDENTIFIED_DESC ~裂地一击
+无畏战士挥出重击破地，连战场本身都会受其冲击。接下来两回合内的下一次攻击将自动判定为重击，并对自身前方10英尺直线上的次要目标触发重击强化效果，将除主目标外的所有生物略微击退。此外，重击的冲击会在原地留下一片半径10英尺的区域，持续五回合；除无畏战士自身外，站在区域内的所有生物敏捷属性与移动速率都会减半。~
 
 COPY_EXISTING ~C0DRED5B.SPL~ OVERRIDE
   LPF ALTER_SPELL_HEADER
@@ -501,12 +501,12 @@ LPF ALTER_EFFECT INT_VAR match_opcode = 326 parameter2 = STR_EXTRA_91_99 STR_VAR
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 parameter2 = C0HTSTREXTRA_EQUAL STR_VAR match_resource = C0DRED5J END
 
 COPY_EXISTING ~C0DREDH1.SPL~ OVERRIDE
-SAY NAME1 ~Focused Attack~
-SAY UNIDENTIFIED_DESC ~The dreadnought gains a +5 bonus to their melee critical hit modifier while All-Out Offense is active.~
+SAY NAME1 ~专注攻击~
+SAY UNIDENTIFIED_DESC ~全力进攻激活期间，无畏战士的近战重击调整值获得+5加值。~
 
 COPY_EXISTING ~C0DREDH2.SPL~ OVERRIDE
-SAY NAME1 ~Juggernaut~
-SAY UNIDENTIFIED_DESC ~The dreadnought becomes a sheer engine of destruction while using All-Out Offense, instantly killing enemies who fall below 60 current hit points with their melee attacks. Additionally, their penalties while All-Out Offense is active is halved to -3 to Armor Class and -25% to resistances. Furthermore, the dreadnought becomes permanently immune to fatigue.~
+SAY NAME1 ~主宰之势~
+SAY UNIDENTIFIED_DESC ~使用全力进攻时，无畏战士将化为纯粹的毁灭机器，近战攻击可直接斩杀生命值低于60点的敌人。此外，全力进攻期间的惩罚减半：护甲等级减值降至-3，伤害抗性减值降至-25%。不仅如此，无畏战士将永久免疫疲劳。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ BEGIN
 

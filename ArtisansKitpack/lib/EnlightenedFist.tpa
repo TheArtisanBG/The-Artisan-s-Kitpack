@@ -25,54 +25,54 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 19
 	
-    mixed         = RESOLVE_STR_REF(~Enlightened Fist~)
+    mixed         = RESOLVE_STR_REF(~启迪之拳~)
 	
-    lower         = RESOLVE_STR_REF(~enlightened fist~)
+    lower         = RESOLVE_STR_REF(~启迪之拳~)
 	
-    help          = RESOLVE_STR_REF(~ENLIGHTENED FIST: Not all monks pursue metaphysical perfection to the exclusion of all other study. Some monks combine a rigorous discipline of academic study with martial arts and development of the body. For these monks, that study includes the practice of magic and the implementation of certain arcane tricks into their unarmed combat styles. These enlightened fists master the use of touch spells, creating new forms of combat where their fists strike with blinding speed, phenomenal power, and magical energy.
+    help          = RESOLVE_STR_REF(~启迪之拳：并非所有武僧都只追求心性圆满而摒弃其他学识。有些武僧将严谨的术业修行与武道、体魄修炼相结合，对他们而言，这份修行还包括研习魔法，并将诸多奥术技艺融入徒手格斗的招式之中。这些“启迪之拳”精通接触类法术，开创出全新的战斗方式——拳锋兼具迅疾之势、千钧之力与魔法威能。
 
-Advantages:
-– THAC0 progresses as a Cleric of the same level.
-– Moves 2 points faster than other characters. Movement rate further improves by 1 every 5 levels.
-– May make 2 unarmed attacks per round. Gains an additional half attack per round at 9th and 18th level.
-– The Enlightened Fist's empowered fists deal crushing damage and deal increase damage with level as follows:
-  Level 1-4: 1d4
-  Level 5-8: 1d6
-  Level 9-12: 1d8
-  Level 13-16: 1d10
-  Level 17-20: 1d12
-  Level 21+: 2d8
-  
-– Ki: The Enlightened Fists's unarmed attacks are empowered with ki, which allows them to be treated as magical weapons of +1 enchantment at 4th level, +2 at 8th level, +3 at 12th level, +4 at 16th level and +5 at 20th level. From 7th level, they are treated as silver weapons.
-– The Enlightened Fist gains a +1 bonus to base Armor Class per point of Wisdom above 12. They gain an additional +1 to AC at 7th level and every 7 levels thereafter.
-– May use Find Traps, Detect Illusion and Hide in Shadows abilities.
-– Flurry of Blows: The Enlightened Fist, while unarmed or wielding daggers, may make an additional attack at the same time as their first attack each round at the cost of a -5 penalty to THAC0. This extra attack is not subject to the attacks per round limit and may be toggled at will. THAC0 penalty decreases to -2 at 13th level.
-– Gains the Arcane Fist passive effect.
+职业优势：
+–零级命中值（THAC0）成长等同于同等级牧师。
+–移动速度比其他角色快2点，每提升5级，移动速度再额外增加1点。
+–每轮可进行2次徒手攻击；9级与18级时，每轮额外增加半次攻击。
+–启迪之拳的双拳蕴含威能，造成粉碎伤害，伤害随等级提升：
+  1-4级：1d4
+  5-8级：1d6
+  9-12级：1d8
+  13-16级：1d10
+  17-20级：1d12
+  21级及以上：2d8
 
-ARCANE FIST: The Enlightened Fist's mastery of touch-based spells allows them to apply the benefits of any arcane spells that use a touch-based weapon, such as Chill Touch or Shocking Grasp, on their regular melee attack.
+–气：启迪之拳的徒手攻击灌注了“气”的力量。4级起视为+1附魔魔法武器，8级+2，12级+3，16级+4，20级+5；7级起，攻击同时视为银质武器。
+–智慧属性每超出12点1点，基础护甲等级（AC）获得+1加值；7级起额外获得+1AC，之后每提升7级再增加1点。
+–可使用查找陷阱、识破幻象、潜行技能。
+–疾风连击：徒手或手持匕首时，每轮首次攻击可额外追加一次攻击，但所有攻击的THAC0承受-5惩罚。该额外攻击不受每轮攻击次数上限限制，可随时开启/关闭。13级时，THAC0惩罚降低至-2。
+–获得被动效果「奥术之拳」。
 
-– May use the Stunning Blow ability once per day. Gains one use at level 1 and an additional use every 6 levels thereafter.
+奥术之拳：启迪之拳精通接触类法术，可将任何以接触为生效方式的奥术法术（例如寒冷之触、电击爪）的效果，附加在自身的常规近战攻击中。
 
-STUNNING BLOW: The Enlightened Fist sacrifices four points of THAC0 and damage for their next successful attack within 10 seconds. When struck, the target must make a Save vs. Death (-1 modifier per point of Wisdom above 14) or be stunned for three rounds.
+–每日可使用「震慑拳」1次。1级时获得1次使用次数，之后每提升6级增加1次。
 
-– 5th level: May use the Fist of Energy ability.
+震慑拳：启迪之拳牺牲4点THAC0与伤害，在接下来10秒内的下一次成功命中时生效。目标受击后必须进行死亡豁免（智慧每高于14点，豁免获得-1调整值），失败则震慑3轮。
 
-FIST OF ENERGY: The Enlightened Fist may choose to expend one of their uses of Stunning Fist to instead deal 1d8 electrical and 1d8 magic fire damage for the next 10 seconds. Damage increases to 2d8 of each damage type at 10th level and 3d8 at 18th level.
+–5级：可使用「能量之拳」能力。
 
-– 10th level: May use Wholeness of Body once per day.
+能量之拳：可选择消耗1次震慑拳的使用次数，改为在接下来10秒内，攻击附带1d8电击伤害与1d8魔法火焰伤害。10级时两种伤害均提升至2d8，18级时提升至3d8。
 
-WHOLENESS OF BODY: The Enlightened Fist instantly heals themself for three hit points per level.
+–10级：每日可使用「通体回春」1次。
 
-– 14th level: Diamond Soul: The Enlightened Fist gains base 10% + 2% Magic Resistance per level up to a maximum of 50% at 20th level.
-– 18th level: Inner Eye: The Enlightened Fist becomes immune to critical hits while unarmed.
+通体回春：立即恢复相当于自身等级×3的生命值。
 
-Disadvantages:
-– May cast one fewer spell per level per day.
-– May only be of any Lawful alignment.
-– May only be humans, half-elves or half-orcs.
-– Suffers a -6 penalty to THAC0 when wielding any weapon.~)
+–14级：金刚魂：获得基础10%魔法抗性，每等级额外提升2%，20级时达到最高50%。
+–18级：内视之眼：徒手状态下免疫重击。
+
+职业限制：
+–每日每等级可施展的法术数量减少1个。
+–仅可选择守序阵营。
+–仅可选人类、半精灵或半兽人种族。
+–手持任何武器时，THAC0承受-6惩罚。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~ENLIGHTENED FIST: Not all monks pursue metaphysical perfection to the exclusion of all other study. Some monks combine a rigorous discipline of academic study with martial arts and development of the body. For these monks, that study includes the practice of magic and the implementation of certain arcane tricks into their unarmed combat styles. These enlightened fists master the use of touch spells, creating new forms of combat where their fists strike with blinding speed, phenomenal power, and magical energy.~)
+    briefdesc     = RESOLVE_STR_REF(~启迪之拳：并非所有武僧都只追求心性圆满而摒弃其他学识。有些武僧将严谨的术业修行与武道、体魄修炼相结合，将奥术技艺融入徒手格斗，以拳锋承载魔法威能。~)
   STR_VAR
     kit_name      = ~C0_ENLIGHTENED_FIST~
 	
@@ -182,8 +182,8 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Arcane Fist~) STR_VAR bam_file = C0EFNSI RET C0EFNSI = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Fist of Energy~) STR_VAR bam_file = C0EFN2I RET C0EFN2I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~奥术之拳~) STR_VAR bam_file = C0EFNSI RET C0EFNSI = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~能量之拳~) STR_VAR bam_file = C0EFN2I RET C0EFN2I = icon END
 
 // WISDOM
 APPEND ~splprot.2da~ ~C0HTWIS 39 -1 1~ UNLESS ~C0HTWIS~
@@ -199,9 +199,9 @@ COPY_EXISTING ~splprot.2da~ ~override~
 	END
 	
 COPY_EXISTING ~C0EFN1.SPL~ OVERRIDE
-SAY NAME1 ~Stunning Blow~
-SAY UNIDENTIFIED_DESC ~Stunning Blow
-The Enlightened Fist sacrifices four points of THAC0 and damage for their next successful attack within 10 seconds. When struck, the target must make a Save vs. Death (-1 modifier per point of Wisdom above 14) or be stunned for three rounds.~
+SAY NAME1 ~震慑拳~
+SAY UNIDENTIFIED_DESC ~震慑拳
+启迪之拳牺牲4点THAC0与伤害，在接下来10秒内的下一次成功命中时生效。目标受击后必须进行死亡豁免（智慧每高于14点，豁免获得-1调整值），失败则震慑3轮。~
 	LPF ALTER_EFFECT
 		INT_VAR
 			match_opcode = 326
@@ -212,9 +212,9 @@ The Enlightened Fist sacrifices four points of THAC0 and damage for their next s
 
 COPY_EXISTING ~C0EFN2.SPL~ OVERRIDE
   LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0EFN2I END
-SAY NAME1 ~Fist of Energy~
-SAY UNIDENTIFIED_DESC ~Fist of Energy
-The Enlightened Fist may choose to expend one of their uses of Stunning Fist to instead deal 1d8 electrical and 1d8 magic fire damage for the next 10 seconds. Damage increases to 2d8 of each damage type at 10th level and 3d8 at 18th level.~
+SAY NAME1 ~能量之拳~
+SAY UNIDENTIFIED_DESC ~能量之拳
+启迪之拳可选择消耗1次震慑拳的使用次数，改为在接下来10秒内，攻击附带1d8电击伤害与1d8魔法火焰伤害。10级时两种伤害均提升至2d8，18级时提升至3d8。~
 
 /// CHILL TOUCH
 

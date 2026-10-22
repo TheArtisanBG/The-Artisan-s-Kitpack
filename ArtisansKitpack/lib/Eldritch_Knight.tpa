@@ -26,35 +26,35 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 7
 	
-    mixed         = RESOLVE_STR_REF(~Eldritch Knight~)
+    mixed         = RESOLVE_STR_REF(~奥法骑士~)
 	
-    lower         = RESOLVE_STR_REF(~eldritch knight~)
+    lower         = RESOLVE_STR_REF(~奥法骑士~)
 	
-    help          = RESOLVE_STR_REF(~ELDRITCH KNIGHT: Studying the martial and arcane arts to equal degree, the eldritch knight is a versatile combatant who can cast fireball on their foes or charge them with sword drawn. The eldritch knight takes pride in their ability to use the right technique for the job: spells against physically tough foes and force of arms against spellcasting enemies. Eldritch knights split their time between physical training to become better soldiers and arcane study to learn more powerful spells. They tend to be driven individuals, because simultaneously perfecting their spellcasting and combat prowess requires immense time and effort.
+    help          = RESOLVE_STR_REF(~奥法骑士：兼修武道与奥术，造诣不相上下，是攻守兼备的多面战士。既能向敌人轰出火球术，也能拔剑冲锋。奥法骑士引以为傲的是，总能因敌制宜：对阵肉身强悍的敌人便用法术，对阵施法者便以兵刃相向。他们将时间平分在体能训练与奥术研习之间，前者让他们成为更优秀的战士，后者让他们学会更强的法术。奥法骑士往往都是坚毅执着之人——要同时精进施法与战技，需要付出海量的时间与心血。
 
-Advantages:
-– May Master (three slots) any melee weapon.
-– Armored Caster: The Eldritch Knight may cast spells while wearing up to studded leather.
-– Combat Casting: The Eldritch Knight is skilled at casting spells in the midst of combat. If there is an enemy within 5-ft. of the Eldritch Knight, they gain an increased casting speed of 2.
-– 3rd level: May use the Eldritch Strike ability once per day. Gains extra uses at levels 6, 9, 12 and 15.
+职业优势：
+–任意近战武器均可修习至宗师级（3点熟练槽）。
+–护甲施法：奥法骑士身着至多钉皮甲时仍可施法。
+–战斗施法：奥法骑士擅长在激战中施法。5尺范围内有敌人时，施法速度+2。
+–3级：每日可使用一次「奥术打击」能力。6、9、12、15级各额外获得一次使用次数。
 
-ELDRITCH STRIKE: The Eldritch Knight empowers <PRO_HISHER> next successful attack to weaken their opponent's resistance to their spells, reducing their Saving Throws by 2 and Magic Resistance by 25% for three rounds. This effect is non-cumulative on the same target.
+奥术打击：奥法骑士为<PRO_HISHER>下一次成功的攻击注入魔力，削弱目标对自身法术的抗性，使其豁免检定-2，魔法抗性降低25%，持续3回合。同一目标身上该效果不可叠加。
 
-– 6th level: Eldritch Strike reduces Saving Throws by 3 and Magic Resistance by 50%.
-– 8th level: May cast Dimension Door twice per day.
+–6级：奥术打击的豁免惩罚提升至-3，魔法抗性降低50%。
+–8级：每日可施展两次「任意门」。
 
-DIMENSION DOOR: This spell transports the caster to any place within the visual range of the caster. When the spell is cast, a dimensional portal opens up in front of the caster, who immediately steps through it. Upon passing through the portal, the caster finds <PRO_HIMHER>self at <PRO_HISHER> chosen destination.
+任意门：本法术将施法者传送至视野范围内的任意地点。施法时，施法者面前会开启一道次元传送门，随即跨步而入。穿过传送门后，<PRO_HIMHER>便会出现在<PRO_HISHER>选定的目的地。
 
-– 10th level: Battle Caster: The Eldritch Knight may cast spells while wearing any armor.
-– 12th level: Eldritch Strike reduces Saving Throws by 4 and Magic Resistance by 100%.
-– 14th level: Improved Combat Casting: Bonus to casting speed increased to 4.
+–10级：战地施法：奥法骑士身着任意护甲时均可施法。
+–12级：奥术打击的豁免惩罚提升至-4，魔法抗性降低100%。
+–14级：精通战斗施法：施法速度加成提升至4。
 
-Disadvantages:
-– May only be proficient in any ranged weapon.
-– -1 penalty to casting speed when outside of Combat Casting range.
-– Learns the first spell of each spell level from 2nd level onwards by one level later than a regular Mage.~)
+职业限制：
+–所有远程武器仅能达到熟练级。
+–超出战斗施法范围时，施法速度受-1惩罚。
+–从2环起，每个法术等级的首个法术，学习进度比普通法师晚1级。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~ELDRITCH KNIGHT: Studying the martial and arcane arts to equal degree, the eldritch knight is a versatile combatant who can cast fireball on their foes or charge them with sword drawn. The eldritch knight takes pride in their ability to use the right technique for the job: spells against physically tough foes and force of arms against spellcasting enemies. Eldritch knights split their time between physical training to become better soldiers and arcane study to learn more powerful spells. They tend to be driven individuals, because simultaneously perfecting their spellcasting and combat prowess requires immense time and effort.~)
+    briefdesc     = RESOLVE_STR_REF(~奥法骑士：兼修武道与奥术，造诣不相上下，是攻守兼备的多面战士。既能向敌人轰出火球术，也能拔剑冲锋。奥法骑士引以为傲的是，总能因敌制宜：对阵肉身强悍的敌人便用法术，对阵施法者便以兵刃相向。他们将时间平分在体能训练与奥术研习之间，前者让他们成为更优秀的战士，后者让他们学会更强的法术。奥法骑士往往都是坚毅执着之人——要同时精进施法与战技，需要付出海量的时间与心血。~)
 	
 	// fallen = 0
 	
@@ -160,7 +160,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Eldritch Strike~) STR_VAR bam_file = c0ek2ic RET c0ek2ic = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~奥术打击~) STR_VAR bam_file = c0ek2ic RET c0ek2ic = icon END
 
 INCLUDE ~%MOD_FOLDER%/effects/combat_casting.tpa~
 
@@ -177,30 +177,30 @@ COPY_EXISTING ~C0EKCC1B.SPL~ OVERRIDE
   LPF CLONE_EFFECT INT_VAR match_opcode = 189 opcode = 177 parameter2 = 9 parameter1 = IDS_OF_SYMBOL (~KIT~ ~C0EK~) STR_VAR resource = C0EKCC3 END
 
 COPY ~%MOD_FOLDER%/MultiKit/Eldritch_Knight/spells/c0eknam.spl~ ~override~
-LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~Eldritch Knight~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~奥法骑士~) END
 
 COPY ~%MOD_FOLDER%/MultiKit/Eldritch_Knight/spells/c0ek2.spl~ ~override~
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0ek2ic END
-SAY NAME1 ~Eldritch Strike~
-SAY UNIDENTIFIED_DESC ~Eldritch Strike
-The Eldritch Knight empowers <PRO_HISHER> next successful attack to weaken their opponent's resistance to their spells, reducing their Saving Throws by 2 and Magic Resistance by 25% for three turns.~
+SAY NAME1 ~奥术打击~
+SAY UNIDENTIFIED_DESC ~奥术打击
+奥法骑士为<PRO_HISHER>下一次成功的攻击注入魔力，削弱目标对自身法术的抗性，使其豁免检定-2，魔法抗性降低25%，持续3回合。~
 
 COPY ~%MOD_FOLDER%/MultiKit/Eldritch_Knight/spells/c0ek2a.spl~ ~override~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Saving Throws and Magic Resistance Lowered~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~豁免与魔法抗性已降低~) END
 
 COPY ~%MOD_FOLDER%/MultiKit/Eldritch_Knight/spells/c0ek3.spl~ ~override~
-SAY NAME1 ~Dimension Door~
-SAY UNIDENTIFIED_DESC ~Dimension Door
-(Alteration)
+SAY NAME1 ~任意门~
+SAY UNIDENTIFIED_DESC ~任意门
+（变化系）
 
-Level: 4
-Range: 0
-Duration: Instant
-Casting Time: 1
-Area of Effect: The caster
-Saving Throw: None
+等级：4
+范围：自身
+持续时间：即时
+施法时间：1
+影响区域：施法者
+豁免检定：无
 
-This spell transports the caster to any place within the visual range of the caster. When the spell is cast, a dimensional portal opens up in front of the caster, who immediately steps through it. Upon passing through the portal, the caster finds <PRO_HIMHER>self at <PRO_HISHER> chosen destination.~
+本法术将施法者传送至视野范围内的任意地点。施法时，施法者面前会开启一道次元传送门，随即跨步而入。穿过传送门后，<PRO_HIMHER>便会出现在<PRO_HISHER>选定的目的地。~
 
 COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
   PATCH_IF (SOURCE_SIZE > 0x71) BEGIN // avoid crashing on empty items

@@ -33,31 +33,31 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 21
 	
-    mixed         = RESOLVE_STR_REF(~Favored Soul~)
+    mixed         = RESOLVE_STR_REF(~天佑者~)
 	
-    lower         = RESOLVE_STR_REF(~Favored Soul~)
+    lower         = RESOLVE_STR_REF(~天佑者~)
 	
-    help          = RESOLVE_STR_REF(~FAVORED SOUL: The favored soul follows the path of the cleric but is able to channel divine power with surprising ease. They are able to perform the same tasks as their fellow divine spellcasters but with virtually no study. Favored souls cast their spells naturally, as much through force of personality as through study. Though this gives them extraordinary divine abilities no normal person could ever match, they see their gift as a call to action, and so in some ways may lag behind their more studious colleagues. Favored souls cast divine spells by means of an innate connection rather than through laborious training and prayer, so their divine connection is natural rather than learned. Mortals who perform great services to deities, devoting their lives and work to the cause of their god or goddess, sometimes become the Chosen of that deity.
-	
-CLASS FEATURES:
+    help          = RESOLVE_STR_REF(~天佑者：天佑者循牧师之道修行，却能以惊人的从容引导神力。他们无需经年研读，便能与其他神圣施法者施展同样的神术。天佑者施法全凭天赋，既靠心性修持，亦靠人格力量。尽管这份天赋赋予了常人无法企及的神圣威能，他们却将其视为行动的感召，因此在某些方面或许不及苦读修行的同僚。天佑者凭借与生俱来的联结施展神圣法术，而非刻苦的训练与祈祷，因此他们与神力的联系是天生的，而非习得的。凡为神祇立下大功、将毕生身心奉献于神祇事业的凡人，有时会成为该神祇的“选民”。
 
-– May wear helmets.
-– May wear any armor.
-– May only use the following weapons: dagger, club, spear, mace, quarterstaff, crossbow, dart, sling, and their Deity's Favored Weapon.
-– May only become Proficient (one slot) in any weapon class.
-– May only become Proficient (one slot) in any fighting style.
-– May cast priest spells.
-– Does not automatically learn all spells of a given level as Clerics do. Instead, Favored Souls select new spells to learn at each level, which they can cast daily without memorization.
-– Does not gain bonus spells per day from high Wisdom.
-– +1 bonus to all Saving Throws. Gains an additional +1 bonus every 5th level.
-– Deity's Favored Weapon: At level 1, the Favored Soul may select a weapon type. They gain the ability to wield and proficiency in the chosen weapon, if not already applicable, and gain further benefits at higher levels.
-– 5th level: The Favored Soul automatically becomes Specialized in their Deity's Favored Weapon.
-– 8th level: The Favored Soul gains 10% resistance to fire, cold, acid and electrical damage. This bonus increases to 20% at 13th level and 30% at 18th level.
-– 14th level: The Favored Soul automatically Masters their Deity's Favored Weapon.
-– 18th level: The Favored Soul becomes immune to non-enchanted weapons and 25% resistance to crushing, slashing, piercing and missile damage.
-– Hit Die: d8~)
+职业特性：
+
+–可佩戴头盔。
+–可穿戴任何护甲。
+–仅可使用以下武器：匕首、棍棒、长矛、钉头锤、手杖、十字弓、飞镖、投石索，以及其神祇偏好武器。
+–任意武器类都仅能习得基础熟练（消耗1个技能点）。
+–任意战斗风格都仅能习得基础熟练（消耗1个技能点）。
+–可施展牧师法术。
+–无法像牧师那样自动习得某等级的所有法术。取而代之的是，天佑者每升一级可选择学习新的法术，无需记忆即可每日施展。
+–无法因高智慧获得每日额外法术。
+–所有豁免检定获得+1加值。每提升5级，额外获得+1加值。
+–神祇偏好武器：1级时，天佑者可选择一种武器类型。若尚未掌握该武器，则获得使用权限与基础熟练，并在更高等级获得进一步加成。
+–5级：自动获得所选神祇偏好武器的武器专精。
+–8级：获得10%火焰、寒冷、强酸、电击伤害抗性。13级时提升至20%，18级时提升至30%。
+–14级：自动获得所选神祇偏好武器的武器精通。
+–18级：免疫非附魔武器攻击，并获得25%粉碎、挥砍、穿刺与远程伤害抗性。
+–生命骰：d8~)
 	
-    briefdesc     = RESOLVE_STR_REF(~FAVORED SOUL: The favored soul follows the path of the cleric but is able to channel divine power with surprising ease. They are able to perform the same tasks as their fellow divine spellcasters but with virtually no study. Favored souls cast their spells naturally, as much through force of personality as through study.~)
+    briefdesc     = RESOLVE_STR_REF(~天佑者：天佑者循牧师之道修行，却能以惊人的从容引导神力。他们无需经年研读，便能与其他神圣施法者施展同样的神术，施法全凭天赋与人格力量。~)
 	
 	// fallen = 0
 	
@@ -261,9 +261,9 @@ COPY ~%MOD_FOLDER%/lua/m_c0fs.lua~      ~override~ // Lua file read by EEex, pro
 
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISW1H01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Bastard Sword~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Bastard Sword Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Bastard Sword Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：巨剑~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：巨剑专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：巨剑精通~) END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYBASTARDSWORD~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1B END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1C END
@@ -287,9 +287,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override~
 
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1B.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISW1H04 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Long Sword~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Long Sword Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Long Sword Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长剑~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长剑专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长剑精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 90 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYLONGSWORD~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -314,9 +314,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1B.spl~
 
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1C.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISW1H07 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Short Sword~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Short Sword Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Short Sword Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：短剑~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：短剑专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：短剑精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 91 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYSHORTSWORD~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -341,9 +341,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1C.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1D.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IAX1H01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Axe~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Axe Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Axe Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：战斧~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：战斧专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：战斧精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 92 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYAXE~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -368,9 +368,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1D.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1E.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISW2H01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Two-handed Sword~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Two-handed Sword Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Two-handed Sword Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：双手剑~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：双手剑专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：双手剑精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 93 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYTWOHANDEDSWORD~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -395,9 +395,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1E.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1F.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISW1H43 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Katana~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Katana Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Katana Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：武士刀~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：武士刀专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：武士刀精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 94 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYKATANA~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -422,9 +422,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1F.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1G.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISW1H20 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Scimitar~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Scimitar Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Scimitar Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：弯刀~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：弯刀专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：弯刀精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 95 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYSCIMITARWAKISASHININJATO~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -449,9 +449,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1G.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1H.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IDAGG01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Dagger~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Dagger Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Dagger Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：匕首~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：匕首专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：匕首精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 96 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYDAGGER~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -476,9 +476,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1H.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1I.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IHAMM01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: War Hammer~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: War Hammer Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: War Hammer Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：战锤~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：战锤专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：战锤精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 97 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYWARHAMMER~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -503,9 +503,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1I.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1J.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IBLUN01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Club~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Club Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Club Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：棍棒~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：棍棒专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：棍棒精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 115 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYCLUB~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -530,9 +530,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1J.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1K.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISPER01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Spear~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Spear Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Spear Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长矛~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长矛专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长矛精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 98 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYSPEAR~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -557,9 +557,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1K.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1L.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IHALB01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Halberd~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Halberd Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Halberd Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：戟~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：戟专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：戟精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 99 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYHALBERD~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -584,9 +584,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1L.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1M.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IBLUN02 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Flail~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Flail Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Flail Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：链枷~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：链枷专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：链枷精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 100 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYFLAILMORNINGSTAR~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -611,9 +611,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1M.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1N.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IBLUN04 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Mace~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Mace Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Mace Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：钉头锤~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：钉头锤专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：钉头锤精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 101 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYMACE~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -638,9 +638,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1N.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1O.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISTAF01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Quarterstaff~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Quarterstaff Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Quarterstaff Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：手杖~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：手杖专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：手杖精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 102 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYQUARTERSTAFF~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -665,9 +665,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1O.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1P.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IXBOW01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Crossbow~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Crossbow Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Crossbow Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：十字弓~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：十字弓专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：十字弓精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 103 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYCROSSBOW~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -692,9 +692,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1P.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1Q.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IBOW01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Longbow~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Longbow Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Longbow Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长弓~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长弓专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：长弓精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 104 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYLONGBOW~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -719,9 +719,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1Q.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1R.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IBOW05 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Shortbow~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Shortbow Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Shortbow Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：短弓~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：短弓专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：短弓精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 105 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYSHORTBOW~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -746,9 +746,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1R.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1S.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = IDART01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Dart~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Dart Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Dart Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：飞镖~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：飞镖专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：飞镖精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 106 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYDART~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -773,9 +773,9 @@ COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1S.spl~
 	
 COPY ~%MOD_FOLDER%/FavoredSoul/spells/C0FS#1A.spl~ ~override/C0FS#1T.spl~
 	LPF ALTER_SPELL_HEADER STR_VAR icon = ISLNG01 END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Sling~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Sling Specialization~) END
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~Deity's Favored Weapon: Sling Mastery~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 0 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：投石索~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 1 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：投石索专精~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 header = 2 parameter1 = RESOLVE_STR_REF (~神祇偏好武器：投石索精通~) END
     LPF ALTER_EFFECT INT_VAR match_opcode = 233 parameter2 = 107 END
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 401 target = 1 timing = 9 special = IDS_OF_SYMBOL (~STATS~ ~C0_PROFICIENCYSLING~) parameter1 = 1 parameter2 = 1 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 318 target = 1 timing = 9 STR_VAR resource = C0FS#1A END
@@ -823,26 +823,27 @@ LPF patch_add_hla STR_VAR 2da_row = ~C0FAV3~ ability = ~GA_C0FS#06~ num_allowed 
 ACTION_IF FILE_EXISTS_IN_GAME ~WISH25.DLG~ THEN BEGIN
 
 COPY_EXISTING ~C0FS#06.spl~ ~override~
-SAY NAME1 ~Miracle~
-SAY UNIDENTIFIED_DESC ~Miracle
-(Evocation)
+SAY NAME1 ~奇迹术~
+SAY UNIDENTIFIED_DESC ~奇迹术
+（塑能系）
 
-Level: Quest
-Sphere: Creation, Thought
-Range: Unlimited
-Duration: Special
-Casting Time: 9
-Area of Effect: Special
-Saving Throw: None
+等级：专属
+领域：创造、思想
+射程：无限制
+持续时间：特殊
+施法时间：9
+影响区域：特殊
 
-This powerful spell allows the favored soul to call upon their deity to intervene in their current situation, bestowing an effect of unpredictable—and not necessarily beneficial—results. At its weakest, the intervention may take the form of a physical token or spell, while particularly fortunate casters may receive powerful boons that can instantly turn the tides in their favor. The favored soul's force of personality allows them to shift the winds of fortune in their favor, and as such, a higher charisma attribute grants improved chances of beneficial effects.
+豁免检定：无
 
-However, excessive use of this spell will have diminishing results. For each time that this spell is cast, the chances of the caster's deity responding in subsequent casts is decreased by 20% until eight hours have passed.
+这道强力法术允许天佑者呼唤其神祇介入当下的处境，降下效果难以预料的干预——且未必总是有益的。效果最弱时，神祇的干预可能只是一件信物或一道法术；而运气极佳的施法者则可能获得强大的赐福，瞬间扭转战局。天佑者的人格力量能为自己撬动命运的天平，因此魅力属性越高，获得有益效果的概率就越大。
 
-This spell may be selected five times.~
+然而，过度使用本法术会导致效果递减。每施展一次本法术，后续施法时神祇回应的概率降低20%，直到八小时后才会重置。
+
+本法术最多可选择5次。~
 
 COPY_EXISTING ~C0FS#06A.spl~ ~override~
-	LPF ALTER_EFFECT INT_VAR match_opcode = 324 special = RESOLVE_STR_REF (~Your deity does not respond to your call.~) STR_VAR match_resource = C0FS#06A END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 324 special = RESOLVE_STR_REF (~你的神祇没有回应你的祈求。~) STR_VAR match_resource = C0FS#06A END
 
 COPY_EXISTING ~C0FS#06A.spl~ ~override/C0FS#06B.spl~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 324 STR_VAR match_resource = C0FS#06A resource = C0FS#06B END

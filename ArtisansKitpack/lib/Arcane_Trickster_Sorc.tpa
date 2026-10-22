@@ -25,47 +25,47 @@ LAF ADD_KIT_EX
 	// Monk = 20
 	// Shaman = 21
     kit_class     = 19
-	
-    mixed         = RESOLVE_STR_REF(~Arcane Trickster~)
-	
-    lower         = RESOLVE_STR_REF(~arcane trickster~)
-	
-    help          = RESOLVE_STR_REF(~ARCANE TRICKSTER: Arcane tricksters combine their knowledge of spells with a taste for intrigue, larceny, or just plain mischief. With an extensive knowledge of arcane arts to complement their skills in thievery, they are among the most adaptable of adventurers.
 
-Advantages:
-– Thieving Skills: Pick Pockets, Find Traps, Open Locks, Hide in Shadows, Move Silently, Detect Illusion.
-– +10% bonus to Pick Pockets and Detect Illusion.
-– Stealth Caster: The arcane trickster's spells cast while hiding or invisible have their casting time reduced to 1, if higher.
-– May backstab for increased damage:
-  Level 1-9: x2
-  Level 10-17: x3
-  Level 18+: x4
-– May use Pilfer Magic once per day.
+    mixed         = RESOLVE_STR_REF(~诡术师~)
 
-PILFER MAGIC: The arcane trickster may steal the magical power of a targeted mage or bard, removing one memorized arcane spell of the highest level from the target and restoring one of the arcane trickster's own.
+    lower         = RESOLVE_STR_REF(~诡术师~)
 
-– 5th level: Gains an extra use of Pilfer Magic.
-– 5th level: May make Impromptu Sneak Attacks.
+    help          = RESOLVE_STR_REF(~诡术师：诡术师兼修法术之道与诡计、盗窃乃至恶作剧之术。他们以精深的奥术学识辅益潜行窃盗之技，是冒险者中适应性最强的群体之一。
 
-IMPROMPTU SNEAK ATTACK: The arcane trickster's backstabs reduce the target's Dexterity and Saving Throws vs. Spells for 1 hour, with effects becoming more powerful as the arcane trickster's Thief level increases. This effect is non-cumulative on the same target.
+职业优势：
+–盗贼技能：扒窃、找寻并解除陷阱、开锁、阴影躲藏、无声行动、侦测幻象。
+–扒窃与侦测幻象技能获得+10%加值。
+–潜行施法：诡术师处于躲藏或隐形状态时施放的法术，若施法时间大于1，则缩短为1。
+–可使用背刺造成额外伤害：
+  1-9级：2倍
+  10-17级：3倍
+  18级及以上：4倍
+–每日可使用一次「窃法」。
 
-  Level 1-8: Dexterity reduced by 4, Saving Throws reduced by 1
-  Level 9-12: Dexterity reduced by 6, Saving Throws reduced by 2
-  Level 13+: Dexterity reduced by 8, Saving Throws reduced by 3
+窃法：诡术师可窃取目标法师或吟游诗人的魔力，移除目标一个已记忆的最高环奥术法术，并回复自身一个已消耗的法术位。
 
-– 9th level: Gains an extra use of Pilfer Magic.
-– 10th level: Pilfer Magic removes one spell protection from the target of up to 5th level.
-– 13th level: Gains an extra use of Pilfer Magic.
-– 15th level: Pilfer Magic removes one spell protection from the target of up to 8th level.
-– 17th level: Gains an extra use of Pilfer Magic.
-– 20th level: Pilfer Magic removes one spell protection from the target of up to 9th level.
+–5级：额外获得一次窃法使用次数。
+–5级：可使用「即兴背刺」。
 
-Disadvantages:
-– May cast one fewer spell per level per day.
-– Must be of non-lawful alignment.~)
-	
-    briefdesc     = RESOLVE_STR_REF(~ARCANE TRICKSTER: Arcane tricksters combine their knowledge of spells with a taste for intrigue, larceny, or just plain mischief. With an extensive knowledge of arcane arts to complement their skills in thievery, they are among the most adaptable of adventurers.~)
-	
+即兴背刺：诡术师的背刺会降低目标的敏捷属性与法术豁免检定，持续1小时；效果强度随诡术师的游荡者等级提升而增强。同一目标身上该效果不可叠加。
+
+  1-8级：敏捷-4，豁免检定-1
+  9-12级：敏捷-6，豁免检定-2
+  13级及以上：敏捷-8，豁免检定-3
+
+–9级：额外获得一次窃法使用次数。
+–10级：窃法可移除目标一个不高于5环的法术防护效果。
+–13级：额外获得一次窃法使用次数。
+–15级：窃法可移除目标一个不高于8环的法术防护效果。
+–17级：额外获得一次窃法使用次数。
+–20级：窃法可移除目标一个不高于9环的法术防护效果。
+
+职业限制：
+–每个法术等级每日可施展的法术数量减少1个。
+–必须为非守序阵营。~)
+
+    briefdesc     = RESOLVE_STR_REF(~诡术师：诡术师兼修法术之道与诡计、盗窃乃至恶作剧之术。他们以精深的奥术学识辅益潜行窃盗之技，是冒险者中适应性最强的群体之一。~)
+
     suppress_warnings     = 1
 	
   STR_VAR
@@ -156,18 +156,18 @@ Disadvantages:
 END
 
 COPY_EXISTING ~C0ATRNAM.SPL~ ~override~
-LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~Arcane Trickster~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~诡术师~) END
 
 COPY_EXISTING ~C0ATR01.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Spell Protections Removed~) END
-SAY NAME1 ~Pilfer Magic~
-SAY UNIDENTIFIED_DESC ~Pilfer Magic
-The arcane trickster may steal the magical power of a targeted mage or bard, removing one memorized arcane spell of the highest level from the target and restoring one of the arcane trickster's own.~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~法术防护已移除~) END
+SAY NAME1 ~窃法~
+SAY UNIDENTIFIED_DESC ~窃法
+诡术师可窃取目标法师或吟游诗人的魔力，移除目标一个已记忆的最高环奥术法术，并回复自身一个已消耗的法术位。~
 COPY_EXISTING ~C0ATR01B.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Spell Pilfered~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~法术已窃取~) END
 
 COPY_EXISTING ~C0ATR02.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Impromptu Sneak Attack~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~即兴背刺~) END
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 

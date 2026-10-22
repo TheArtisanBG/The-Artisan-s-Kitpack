@@ -20,46 +20,46 @@ COPY_EXISTING ~CLABTH01.2DA~ ~OVERRIDE/CLABTH04.2DA~
 
 INCLUDE ~ArtisansKitpack/lib/thac0.tpa~
 
-OUTER_SPRINT kit_description ~SWASHBUCKLER: This rogue is part acrobat, part swords<PRO_MANWOMAN>, and part wit: the epitome of charm and grace. The swashbuckler embodies the concepts of daring and panache. Favoring agility and wit over brute force, the swashbuckler excels both in combat situations and social interactions, making them a versatile character indeed.
+OUTER_SPRINT kit_description ~游荡剑客：这名盗贼身兼杂技艺人、剑客<PRO_MANWOMAN>与智者数重身份，是魅力与优雅的典范。游荡剑客集胆识与气度于一身，崇尚机敏与智慧胜过蛮力，无论战斗场合还是社交周旋都得心应手，是名副其实的多面手。
 
-Advantages:
-– Luck of Heroes: +1 bonus to Saving Throws and all attack and skill rolls.
-– May Specialize (two slots) in any melee weapon available to Thieves.
-– May full Specialize or achieve Mastery in Sword and Shield Style, Single Weapon Style and Two-Weapon Style respectively.
-– THAC0 progression is equivalent to a Fighter of the same level.
-– Gains a +1 bonus to base Armor Class on every even-numbered level up to 20th level.
-– Gains a +1 bonus to Armor Class on 5th level up to 20th level.
-– Gains the Insightful Strike passive effect.
+职业优势：
+-英雄气运：所有豁免检定、攻击检定与技能检定获得+1加值。
+–盗贼可用的任意近战武器技能都可以达到精通（二星）水平。
+-可分别将剑盾式、单武器式、双武器式战斗风格修至专精级或大师级。
+-零级命中值的成长与同等级战士相当。
+-20级前，每偶数等级基础护甲等级+1。
+-5级起获得护甲等级+1加值，效果持续至20级。
+-获得「诡击」被动效果。
 
-INSIGHTFUL STRIKE: The swashbuckler is capable of making finesse attacks that strike at the target's weak points, gaining bonuses to damage and critical hit rate while wielding a melee weapon scaling with their Intelligence and level. The swashbuckler loses this bonus if they equip any armor that disables thieving skills.
+诡击：游荡剑客能施展精妙的攻击直击目标弱点，手持近战武器时，伤害与暴击率获得加值，加值随智力与等级提升。若装备任何会禁用盗贼技能的护甲，则失去该加值。
 
-17 Intelligence: +1 to damage.
-18 Intelligence: +1 to damage.
-19 Intelligence: +1 to critical hit rate.
-5th level, 20 Intelligence: +1 to damage.
-8th level, 21 Intelligence: +1 to critical hit rate.
-11th level, 22 Intelligence: +1 to damage.
-14th level, 23 Intelligence: +1 to critical hit rate.
-17th level, 24 Intelligence: +1 to damage.
-20th level, 25 Intelligence: +1 to critical hit rate.
+智力17：伤害+1
+智力18：伤害+1
+智力19：暴击率+1
+5级且智力20：伤害+1
+8级且智力21：暴击率+1
+11级且智力22：伤害+1
+14级且智力23：暴击率+1
+17级且智力24：伤害+1
+20级且智力25：暴击率+1
 
-– 10th level: Luck of Heroes bonus increases to +2.
-– 18th level: Luck of Heroes bonus increases to +3.
-– 20th level: Gains an additional bonus half attack per round while wielding a melee weapon.
+-10级：英雄气运加值提升至+2。
+-18级：英雄气运加值提升至+3。
+-20级：手持近战武器时，每回合额外获得半次攻击。
 
-Disadvantages:KIT_DISADV_1
-– May only distribute 15 skill points per level among thieving skills.
-– May not use Backstab ability.
-– May not use Stealth ability.
-– May not use Set Traps ability.~
+职业限制：KIT_DISADV_1
+-每等级仅可分配15点技能点至盗贼技能。
+–不能使用背刺能力。
+-无法使用潜行能力。
+-无法使用设置陷阱能力。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~7000~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not Use Magic Devices.
-– May not use Crippling Strike.
-– Does not gain Epic Precision.~
+-无法使用魔法装置。
+-无法使用致残打击。
+-不获得史诗精准。~
 
 END
 
@@ -173,10 +173,10 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~C0SB-HL.SPL~ OVERRIDE
-SAY NAME1 ~Wounding Critical~
-SAY UNIDENTIFIED_DESC ~The swashbuckler is capable of landing precise strikes to weaken their opponent and make them more vulnerable. With this ability, the swashbuckler's critical hits passively reduce the target's Luck modifier for dealing and receiving damage by 2 points for 4 rounds.
-'
-This skill qualifies as learning the Power Attack ability in terms of other prerequisites.~
+SAY NAME1 ~创伤打击~
+SAY UNIDENTIFIED_DESC ~游荡剑客能以精准的打击削弱对手，使其更加脆弱。获得此能力后，游荡剑客的暴击会被动降低目标造成与承受伤害的幸运修正值2点，持续4回合。
+
+在其他能力的前置条件判定中，本技能视同已学会猛力攻击。~
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 

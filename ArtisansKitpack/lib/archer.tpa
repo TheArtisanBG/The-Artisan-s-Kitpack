@@ -1469,70 +1469,68 @@ BUT_ONLY_IF_IT_CHANGES
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~2000~ THEN BEGIN
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~FERALAN~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~ARCHER: The Archer is the epitome of skill with ranged weapons—the ultimate marks<PRO_MANWOMAN>, able to make almost any shot, no matter how difficult. Whether as a harrier launching a one-man fusillade of arrows or a sharpshooter hiding in the shadows waiting for the perfect shot, the archer is a master of all forms of marksmanship. To become so skilled with their art, the Archer has had to sacrifice some of <PRO_HISHER> proficiency with melee weapons and armor.
+STRING_SET_EVALUATE kit_strref ~射手：射手是远程武器技艺的极致化身——顶尖的神射手，无论难度多高都能精准命中。无论是作为游骑兵独自倾泻箭雨，还是潜伏于暗影中等待最佳时机的狙击手，射手精通各类射术。为了练就这般技艺，射手牺牲了部分近战武器与护甲的熟练度。
 
-Advantages:
-– +1 to hit rolls with ranged weapons. Gains an additional point at every 3rd level.
-– May achieve Grand Mastery (5 slots) in longbows, shortbows and crossbows.
-– Farsighted: The archer's visual range is slightly greater than normal, and is further increased if stealthed or invisible.
-– May use the Rapid Shot modal ability.
+职业优势：
+–远程武器命中掷骰+1，每提升3级再额外+1。
+–可将长弓、短弓与十字弓修习至宗师级（5点熟练槽）。
+–远视：射手的视野范围略高于常人，处于潜行或隐形状态时会进一步提升。
+–可使用「速射」攻击模式。
 
-RAPID SHOT: The archer may make an additional attack per round at a -4 penalty to hit.
+速射：射手每轮可额外进行一次攻击，但命中受-4惩罚。
+–4级：每日可使用一次「精准射击」能力，每提升4级额外获得一次使用次数。
 
-– 4th level: May use the Called Shot ability once per day. Gains an additional use at every 4th level.
+精准射击：射手瞄准敌人的肢体与要害射出致残一击。接下来10秒内所有成功的远程攻击，除造成正常伤害外，还将根据射手等级叠加以下非累积效果，每提升一级效果持续1轮：
+ 4级：目标的敏捷属性减半
+ 8级：目标的移动速度降至25%
+ 12级：目标每轮损失一次攻击
+ 16级：每次命中额外造成2点无视护甲远程伤害。
 
-CALLED SHOT: The archer makes a debilitating shot targeted at their opponent's limbs and vitals. All successful ranged attacks within the next 10 seconds have the following non-cumulative effects besides normal damage, lasting for one round per upgrade, according to the level of the Archer:
- 4th level: Target's dexterity stat is halved
- 8th level: Target's movement rate is reduced to 25%
- 12th level: Target loses one attack per round
- 16th level: +2 bonus unmitigated missile damage on each hit.
+–7级：多重射击：射手每轮使用弓或十字弓的第一次攻击会射出两发投射物而非一发，每发箭矢单独进行命中判定。
+–12级：精通速射：速射状态下的命中惩罚降低至-2。
+–13级：多重射击现在适用于每轮的前两次攻击。
+–16级：狙击：潜行或隐形状态下，射手的远程攻击必定暴击。
+–20级：多重射击现在适用于每轮的前三次攻击。
 
-– 7th level: Manyshot: The first attack the archer makes each round with a bow or crossbow launches two projectiles instead of one, with each arrow rolling individually to hit.
-– 12th level: Improved Rapid Shot: The archer’s penalty to hit while Rapid Shot is active is reduced to -2.
-– 13th level: Manyshot now applies for the first two attacks of each round.
-– 16th level: Sniper: The archer's ranged attacks while stealthed or invisible are guaranteed critical hits.
-– 20th level: Manyshot now applies for the first three attacks of each round.
-
-Disadvantages:
-– Hit Die: d8, does not gain Toughness bonus
-– THAC0 penalty of -3 while wielding melee weapons.
-– May only become Proficient (one slot) with melee weapons.
-– May not gain Proficiency in Two-Weapon Style.
-– May not Set Traps.
-– May not use the Charm Animal ability.~
+职业限制：
+–生命骰：d8，不获得强健加值
+–手持近战武器时，零级命中值（THAC0）受-3惩罚。
+–近战武器仅能达到熟练级（1点熟练槽）。
+–无法获得双武器风格熟练。
+–无法设置陷阱。
+–无法使用「魅惑动物」能力。~
 END
 ACTION_IF NOT MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~2000~ THEN BEGIN
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~FERALAN~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~ARCHER: The Archer is the epitome of skill with ranged weapons—the ultimate marks<PRO_MANWOMAN>, able to make almost any shot, no matter how difficult. Whether as a harrier launching a one-man fusillade of arrows or a sharpshooter hiding in the shadows waiting for the perfect shot, the archer is a master of all forms of marksmanship. To become so skilled with their art, the Archer has had to sacrifice some of <PRO_HISHER> proficiency with melee weapons and armor.
+STRING_SET_EVALUATE kit_strref ~射手：射手是远程武器技艺的极致化身——顶尖的神射手，无论难度多高都能精准命中。无论是作为游骑兵独自倾泻箭雨，还是潜伏于暗影中等待最佳时机的狙击手，射手精通各类射术。为了练就这般技艺，射手牺牲了部分近战武器与护甲的熟练度。
 
-Advantages:
-– +1 to hit rolls with ranged weapons. Gains an additional point at every 3rd level.
-– May achieve Grand Mastery (5 slots) in longbows, shortbows and crossbows.
-– Farsighted: The archer's visual range is slightly greater than normal, and is further increased if stealthed or invisible.
-– May use the Rapid Shot modal ability.
+职业优势：
+–远程武器命中掷骰+1，每提升3级再额外+1。
+–可将长弓、短弓与十字弓修习至宗师级（5点熟练槽）。
+–远视：射手的视野范围略高于常人，处于潜行或隐形状态时会进一步提升。
+–可使用「速射」攻击模式。
 
-RAPID SHOT: The archer may make an additional attack per round at a -4 penalty to hit.
+速射：射手每轮可额外进行一次攻击，但命中受-4惩罚。
+–4级：每日可使用一次「精准射击」能力，每提升4级额外获得一次使用次数。
 
-– 4th level: May use the Called Shot ability once per day. Gains an additional use at every 4th level.
+精准射击：射手瞄准敌人的肢体与要害射出致残一击。接下来10秒内所有成功的远程攻击，除造成正常伤害外，还将根据射手等级叠加以下非累积效果，每提升一级效果持续1轮：
+ 4级：目标的敏捷属性减半
+ 8级：目标的移动速度降至25%
+ 12级：目标每轮损失一次攻击
+ 16级：每次命中额外造成2点无视护甲远程伤害。
 
-CALLED SHOT: The archer makes a debilitating shot targeted at their opponent's limbs and vitals. All successful ranged attacks within the next 10 seconds have the following non-cumulative effects besides normal damage, lasting for one round per upgrade, according to the level of the Archer:
- 4th level: Target's dexterity stat is halved
- 8th level: Target's movement rate is reduced to 25%
- 12th level: Target loses one attack per round
- 16th level: +2 bonus unmitigated missile damage on each hit.
+–7级：多重射击：射手每轮使用弓或十字弓的第一次攻击会射出两发投射物而非一发，每发箭矢单独进行命中判定。
+–12级：精通速射：速射状态下的命中惩罚降低至-2。
+–13级：多重射击现在适用于每轮的前两次攻击。
+–16级：狙击：潜行或隐形状态下，射手的远程攻击必定暴击。
+–20级：多重射击现在适用于每轮的前三次攻击。
 
-– 7th level: Manyshot: The first attack the archer makes each round with a bow or crossbow launches two projectiles instead of one, with each arrow rolling individually to hit.
-– 12th level: Improved Rapid Shot: The archer’s penalty to hit while Rapid Shot is active is reduced to -2.
-– 13th level: Manyshot now applies for the first two attacks of each round.
-– 16th level: Sniper: The archer's ranged attacks while stealthed or invisible are guaranteed critical hits.
-– 20th level: Manyshot now applies for the first three attacks of each round.
-
-Disadvantages:
-– Hit Die: d8
-– THAC0 penalty of -3 while wielding melee weapons.
-– May only become Proficient (one slot) with melee weapons.
-– May not gain Proficiency in Two-Weapon Style.
-– May not use the Charm Animal ability.~
+职业限制：
+–生命骰：d8
+–手持近战武器时，零级命中值（THAC0）受-3惩罚。
+–近战武器仅能达到熟练级（1点熟练槽）。
+–无法获得双武器风格熟练。
+–无法使用「魅惑动物」能力。~
 END
 	
 // ARCHER - HIT DIE
@@ -1611,20 +1609,20 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 END
 
 COPY_EXISTING SPCL121.SPL OVERRIDE
-SAY NAME1 ~Called Shot~
-SAY UNIDENTIFIED_DESC ~Called Shot
-The archer makes a debilitating shot targeted at their opponent's limbs and vitals. All successful ranged attacks within the next 10 seconds have the following non-cumulative effects besides normal damage, lasting for 1 turn, according to the level of the Archer:
- 4th level: Target's dexterity stat is halved
- 8th level: Target's movement rate is reduced to 25%
- 12th level: Target loses one attack per round
- 16th level: +2 bonus unmitigated missile damage on each hit.~
+SAY NAME1 ~精准射击~
+SAY UNIDENTIFIED_DESC ~精准射击
+射手瞄准敌人的肢体与要害射出致残一击。接下来10秒内所有成功的远程攻击，除造成正常伤害外，还将根据射手等级叠加以下非累积效果，效果持续1轮：
+ 4级：目标的敏捷属性减半
+ 8级：目标的移动速度降至25%
+ 12级：目标每轮损失一次攻击
+ 16级：每次命中额外造成2点无视护甲远程伤害。~
 
 INCLUDE ~%MOD_FOLDER%/spells/rapidshot.tpa~
 
 COPY_EXISTING C0ARCH01.SPL OVERRIDE
-SAY NAME1 ~Greater Called Shot~
-SAY UNIDENTIFIED_DESC ~Greater Called Shot
-All successful ranged attacks within the next 10 seconds have all the cumulative effects of a normal Called Shot. Additionally, each attack also deals maximum damage and stuns the target for 3 seconds.~
+SAY NAME1 ~强效精准射击~
+SAY UNIDENTIFIED_DESC ~强效精准射击
+接下来10秒内所有成功的远程攻击，附带普通精准射击的全部效果。此外，每次攻击还将造成最大伤害，并将目标眩晕3秒。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~2000~ THEN BEGIN
 

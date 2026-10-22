@@ -9,31 +9,31 @@ COPY_EXISTING ~CLABDR02.2DA~ ~OVERRIDE~
   PRETTY_PRINT_2DA
 END
 
-OUTER_SPRINT kit_description ~TOTEMIC DRUID: This Druid closely identifies with a particular animal, an animal that <PRO_HESHE> feels represents <PRO_HISHER> spirit. This grants <PRO_HIMHER> a special connection to the animal kingdom, and <PRO_HESHE> is able to call upon their spirits to aid <PRO_HIMHER>.
+OUTER_SPRINT kit_description ~图腾德鲁伊：这名德鲁伊与某一特定动物深度共鸣，<PRO_HESHE>认为这只动物正是<PRO_HISHER>灵魂的化身。这份羁绊赋予<PRO_HIMHER>与动物王国的特殊联结，<PRO_HESHE>能够呼唤动物之灵前来助<PRO_HIMHER>一臂之力。
 
-Advantages:
-– May use the Totemic Guardian special ability.
+职业优势：
+-可使用特殊能力「图腾守护灵」。
 
-TOTEMIC GUARDIAN: The totemic druid is persistently guarded by an animal spirit. The spirit manifests when the totemic druid enters battle and remains until the battle ends. The spirit animal can be controlled, increases in power as the summoner gains in druid levels. The totemic druid may select a spirit animal to be guarded by once per day, with each providing different bonuses to all druids, shamans, rangers and barbarians within a 15-ft. radius of them.
-  BEAR'S ENDURANCE: The summoner gains a +10% bonus to physical resistances and a +1 bonus to Saving Throws vs. Death.
-  WOLF'S TENACITY: The summoner gains a +10% bonus to all damage dealt, with an additional +1 bonus to melee damage.
-  LION'S COURAGE: The summoner gains a +1 bonus to THAC0, Morale and Saving Throw vs. Spells.
-  SNAKE'S SWIFTNESS: The summoner gains a +1 bonus to Armor Class, Movement Rate and Saving Throws vs. Breath.
+图腾守护灵：图腾德鲁伊始终受一只动物灵的守护。进入战斗时灵体便会显现，战斗结束后方才散去。灵体可被操控，威力随召唤者的德鲁伊等级提升。图腾德鲁伊每日可选择一只守护灵，每种灵体都会为15尺范围内所有德鲁伊、萨满、游侠与野蛮人提供不同的加值。
+  熊之坚韧：召唤者物理抗性+10%，死亡豁免+1。
+  狼之骁勇：召唤者造成的所有伤害+10%，近战伤害额外+1。
+  狮之勇气：召唤者零级命中值、士气与法术豁免+1。
+  蛇之迅捷：召唤者护甲等级、移动速度与呼吸豁免+1。
 
-– 5th level: May use the Spirit's Protection ability while a spirit animal is present. This ability is cast from the spirit animal's special abilities rather than the summoner's own.
+-5级：守护灵在场时，可使用「灵护」能力。该能力由守护灵的特殊能力栏施放，而非召唤者自身。
 
-SPIRIT'S PROTECTION: The totemic druid may command their spirit animal to bestow their power upon a targeted creature for one turn. The spirit animal disappears for the duration and grants their bonuses to the target regardless of their class. Once the effect expires, the spirit animal manifests at the summoner's side once more.
+灵护：图腾德鲁伊可命令守护灵将自身力量灌注给指定目标，持续1回合。期间守护灵暂时隐去，无论目标职业为何，均可获得守护灵的全部加值。效果结束后，守护灵会重新现身于召唤者身侧。
 
-– 8th level: Totemic Guardian bonuses increase to +15%/+2 for their respective effects.
-– 10th level: Spirit's Protection heals the target for 50% of their maximum hit points.
-– 12th level: Spirit's Protection removes negative mind-affecting effects from the target and grants them protection from similar effects for the duration.
-– 14th level: Totemic Guardian bonuses increase to +20%/+3 for their respective effects.
-– 14th level: Spirit's Protection may now be cast on dead allies, restoring them to life and then providing their usual bonuses. However, the spirit animal expends its energy to do so. Additionally, so long as the totemic druid is being guarded by a spirit, they are protected from instant death effects as per a Death Ward spell. If they would take lethal damage while under this protection, the spirit animal expends its energies to protect them from the attack while applying Spirit's Protection on them.
-– 15th level: Totemic Guardian bonuses increase to +25%/+4 for their respective effects. Spirit's Protection heals the target for 100% of their maximum hit points.
+-8级：图腾守护灵的各项效果提升至+15%/+2。
+-10级：灵护可为目标恢复相当于最大生命值50%的生命。
+-12级：灵护可移除目标身上的负面心灵效果，并在持续期间为目标提供同类效果免疫。
+-14级：图腾守护灵的各项效果提升至+20%/+3。
+-14级：灵护可对已死亡的友军施放，将其复活后再提供常规加值。但守护灵会为此耗尽力量。此外，只要图腾德鲁伊正受守护灵庇护，即可获得「死亡护盾」法术的效果，免疫即死效果。若在此保护下将受到致命伤害，守护灵会耗尽力量挡下攻击，并对其施放灵护。
+-15级：图腾守护灵的各项效果提升至+25%/+4。灵护可为目标恢复相当于最大生命值100%的生命。
 
-Disadvantages:
-– Cannot use shapeshift.
-– If the totemic druid's spirit animal is defeated in battle or uses its energies to revive an ally or protect its summoner from death, it will be unable to manifest unless a full turn passes and the battle is still ongoing. If this occurs, the totemic druid suffers a -2 penalty to casting speed and a 25% chance to miscast spells for one turn.~
+职业限制：
+-无法使用变形术。
+-若图腾德鲁伊的守护灵在战斗中被击溃，或为复活友军、保护召唤者免于死亡而耗尽力量，则需经过一整回合且战斗仍在进行时才能重新显现。发生这种情况时，图腾德鲁伊施法速度受-2惩罚，且一回合内有25%几率法术失手。~
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~TOTEMIC_DRUID~ RET kit_strref END
 STRING_SET_EVALUATE kit_strref ~%kit_description%~
@@ -55,10 +55,10 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Spirit: Bear~) STR_VAR bam_file = C0D2_I1 RET C0D2_I1 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Spirit: Wolf~) STR_VAR bam_file = C0D2_I2 RET C0D2_I2 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Spirit: Lion~) STR_VAR bam_file = C0D2_I3 RET C0D2_I3 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Spirit: Snake~) STR_VAR bam_file = C0D2_I4 RET C0D2_I4 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~灵：熊~) STR_VAR bam_file = C0D2_I1 RET C0D2_I1 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~灵：狼~) STR_VAR bam_file = C0D2_I2 RET C0D2_I2 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~灵：狮~) STR_VAR bam_file = C0D2_I3 RET C0D2_I3 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~灵：蛇~) STR_VAR bam_file = C0D2_I4 RET C0D2_I4 = icon END
 
 ADD_PROJECTILE ~%MOD_FOLDER%/Druid/TotemicDruid/projectile/C0D2_P1.PRO~ ~C0 Totemic Projectile One Target~
 
@@ -77,12 +77,12 @@ COPY_EXISTING ~C0D2_SA3.SPL~ OVERRIDE
 END
 
 COPY_EXISTING ~C0D2_A0.SPL~ ~OVERRIDE~
-SAY NAME1 ~Totemic Guardian~
-SAY UNIDENTIFIED_DESC ~The totemic druid is persistently guarded by an animal spirit, which manifests when an enemy is within range of the totemic druid and remains until the battle ends. The spirit animal can be controlled, increases in power as the summoner gains in druid levels, and provides the totemic druid with persistent bonuses unless the spirit is destroyed in battle. The totemic druid may select a spirit animal to be guarded by once per day, with each providing different bonuses.
-  BEAR'S ENDURANCE: The summoner gains a +10% bonus to physical resistances and a +1 bonus to Saving Throws vs. Death.
-  WOLF'S TENACITY: The summoner gains a +10% bonus to all damage dealt, with an additional +1 bonus to melee damage.
-  LION'S COURAGE: The summoner gains a +1 bonus to THAC0, Morale and Saving Throw vs. Spells.
-  SNAKE'S SWIFTNESS: The summoner gains a +1 bonus to Armor Class, Movement Rate and Saving Throws vs. Breath.~
+SAY NAME1 ~图腾守护灵~
+SAY UNIDENTIFIED_DESC ~图腾德鲁伊始终受一只动物灵的守护，当范围内出现敌人时灵体便会显现，战斗结束后方才散去。灵体可被操控，威力随召唤者的德鲁伊等级提升；除非灵体在战斗中被摧毁，否则会持续为图腾德鲁伊提供常驻加值。图腾德鲁伊每日可选择一只守护灵，每种灵体提供的加值各不相同。
+  熊之坚韧：召唤者物理抗性+10%，死亡豁免+1。
+  狼之骁勇：召唤者造成的所有伤害+10%，近战伤害额外+1。
+  狮之勇气：召唤者零级命中值、士气与法术豁免+1。
+  蛇之迅捷：召唤者护甲等级、移动速度与呼吸豁免+1。~
 
 COPY_EXISTING ~C0D2_A0A.SPL~ ~OVERRIDE/C0D2_A0B.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPIRITW END
@@ -242,14 +242,14 @@ COPY_EXISTING ~C0D2_SA7.EFF~ ~OVERRIDE/C0D2_SD7.EFF~
 WRITE_ASCII 0x30 ~C0D2_SD4~
 
 COPY_EXISTING ~C0D2_SP1.SPL~ ~OVERRIDE~
-SAY NAME1 ~Spirit's Protection~
-SAY UNIDENTIFIED_DESC ~The totemic druid may command their spirit animal to bestow their power upon a targeted creature for one turn. The spirit animal disappears for the duration and grants their bonuses to the target regardless of their class. Once the effect expires, the spirit animal manifests at the summoner's side once more.
+SAY NAME1 ~灵护~
+SAY UNIDENTIFIED_DESC ~图腾德鲁伊可命令守护灵将自身力量灌注给指定目标，持续1回合。期间守护灵暂时隐去，无论目标职业为何，均可获得守护灵的全部加值。效果结束后，守护灵会重新现身于召唤者身侧。
 
-10th level: Spirit's Protection heals the ally for 50% of their maximum hit points.
+10级：灵护可为友军恢复相当于最大生命值50%的生命。
 
-12th level: Spirit's Protection may now be cast on dead allies, restoring them to life and then providing their usual bonuses. However, the spirit animal will be unable to manifest itself again until eight hours have passed. Additionally, so long as the totemic druid is being guarded by a spirit, they are protected from instant death effects as per a Death Ward spell. If they would take lethal damage while under this protection, the spirit animal expends its energies to protect them from the attack and heal them for 30% of their maximum hit points.
+12级：灵护可对已死亡的友军施放，将其复活后再提供常规加值。但守护灵在8小时内将无法再次显现。此外，只要图腾德鲁伊正受守护灵庇护，即可获得「死亡护盾」法术的效果，免疫即死效果。若在此保护下将受到致命伤害，守护灵会耗尽力量挡下攻击，并为其恢复30%最大生命值。
 
-14th level: Spirit's Protection may now be cast on dead allies, restoring them to life and then providing their usual bonuses. However, the spirit animal will be unable to manifest itself again until eight hours have passed. Additionally, so long as the totemic druid is being guarded by a spirit, they are protected from instant death effects as per a Death Ward spell. If they would take lethal damage while under this protection, the spirit animal expends its energies to protect them from the attack and heal them for 30% of their maximum hit points.~
+14级：灵护可对已死亡的友军施放，将其复活后再提供常规加值。但守护灵在8小时内将无法再次显现。此外，只要图腾德鲁伊正受守护灵庇护，即可获得「死亡护盾」法术的效果，免疫即死效果。若在此保护下将受到致命伤害，守护灵会耗尽力量挡下攻击，并为其恢复30%最大生命值。~
 
 COPY_EXISTING ~C0D2_SP1.SPL~ ~OVERRIDE/C0D2_SP2.SPL~
 LPF ALTER_EFFECT STR_VAR match_opcode = 318 match_resource = C0D2_SP1 resource = C0D2_SP2 END
@@ -262,16 +262,16 @@ LPF ALTER_EFFECT STR_VAR match_opcode = 318 match_resource = C0D2_SP1 resource =
 LPF ALTER_EFFECT STR_VAR match_resource = C0D2_SA4 resource = C0D2_SD4 END
 
 COPY_EXISTING ~C0D2_1Z.SPL~ ~OVERRIDE~
-SAY NAME1 ~Command: Spirit's Protection~
-SAY UNIDENTIFIED_DESC ~This ability allows the Totemic Druid to directly bestow their spirit animal's blessings upon the targeted ally. It may only be used out of combat, when the spirit animal has not manifested.
+SAY NAME1 ~号令：灵护~
+SAY UNIDENTIFIED_DESC ~此能力允许图腾德鲁伊直接将守护灵的祝福赐予指定友军。仅可在战斗外、守护灵尚未显现时使用。
 
-The totemic druid may command their spirit animal to bestow their power upon a targeted creature for one turn. The spirit animal disappears for the duration and grants their bonuses to the target regardless of their class. Once the effect expires, the spirit animal manifests at the summoner's side once more.
+图腾德鲁伊可命令守护灵将自身力量灌注给指定目标，持续1回合。期间守护灵暂时隐去，无论目标职业为何，均可获得守护灵的全部加值。效果结束后，守护灵会重新现身于召唤者身侧。
 
-10th level: Spirit's Protection heals the ally for 50% of their maximum hit points.
+10级：灵护可为友军恢复相当于最大生命值50%的生命。
 
-12th level: Spirit's Protection may now be cast on dead allies, restoring them to life and then providing their usual bonuses. However, the spirit animal will be unable to manifest itself again until eight hours have passed. Additionally, so long as the totemic druid is being guarded by a spirit, they are protected from instant death effects as per a Death Ward spell. If they would take lethal damage while under this protection, the spirit animal expends its energies to protect them from the attack and heal them for 30% of their maximum hit points.
+12级：灵护可对已死亡的友军施放，将其复活后再提供常规加值。但守护灵在8小时内将无法再次显现。此外，只要图腾德鲁伊正受守护灵庇护，即可获得「死亡护盾」法术的效果，免疫即死效果。若在此保护下将受到致命伤害，守护灵会耗尽力量挡下攻击，并为其恢复30%最大生命值。
 
-14th level: Spirit's Protection may now be cast on dead allies, restoring them to life and then providing their usual bonuses. However, the spirit animal will be unable to manifest itself again until eight hours have passed. Additionally, so long as the totemic druid is being guarded by a spirit, they are protected from instant death effects as per a Death Ward spell. If they would take lethal damage while under this protection, the spirit animal expends its energies to protect them from the attack and heal them for 30% of their maximum hit points.~
+14级：灵护可对已死亡的友军施放，将其复活后再提供常规加值。但守护灵在8小时内将无法再次显现。此外，只要图腾德鲁伊正受守护灵庇护，即可获得「死亡护盾」法术的效果，免疫即死效果。若在此保护下将受到致命伤害，守护灵会耗尽力量挡下攻击，并为其恢复30%最大生命值。~
 
 COPY_EXISTING ~C0D2_1Z.SPL~ ~OVERRIDE/C0D2_2Z.SPL~
 LPF ALTER_EFFECT STR_VAR match_resource = C0D2_SA4 resource = C0D2_SB4 END
@@ -281,7 +281,7 @@ COPY_EXISTING ~C0D2_1Z.SPL~ ~OVERRIDE/C0D2_4Z.SPL~
 LPF ALTER_EFFECT STR_VAR match_resource = C0D2_SA4 resource = C0D2_SD4 END
 
 COPY_EXISTING ~C0D2_SPX.SPL~ OVERRIDE
-  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Totemic spirit slain—casting speed penalty and spell failure~) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~图腾灵已殒——施法速度惩罚与法术失手~) END
 
 ACTION_FOR_EACH baldur_script IN baldur bdbaldur baldur25 BEGIN
 ACTION_IF FILE_EXISTS_IN_GAME ~%baldur_script%.bcs~ BEGIN
@@ -292,26 +292,26 @@ END
 COMPILE ~%MOD_FOLDER%/Druid/TotemicDruid/scripts/C0D2_SM.BAF~
 
 COPY ~%MOD_FOLDER%/Druid/TotemicDruid/creatures/C0D2_S1.cre~ ~OVERRIDE~
-SAY NAME1 ~Spirit Bear~
-SAY NAME2 ~Spirit Bear~
+SAY NAME1 ~灵熊~
+SAY NAME2 ~灵熊~
   WRITE_ASCII SCRIPT_OVERRIDE ~C0D2_SM~ #8 // override
   WRITE_ASCII DEATHVAR ~C0D2_SM~ #8 // death variable
 
 COPY ~%MOD_FOLDER%/Druid/TotemicDruid/creatures/C0D2_S2.cre~ ~OVERRIDE~
-SAY NAME1 ~Spirit Wolf~
-SAY NAME2 ~Spirit Wolf~
+SAY NAME1 ~灵狼~
+SAY NAME2 ~灵狼~
   WRITE_ASCII SCRIPT_OVERRIDE ~C0D2_SM~ #8 // override
   WRITE_ASCII DEATHVAR ~C0D2_SM~ #8 // death variable
 
 COPY ~%MOD_FOLDER%/Druid/TotemicDruid/creatures/C0D2_S3.cre~ ~OVERRIDE~
-SAY NAME1 ~Spirit Lion~
-SAY NAME2 ~Spirit Lion~
+SAY NAME1 ~灵狮~
+SAY NAME2 ~灵狮~
   WRITE_ASCII SCRIPT_OVERRIDE ~C0D2_SM~ #8 // override
   WRITE_ASCII DEATHVAR ~C0D2_SM~ #8 // death variable
 
 COPY ~%MOD_FOLDER%/Druid/TotemicDruid/creatures/C0D2_S4.cre~ ~OVERRIDE~
-SAY NAME1 ~Spirit Snake~
-SAY NAME2 ~Spirit Snake~
+SAY NAME1 ~灵蛇~
+SAY NAME2 ~灵蛇~
   WRITE_ASCII SCRIPT_OVERRIDE ~C0D2_SM~ #8 // override
   WRITE_ASCII DEATHVAR ~C0D2_SM~ #8 // death variable
 
@@ -332,9 +332,9 @@ LPF patch_add_hla STR_VAR 2da_row = ~LUC0D2_1~ ability = ~AP_C0D2_H1~ num_allowe
 LPF patch_add_hla STR_VAR 2da_row = ~LUC0D2_2~ ability = ~AP_C0D2_H2~ num_allowed = 1 END	
 
 COPY_EXISTING ~C0D2_H1.SPL~ ~OVERRIDE~
-SAY NAME1 ~Empower Spirit: Might~
-SAY UNIDENTIFIED_DESC ~After selecting this ability, the totemic druid's spirit animal gains the ability to use the abilities Greater Whirlwind, Power Attack and Critical Strike once per manifestation.~
+SAY NAME1 ~赋能灵魄：勇武~
+SAY UNIDENTIFIED_DESC ~选择此能力后，图腾德鲁伊的守护灵每次显现时，均可使用一次「旋风斩」、「猛力攻击」与「致命一击」能力。~
 
 COPY_EXISTING ~C0D2_H2.SPL~ ~OVERRIDE~
-SAY NAME1 ~Empower Spirit: Fortitude~
-SAY UNIDENTIFIED_DESC ~After selecting this ability, the totemic druid's spirit animal gains the ability to use the abilities Hardiness, Resist Magic and Greater Evasion once per manifestation.~
+SAY NAME1 ~赋能灵魄：坚韧~
+SAY UNIDENTIFIED_DESC ~选择此能力后，图腾德鲁伊的守护灵每次显现时，均可使用一次「强健」、「魔法抗性」与「高级闪避」能力。~

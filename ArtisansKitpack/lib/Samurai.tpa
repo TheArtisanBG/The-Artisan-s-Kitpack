@@ -36,37 +36,37 @@ COPY_EXISTING ~CLABFI01.2DA~ ~OVERRIDE/C0RONIN.2DA~
 
 INCLUDE ~%MOD_FOLDER%/effects/poison_weapon.tpa~
 
-OUTER_SPRINT kit_description_1 ~SAMURAI: A samurai is first and foremost a warrior, one who lives and dies by his sword. In doing so, the samurai gains honor and experience, increasing in power and importance in the world. However, bushido (the code of the samurai) is hard and unrelenting. A samurai must be willing to accept his own death at any moment.
+OUTER_SPRINT kit_description_1 ~武士：武士首先是战士，以剑为生，也以剑赴死。武士道上赢得荣誉与历练，实力与地位与日俱增。然而武士之道严苛无情，武士必须时刻抱持赴死的觉悟。
 
-Advantages:
-– Immunity to Backstabs, Fear and Morale Failure.
-– Gains the Bushido passive effect.
+职业优势：
+-免疫背刺、恐惧与士气崩溃。
+-获得「武士道」被动效果。
 
-BUSHIDO: When there is no ally within a 15-ft. range of the samurai, they gain a persistent +2 bonus to melee THAC0 and damage, Armor Class and Saving Throws while there is an enemy of equal or higher level within a 15-ft. range of them. The samurai gains a bonus against enemies of greater than a specific level regardless of their own:
-  Enemy is level 12+: +2 bonus
-  Enemy is level 21+: +3 bonus
-  Enemy is level 30+: +4 bonus
-  Enemy is level 40+: +5 bonus
-This bonus is non-cumulative—the highest possible bonus will take precedence over others.
+武士道：15尺范围内没有盟友时，武士的近战零级命中值、伤害、护甲等级与所有豁免检定持续获得+2加值；若15尺范围内存在等级相当或更高的敌人，还可额外获得对应加值：
+  敌人12级及以上：+2加值
+  敌人21级及以上：+3加值
+  敌人30级及以上：+4加值
+  敌人40级及以上：+5加值
+该加值不叠加，仅取最高有效值。
 
-– May use the Challenge ability once per day. Gains an additional use every 8th level.
+-每日可使用一次「决死挑戦」。每提升8级，额外获得1次使用次数。
 
-CHALLENGE: The samurai marks a targeted creature with a Challenge, reducing both the target's and the samurai's own Armor Class by 10 for the next three rounds. The samurai deals additional unmitigated magic damage to the Challenged target. Additionally, the Challenged target can be seen within the fog of war and cannot turn invisible for the duration.
-  1st-11th level: 1d6 damage
-  12th-19th level: 2d6 damage
-  20th+ level: 4d6 damageIAIJUTSU_DESCRIPTION
+决死挑戦：武士标记一名目标生物，接下来三回合内，目标与武士自身的护甲等级各降低10点。武士对被挑战的目标造成额外的无法减免魔法伤害。此外，被挑战目标在战争迷雾中会显形，且效果持续期间无法进入隐身状态。
+  1-11级：造成1d6点伤害
+  12-19级：造成2d6点伤害
+  20级及以上：造成4d6点伤害IAIJUTSU_DESCRIPTION
 
-– 14th level: May use Great Kiai once per day.
+-14级：每日可使用一次「气合大喝」。
 
-GREAT KIAI: The ronin lets out a great shout, gaining maximum damage to all attacks made within the next round. All enemies nearby suffer a massive penalty to morale and must make an additional Saving Throw vs. Paralyzation at -4 or become completely unable to move or take any action for one round and suffering a -10 penalty to Armor Class.
+气合大喝：武士暴喝一声，下回合内的所有攻击均取最大伤害值。附近所有敌人士气大幅受挫，必须额外进行一次麻痹豁免检定（难度-4），失败则一回合内完全无法移动或采取任何行动，且护甲等级受-10惩罚。
 
-Disadvantages:
-– May only be of Lawful alignment.
-– If the samurai's Reputation falls below 6, they become a Ronin, permanently shifting their alignment to chaotic and losing the benefits of Bushido and usage of Challenge. However, they gain different advantages in return as well as the ability to dual-class to Thief.KIT_DISADV_1
-– May not dual-class to Thief unless they become a Ronin.
-– May not wear armor heavier than splint mail.
-– May not attain proficiency in any weapon other than katanas, wakizashis and longbows.
-– May not attain proficiency in Sword and Shield style.~
+职业限制：
+-必须为守序阵营。
+-若武士声望降至6以下，将沦为浪人：阵营永久转为混乱，失去武士道加值与决死挑戦的使用权，但会获得其他相应优势，并可兼职游荡者。KIT_DISADV_1
+-未成为浪人时，不可兼职游荡者。
+-不可穿戴比镶片甲更重的护甲。
+-仅可精通武士刀、胁差与长弓三类武器。
+-不可精通剑盾战斗风格。~
 
 OUTER_SET opcode_342_eeex = 0
 ACTION_IF MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~ AND FILE_EXISTS ~EEex_scripts/EEex_Opcode_Patch.lua~ THEN BEGIN
@@ -89,9 +89,9 @@ ACTION_IF (opcode_342_eeex = 1) THEN BEGIN
 OUTER_PATCH_SAVE kit_description_1 ~%kit_description_1%~ BEGIN
   REPLACE_TEXTUALLY ~IAIJUTSU_DESCRIPTION~ ~
 
-– 9th level: May use Iaijutsu.
+-9级：可使用「居合术」。
 
-IAIJUTSU: When wielding a one-handed sword, the samurai's first attack at the start of every second round has a speed factor of 0 and strikes twice, with each hit being a guaranteed critical hit. The samurai loses these bonuses if they wield a two-handed weapon, a ranged weapon, or anything in the offhand.~
+居合术：手持单手剑时，浪人每回合额外获得半次攻击；且每两回合的首次攻击速度因子为0，必定暴击，最小伤害掷骰+4。若手持双手武器、远程武器，或副手持有任何物品，则失去该加值。~
 
 END
 
@@ -108,7 +108,7 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description_1 ~%kit_description_1%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– Does not gain Specialization in all weapons at 16th level.~
+-16级时，不会获得全武器专精。~
 
 END
 
@@ -145,17 +145,17 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 2
 	
-    mixed         = RESOLVE_STR_REF(~Samurai~)
+    mixed         = RESOLVE_STR_REF(~武士~)
 	
-    lower         = RESOLVE_STR_REF(~samurai~)
+    lower         = RESOLVE_STR_REF(~武士~)
 	
     help          = RESOLVE_STR_REF(~%kit_description_1%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~SAMURAI: A samurai is first and foremost a warrior, one who lives and dies by his sword. In doing so, the samurai gains honor and experience, increasing in power and importance in the world. However, bushido (the code of the samurai) is hard and unrelenting. A samurai must be willing to accept his own death at any moment.~)
+    briefdesc     = RESOLVE_STR_REF(~武士：武士首先是战士，以剑为生，也以剑赴死。武士道严苛无情，武士必须时刻抱持赴死的觉悟。~)
 	
 	// fallen = 0
 
-	fallen_notice = RESOLVE_STR_REF (~Dishonored: Class changed to Ronin~)
+	fallen_notice = RESOLVE_STR_REF (~失格：职业已转为浪人~)
 	
   STR_VAR
     kit_name      = ~C0_SAMURAI~
@@ -246,41 +246,41 @@ END
 /////       RONIN        /////
 //////////////////////////////
 
-OUTER_SPRINT kit_description_2 ~RONIN: The ronin is a disgraced samurai who has betrayed their code of honor. While they have abandoned their former ways and lost access to some of their original techniques, their swordsmanship is no less deadly, and their newfound lack of principles has given them the willingness to learn and take advantage of unique tactics of their own.
+OUTER_SPRINT kit_description_2 ~浪人：浪人是失格的武士，背弃了自身的荣誉准则。尽管抛弃了过往的道，也失去了部分原有技艺，但剑术依旧致命；而不再受原则束缚的他们，更愿意钻研并利用独属于自己的奇策诡术。
 
-Advantages:
-– Immunity to Backstabs, Fear and Morale Failure.
-– Gains the Pragmatism passive effect.
+职业优势：
+-免疫背刺、恐惧与士气崩溃。
+-获得「务实之道」被动效果。
 
-PRAGMATISM: The ronin's melee attacks deal four points of unmitigated piercing damage to targets who are asleep, panicked, stunned, charmed, poisoned, slowed, blinded, diseased, feebleminded or confused, or if the ronin is attacking while invisible.
+务实之道：当目标处于睡眠、恐慌、震慑、魅惑、中毒、缓慢、目盲、患病、愚钝或困惑状态时，或是浪人在隐身状态下发动攻击时，浪人的近战攻击会额外造成4点无法减免的穿刺伤害。
 
-– May use the Poison Weapon ability once per day starting at level 1 and gaining one extra use every six levels thereafter.
+-1级起每日可使用一次「淬毒武器」，之后每提升6级额外获得1次使用次数。
 
-POISON WEAPON: The ronin is capable of coating <PRO_HISHER> weapon for the next eight hours with a slow-acting but extremely potent poison. This poison deals damage and reduces the target's Constitution immediately and every following round for at least four rounds. After four rounds have passed, the target must make a Saving Throw vs. Death or remain poisoned for another four rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
-  1st level: Target suffers two poison damage and loses one point of Constitution. No save modifier.
-  6th level: Target suffers four poison damage and loses one point of Constitution. Save modifier of -1.
-  11th level: Target suffers six poison damage and loses two points of Constitution. Save modifier of -2.
-  16th level: Target suffers eight poison damage and loses two points of Constitution. Save modifier of -3.
-  21st level: Target suffers ten poison damage and loses three points of Constitution. Save modifier of -4.IAIJUTSU_DESCRIPTION
+淬毒武器：浪人可在武器上涂抹剧毒，药效持续八小时。毒素发作平缓但烈性极强，立即并在之后每回合造成伤害，同时降低目标体质，效果至少持续4回合。4回合后，目标必须进行死亡豁免检定，失败则毒素再持续4回合。因此只要目标未能成功豁免，毒素就可能无限持续。目标不会因毒素造成的体质流失而直接死亡。
+  1级：目标受到2点毒素伤害，损失1点体质。无豁免惩罚。
+  6级：目标受到4点毒素伤害，损失1点体质。豁免惩罚-1。
+  11级：目标受到6点毒素伤害，损失2点体质。豁免惩罚-2。
+  16级：目标受到8点毒素伤害，损失2点体质。豁免惩罚-3。
+  21级：目标受到10点毒素伤害，损失3点体质。豁免惩罚-4。IAIJUTSU_DESCRIPTION
 
-– 14th level: May use Great Kiai once per day.
+-14级：每日可使用一次「气合大喝」。
 
-GREAT KIAI: The ronin lets out a great shout, gaining maximum damage to all attacks made within the next round. All enemies nearby suffer a massive penalty to morale for one turn and must make an additional Saving Throw vs. Paralyzation at -4 or become completely unable to move or take any action for one round and suffering a -10 penalty to Armor Class.
+气合大喝：浪人暴喝一声，下回合内的所有攻击均取最大伤害值。附近所有敌人士气受挫一回合，且必须额外进行一次麻痹豁免检定（难度-4），失败则一回合内完全无法移动或采取任何行动，且护甲等级受-10惩罚。
 
-Disadvantages:
-– May only be of Chaotic alignment.KIT_DISADV_1
-– May not wear armor heavier than splint mail.
-– May not achieve Mastery in any weapon other than katanas, wakizashis and longbows.
-– May not become proficient in Sword and Shield style.~
+职业限制：
+-必须为混乱阵营。KIT_DISADV_1
+-不可穿戴比镶片甲更重的护甲。
+-仅可精通武士刀、胁差与长弓三类武器，无法达到武器大师级。
+-不可精通剑盾战斗风格。~
 
 ACTION_IF (opcode_342_eeex = 1) THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description_2 ~%kit_description_2%~ BEGIN
   REPLACE_TEXTUALLY ~IAIJUTSU_DESCRIPTION~ ~
 
-– 9th level: May use Iaijutsu.
+-9级：可使用「居合术」。
 
-IAIJUTSU: When wielding a one-handed sword, the samurai gains an additional half attack per round, and their first attack at the start of every second round has a speed factor of 0 and is a guaranteed critical hit with a +4 bonus to minimum damage rolls. The samurai loses these bonuses if they wield a two-handed weapon, a ranged weapon, or anything in the offhand.~
+居合术：手持单手剑时，浪人每回合额外获得半次攻击；且每两回合的首次攻击速度因子为0，必定暴击，最小伤害掷骰+4。若手持双手武器、远程武器，或副手持有任何物品，则失去该加值。~
 
 END
 
@@ -296,7 +296,7 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description_2 ~%kit_description_2%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– Does not gain Specialization in all weapons at 16th level.~
+-16级时，不会获得全武器专精。~
 
 END
 
@@ -333,13 +333,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 2
 	
-    mixed         = RESOLVE_STR_REF(~Ronin~)
+    mixed         = RESOLVE_STR_REF(~浪人~)
 	
-    lower         = RESOLVE_STR_REF(~ronin~)
+    lower         = RESOLVE_STR_REF(~浪人~)
 	
     help          = RESOLVE_STR_REF(~%kit_description_2%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~RONIN: The ronin is a disgraced samurai who has betrayed their code of honor. While they have abandoned their former ways and lost access to some of their original techniques, their newfound lack of principles has given them the willingness to learn and take advantage of unique tactics of their own.~)
+    briefdesc     = RESOLVE_STR_REF(~浪人：浪人是失格的武士，背弃了荣誉准则。虽失去了部分原有技艺，但不再受原则束缚，更擅长钻研独有的诡术。~)
 	
 	visible = 0
 	
@@ -464,7 +464,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Bushido~) STR_VAR bam_file = C0SAMI01 RET C0SAMI01 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~武士道~) STR_VAR bam_file = C0SAMI01 RET C0SAMI01 = icon END
 
 ADD_PROJECTILE ~%MOD_FOLDER%/Fighter/Samurai/pro/C0SAM02P.PRO~ ~C0 Samurai Bushido~
 ADD_PROJECTILE ~%MOD_FOLDER%/Fighter/Samurai/pro/C0SAM02X.PRO~ ~C0 Samurai Bushido2~
@@ -500,16 +500,16 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~C0CAV03.SPL~ BEGIN
 COPY ~%MOD_FOLDER%/spells/challenge~ ~override~
 
 COPY_EXISTING ~C0CAV03.spl~ ~override~
-SAY NAME1 ~Challenge!~
-SAY UNIDENTIFIED_DESC ~Challenge
-The user marks a targeted creature with a Challenge, reducing both the target's and the user's own Armor Class by 10 for the next three rounds. The user deals additional unmitigated magic damage to the Challenged target. Additionally, the Challenged target can be seen within the fog of war and cannot turn invisible for the duration.
-  1st-11th level: 1d6 damage
-  12th-19th level: 2d6 damage
-  20th+ level: 4d6 damage~
+SAY NAME1 ~决死挑戦！~
+SAY UNIDENTIFIED_DESC ~决死挑戦
+施法者标记一名目标生物，接下来三回合内，目标与施法者自身的护甲等级各降低10点。施法者对被挑战的目标造成额外的无法减免魔法伤害。此外，被挑战目标在战争迷雾中会显形，且效果持续期间无法进入隐身状态。
+  1-11级：造成1d6点伤害
+  12-19级：造成2d6点伤害
+  20级及以上：造成4d6点伤害~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Challenged~)
+	  parameter1 = RESOLVE_STR_REF (~挑战标记~)
 END
 
 END
@@ -545,7 +545,7 @@ COPY_EXISTING ~C0SAM03D.spl~ ~override~
   LPF ALTER_EFFECT
 	INT_VAR
 		match_opcode = 139
-		parameter1 = RESOLVE_STR_REF (~Iaijutsu Strike~)
+		parameter1 = RESOLVE_STR_REF (~居合一击~)
 END
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
@@ -555,7 +555,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
     PATCH_IF ((("%kit1%" BAND 0b01000000) = 0b01000000) AND // if unusable by fighters and barbarians
               (("%usa2%" BAND 0b00001000) = 0b00001000)) THEN BEGIN
       WRITE_BYTE 0x29 ("%kit1%" BAND 0b10111111) //remove redundant barb flag
-      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 timing = 2 power = 0 parameter1 = 0 parameter2 = 5 special = RESOLVE_STR_REF (~Barbarian~) END
+      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 timing = 2 power = 0 parameter1 = 0 parameter2 = 5 special = RESOLVE_STR_REF (~野蛮人~) END
     END
   END
   BUT_ONLY
@@ -620,6 +620,6 @@ COPY_EXISTING ~C0RONIN.2DA~ OVERRIDE
 	END
 
 COPY_EXISTING ~C0SAM04.SPL~ ~OVERRIDE~
-SAY NAME1 ~Great Kiai~
-SAY UNIDENTIFIED_DESC ~Great Kiai
-The samurai lets out a great shout, gaining maximum damage to all attacks made within the next round. All enemies nearby suffer a massive penalty to morale for one turn and must make an additional Saving Throw vs. Paralyzation at -4 or become completely unable to move or take any action for one round and suffering a -10 penalty to Armor Class.~
+SAY NAME1 ~气合大喝~
+SAY UNIDENTIFIED_DESC ~气合大喝
+武士暴喝一声，下回合内的所有攻击均取最大伤害值。附近所有敌人士气大幅受挫一回合，且必须额外进行一次麻痹豁免检定（难度-4），失败则一回合内完全无法移动或采取任何行动，且护甲等级受-10惩罚。~

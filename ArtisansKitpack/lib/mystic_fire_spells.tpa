@@ -39,7 +39,7 @@ ACTION_FOR_EACH description IN
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0MF" BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
           SPRINT old_desc ~<MF_LEVEL5>~
-          SPRINT new_desc ~ Level 5: Spell Immunity, Oracle, Sunfire, Cone of Cold
+          SPRINT new_desc ~ 5级：法术免疫、神谕术、阳炎术、寒冰锥
 ~
           GET_STRREF %kit_desc% desc_text
           INNER_PATCH_SAVE desc_text ~%desc_text%~ BEGIN
@@ -69,10 +69,10 @@ END
 COPY_EXISTING ~c0mfhl5.spl~ ~override~
   LPF DELETE_EFFECT INT_VAR match_opcode = 171 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 21 target = 1 timing = 9 parameter1 = 25 END
-SAY NAME1 ~Arcane Knowledge I~
-SAY NAME2 ~Arcane Knowledge I~
-SAY UNIDENTIFIED_DESC ~Arcane Knowledge
-An experienced Mystic Fire Knight develops more knowledge of arcane spells closer to that of an actual wizard, gaining +1 to all Saving Throws and +25 to Lore.~
+SAY NAME1 ~奥术学识 I~
+SAY NAME2 ~奥术学识 I~
+SAY UNIDENTIFIED_DESC ~奥术学识
+资深的秘火骑士对奥术法术的理解愈发接近真正的法师，获得所有豁免检定+1与学识+25。~
 
 END
 
@@ -91,7 +91,7 @@ ACTION_FOR_EACH description IN
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0MF" BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
           SPRINT old_desc ~<MF_LEVEL6>~
-          SPRINT new_desc ~ Level 6: Globe of Invulnerability, Protection from Magical Weapons, Improved Haste, Spell Deflection
+          SPRINT new_desc ~ 6级：无效结界、魔法武器防护、高级加速术、法术偏转
 ~
           GET_STRREF %kit_desc% desc_text
           INNER_PATCH_SAVE desc_text ~%desc_text%~ BEGIN
@@ -121,12 +121,12 @@ END
 COPY_EXISTING ~c0mfhl6.spl~ ~override~
   LPF DELETE_EFFECT INT_VAR match_opcode = 171 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 42 target = 1 timing = 9 parameter1 = 1 parameter2 = 16 END
-SAY NAME1 ~Arcane Knowledge II~
-SAY NAME2 ~Arcane Knowledge II~
-SAY UNIDENTIFIED_DESC ~Arcane Knowledge II
-An experienced Mystic Fire Knight develops more knowledge of arcane spells closer to that of an actual wizard, gaining -1 to casting time and one additional Level 5 spell slot.
+SAY NAME1 ~奥术学识 II~
+SAY NAME2 ~奥术学识 II~
+SAY UNIDENTIFIED_DESC ~奥术学识 II
+资深的秘火骑士对奥术法术的理解愈发接近真正的法师，施法时间-1，并额外获得一个5环法术位。
 
-Requires: Arcane Knowledge I~
+需要：奥术学识 I~
 
 END
 
@@ -145,7 +145,7 @@ ACTION_FOR_EACH description IN
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0MF" BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
           SPRINT old_desc ~<MF_LEVEL7>~
-          SPRINT new_desc ~ Level 7: Limited Wish, Khelben's Warding Whip, Mordenkainen's Sword, Spell Turning
+          SPRINT new_desc ~ 7级：有限祈愿术、凯尔本金的守护鞭、魔邓肯之剑、法术反转
 ~
           GET_STRREF %kit_desc% desc_text
           INNER_PATCH_SAVE desc_text ~%desc_text%~ BEGIN
@@ -175,11 +175,11 @@ END
 COPY_EXISTING ~c0mfhl7.spl~ ~override~
   LPF DELETE_EFFECT INT_VAR match_opcode = 171 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 42 target = 1 timing = 9 parameter1 = 1 parameter2 = 32 END
-SAY NAME1 ~Arcane Knowledge III~
-SAY NAME2 ~Arcane Knowledge III~
-SAY UNIDENTIFIED_DESC ~Arcane Knowledge III
-An experienced Mystic Fire Knight develops more knowledge of arcane spells closer to that of an actual wizard, gaining +20% to spell duration and one additional Level 6 spell slot.
+SAY NAME1 ~奥术学识 III~
+SAY NAME2 ~奥术学识 III~
+SAY UNIDENTIFIED_DESC ~奥术学识 III
+资深的秘火骑士对奥术法术的掌控愈发接近真正的法师，法术持续时间+20%，并额外获得一个6环法术位。
 
-Requires: Arcane Knowledge II~
+需要：奥术学识 II~
 
 END

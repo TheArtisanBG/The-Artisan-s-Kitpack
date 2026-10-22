@@ -66,31 +66,31 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 11
 	
-    mixed         = RESOLVE_STR_REF(~Elementalist~)
+    mixed         = RESOLVE_STR_REF(~元素使~)
 	
-    lower         = RESOLVE_STR_REF(~elementalist~)
+    lower         = RESOLVE_STR_REF(~元素使~)
 	
-    help          = RESOLVE_STR_REF(~ELEMENTALIST: Elementalist druids specialize in the natural energies of Nature, allowing them to command the elements with exceptional skill.
+    help          = RESOLVE_STR_REF(~元素使：元素使德鲁伊专精于自然的本源能量，得以凭借超凡的技艺驾驭四大元素。
 
-Advantages:
-– +20% resistance to acid, cold, electrical and fire damage.
-– +20% to acid, cold, electrical and fire damage dealt.
-– May cast the arcane version of Protection from Fire, Cold, Electricity, Acid, and the Elements with increased casting range and casting time reduced to 1.
-– Three arcane spells per spell level are added to <PRO_HISHER> repertoire, all the way up to the 7th level. These are listed below:
-  1st level: Burning Hands, Chill Touch, Shocking Grasp
-  2nd level: Agannazar's Scorcher, Melf's Acid Arrow, Snilloc's Snowball Swarm
-  3rd level: Fireball, Icelance, Lightning Bolt
-  4th level: Fire Shield (Red), Ice Storm, Vitriolic Sphere
-  5th level: Cone of Cold, Protection from Acid, Sunfire
-  6th level: Chain Lightning, Death Fog, Otiluke's Freezing Sphere
-  7th level: Acid Storm, Delayed Blast Fireball, Protection from the Elements
+职业优势：
+–对强酸、寒冷、电击与火焰伤害获得+20%抗性。
+–造成的强酸、寒冷、电击与火焰伤害提升+20%。
+–施展奥术版的防护火焰、防护寒冷、防护电击、防护强酸与元素防护时，施法距离增加，且施法时间缩短为1。
+–从1环到7环，每个法术环级都将有3个奥术法术加入<PRO_HISHER>的法术列表，具体如下：
+  1环：燃烧之手、寒冷之触、电击掌
+  2环：阿加纳扎的灼烧术、麦夫的酸箭、斯诺洛克的雪球群
+  3环：火球术、冰枪术、闪电束
+  4环：火焰护盾（红色）、冰风暴、强酸法球
+  5环：寒冰锥、防护强酸、阳炎术
+  6环：连锁闪电、死亡之雾、奥提路克的冷冻球
+  7环：酸雨风暴、延迟爆焰火球、元素防护
 
-Disadvantages:
-– May not wear any armor.
-– May not cast any spells of the Animal and non-Elemental Summoning Spheres.
-– May not shapeshift into any animal forms.~)
+职业限制：
+–无法穿戴任何护甲。
+–无法施展动物领域与非元素召唤领域的任何法术。
+–无法变形为任何动物形态。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~ELEMENTALIST: Elementalist druids specialize in the natural energies of Nature, allowing them to command the elements with exceptional skill.~)
+    briefdesc     = RESOLVE_STR_REF(~元素使：元素使德鲁伊专精于自然的本源能量，得以凭借超凡的技艺驾驭四大元素。~)
 	
 	// fallen = 0
 	
@@ -209,17 +209,17 @@ COPY_EXISTING ~SPWI512.spl~ ~override/C0EL512.spl~
 LPF ALTER_SPELL_HEADER INT_VAR speed = 1 range = 30 END
 WRITE_SHORT 0x1C 2 
 WRITE_SHORT 0x34 4 
-SAY UNIDENTIFIED_DESC ~Protection From Electricity
-(Abjuration)
+SAY UNIDENTIFIED_DESC ~防护电击
+（防护系）
 
-Level: 4
-Range: Touch
-Duration: 1 turn/level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+环级：4
+射程：触碰
+持续时间：每等级1回合
+施法时间：5
+影响区域：1个生物
+豁免检定：无
 
-When the spell is cast, it confers complete invulnerability to all electrical attacks, whether magical or non-magical, such as Lightning Bolt or certain breath weapons. This effect lasts for the duration of the spell or until dispelled.~
+施展本法术后，目标将完全免疫所有电击伤害，无论其来源是魔法还是非魔法，例如闪电束或是某些生物的喷吐武器。该效果持续至法术结束或被解除为止。~
 COPY_EXISTING ~SPWI517.spl~ ~override/C0EL517.spl~
 LPF ALTER_SPELL_HEADER INT_VAR speed = 1 range = 30 END
 WRITE_SHORT 0x1C 2 
@@ -243,18 +243,18 @@ ADD_PROJECTILE ~%MOD_FOLDER%/Druid/Elementalist/iwdspells/snilloc/IDPRO217.PRO~
 COPY_EXISTING ~C0EL204.SPL~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = IDPRO217 END
 WRITE_SHORT 0x1C 2 
-SAY NAME1 ~Snilloc's Snowball Swarm~
-SAY UNIDENTIFIED_DESC ~Snilloc's Snowball Swarm
-(Evocation)
+SAY NAME1 ~斯诺洛克的雪球群~
+SAY UNIDENTIFIED_DESC ~斯诺洛克的雪球群
+（塑能系）
 
-Level: 2
-Range: Visual range of the caster
-Duration: Instant
-Casting Time: 2
-Area of Effect: 15-ft. radius
-Saving Throw: 1/2
+环级：2
+射程：施法者视野范围
+持续时间：即时
+施法时间：2
+影响区域：半径15英尺
+豁免检定：减半
 
-This spell causes a flurry of snowballs to erupt from a point within range. These snowballs will hit everything within the area of effect, doing 1d3 points of cold damage per level, up to a maximum of 8d3 points at level 8. Against fire-using or fire-dwelling creatures, it inflicts 1d6 points of cold damage per level, up to a maximum of 8d6 points at level 8.~
+本法术会在射程内的指定点引爆一阵漫天雪球。范围内的所有目标都会受到撞击，每施法者等级造成1d3点寒冷伤害，8级时达到上限8d3点。针对操纵火焰或栖身火焰的生物，每等级造成1d6点寒冷伤害，8级时达到上限8d6点。~
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPWI204.SPL~ THEN BEGIN
@@ -271,18 +271,18 @@ COPY_EXISTING ~C0EL327.SPL~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = IDPRO251 END
 LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Stunned~) END
 WRITE_SHORT 0x1C 2 
-SAY NAME1 ~Icelance~
-SAY UNIDENTIFIED_DESC ~Icelance
-(Evocation)
+SAY NAME1 ~冰枪术~
+SAY UNIDENTIFIED_DESC ~冰枪术
+（塑能系）
 
-Level: 3
-Range: Visual range of the caster
-Duration: Instant
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: Special
+环级：3
+射程：施法者视野范围
+持续时间：即时
+施法时间：3
+影响区域：1个生物
+豁免检定：特殊
 
-This spell fires a magical lance of ice at a target of the caster's choosing. It automatically hits, inflicting 5d6 points of cold damage and forcing the target to make a Save vs. Spell or be stunned for 3 rounds.~
+本法术会向施法者选定的目标射出一支魔法冰枪。冰枪必定命中，造成5d6点寒冷伤害，并迫使目标进行法术豁免检定，失败则陷入震慑状态，持续3轮。~
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPWI327.SPL~ THEN BEGIN
@@ -298,20 +298,20 @@ ADD_PROJECTILE ~%MOD_FOLDER%/Druid/Elementalist/iwdspells/vitriolic/IDPRO316.PRO
 COPY_EXISTING ~C0EL432.SPL~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = IDPRO316 END
 WRITE_SHORT 0x1C 2 
-SAY NAME1 ~Vitriolic Sphere~
-SAY UNIDENTIFIED_DESC ~Vitriolic Sphere
-(Conjuration)
+SAY NAME1 ~强酸法球~
+SAY UNIDENTIFIED_DESC ~强酸法球
+（咒法系）
 
-Level: 4
-Range: Visual range of the caster
-Duration: Special
-Casting Time: 4
-Area of Effect: 5-ft. radius
-Saving Throw: Special
+环级：4
+射程：施法者视野范围
+持续时间：特殊
+施法时间：4
+影响区域：半径5英尺
+豁免检定：特殊
 
-This spell conjures a sphere of glowing emerald acid that the caster can direct to strike any target within range. When it reaches its target, the sphere explodes and drenches the victim in potent acid. The victim suffers 1d4 points of acid damage per caster level, to a maximum of 12d4 points of damage. After the initial damage, the victim must save vs. Spell to avoid more damage. If unsuccessful, the victim continues to suffer acid damage in the following rounds, sustaining two less dice of damage each round. For example, an 8th-level wizard inflicts 8d4 damage with this spell on the first round, 6d4 on the second round, 4d4 on the third round, 2d4 on the fourth round, and the spell ends on the fifth round. Each round after the first, the victim is entitled to a Save vs. Spell to avoid further damage.
+本法术会召唤出一颗散发翠绿光芒的酸球，施法者可操控它攻击射程内的任意目标。酸球命中目标后会炸裂，将强效酸液泼洒在目标身上。目标每受到1d4点强酸伤害，最高不超过12d4点。初次伤害过后，目标需进行法术豁免检定以避免持续伤害。若豁免失败，目标将在后续回合继续受到强酸伤害，每回合伤害骰数减少2颗。例如，一名8级法师在首回合造成8d4点伤害，第二回合6d4，第三回合4d4，第四回合2d4，法术在第五回合结束。首回合之后的每一轮，目标都可以进行一次法术豁免检定来终止该回合的伤害。
 
-The vitriolic sphere also splashes acid in a 5-ft. radius around the primary target. Any creatures within the splash radius must save vs. Petrification/Polymorph or suffer a splash hit that inflicts 1d4 points of damage per every five levels of the caster. Splash hits do not cause continuing damage.~
+强酸法球还会在主目标周围半径5英尺范围内溅洒酸液。飞溅范围内的所有生物都需进行石化/变形豁免检定，失败则受到溅射伤害，每5个施法者等级造成1d4点伤害。溅射伤害不会产生持续效果。~
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPWI432.SPL~ THEN BEGIN
@@ -327,18 +327,18 @@ ADD_PROJECTILE ~%MOD_FOLDER%/Druid/Elementalist/iwdspells/otiluke/IDPRO269.PRO~
 COPY_EXISTING ~C0EL628.SPL~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = IDPRO269 END
 WRITE_SHORT 0x1C 2 
-SAY NAME1 ~Otiluke's Freezing Sphere~
-SAY UNIDENTIFIED_DESC ~Otiluke's Freezing Sphere
-(Alteration, Evocation)
+SAY NAME1 ~奥提路克的冷冻球~
+SAY UNIDENTIFIED_DESC ~奥提路克的冷冻球
+（变化系、塑能系）
 
-Level: 6
-Range: Visual range of the caster
-Duration: Instant
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Neg.
+环级：6
+射程：施法者视野范围
+持续时间：即时
+施法时间：6
+影响区域：1个生物
+豁免检定：无效
 
-This spell fires an orb of cold at a creature that inflicts 1d4+2 points of cold damage per level of the caster. If the target makes its Save vs. Spell, however, they have dodged the orb and avoided all damage.~
+本法术向目标射出一颗寒冷能量球，每施法者等级造成1d4+2点寒冷伤害。但若目标成功通过法术豁免检定，则表示其躲开了法球，完全不受伤害。~
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPWI628.SPL~ THEN BEGIN
@@ -354,18 +354,18 @@ ADD_PROJECTILE ~%MOD_FOLDER%/Druid/Elementalist/iwdspells/acidstorm/IDPRO211.PRO
 COPY_EXISTING ~C0EL724.SPL~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = IDPRO211 END
 WRITE_SHORT 0x1C 2 
-SAY NAME1 ~Acid Storm~
-SAY UNIDENTIFIED_DESC ~Acid Storm
-(Evocation)
+SAY NAME1 ~酸雨风暴~
+SAY UNIDENTIFIED_DESC ~酸雨风暴
+（塑能系）
 
-Level: 7
-Range: Visual range of the caster
-Duration: 1 round/level
-Casting Time: 7
-Area of Effect: 12-ft. radius
-Saving Throw: 1/2
+环级：7
+射程：施法者视野范围
+持续时间：每等级1轮
+施法时间：7
+影响区域：半径12英尺
+豁免检定：减半
 
-This spell unleashes an acidic downpour on the area of effect, doing 1d4 points of acid damage each round for the first three rounds, 1d6 points for the next three rounds, and 1d8 points for each round thereafter. Moving out of the area of effect does not stop the damage—the acid adheres to the skin, and any creatures in the area of effect when Acid Storm is cast continue to suffer acid damage as long as the spell duration lasts. Creatures make a Save vs. Spell every round after they have been hit by the cloud—if successful, they only take half damage (for that round only).~
+本法术会在影响区域降下腐蚀性酸雨，前三轮每回合造成1d4点强酸伤害，接下来三轮每回合1d6点，之后每回合1d8点。离开影响区域并不能终止伤害——酸液会黏附在皮肤上，所有在法术施放时身处范围内的生物，在法术持续时间内都会持续受到强酸伤害。生物在被酸云笼罩后每回合可进行一次法术豁免检定，成功则该回合只受到半数伤害。~
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPWI724.SPL~ THEN BEGIN

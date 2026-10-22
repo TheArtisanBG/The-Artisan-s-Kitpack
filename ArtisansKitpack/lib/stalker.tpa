@@ -23,28 +23,28 @@ COPY_EXISTING ~CLABRN01.2DA~ ~OVERRIDE/CLABRN03.2DA~
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~2000~ THEN BEGIN
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~STALKER~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~STALKER: Stalkers serve as covert intelligence-gatherers, comfortable in both wilderness and urban settings. They are spies, informants, and interrogators. Their versatile set of skills allow them to take on any mission, whether it involves persuasion, assassination, or open combat.
+STRING_SET_EVALUATE kit_strref ~潜行者：潜行者是专职的隐秘情报搜集者，在荒野与都市环境中都能如鱼得水。他们身兼间谍、线人与审讯者多重身份。全面的技艺让他们足以胜任任何任务，无论是游说、暗杀还是正面作战。
 
-Advantages:
-– +10% bonus to Set Traps.
-– Gains Camouflage bonuses to Hide in Shadows and Move Silently (+25%) while indoors.
-– May use Tracking while indoors.
-– Fleet of Foot: The stalker moves at 30% increased movement rate while stealthed or invisible.
-– May memorize one Mage spell per spell level: Friends (1st level), Detect Invisibility (2nd level), Haste (3rd level)
-– May use Backstab ability, although for a lower damage multiplier than Thieves:
-  Level 1-8: x2
-  Level 9-16: x3
-  Level 17+: x4
-– May use the Analyze ability at will.
+职业优势：
+-设置陷阱获得+10%加值。
+-室内时，隐匿阴影与潜行获得迷彩加成（+25%）。
+-室内可使用追踪能力。
+-疾步：潜行者处于潜行或隐身状态时，移动速度提升30%。
+-每个法术环级可记记一个法师法术：1环交友术、2环识破隐形、3环加速术。
+-可使用背刺能力，但伤害倍率低于普通游荡者：
+  1-8级：2倍
+  9-16级：3倍
+  17级及以上：4倍
+-可随意使用「分析」能力。
 
-ANALYZE: With this ability, the user carefully observes the target and identifies their strengths and weaknesses, revealing their Hit Die, THAC0, Saving Throws, Magic Resistance, Damage Resistance and vulnerability to Poison and Backstabs. This ability may be used an unlimited number of times.
+分析：使用者可通过此能力仔细观察目标，识别其优缺点，显示目标的生命骰、零级命中值、豁免检定、魔法抗性、伤害抗性，以及对毒素与背刺的易伤性。此能力可无限制使用。
 
-– 15th level: Cloak of Shadows: The stalker's mastery of stealth renders <PRO_HIMHER> completely undetectable and untargetable by all means, whether magical or mundane, while hiding or Invisible. Even creatures that normally see through invisibility cannot perceive the stalker.
+-15级：暗影披风：潜行者对潜行的掌控炉火纯青，处于隐匿或隐身状态时，无论魔法还是寻常手段都完全无法侦测、锁定<PRO_HIMHER>。即便通常能看破隐形的生物也无法察觉潜行者的存在。
 
-Disadvantages:
-– Hit Die: d8, does not gain Toughness bonus
-– Does not gain Woodland Stride.
-– May not wear armor heavier than studded leather.~
+职业限制：
+-生命骰：d8，不获得强健加值
+-不获得林地步伐。
+–无法穿戴重于皮环甲的护甲。~
 
 APPEND ~splprot.2da~ ~C0_OUTDOORS_CHECK%TAB%0x106%TAB%1%TAB%8~ UNLESS ~C0_OUTDOORS_CHECK~
 COPY_EXISTING ~splprot.2da~ ~override~
@@ -95,24 +95,24 @@ ACTION_IF NOT MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~2000~ THEN BEGIN
 COPY ~%MOD_FOLDER%/Ranger/Stalker/vanilla~ ~OVERRIDE~
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~STALKER~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~STALKER: Stalkers serve as covert intelligence-gatherers, comfortable in both wilderness and urban settings. They are spies, informants, and interrogators. Their versatile set of skills allow them to take on any mission, whether it involves persuasion, assassination, or open combat.
+STRING_SET_EVALUATE kit_strref ~潜行者：潜行者是专职的隐秘情报搜集者，在荒野与都市环境中都能如鱼得水。他们身兼间谍、线人与审讯者多重身份。全面的技艺让他们足以胜任任何任务，无论是游说、暗杀还是正面作战。
 
-Advantages:
-– +25% bonus to Hide in Shadows and Move Silently.
-– Stealth Caster: The stalker's spells cast while hiding or invisible have their casting time reduced to 1, if higher. 
-– May memorize one Mage spell per spell level: Friends (1st level), Detect Invisibility (2nd level), Haste (3rd level)
-– May use Backstab ability, although for a lower damage multiplier than Thieves:
-  Level 1-8: x2
-  Level 9-16: x3
-  Level 17+: x4
-– May use the Analyze ability at will.
+职业优势：
+–无声行动和阴影躲藏+20%。
+-潜行施法：潜行者在隐匿或隐身状态下施法时，若原施法时间长于1，则缩短为1。
+-每个法术环级可记记一个法师法术：1环交友术、2环识破隐形、3环加速术。
+–可以使用背刺能力，但是与盗贼相比伤害倍数较小：
+  等级1–8：×2
+  等级9–16：×3
+  等级17+：×4
+-可随意使用「分析」能力。
 
-ANALYZE: With this ability, the user carefully observes the target and identifies their strengths and weaknesses, revealing their Hit Die, THAC0, Saving Throws, Magic Resistance, Damage Resistance and vulnerability to Poison and Backstabs. This ability may be used an unlimited number of times.
+分析：使用者可通过此能力仔细观察目标，识别其优缺点，显示目标的生命骰、零级命中值、豁免检定、魔法抗性、伤害抗性，以及对毒素与背刺的易伤性。此能力可无限制使用。
 
-– 15th level: Cloak of Shadows: The stalker's mastery of stealth renders <PRO_HIMHER> completely undetectable and untargetable by all means, whether magical or mundane, while hiding or Invisible. Even creatures that normally see through invisibility cannot perceive the stalker.
+-15级：暗影披风：潜行者对潜行的掌控炉火纯青，处于隐匿或隐身状态时，无论魔法还是寻常手段都完全无法侦测、锁定<PRO_HIMHER>。即便通常能看破隐形的生物也无法察觉潜行者的存在。
 
-Disadvantages:
-– May not wear armor heavier than studded leather.~
+职业限制：
+–无法穿戴重于皮环甲的护甲。~
 
 END
 

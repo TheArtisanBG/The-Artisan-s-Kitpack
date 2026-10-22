@@ -12,39 +12,39 @@ COPY_EXISTING ~CLABTH01.2DA~ ~OVERRIDE/C0INVBL.2DA~
 
  	PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~INVISIBLE BLADE: Invisible Blades are deadly fighters who prefer to use daggers and related weapons in combat. Their training and techniques with these weapons make them just as lethal as any well-armed fighter. Invisible Blades enjoy cultivating misconceptions about the level of danger they present, and they relish any chance to demonstrate that the most unimposing weapons can be the most lethal.
+OUTER_SPRINT kit_description ~无踪短刃：无踪短刃是致命的战士，偏好使用匕首及同类武器作战。他们对这类武器的训练与技法，使其杀伤力丝毫不逊于任何全副武装的战士。无踪短刃乐于让他人低估自己的危险程度，也热衷于抓住一切机会证明：最不起眼的武器，往往最致命。
 
-Advantages:
-– May achieve Grandmastery (five slots) in Daggers.
-– May achieve Mastery (three slots) in Two-Weapon Style.
-– +1 bonus to hit while wielding a dagger. Gains an additional +1 at every even-numbered level up to a maximum of +11 at 20th level.
-– Unfettered Defense: The Invisible Blade's base Armor Class improves by 1 per point of Intelligence above 12.
-– Bleeding Wound: The Invisible Blade's backstabs while using a dagger cause their targets to bleed out, dealing bonus piercing damage on the initial hit and unmitigated damage for several rounds thereafter. The attack must have dealt damage for Bleeding Wound to apply. This damage is cumulative on the same target.
-  1st-4th: 2 damage per round, 2 rounds
-  5th-8th: 3 damage per round, 4 rounds
-  9th-12th: 4 damage per round, 8 rounds
-  12th-16th: 6 damage per round, 8 rounds
-  17th+: 8 damage per round, 10 rounds
-  Targets without blood are immune to Bleeding Wound, though they take regular backstab damage.
-  
-– May use the Feint modal ability.
+职业优势：
+–匕首可达到宗师级精通（5个熟练位）。
+–双武器战斗可达到精通级（3个熟练位）。
+–持匕首时命中+1。每偶数等级额外+1，20级时达到上限+11。
+–自由身法：智力每超过12点1点，无踪短刃的基础护甲等级就提升1点。
+–流血不止：无踪短刃使用匕首的背刺会使目标流血不止，首次命中造成额外穿刺伤害，之后数回合造成无视护甲伤害。攻击必须造成伤害才能触发流血不止，同一目标可叠加该效果。
+  1-4级：每回合2点伤害，持续2回合
+  5-8级：每回合3点伤害，持续4回合
+  9-12级：每回合4点伤害，持续8回合
+  12-16级：每回合6点伤害，持续8回合
+  17级及以上：每回合8点伤害，持续10回合
+  无血液的目标免疫流血不止，但仍承受正常背刺伤害。
 
-FEINT: The Invisible Blade makes a deceptive maneuver in an attempt to make their opponent lower their guard, striking them when they are vulnerable. When Feint is active, the Invisible Blade halves their attacks per round for that round to make their melee attacks force the target to make a Save vs. Breath at +4 (modifier decreases by 1 per 3 levels) or have their Dexterity halved for one round and Bleeding Wound applied on them. Only one Feint attempt may be made on each individual target per round. Feint has no effect on non-intelligent creatures such as golems and slimes.
-  
-– 12th level: Feint Mastery: The Invisible Blade's first attack each round while Feinting is always counted as a backstab, applying an additional Bleeding Wound stack.
+–可使用「虚招」攻击模式。
 
-Disadvantages:
-– Backstab modifier does not improve beyond x2.KIT_DISADV_1
-– May not wear any armor.
-– May only distribute 15 skill points per level among thieving skills.
-– May not use the Set Snare ability.~
+虚招：无踪短刃做出假动作诱使对手露出破绽，趁其不备发动攻击。虚招激活时，本回合无踪短刃每回合攻击次数减半，近战攻击会迫使目标进行强韧豁免（难度+4，每3级难度惩罚-1），失败则目标敏捷减半，持续1回合，并附加流血不止效果。每回合对单个目标仅可尝试一次虚招。虚招对无智生物（如魔像、史莱姆）无效。
+
+–12级：虚招大师：虚招状态下，无踪短刃每回合的首次攻击必定视为背刺，并额外叠加一层流血不止。
+
+职业限制：
+–背刺倍率最高仅为2倍。KIT_DISADV_1
+–无法穿戴任何护甲。
+–每级仅可分配15点技能点数至游荡者技能。
+–无法使用「设置陷阱」能力。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~7000~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Crippling Strike.
-– Does not gain Epic Precision.~
+–无法使用「致残打击」。
+–不获得「史诗精准」。~
 
 END
 
@@ -93,13 +93,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 4
 	
-    mixed         = RESOLVE_STR_REF(~Invisible Blade~)
+    mixed         = RESOLVE_STR_REF(~无踪短刃~)
 	
-    lower         = RESOLVE_STR_REF(~invisible blade~)
+    lower         = RESOLVE_STR_REF(~无踪短刃~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~INVISIBLE BLADE: Invisible Blades are deadly fighters who prefer to use daggers and related weapons in combat. Their training and techniques with these weapons make them just as lethal as any well-armed fighter. Invisible Blades enjoy cultivating misconceptions about the level of danger they present, and they relish any chance to demonstrate that the most unimposing weapons can be the most lethal.~)
+    briefdesc     = RESOLVE_STR_REF(~无踪短刃：无踪短刃是致命的战士，偏好使用匕首及同类武器作战。他们对这类武器的训练与技法，使其杀伤力丝毫不逊于任何全副武装的战士。无踪短刃乐于让他人低估自己的危险程度，也热衷于抓住一切机会证明：最不起眼的武器，往往最致命。~)
 	
 	// fallen = 0
 	
@@ -203,40 +203,40 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Feint~) STR_VAR bam_file = c0ivb02i RET c0ivb02i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~虚招~) STR_VAR bam_file = c0ivb02i RET c0ivb02i = icon END
 
 COPY_EXISTING ~C0IVB00.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 match_special = 1000 parameter2 = C0HTINT END
 
 COPY_EXISTING ~C0IVB01a.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—2 damage per round for 2 rounds~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—每回合2点伤害，持续2回合~) END
 COPY_EXISTING ~C0IVB01b.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—3 damage per round for 4 rounds~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—每回合3点伤害，持续4回合~) END
 COPY_EXISTING ~C0IVB01c.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—4 damage per round for 8 rounds~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—每回合4点伤害，持续8回合~) END
 COPY_EXISTING ~C0IVB01d.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—6 damage per round for 8 rounds~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—每回合6点伤害，持续8回合~) END
 COPY_EXISTING ~C0IVB01e.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—8 damage per round for 10 rounds~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—每回合8点伤害，持续10回合~) END
 COPY_EXISTING ~C0IVB01z.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—Damage Taken (2)~) END
-LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—Damage Taken (3)~) END
-LPF ALTER_EFFECT INT_VAR header = 2 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—Damage Taken (4)~) END
-LPF ALTER_EFFECT INT_VAR header = 3 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—Damage Taken (6)~) END
-LPF ALTER_EFFECT INT_VAR header = 4 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Bleeding Wound—Damage Taken (8)~) END
+LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—承受伤害（2）~) END
+LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—承受伤害（3）~) END
+LPF ALTER_EFFECT INT_VAR header = 2 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—承受伤害（4）~) END
+LPF ALTER_EFFECT INT_VAR header = 3 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—承受伤害（6）~) END
+LPF ALTER_EFFECT INT_VAR header = 4 match_opcode = 139 parameter1 = RESOLVE_STR_REF (~流血不止—承受伤害（8）~) END
 
 COPY_EXISTING ~C0IVB02.SPL~ OVERRIDE
-SAY NAME1 ~Feint~
-SAY UNIDENTIFIED_DESC ~Feint
-The Invisible Blade makes a deceptive maneuver in an attempt to make their opponent lower their guard, striking them when they are vulnerable. When Feint is active, the Invisible Blade halves their attacks per round for that round to make their melee attacks force the target to make a Save vs. Breath at +4 (modifier decreases by 1 per 3 levels) or have their Dexterity halved for one round and Bleeding Wound applied on them. Only one Feint attempt may be made on each individual target per round. Feint has no effect on non-intelligent creatures such as golems and slimes.~
+SAY NAME1 ~虚招~
+SAY UNIDENTIFIED_DESC ~虚招
+无踪短刃做出假动作诱使对手露出破绽，趁其不备发动攻击。虚招激活时，本回合无踪短刃每回合攻击次数减半，近战攻击会迫使目标进行强韧豁免（难度+4，每3级难度惩罚-1），失败则目标敏捷减半，持续1回合，并附加流血不止效果。每回合对单个目标仅可尝试一次虚招。虚招对无智生物（如魔像、史莱姆）无效。~
 
 COPY_EXISTING ~C0IVB02a.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0ivb02i END
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Feint Activated~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~虚招已激活~) END
 COPY_EXISTING ~C0IVB02b.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Feint Succeeded~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~虚招成功~) END
 COPY_EXISTING ~C0IVB02y.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Feint Deactivated~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~虚招已解除~) END
 
 COPY_EXISTING ~C0IVP202.EFF~ ~OVERRIDE/C0IVP203.EFF~
 	WRITE_BYTE 0x1C 2
@@ -286,8 +286,8 @@ LPF patch_add_hla STR_VAR 2da_row = ~C0INVB2~ ability = ~GA_SPCL901~ num_allowed
 LPF patch_add_hla STR_VAR 2da_row = ~C0INVB3~ ability = ~GA_C0IVBH1~ num_allowed = 1 END	
 
 COPY_EXISTING ~C0IVBH1.SPL~ OVERRIDE
-SAY NAME1 ~Dagger Mastery~
-SAY UNIDENTIFIED_DESC ~The invisible blade's precision with their weapon of choice grants them a +4 bonus modifier to critical hit chance when attacking in melee with a dagger.~
+SAY NAME1 ~匕首大师~
+SAY UNIDENTIFIED_DESC ~无踪短刃对本命武器的精准掌控，使其一使用匕首进行近战攻击时，暴击几率获得+4加值修正。~
 
 COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
   PATCH_IF (SOURCE_SIZE > 0x71) BEGIN // avoid crashing on empty items

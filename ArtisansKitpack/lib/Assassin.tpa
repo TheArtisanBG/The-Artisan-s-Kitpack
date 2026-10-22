@@ -35,11 +35,11 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Backstab: Paralysis~) STR_VAR bam_file = c0asic01 RET c0asic01 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Backstab: Hamstring~) STR_VAR bam_file = c0asic02 RET c0asic02 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Backstab: Bleeding~) STR_VAR bam_file = c0asic03 RET c0asic03 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Backstab: Cutthroat~) STR_VAR bam_file = c0asic04 RET c0asic04 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Backstab: Lethal~) STR_VAR bam_file = c0asic05 RET c0asic05 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~背刺：麻痹~) STR_VAR bam_file = c0asic01 RET c0asic01 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~背刺：断筋~) STR_VAR bam_file = c0asic02 RET c0asic02 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~背刺：流血~) STR_VAR bam_file = c0asic03 RET c0asic03 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~背刺：割喉~) STR_VAR bam_file = c0asic04 RET c0asic04 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~背刺：致命~) STR_VAR bam_file = c0asic05 RET c0asic05 = icon END
 
   COPY_EXISTING ~alignmnt.2da~ ~override~
 	COUNT_2DA_COLS cols // amount of columns
@@ -120,54 +120,54 @@ SET_2DA_ENTRY 9 36 1 ~0~
 	END
 	
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~ASSASIN~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~ASSASSIN: The Way of the Assassin is a feared profession, and rightfully so. A master of the art of killing, the assassin is noteworthy for being able to slay a living man with a single calculated blow or from the slightest cut with a poisoned blade. No man alive is capable of killing a target in as many ways as an assassin, and once an assassin has marked a chosen target, their fate is often sealed. While the act of assassination demands swiftness and guile, an assassin's most important skill is patience; the patience to analyze their target, observing for weaknesses, and finding the most effective way to ensure the kill and fade away unseen.
+STRING_SET_EVALUATE kit_strref ~刺客：刺客之道是一门令人闻风丧胆的行当，这绝非虚言。作为刺杀艺术的大师，刺客最令人忌惮之处，在于既能以一记蓄谋已久的突袭夺命，也能仅凭淬毒之刃的一道浅伤取人性命。世上无人能像刺客这般以千般手法猎杀目标，而一旦刺客锁定了猎物，其命运往往便已注定。刺杀之道讲究迅捷与狡诈，但刺客最重要的技艺却是耐心——耐心分析目标，观察破绽，寻得最有效的方式确保一击必杀，而后遁形无踪。
 
-Those who choose to walk the path of assassination do so for a variety of reasons. Many are opportunists, selling their services for personal gain. Some are vigilantes, hoping to make the world a better (or at least more peaceful) place by exterminating 'undesirables'. Yet others do so simply for the thrill of the kill. It is said that no two assassins are alike in either motive or technique.
+选择踏上刺杀之路的人，缘由各有不同。多者是投机之徒，为一己之利出卖技艺。也有治安维持者，以铲除「败类」的方式，妄图让世界变得更好，或至少更太平。更有甚者，单纯只为猎杀的快感而行事。世人常说，没有两名刺客的动机与手法是相同的。
 
-Because of the unsavory nature of their profession as well as their preferred mode of operation, assassins are dreaded and reviled by decent folk. Assassins do not seek fame and recognition, as such things are detrimental to their cause and thus they rarely take positions of leadership or band in groups at all. The best assassins are all but unknown.
+由于其行当的阴暗性质，加之行事偏好隐秘，刺客为正派人士所恐惧与唾弃。刺客不求声名与认可，因这些事物只会有碍其行事，因此他们极少出任领袖之位，也极少成群结队。顶尖的刺客，几乎籍籍无名。
 
-Advantages:
-– Begins with a x3 Backstab multiplier. The assassin's Backstab multiplier caps at x7 at 17th level.
-– Gains a +10% bonus to Hide in Shadows and Move Silently at 1st level and an extra +5% for every level thereafter.
-– Gains a +1 bonus to Saving Throws vs. Death at 1st level and every 10 levels thereafter.
-– May use the Analyze ability at will.
+职业优势：
+–初始背刺倍率为3倍。刺客的背刺倍率在17级时达到上限7倍。
+–1级起，躲藏暗影与无声移动获得+10%加值，之后每提升1级再额外+5%。
+–1级起，死亡豁免获得+1加值，之后每提升10级再+1。
+–可随意使用「分析」能力。
 
-ANALYZE: With this ability, the user carefully observes the target and identifies their strengths and weaknesses, revealing their Hit Die, THAC0, Saving Throws, Magic Resistance, Damage Resistance and vulnerability to Poison and Backstabs. This ability may be used an unlimited number of times.
+分析：使用该能力时，使用者会仔细观察目标，辨识其优劣，显示目标的生命骰、零级命中值、豁免检定、魔法抗性、伤害抗性，以及对毒素与背刺的易伤程度。本能力可无限制使用。
 
-– May use the Poison Weapon ability once per day starting at level 1 and gaining one extra use every six levels thereafter.
+–1级起，每日可使用一次「武器淬毒」能力，之后每提升6级额外获得一次使用次数。
 
-POISON WEAPON: The assassin is capable of coating <PRO_HISHER> weapon for the next eight hours with a slow-acting but extremely potent poison. This poison deals damage and reduces the target's Constitution immediately and every following round for at least four rounds. After four rounds have passed, the target must make a Saving Throw vs. Death or remain poisoned for another four rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
-  1st level: Target suffers two poison damage and loses one point of Constitution. No save modifier.
-  6th level: Target suffers four poison damage and loses one point of Constitution. Save modifier of -1.
-  11th level: Target suffers six poison damage and loses two points of Constitution. Save modifier of -2.
-  16th level: Target suffers eight poison damage and loses two points of Constitution. Save modifier of -3.
-  21st level: Target suffers ten poison damage and loses three points of Constitution. Save modifier of -4.
+武器淬毒：刺客可为<PRO_HISHER>武器涂抹起效缓慢但药性猛烈的剧毒，持续8小时。该毒素会立即造成伤害并降低目标的体质，之后每回合持续生效，至少持续4回合。4回合过后，目标必须进行一次死亡豁免，否则将再中毒4回合。因此只要目标未能成功豁免，毒素就有可能无限期持续。目标不会因毒素造成的体质流失而死亡。
+  1级：目标受到2点毒素伤害，损失1点体质。无豁免惩罚。
+  6级：目标受到4点毒素伤害，损失1点体质。豁免惩罚-1。
+  11级：目标受到6点毒素伤害，损失2点体质。豁免惩罚-2。
+  16级：目标受到8点毒素伤害，损失2点体质。豁免惩罚-3。
+  21级：目标受到10点毒素伤害，损失3点体质。豁免惩罚-4。
 
-– Gains the Preparation and Enhanced Backstab passive effects.
+–获得「蓄势待发」与「强化背刺」被动效果。
 
-PREPARATION: For every round that the assassin remains Invisible, <PRO_HESHE> gains a +1 bonus to Hit and Damage up to a cap of +2 at 1st level. This bonus increases by at +1 at 5th level and every 5 levels thereafter. Additionally, if the assassin remains Invisible for a full ten rounds, <PRO_HISHER> next attack becomes an automatic Critical Hit. Upon exiting stealth, all stacked bonuses are depleted immediately.
+蓄势待发：刺客每处于隐形状态一回合，<PRO_HESHE>的命中与伤害便获得+1加值，1级时上限为+2。该加值在5级及之后每5级再+1。此外，若刺客保持隐形状态满10回合，<PRO_HISHER>的下一次攻击将必定暴击。脱离潜行状态后，所有堆叠的加值将立即清空。
 
-ENHANCED BACKSTAB: The assassin is a master of sneak attacks, capable of backstabbing from any direction while stealthed, while crippling <PRO_HISHER> victim with <PRO_HISHER> backstabs, inflicting one of the following effects. Save modifiers decrease by one for every six levels gained thereafter.
-  Paralysis: Target must save vs. death at +2 or become Paralyzed for 2 rounds.
-  Hamstring: Target must save vs. death or have their Movement Rate and Dexterity halved for 8 rounds.
-  Bleeding: Target must save vs. death at +2 or suffer 1d4+1 piercing damage every round for 2 rounds + 1 round/6 levels.
-  Cutthroat: Target must save vs. death or be Silenced for 20 rounds.
-  Lethality (Level 17+): Target must save vs. death at +4 or be slain instantly. If target is immune to death effects, deal 20% maximum Hit Points in damage instead.
+强化背刺：刺客是潜行攻击的大师，潜行时可从任意方向发动背刺，并以背刺重创<PRO_HISHER>目标，附带以下效果之一。豁免惩罚每提升6级减少1点。
+  麻痹：目标需进行+2难度的死亡豁免，否则麻痹2回合。
+  断筋：目标需进行死亡豁免，否则移动速度与敏捷减半，持续8回合。
+  流血：目标需进行+2难度的死亡豁免，否则每回合受到1d4+1点穿刺伤害，持续2回合，之后每6级增加1回合。
+  割喉：目标需进行死亡豁免，否则沉默20回合。
+  致命（17级及以上）：目标需进行+4难度的死亡豁免，否则即刻被斩杀。若目标免疫死亡效果，则改为造成最大生命值20%的伤害。
 
-– From 5th level onwards, gains the Hidden Blade passive effect.
+–5级起，获得「隐刃」被动效果。
 
-HIDDEN BLADE: When the assassin kills <PRO_HISHER> target, <PRO_HESHE> briefly turns Invisible and moves at double <PRO_HISHER> Movement Rate for one round. This may not occur more than once every five rounds, reduced by one round for every 5 levels gained thereafter (no cooldown at 30th level)
+隐刃：刺客击杀目标时，<PRO_HESHE>将短暂进入隐形状态，并以双倍移动速度移动1回合。该效果每5回合最多触发一次，之后每提升5级冷却时间减少1回合（30级时无冷却）。
 
-– From 10th level onwards, gains the Cloak of Shadows passive effect.
+–10级起，获得「暗影披风」被动效果。
 
-CLOAK OF SHADOWS: The assassin's mastery of stealth renders <PRO_HIMHER> completely undetectable and untargetable by all means, whether magical or mundane, while hiding or Invisible. Even creatures that normally see through invisibility cannot perceive the assassin.
+暗影披风：刺客对潜行的掌控炉火纯青，躲藏或隐形时，无论魔法还是凡俗手段都完全无法探测与锁定。即便是通常能看破隐形的生物，也无法察觉刺客的存在。
 
-Disadvantages:
-– -2 penalty to Charisma.
-– -2 penalty to starting Reputation.
-– May not Set Traps.
-– May only be of any non-good alignment.
-– May only distribute 10 skill points per level among thieving skills.~
+职业限制：
+–魅力属性受-2惩罚。
+–初始声望受-2惩罚。
+–无法设置陷阱。
+–只能为非善良阵营。
+–每次升级只能获得10点的技能点数。~
 
 // change backstab
 
@@ -237,47 +237,47 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0ashla1.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Vulnerable~ /* Vulnerable */)
+	  parameter1 = RESOLVE_STR_REF (~易伤~ /* Vulnerable */)
   END
-SAY NAME1 ~Expose Weakness~ /* Expose Weakness */
-SAY NAME2 ~Expose Weakness~ /* Expose Weakness */
-SAY UNIDENTIFIED_DESC ~Expose Weakness
-To an assassin, no enemy is without a weak point. Using this ability, the assassin may mark a target as vulnerable, reducing their Armor Class by 10 points and setting their physical resistance (if any) to zero for three rounds. Additionally, if the target is immune to backstabs, they lose their immunity permanently. This ability can be taken multiple times, but an assassin can only mark a single target at any given time.~ /* Expose Weakness
+SAY NAME1 ~破绽暴露~ /* Expose Weakness */
+SAY NAME2 ~破绽暴露~ /* Expose Weakness */
+SAY UNIDENTIFIED_DESC ~破绽暴露
+在刺客眼中，没有无懈可击的敌人。使用本能力后，刺客可标记目标为易伤状态，使其护甲等级降低10点，物理抗性（若有）归零，持续3回合。此外，若目标免疫背刺，将永久失去该免疫。本能力可多次习得，但刺客同一时间只能标记一个目标。~ /* Expose Weakness
 To an assassin, no enemy is without a weak point. Using this ability, the assassin may mark a target as vulnerable, reducing their Armor Class by 10 points and setting their physical resistance (if any) to zero for three rounds. Additionally, if the target is immune to backstabs, they lose their immunity permanently. This ability can be taken multiple times, but an assassin can only mark a single target at any given time. */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0ashla2.spl~ ~override~
-SAY NAME1 ~Assassin's Blade~ /* Assassin's Blade */
-SAY NAME2 ~Assassin's Blade~ /* Assassin's Blade */
-SAY UNIDENTIFIED_DESC ~Assassin's Blade
-A master assassin's blade must be honed to the sharpest edge. This innate ability permanently increases the assassin's critical hit chance with melee weapons by 10% and <PRO_HISHER> backstab modifier by 1.
+SAY NAME1 ~刺客之刃~ /* Assassin's Blade */
+SAY NAME2 ~刺客之刃~ /* Assassin's Blade */
+SAY UNIDENTIFIED_DESC ~刺客之刃
+大师级刺客的利刃，必须磨砺至最为锋利的刃口。该天生能力使刺客的近战武器暴击几率永久提升10%，<PRO_HISHER>的背刺倍率+1。
 
-Requires: Expose Weakness~ /* Assassin's Blade
+前置需求：破绽暴露~ /* Assassin's Blade
 A master assassin's blade must be honed to the sharpest edge. This innate ability permanently increases the assassin's critical hit chance with melee weapons by 10% and <PRO_HISHER> backstab modifier by 1.
 
 Requires: Expose Weakness */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0ashla3.spl~ ~override~
-SAY NAME1 ~Death Attack~ /* Death Attack */
-SAY NAME2 ~Death Attack~ /* Death Attack */
-SAY UNIDENTIFIED_DESC ~Death Attack
-A high-level assassin's intimate knowledge of vital spots on opponents allows <PRO_HIMHER> to, once per day, strike a lethal blow against a target. With this ability, the assassin's next attack within five rounds becomes a guaranteed critical hit and kills the target instantly on a failed save vs. death at -4.
+SAY NAME1 ~夺命攻击~ /* Death Attack */
+SAY NAME2 ~夺命攻击~ /* Death Attack */
+SAY UNIDENTIFIED_DESC ~夺命攻击
+高阶刺客对敌人要害部位了如指掌，<PRO_HIMHER>每日可发动一次致命打击。使用本能力后，刺客5回合内的下一次攻击将必定暴击，目标若未通过-4难度的死亡豁免则即刻死亡。
 
-Requires: Assassin's Blade~ /* Death Attack
+前置需求：刺客之刃~ /* Death Attack
 A high-level assassin's intimate knowledge of vital spots on opponents allows <PRO_HIMHER> to, once per day, strike a lethal blow against a target. With this ability, the assassin's next attack within five rounds becomes a guaranteed critical hit and kills the target instantly on a failed save vs. death at -4.
 
 Requires: Assassin's Blade */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin1.spl~ ~override~
-SAY NAME1 ~Enhanced Backstab~ /* Enhanced Backstab */
-SAY NAME2 ~Enhanced Backstab~ /* Enhanced Backstab */
-SAY UNIDENTIFIED_DESC ~Enhanced Backstab
-The assassin is capable of crippling <PRO_HISHER> victim with <PRO_HISHER> backstabs, inflicting one of the following effects. Save modifiers decrease by one for every six levels of the assassin.
+SAY NAME1 ~强化背刺~ /* Enhanced Backstab */
+SAY NAME2 ~强化背刺~ /* Enhanced Backstab */
+SAY UNIDENTIFIED_DESC ~强化背刺
+刺客能以背刺重创<PRO_HISHER>目标，附带以下效果之一。豁免惩罚每提升6级减少1点。
 
-Paralysis: Target must save vs. death at +2 or become paralyzed for 2 rounds.
-Hamstring: Target must save vs. death or have their movement rate and Dexterity halved for 8 rounds.
-Bleeding: Target must save vs. death at +2 or suffer 1d4+1 piercing damage every round for 2 rounds + 1 round/6 levels.
-Cutthroat: Target must save vs. death or be silenced for 20 rounds.
-Lethality (Level 17+): Target must save vs. death at +4 or be slain instantly. If target is immune to death effects, deal 20% maximum hit points in damage instead.~ /* Enhanced Backstab
+麻痹：目标需进行+2难度的死亡豁免，否则麻痹2回合。
+断筋：目标需进行死亡豁免，否则移动速度与敏捷减半，持续8回合。
+流血：目标需进行+2难度的死亡豁免，否则每回合受到1d4+1点穿刺伤害，持续2回合，之后每6级增加1回合。
+割喉：目标需进行死亡豁免，否则沉默20回合。
+致命（17级及以上）：目标需进行+4难度的死亡豁免，否则即刻被斩杀。若目标免疫死亡效果，则改为造成最大生命值20%的伤害。~ /* Enhanced Backstab
 The assassin is capable of crippling <PRO_HISHER> victim with <PRO_HISHER> backstabs, inflicting one of the following effects. Save modifiers decrease by one for every six levels of the assassin.
 
 Paralysis: Target must save vs. death at +2 or become paralyzed for 2 rounds.
@@ -290,21 +290,21 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0as#01.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Analysis: Critical Bonus~)
+	  parameter1 = RESOLVE_STR_REF (~分析：暴击加成~)
   END
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0as#i4.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Gained Passive Ability: Hidden Blade~)
+	  parameter1 = RESOLVE_STR_REF (~获得被动能力：隐刃~)
   END
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0as#i5.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Gained Passive Ability: Cloak of Shadows~)
+	  parameter1 = RESOLVE_STR_REF (~获得被动能力：暗影披风~)
   END
   
 INCLUDE ~%MOD_FOLDER%/effects/poison_weapon.tpa~
@@ -313,7 +313,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~C0TR#30A.spl~ THEN BEGIN
 COPY_EXISTING ~C0TR#30A.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER STR_VAR icon = C0ASIN8B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = c0as#p1 END
-SAY NAME1 ~Mimic: Poison Weapon~
+SAY NAME1 ~模仿：武器淬毒~
 END
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin2.spl~ ~override~
@@ -322,8 +322,8 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin2.spl~ ~override~
 	    match_opcode = 142
         parameter2 = c0asic01
       END
-SAY NAME1 ~Backstab: Paralysis~ /* Backstab: Paralysis */
-SAY NAME2 ~Backstab: Paralysis~ /* Backstab: Paralysis */
+SAY NAME1 ~背刺：麻痹~ /* Backstab: Paralysis */
+SAY NAME2 ~背刺：麻痹~ /* Backstab: Paralysis */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin3.spl~ ~override~
     LPF ALTER_EFFECT
@@ -331,8 +331,8 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin3.spl~ ~override~
 	    match_opcode = 142
         parameter2 = c0asic02
       END
-SAY NAME1 ~Backstab: Hamstring~ /* Backstab: Hamstring */
-SAY NAME2 ~Backstab: Hamstring~ /* Backstab: Hamstring */
+SAY NAME1 ~背刺：断筋~ /* Backstab: Hamstring */
+SAY NAME2 ~背刺：断筋~ /* Backstab: Hamstring */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin4.spl~ ~override~
     LPF ALTER_EFFECT
@@ -340,8 +340,8 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin4.spl~ ~override~
 	    match_opcode = 142
         parameter2 = c0asic03
       END
-SAY NAME1 ~Backstab: Bleeding~ /* Backstab: Bleeding */
-SAY NAME2 ~Backstab: Bleeding~ /* Backstab: Bleeding */
+SAY NAME1 ~背刺：流血~ /* Backstab: Bleeding */
+SAY NAME2 ~背刺：流血~ /* Backstab: Bleeding */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin5.spl~ ~override~
     LPF ALTER_EFFECT
@@ -349,8 +349,8 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin5.spl~ ~override~
 	    match_opcode = 142
         parameter2 = c0asic04
       END
-SAY NAME1 ~Backstab: Cutthroat~ /* Backstab: Cutthroat */
-SAY NAME2 ~Backstab: Cutthroat~ /* Backstab: Cutthroat */
+SAY NAME1 ~背刺：割喉~ /* Backstab: Cutthroat */
+SAY NAME2 ~背刺：割喉~ /* Backstab: Cutthroat */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin6.spl~ ~override~
     LPF ALTER_EFFECT
@@ -358,8 +358,8 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asin6.spl~ ~override~
 	    match_opcode = 142
         parameter2 = c0asic05
       END
-SAY NAME1 ~Backstab: Lethality~ /* Backstab: Lethality */
-SAY NAME2 ~Backstab: Lethality~ /* Backstab: Lethality */
+SAY NAME1 ~背刺：致命~ /* Backstab: Lethality */
+SAY NAME2 ~背刺：致命~ /* Backstab: Lethality */
 
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0assp2.spl~ ~override~
   LPF ALTER_EFFECT
@@ -367,7 +367,7 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0assp2.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Hamstrung~ /* Hamstrung */)
+	  parameter1 = RESOLVE_STR_REF (~断筋~ /* Hamstrung */)
   END
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0assp3.spl~ ~override~
   LPF ALTER_EFFECT
@@ -375,7 +375,7 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0assp3.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Bleeding~ /* Bleeding */)
+	  parameter1 = RESOLVE_STR_REF (~流血~ /* Bleeding */)
   END
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0assp4.spl~ ~override~
   LPF ALTER_EFFECT
@@ -383,7 +383,7 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0assp4.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Silenced~ /* Silenced */)
+	  parameter1 = RESOLVE_STR_REF (~沉默~ /* Silenced */)
   END
   
 COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asinv2.spl~ ~override~
@@ -392,5 +392,5 @@ COPY ~%MOD_FOLDER%/Thief/Assassin/spells/c0asinv2.spl~ ~override~
       check_globals = 1
       check_headers = 1
       match_opcode = 139 // display string
-	  parameter1 = RESOLVE_STR_REF (~Hidden Blade Ready~ /* Hidden Blade Ready */)
+	  parameter1 = RESOLVE_STR_REF (~隐刃就绪~ /* Hidden Blade Ready */)
   END

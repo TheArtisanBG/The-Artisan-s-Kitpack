@@ -64,14 +64,13 @@ ACTION_FOR_EACH description IN
 
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "THIEF" BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_desc ~– Alignment restricted to any except lawful good.~
-          SPRINT new_desc ~– 16th level: May use Crippling Strike as a modal ability.
-          
-CRIPPLING STRIKE: The thief may, at the cost of reducing their backstab multiplier by 2, inflict a crippling strike on their target when backstabbing. If the target fails a Save vs. Death at -3, they suffer a -4 penalty to damage and may not make critical hits for the next round.
+          SPRINT old_desc ~–阵营不能是守序善良~
+          SPRINT new_desc ~–16级：可将致残打击作为切换式能力使用。
 
-– 20th level: Gains Epic Precision.
-          
-EPIC PRECISION: Upon entering stealth or invisibility, the thief's next attack rolls for maximum damage with an additional +4 modifier. The thief does not regain this modifier until the next time they re-enter stealth.
+致残打击：盗贼背刺时，可降低自身2级背刺伤害倍率，对目标施加致残打击。目标死亡豁免（难度-3）失败则伤害值受-4惩罚，且下回合无法造成暴击。
+–20级：获得史诗精准。
+
+史诗精准：进入潜行或隐身状态时，盗贼的下一次攻击造成最大伤害，且额外获得+4修正。直到下一次重新进入潜行前，该修正不会恢复。
 ~
           GET_STRREF %kit_desc% kit_text
           INNER_PATCH_SAVE kit_text ~%kit_text%~ BEGIN
@@ -88,8 +87,8 @@ EPIC PRECISION: Upon entering stealth or invisibility, the thief's next attack r
 				("%row_name%" STRING_EQUAL_CASE "C0ADVENT")
 														 )) BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_kitdesc ~Disadvantages:~
-          SPRINT new_kitdesc ~– Does not gain Epic Precision.~
+          SPRINT old_kitdesc ~职业限制：~
+          SPRINT new_kitdesc ~–无法获得史诗精准。~
           GET_STRREF %kit_desc% kit_text
           INNER_PATCH_SAVE kit_text ~%kit_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_kitdesc%~ ~%old_kitdesc%
@@ -104,8 +103,8 @@ EPIC PRECISION: Upon entering stealth or invisibility, the thief's next attack r
 				("%row_name%" STRING_EQUAL_CASE "ASSASSIN") 
 														 )) BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_kitdesc ~Disadvantages:~
-          SPRINT new_kitdesc ~– May not use Crippling Strike.~
+          SPRINT old_kitdesc ~职业限制：~
+          SPRINT new_kitdesc ~–无法使用致残打击。~
           GET_STRREF %kit_desc% kit_text
           INNER_PATCH_SAVE kit_text ~%kit_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_kitdesc%~ ~%old_kitdesc%
@@ -129,8 +128,8 @@ EPIC PRECISION: Upon entering stealth or invisibility, the thief's next attack r
 				("%row_name%" STRING_EQUAL_CASE "C0ADVENT")
 														 )) BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_kitdesc ~Disadvantages:~
-          SPRINT new_kitdesc ~– Does not gain Epic Precision.~
+          SPRINT old_kitdesc ~职业限制：~
+          SPRINT new_kitdesc ~–无法获得史诗精准。~
           GET_STRREF %kit_desc% kit_text
           INNER_PATCH_SAVE kit_text ~%kit_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_kitdesc%~ ~%old_kitdesc%
@@ -144,8 +143,8 @@ EPIC PRECISION: Upon entering stealth or invisibility, the thief's next attack r
 				("%row_name%" STRING_EQUAL_CASE "ASSASSIN") 
 														 )) BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_kitdesc ~Disadvantages:~
-          SPRINT new_kitdesc ~– May not use Crippling Strike.~
+          SPRINT old_kitdesc ~职业限制：~
+          SPRINT new_kitdesc ~–无法使用致残打击。~
           GET_STRREF %kit_desc% kit_text
           INNER_PATCH_SAVE kit_text ~%kit_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_kitdesc%~ ~%old_kitdesc%
@@ -178,24 +177,24 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Crippling Strike~) STR_VAR bam_file = C0TH-A1I RET C0TH-A1I = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Epic Precision~) STR_VAR bam_file = C0TH-A2I RET C0TH-A2I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~致残打击~) STR_VAR bam_file = C0TH-A1I RET C0TH-A1I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~史诗精准~) STR_VAR bam_file = C0TH-A2I RET C0TH-A2I = icon END
 
 COPY_EXISTING ~C0TH-A1.SPL~ ~OVERRIDE~
-SAY NAME1 ~Crippling Strike~
-SAY UNIDENTIFIED_DESC ~Crippling Strike
-The thief may, at the cost of reducing their backstab multiplier by 2, inflict a crippling strike on their target when backstabbing. If the target fails a Save vs. Death at -3, they suffer a -4 penalty to damage and may not make critical hits for the next round.~
+SAY NAME1 ~致残打击~
+SAY UNIDENTIFIED_DESC ~致残打击
+盗贼背刺时，可降低自身2级背刺伤害倍率，对目标施加致残打击。目标死亡豁免（难度-3）失败则伤害值受-4惩罚，且下回合无法造成暴击。~
 COPY_EXISTING ~C0TH-A1A.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~Crippling Strike Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~致残打击已激活~) END
     LPF ALTER_EFFECT
       INT_VAR
 	    match_opcode = 142
         parameter2 = C0TH-A1I
       END
 COPY_EXISTING ~C0TH-A1B.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~Crippling Strike Inactive~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~致残打击未激活~) END
 COPY_EXISTING ~C0TH-A1C.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Crippling Strike Applied~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~致残打击已生效~) END
 COPY_EXISTING ~C0TH-A2C.SPL~ ~OVERRIDE~
     LPF ALTER_EFFECT
       INT_VAR
@@ -225,8 +224,8 @@ ACTION_FOR_EACH description IN
 				("%row_name%" STRING_EQUAL_CASE "THIEF")
 														 ) BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_kitdesc ~– May backstab~
-          SPRINT new_kitdesc_1 ~– Use Magic Device: A thief may use magical wands and scrolls exclusive to Mages if they possess a minimum Intelligence of 17.~
+          SPRINT old_kitdesc ~–可以通过使用背刺能力提高伤害。~
+          SPRINT new_kitdesc_1 ~–魔法装置运用：智力达到17点及以上的盗贼，可使用法师专属的魔法法杖与卷轴。~
 
           GET_STRREF %kit_desc% kit_text
           INNER_PATCH_SAVE kit_text ~%kit_text%~ BEGIN
@@ -268,7 +267,7 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
       READ_SHORT    0x1C itemtype 
       PATCH_IF (itemtype = 35) OR (itemtype = 11) BEGIN
         WRITE_BYTE    0x20 (row3 BAND 0b10111111)
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = 0 parameter2 = C0_THIEF_UMD timing = 2 power = 2 special = RESOLVE_STR_REF (~Thief~) END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = 0 parameter2 = C0_THIEF_UMD timing = 2 power = 2 special = RESOLVE_STR_REF (~盗贼~) END
       END
     END
   END
@@ -331,7 +330,7 @@ COPY_EXISTING ~KITLIST.2DA~ ~override~
       LPF set_clab_2da_entries INT_VAR f_MinLevel = 1 f_MaxLevel = 1 STR_VAR f_Entry = AP_C0TH-E2 END // USE MAGIC DEVICE
         PRETTY_PRINT_2DA
       END
-      
+
       END
       END
     END

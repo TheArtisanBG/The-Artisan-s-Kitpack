@@ -4,32 +4,32 @@ COPY ~%MOD_FOLDER%/Sorcerer/DragonDisciple/spells~ ~override~
 COPY ~%MOD_FOLDER%/Sorcerer/DragonDisciple/2das/c0dd.2DA~ ~override/clabso01.2da~
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~DRAGON_DISCIPLE~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~DRAGON DISCIPLE: Dragon Disciples are powerful Sorcerers with dragons' blood somewhere in their lineage. Their natural magical talents bring out their draconic heritage, allowing them to cast powerful magical spells and exhibit dragon-like abilities.
+STRING_SET_EVALUATE kit_strref ~龙脉术士：龙脉术士是血脉中潜藏龙之血脉的强大术士。他们天生的魔法天赋唤醒了自身的龙族传承，使其能够施展强力法术，并展现出类龙能力。
 
-Advantages:
-– 1st level: +1 bonus to AC.
-– 3rd level: May use Breath Weapon once per day.
+职业优势：
+–1级：护甲等级+1。
+–3级：每日可使用一次「龙息」。
 
-BREATH WEAPON: The Dragon Disciple breathes a gout of flame up to 30 ft. long, inflicting 3d8 points of fire damage on all creatures caught within the 140-degree cone.
+龙息：龙脉术士喷出一道最远30尺的火焰，对140度锥形范围内的所有生物造成3d8点火焰伤害。
 
-– 4th level: Gains 25% innate Fire Resistance.
-– 5th level: +1 bonus to AC and Strength.
-– 6th level: Breath Weapon damage increases to 4d8.
-– 8th level: Innate Fire Resistance rises to 50%.
-– 9th level: Breath Weapon damage increases to 5d8.
-– 10th level: +1 bonus to AC and Intelligence.
-– 12th level: Breath Weapon damage increases to 6d8. Innate Fire Resistance rises to 75%.
-– 15th level: +1 bonus to AC and Constitution.
-– 17th level: +1 bonus to Strength.
-– 18th level: Movement rate increased by 2.
-– 20th level: Gains Dragon Apotheosis.
+–4级：获得25%天生火焰抗性。
+–5级：护甲等级与力量+1。
+–6级：龙息伤害提升至4d8。
+–8级：天生火焰抗性提升至50%。
+–9级：龙息伤害提升至5d8。
+–10级：护甲等级与智力+1。
+–12级：龙息伤害提升至6d8。天生火焰抗性提升至75%。
+–15级：护甲等级与体质+1。
+–17级：力量+1。
+–18级：移动速度提升2。
+–20级：获得「龙化」。
 
-DRAGON APOTHEOSIS: The dragon disciple completes its transformation, becoming effectively a half-dragon. Gains +2 to Strength, +1 to Charisma, +2 to AC as well as Infravision, immunity to unconsciousness, hold and fire damage. Additionally, the dragon disciple gains slightly increased visual range and may target partially invisible foes.
+龙化：龙脉术士完成蜕变，实质上成为半龙生物。获得力量+2、魅力+1、护甲等级+2，以及夜视术、免疫昏迷、定身与火焰伤害。此外，龙脉术士的视野范围略有提升，且可攻击半隐型的敌人。
 
-– Hit Die: d6
+–生命骰：d6
 
-Disadvantages:
-– May cast one fewer spell per level per day.~
+职业限制：
+–每天可施展的每级法术减少一个~
 END
 
 ACTION_IF dd = 2 THEN BEGIN
@@ -39,35 +39,35 @@ COPY ~%MOD_FOLDER%/Sorcerer/DragonDisciple/spells/C0DD05C.SPL~ ~override/C0DD05A
 COPY ~%MOD_FOLDER%/Sorcerer/DragonDisciple/2das/c0dd2.2DA~ ~override/clabso01.2da~
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~DRAGON_DISCIPLE~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~DRAGON DISCIPLE: Dragon Disciples are powerful Sorcerers with dragons' blood somewhere in their lineage. Their natural magical talents bring out their draconic heritage, allowing them to cast powerful magical spells and exhibit dragon-like abilities.
+STRING_SET_EVALUATE kit_strref ~龙脉术士：龙脉术士是血脉中潜藏龙之血脉的强大术士。他们天生的魔法天赋唤醒了自身的龙族传承，使其能够施展强力法术，并展现出类龙能力。
 
-Advantages:
-– 1st level: +1 bonus to AC.
-– 3rd level: May use Breath Weapon once per day.
+职业优势：
+–1级：护甲等级+1。
+–3级：每日可使用一次「龙息」。
 
-BREATH WEAPON: The Dragon Disciple breathes a gout of flame up to 30 ft. long, inflicting 3d8 points of fire damage on all creatures caught within the 140-degree cone.
+龙息：龙脉术士喷出一道最远30尺的火焰，对140度锥形范围内的所有生物造成3d8点火焰伤害。
 
-– 4th level: Gains 25% innate Fire Resistance.
-– 5th level: +1 bonus to AC and Strength.
-– 6th level: Breath Weapon damage increases to 4d8.
-– 8th level: Innate Fire Resistance rises to 50%.
-– 9th level: Breath Weapon damage increases to 5d8.
-– 10th level: +1 bonus to AC and Intelligence.
-– 12th level: Breath Weapon damage increases to 6d8. Innate Fire Resistance rises to 75%.
-– 15th level: +1 bonus to AC and Constitution.
-– 18th level: Movement rate increased by 2.
-– 20th level: Gains Dragon Apotheosis.
+–4级：获得25%天生火焰抗性。
+–5级：护甲等级与力量+1。
+–6级：龙息伤害提升至4d8。
+–8级：天生火焰抗性提升至50%。
+–9级：龙息伤害提升至5d8。
+–10级：护甲等级与智力+1。
+–12级：龙息伤害提升至6d8。天生火焰抗性提升至75%。
+–15级：护甲等级与体质+1。
+–18级：移动速度提升2。
+–20级：获得「龙化」。
 
-DRAGON APOTHEOSIS: The dragon disciple completes its transformation, becoming effectively a half-dragon. Gains +1 to Strength, +1 to Charisma, +2 to AC as well as Infravision, immunity to unconsciousness, hold and fire damage. Additionally, the dragon disciple gains slightly increased visual range and may target partially invisible foes.
+龙化：龙脉术士完成蜕变，实质上成为半龙生物。获得力量+1、魅力+1、护甲等级+2，以及夜视术、免疫昏迷、定身与火焰伤害。此外，龙脉术士的视野范围略有提升，且可攻击半隐型的敌人。
 
-– Hit Die: d8
+–生命骰：d8
 
-Disadvantages:
-– May cast one fewer spell per level per day.~
+职业限制：
+–每天可施展的每级法术减少一个~
 END
 
 COPY ~%MOD_FOLDER%/Sorcerer/DragonDisciple/spells/spdd03.spl~ ~override~
-SAY NAME1 ~Breath Weapon~
-SAY UNIDENTIFIED_DESC ~Breath Weapon
-The character breathes a gout of flame up to 30 ft. long, inflicting 3d8 points of fire damage on all creatures caught within the 140-degree cone. The ability deals an additional 1d8 points of fire damage for every three levels beyond 3rd level the character has attained (4d8 at 6th level, 5d8 at 9th level, and so on, up to a maximum of 6d8 at 12th level.~
+SAY NAME1 ~龙息~
+SAY UNIDENTIFIED_DESC ~龙息
+角色喷出一道最远30尺的火焰，对140度锥形范围内的所有生物造成3d8点火焰伤害。3级之后，每提升3级，本技能额外造成1d8点火焰伤害（6级时4d8，9级时5d8，以此类推，12级时达到上限6d8）。~
 COPY ~%MOD_FOLDER%/Sorcerer/DragonDisciple/spells/spdd04.spl~ ~override~

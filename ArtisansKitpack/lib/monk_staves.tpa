@@ -245,8 +245,8 @@ ACTION_FOR_EACH description IN
 //MONK
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "MONK" BEGIN
           READ_2DA_ENTRY index 4 col_count monk_desc
-          SPRINT old_monk ~– May only use weapons available to the Thief class (except two-handed).~
-          SPRINT new_monk ~– May only use weapons available to the Thief class (except bows and crossbows).~
+          SPRINT old_monk ~–只能选用盗贼职业所使用的武器（双手武器除外）。~
+          SPRINT new_monk ~–只能选用盗贼职业所使用的武器（弓与十字弓除外）。~
           GET_STRREF %monk_desc% monk_text
           INNER_PATCH_SAVE monk_text ~%monk_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_monk%~ ~%new_monk%~

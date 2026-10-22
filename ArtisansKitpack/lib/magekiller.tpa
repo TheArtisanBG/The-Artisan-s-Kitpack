@@ -18,35 +18,35 @@ COPY_EXISTING ~CLABTH01.2DA~ ~OVERRIDE/C0MKILL.2DA~
 
  	PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~MAGEKILLER: In regions where magic is feared and persecuted, the skills of those capable of hunting and eliminating magic-users are highly sought after. The Magekiller is a rogue who specializes in tracking, stealth and antimagic, becoming highly skilled at recognizing and countering magic of all kinds.
+OUTER_SPRINT kit_description ~法师杀手：在魔法遭到恐惧与迫害的地区，擅长追踪与铲除施法者的人才备受追捧。法师杀手是专精追踪、潜行与反魔法的游荡者，在辨识与对抗各类魔法上技艺高超。
 
-Advantages:
-– +25% bonus to Detect Illusions.
-– +2 bonus to Saving Throws vs. Spells. Gains an additional +1 per 10 levels.
-– The Magekiller's backstabs have a chance to remove magical effects from their target as per a Dispel Magic spell.
-– The Magekiller's antimagic abilities have a casting time of 1, and are treated as abilities without a spell level or school, thus not being subjected to protections that are determined by them.
-– May cast Breach as an innate ability once per day. Gains an extra use at 10th and 15th level.
-– 8th level: May cast Spell Immunity as an innate ability once per day.
-– 12th level: May cast Globe of Invulnerability as an innate ability once per day.
-– 16th level: May cast Spell Turning as an innate ability once per day.
-– 20th level: May cast Pierce Shield as an innate ability once per day.
+职业优势：
+–识破幻象+25%。
+–对抗法术的豁免检定+2。每提升10级额外+1。
+–法师杀手的背刺有几率移除目标身上的魔法效果，效果等同「解除魔法」法术。
+–法师杀手的反魔法能力施法时间为1，且视为无法术等级、无学派的能力，因此不受基于法术等级或学派的防护效果影响。
+–每日可天生施展一次「破法」。10级与15级时各额外获得1次使用次数。
+–8级：每日可天生施展一次「法术免疫」。
+–12级：每日可天生施展一次「无效结界」。
+–16级：每日可天生施展一次「法术反转」。
+–20级：每日可天生施展一次「破盾术」。
 
-Disadvantages:
-– Backstab progression is weaker than a normal Thief's:
-  Level 1-4: x1 (no multiplier)
-  Level 5-8: x2
-  Level 9-12: x3
-  Level 13+: x4KIT_DISADV_1
-– May only distribute 15 skill points per level among thieving skills.
-– May not dual-class to Mage.
-– May not use the Set Snare ability.~
+职业限制：
+–背刺成长弱于普通游荡者：
+  1-4级：1倍（无倍率）
+  5-8级：2倍
+  9-12级：3倍
+  13级及以上：4倍KIT_DISADV_1
+–每级仅可分配15点技能点数至游荡者技能。
+–无法兼职成为法师。
+–无法使用「设置陷阱」能力。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~7000~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Crippling Strike.
-– Does not gain Epic Precision.~
+–无法使用「致残打击」。
+–不获得「史诗精准」。~
 
 END
 
@@ -83,13 +83,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 4
 	
-    mixed         = RESOLVE_STR_REF(~Magekiller~)
+    mixed         = RESOLVE_STR_REF(~法师杀手~)
 	
-    lower         = RESOLVE_STR_REF(~magekiller~)
+    lower         = RESOLVE_STR_REF(~法师杀手~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~MAGEKILLER: In regions where magic is feared and persecuted, the skills of those capable of hunting and eliminating magic-users are highly sought after. The Magekiller is a rogue who specializes in tracking, stealth and antimagic, becoming highly skilled at recognizing and countering magic of all kinds.~)
+    briefdesc     = RESOLVE_STR_REF(~法师杀手：在魔法遭到恐惧与迫害的地区，擅长追踪与铲除施法者的人才备受追捧。法师杀手是专精追踪、潜行与反魔法的游荡者，在辨识与对抗各类魔法上技艺高超。~)
 	
 	// fallen = 0
 	
@@ -190,7 +190,7 @@ COPY_EXISTING ~C0MK#002.spl~ ~override~
 	LPF ALTER_EFFECT
 		INT_VAR
 		match_opcode = 139
-		parameter1 = RESOLVE_STR_REF (~Dispel Effects~)
+		parameter1 = RESOLVE_STR_REF (~驱散效果~)
 	END
 
 COPY_EXISTING ~SPWI513.spl~ ~override/C0MK#003.spl~
@@ -274,10 +274,10 @@ LPF ALTER_SPELL_HEADER INT_VAR speed = 1 END
 LPF ALTER_EFFECT INT_VAR power = 100 END
 
 COPY_EXISTING ~C0MK#008.SPL~ ~OVERRIDE~
-SAY NAME1 ~Spellstrike~
-SAY UNIDENTIFIED_DESC ~The Magekiller gains the ability to cast Spellstrike as an innate ability once per day.
+SAY NAME1 ~法击~
+SAY UNIDENTIFIED_DESC ~法师杀手可每日天生施展一次本法击。
 
-This ability may be chosen up to three times.~
+本职业能力最多可选取3次。~
 
 COPY_EXISTING ~SPWI903.spl~ ~override/C0MK#009.spl~
 WRITE_SHORT 0x1C 4 
@@ -296,10 +296,10 @@ LPF ALTER_SPELL_HEADER INT_VAR speed = 1 END
 LPF ALTER_EFFECT INT_VAR power = 100 END
 
 COPY_EXISTING ~C0MK#010.SPL~ ~OVERRIDE~
-SAY NAME1 ~Imprison Arcana~
-SAY UNIDENTIFIED_DESC ~Imprison Arcana
-The Magekiller, upon touching an arcane magic-user, imprisons them in an extradimensional antimagic prison indefinitely within which they are unable to escape save for the use of a Freedom spell. Imprison Arcana ignores Magic Resistance and there is no Saving Throw against the effects, but the ability is only effective against mages and will fail if attempted on anyone else.
+SAY NAME1 ~奥术封禁~
+SAY UNIDENTIFIED_DESC ~奥术封禁
+法师杀手触碰奥术施法者时，可将其永久囚禁于异次元反魔法监牢中，目标除非使用「自由术」否则无法逃脱。奥术封禁无视魔法抗性，且无豁免检定，但本能力仅对法师有效，对其他目标使用会失败。
 
-This ability may only be chosen once.
+本技能仅可选择1次。
 
-Requires: Spellstrike~
+需要：法击~

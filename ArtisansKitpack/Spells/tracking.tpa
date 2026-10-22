@@ -48,21 +48,21 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Tracking~) STR_VAR bam_file = SPCL922I RET SPCL922I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~追踪~) STR_VAR bam_file = SPCL922I RET SPCL922I = icon END
 
 COPY_EXISTING ~C0PR#XX.SPL~ ~OVERRIDE~
 	LPF CLONE_EFFECT INT_VAR match_opcode = 326 STR_VAR match_resource = C0PR#X1 resource = SPCL922K	END
 
 COPY_EXISTING ~C0CL922.SPL~ OVERRIDE
 	LPF ALTER_EFFECT INT_VAR match_opcode = 318 parameter2 = C0_NOT_OUTDOORS_CHECK END
-SAY NAME1 ~Tracking~
-SAY UNIDENTIFIED_DESC ~Tracking
-With an intimate knowledge of <PRO_HISHER> surroundings and the creatures that live within them, a ranger can use the Tracking ability to give <PRO_HIMHER>self a general idea of what creatures are in an area and which direction they are. All enemies within a 50 feet radius of the ranger will be revealed from within the fog of war. Tracking's range increases by an additional 25 feet radius at 9th and 18th level.
+SAY NAME1 ~追踪~
+SAY UNIDENTIFIED_DESC ~追踪
+凭借对<PRO_HISHER>周遭环境与栖息生物的熟稔，游侠可使用追踪能力，让<PRO_HIMHER>自身大致探明区域内的生物种类与方位。游侠周围50英尺半径内的所有敌人，都将在战争迷雾中显露身形。9级与18级时，追踪半径将额外增加25英尺。
 
-This ability only works while outdoors.~
+本能力仅在室外生效。~
 
 COPY_EXISTING ~SPCL922a.SPL~ OVERRIDE
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Tracking Activated~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~追踪（激活）~) END
   LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = SPCL922I END
 
 ADD_PROJECTILE ~%MOD_FOLDER%/spells/tracking/projectile/C0TRKP01.PRO~ ~C0 Tracking 800~
@@ -97,7 +97,7 @@ COPY_EXISTING ~SPCL922H.SPL~ OVERRIDE
 END
 
 COPY_EXISTING ~SPCL922c.SPL~ OVERRIDE
-	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Tracking Deactivated~) END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~追踪（未激活）~) END
 
 DEFINE_ACTION_FUNCTION cd_new_portrait_icon
   INT_VAR string = 0

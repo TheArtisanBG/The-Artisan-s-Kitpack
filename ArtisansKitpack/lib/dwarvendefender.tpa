@@ -21,55 +21,55 @@ COPY_EXISTING ~CLABFI01.2DA~ ~OVERRIDE/CLABFI06.2DA~
 
 INCLUDE ~%MOD_FOLDER%/effects/fortitude.tpa~
 
-OUTER_SPRINT kit_description ~DWARVEN DEFENDER: The Dwarven Defender is a formidable warrior that is reputed to be worth two soldiers of any other race. Trained extensively in the art of dwarven warfare, a handful of these stout fighters can render a defensive line all but unbreakable. 
+OUTER_SPRINT kit_description ~矮人防御者：矮人防御者是令人敬畏的战士，相传其战力堪比两名其他种族的士兵。他们受过精深的矮人战技训练，寥寥数名这般强壮的战士便可构筑出几乎牢不可破的防线。
 
-Advantages:
-– Immunity to Stun and Displacement effects.
-– Gains 5% resistance to crushing, slashing, piercing, and missile damage every 5 levels to a maximum of 20% at level 20.
-– Fortitude: The Dwarven Defender is healed for one hit point each time they take damage.
-– May use Defensive Stance once per day. Gains one use at level 1, one use at level 4, and an additional use every 4 levels thereafter.
+职业优势：
+–免疫震慑与移位效果。
+–每5级获得5%钝击、挥砍、穿刺与远程伤害抗性，20级时达到最高20%。
+–坚毅：矮人防御者每次受到伤害时恢复1点生命值。
+–每日可使用防御姿态。1级时获得1次使用次数，4级时再获得1次，之后每4级增加1次使用次数。
 
-DEFENSIVE STANCE: The Dwarven Defender assumes a defensive position, prepared to endure all attacks in their direction, gaining various bonuses based on their level for 1 turn. From 1st level, the Dwarven Defender gains +2 to Armor Class and Saving Throws, 20% resistance to all damage, their effective personal space is doubled, preventing creatures from passing them in a larger radius, but their movement rate are halved and they are unable to make critical hits during the stance. Additional bonuses with level are as follows:
-  5th level: Armor Class and Saving Throw bonus increased to +3.
-  8th level: Damage Resistance increased to 35%.
-  11th level: Armor Class and Saving Throw bonus increased to +4.
-  14th level: Inflicts 4d6+4 non-lethal damage as recoil to incoming melee attackers.
-  18th level: Armor Class and Saving Throw bonus increased to +6. Damage Resistance increased to 50%.
-  
-– May use the Shield Bash modal ability.
+防御姿态：矮人防御者摆出防御架势，准备承受朝向自己的所有攻击，在1回合内根据自身等级获得多种增益。从1级开始，矮人防御者获得+2护甲等级与豁免检定，所有伤害抗性20%，有效个人空间翻倍，可在更大范围内阻挡敌人通行，但姿态持续期间移动速度减半，且无法造成重击。随等级提升的额外增益如下：
+  5级：护甲等级与豁免检定加成提升至+3。
+  8级：伤害抗性提升至35%。
+  11级：护甲等级与豁免检定加成提升至+4。
+  14级：对来袭的近战攻击者造成4d6+4点非致命反弹伤害。
+  18级：护甲等级与豁免检定加成提升至+6，伤害抗性提升至50%。
 
-SHIELD BASH: The Dwarven Defender slams their shield into the target for their first melee attack on each target to unbalance and daze them, dealing 1d10 bonus crushing damage and reducing the target's Armor Class by 2 points and temporarily rendering them unable to take actions for one round on a failed Save vs. Breath Weapons (-1 to modifier per 5 levels). The Dwarven Defender may only attempt a Shield Bash on a single target once per two rounds.
+–可使用盾击模式技能。
 
-The Dwarven Defender reduces their attacks per round by 1/2 and melee damage by 2 points while Shield Bash is active.
-  
-– 20th level: Unyielding: The dwarven defender permanently gains a 10% chance to negate incoming damage.
+盾击：矮人防御者在对每个目标的首次近战攻击中用盾牌猛撞目标，使其失去平衡并陷入眩晕，额外造成1d10点钝击伤害，降低目标2点护甲等级；若目标未通过吐息豁免（每5级豁免检定减值-1），则暂时无法行动，持续1轮。矮人防御者每2轮只能对单个目标尝试一次盾击。
 
-– Hit Die: d12
-  
-Disadvantages:KIT_DISADV_1
-– May not exceed High Mastery (four slots) in axes and war hammers.
-– May not exceed Specialization (two slots) in any other weapon.~
+盾击激活期间，矮人防御者的每回合攻击次数减半，近战伤害降低2点。
+
+–20级：不屈：矮人防御者永久获得10%几率抵消来袭伤害。
+
+–生命骰：d12
+
+职业限制：KIT_DISADV_1
+–斧和战锤的熟练程度无法超过宗师水平（四星）。
+–其他所有武器的熟练程度都无法超过精通（两星）。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 COPY_EXISTING ~C0FIG01.SPL~ ~OVERRIDE/C0DWD01.SPL~
 LPF DELETE_SPELL_HEADER INT_VAR min_level = 14 END
-SAY NAME1 ~Power Attack~
-SAY UNIDENTIFIED_DESC ~Power Attack
-The Fighter forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Fighter must have 17 or greater Strength to activate this ability.~
+SAY NAME1 ~猛力攻击~
+SAY UNIDENTIFIED_DESC ~猛力攻击
+战士放弃命中精度以换取更沉重、更具杀伤力的打击，牺牲3点近战THAC0来提升3点近战伤害。战士必须拥有17点及以上力量才能激活此技能。~
 
 COPY_EXISTING ~C0FIG02.SPL~ ~OVERRIDE/C0DWD02.SPL~
 LPF DELETE_SPELL_HEADER INT_VAR min_level = 14 END
-SAY NAME1 ~Expertise~
-SAY UNIDENTIFIED_DESC ~Expertise
-The Fighter focuses on defense at the expense of accuracy, sacrificing 3 points of THAC0 to increase their Armor Class by 3. The Fighter must have 15 or greater Intelligence to activate this ability.~
+SAY NAME1 ~寓守于攻~
+SAY UNIDENTIFIED_DESC ~寓守于攻
+战士以命中精度为代价专注于防御，牺牲3点THAC0来提升3点护甲等级。战士必须拥有15点及以上智力才能激活此技能。~
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Improved Power Attack and Improved Expertise.
-– May not use Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.
-– Does not gain Improved Initiative.~
+–无法使用精通猛力攻击与精通寓守于攻。
+–无法使用速射。
+–16级时无法获得全武器专精。
+–无法获得精通先攻。~
 
 END
 
@@ -104,82 +104,82 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Shield Bash~) STR_VAR bam_file = c0dwd03i RET c0dwd03i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~盾击~) STR_VAR bam_file = c0dwd03i RET c0dwd03i = icon END
 
 COPY_EXISTING ~SPDWD02.SPL~ OVERRIDE
-SAY NAME1 ~Defensive Stance~
-SAY UNIDENTIFIED_DESC ~Defensive Stance
-DEFENSIVE STANCE: The user assumes a defensive position, prepared to endure all attacks in their direction, gaining various bonuses based on their level for 1 turn. From 1st level, the user gains +2 to Armor Class and Saving Throws, 20% resistance to all damage, their effective personal space is doubled, preventing creatures from passing them in a larger radius, but their movement rate are halved and they are unable to make critical hits during the stance. Additional bonuses with level are as follows:
-  5th level: Armor Class and Saving Throw bonus increased to +3.
-  8th level: Damage Resistance increased to 35%.
-  11th level: Armor Class and Saving Throw bonus increased to +4.
-  14th level: Inflicts 4d6+4 non-lethal damage as recoil to incoming melee attackers.
-  18th level: Armor Class and Saving Throw bonus increased to +6. Damage Resistance increased to 50%.~
+SAY NAME1 ~防御姿态~
+SAY UNIDENTIFIED_DESC ~防御姿态
+使用者摆出防御架势，准备承受朝向自己的所有攻击，在1回合内根据自身等级获得多种增益。从1级开始，使用者获得+2护甲等级与豁免检定，所有伤害抗性20%，有效个人空间翻倍，可在更大范围内阻挡敌人通行，但姿态持续期间移动速度减半，且无法造成重击。随等级提升的额外增益如下：
+  5级：护甲等级与豁免检定加成提升至+3。
+  8级：伤害抗性提升至35%。
+  11级：护甲等级与豁免检定加成提升至+4。
+  14级：对来袭的近战攻击者造成4d6+4点非致命反弹伤害。
+  18级：护甲等级与豁免检定加成提升至+6，伤害抗性提升至50%。~
 
 COPY_EXISTING ~C0DWD03.SPL~ OVERRIDE
-SAY NAME1 ~Shield Bash~
-SAY UNIDENTIFIED_DESC ~Shield Bash
-The user slams their shield into the target for their first melee attack on each target to unbalance and daze them, dealing 1d10 bonus crushing damage and reducing the target's Armor Class by 2 points and temporarily rendering them unable to take actions for one round on a failed Save vs. Breath Weapons (-1 to modifier per 5 levels). The user may only attempt a Shield Bash on a single target once per two rounds.
+SAY NAME1 ~盾击~
+SAY UNIDENTIFIED_DESC ~盾击
+使用者在对每个目标的首次近战攻击中用盾牌猛撞目标，使其失去平衡并陷入眩晕，额外造成1d10点钝击伤害，降低目标2点护甲等级；若目标未通过吐息豁免（每5级豁免检定减值-1），则暂时无法行动，持续1轮。使用者每2轮只能对单个目标尝试一次盾击。
 
-The user reduces their attacks per round by 1/2 and melee damage by 2 points while Shield Bash is active.~
+盾击激活期间，使用者的每回合攻击次数减半，近战伤害降低2点。~
 
 COPY_EXISTING ~C0DWD03a.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0dwd03i END
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Shield Bash Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~盾击激活~) END
 
 COPY_EXISTING ~C0DWD03b.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Shield Bash Successful~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~盾击成功~) END
 
 COPY_EXISTING ~C0DWD03c.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Dazed~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~眩晕~) END
 
 COPY_EXISTING ~C0DWD03z.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Shield Bash Inactive~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~盾击未激活~) END
 
 COPY_EXISTING ~C0DWD04b.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Incoming damage negated by Unyielding~)
+	  parameter1 = RESOLVE_STR_REF (~不屈效果抵消来袭伤害~)
 END
 
-OUTER_SPRINT kit_description ~VANGUARD: The vanguard is a frontline warrior trained to fight in the middle of enemy lines. Tough and durable, a vanguard is a reliable defender capable of holding the line and enduring blows that would fell a lesser man.
+OUTER_SPRINT kit_description ~先锋：先锋是受训于敌阵之中作战的前线战士。他们强壮坚韧，是可靠的防御者，足以守住阵线，承受足以击倒常人的打击。
 
-Advantages:
-– Immunity to Stun and Displacement effects.
-– Gains 5% resistance to crushing, slashing, piercing, and missile damage every 5 levels to a maximum of 20% at level 20.
-– Fortitude: The Vanguard is healed for one hit point each time they take damage.
-– May use Defensive Stance once per day. Gains one use at level 1, one use at level 4, and an additional use every 4 levels thereafter.
+职业优势：
+–免疫震慑与移位效果。
+–每5级获得5%钝击、挥砍、穿刺与远程伤害抗性，20级时达到最高20%。
+–坚毅：先锋每次受到伤害时恢复1点生命值。
+–每日可使用防御姿态。1级时获得1次使用次数，4级时再获得1次，之后每4级增加1次使用次数。
 
-DEFENSIVE STANCE: The Vanguard assumes a defensive position, prepared to endure all attacks in their direction, gaining various bonuses based on their level for 1 turn. From 1st level, the Vanguard gains +2 to Armor Class and Saving Throws, 20% resistance to all damage, their effective personal space is doubled, preventing creatures from passing them in a larger radius, but their movement rate are halved and they are unable to make critical hits during the stance. Additional bonuses with level are as follows:
-  5th level: Armor Class and Saving Throw bonus increased to +3.
-  8th level: Damage Resistance increased to 35%.
-  11th level: Armor Class and Saving Throw bonus increased to +4.
-  14th level: Inflicts 4d6+4 non-lethal damage as recoil to incoming melee attackers.
-  18th level: Armor Class and Saving Throw bonus increased to +6. Damage Resistance increased to 50%.
-  
-– May use the Shield Bash modal ability.
+防御姿态：先锋摆出防御架势，准备承受朝向自己的所有攻击，在1回合内根据自身等级获得多种增益。从1级开始，先锋获得+2护甲等级与豁免检定，所有伤害抗性20%，有效个人空间翻倍，可在更大范围内阻挡敌人通行，但姿态持续期间移动速度减半，且无法造成重击。随等级提升的额外增益如下：
+  5级：护甲等级与豁免检定加成提升至+3。
+  8级：伤害抗性提升至35%。
+  11级：护甲等级与豁免检定加成提升至+4。
+  14级：对来袭的近战攻击者造成4d6+4点非致命反弹伤害。
+  18级：护甲等级与豁免检定加成提升至+6，伤害抗性提升至50%。
 
-SHIELD BASH: The Vanguard slams their shield into the target for their first melee attack on each target to unbalance and daze them, dealing 1d4 bonus crushing damage per 2 levels and reducing the target's Armor Class by 2 points and temporarily rendering them unable to take actions for one round on a failed Save vs. Breath Weapons (-1 to modifier per 5 levels). The Vanguard may only attempt a Shield Bash on a single target once per two rounds.
+–可使用盾击模式技能。
 
-The Vanguard reduces their attacks per round by 1/2 and melee damage by 2 points while Shield Bash is active.
-  
-– 20th level: Unyielding: The vanguard permanently gains a 10% chance to negate incoming damage.
+盾击：先锋在对每个目标的首次近战攻击中用盾牌猛撞目标，使其失去平衡并陷入眩晕，每2级额外造成1d4点钝击伤害，降低目标2点护甲等级；若目标未通过吐息豁免（每5级豁免检定减值-1），则暂时无法行动，持续1轮。先锋每2轮只能对单个目标尝试一次盾击。
 
-– Hit Die: d12
+盾击激活期间，先锋的每回合攻击次数减半，近战伤害降低2点。
 
-Disadvantages:KIT_DISADV_1
-– May not exceed High Mastery (four slots) in single-handed melee weapons.
-– May not exceed Specialization (two slots) in any other weapon.~
+–20级：不屈：先锋永久获得10%几率抵消来袭伤害。
+
+–生命骰：d12
+
+职业限制：KIT_DISADV_1
+–单手近战武器的熟练度最高只能达到武器大师（4点）。
+–其他武器的熟练度最高只能达到武器专精（2点）。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Improved Power Attack and Improved Expertise.
-– May not use Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.
-– Does not gain Improved Initiative.~
+–无法使用精通猛力攻击与精通寓守于攻。
+–无法使用速射。
+–16级时无法获得全武器专精。
+–无法获得精通先攻。~
 
 END
 
@@ -216,13 +216,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 2
 	
-    mixed         = RESOLVE_STR_REF(~Vanguard~)
+    mixed         = RESOLVE_STR_REF(~先锋~)
 	
-    lower         = RESOLVE_STR_REF(~vanguard~)
+    lower         = RESOLVE_STR_REF(~先锋~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~VANGUARD: The vanguard is a frontline warrior trained to fight in the middle of enemy lines. Tough and durable, a vanguard is a reliable defender capable of holding the line and enduring blows that would fell a lesser man.~)
+    briefdesc     = RESOLVE_STR_REF(~先锋：先锋是受训于敌阵之中作战的前线战士。他们强壮坚韧，是可靠的防御者，足以守住阵线，承受足以击倒常人的打击。~)
 	
 	// fallen = 0
 	

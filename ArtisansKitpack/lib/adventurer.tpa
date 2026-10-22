@@ -13,35 +13,35 @@ COPY_EXISTING ~CLABTH01.2DA~ ~OVERRIDE/C0ADVENT.2DA~
 
  	PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~ROGUE ARCHER: Many rogues choose the use of ranged weapons out of pragmatism, choosing to approach combat from a safe distance. Rogue Archers are experienced enough with such weapons to become a match for any warrior from a distance, taking down their foes with deadly missiles without ever needing to put themselves within threat range.
+OUTER_SPRINT kit_description ~游荡射手：许多游荡者出于务实考量选择使用远程武器，习惯于在安全距离外接战。游荡射手精于此道，远距交锋时不逊于任何战士，无需身犯险境，便能以致命的投射物击倒敌人。
 
-Advantages:
-– +1 to hit and damage rolls with any missile weapon at level 1 and every 3 levels thereafter.
-– Farsighted: The rogue archer's visual range is slightly greater than normal, and is further increased if stealthed or invisible.
-– May achieve Mastery (3 slots) in any missile weapon.
-– May use the Rapid Shot modal ability.
+职业优势：
+–1级起，所有远程武器的命中与伤害掷骰获得+1加值，之后每提升3级再+1。
+–远视：游荡射手的视野范围略高于常人，处于潜行或隐形状态时会进一步提升。
+–可将任意远程武器修习至精通级（3点熟练槽）。
+–可使用「速射」攻击模式。
 
-RAPID SHOT: The archer may make an additional attack per round at a -4 penalty to hit.
+速射：射手每轮可额外进行一次攻击，但命中受-4惩罚。
 
-– May use the Called Shot ability once per day. Gains one use at level 4 and an additional use every 4 levels thereafter.
+–每日可使用一次「精准射击」能力。4级时增加一次使用次数，之后每提升4级再增加一次。
 
-CALLED SHOT: All successful ranged attacks within the next 10 seconds have the following cumulative effects besides normal damage, according to the level of the Rogue Archer:
- 4th level: -1 penalty to target's THAC0.
- 8th level: -1 penalty to target's Saving Throws vs. Spell.
- 12th level: -1 penalty to the target's Strength score.
- 16th level: +2 bonus to damage roll.
- 
-– 12th level: Improved Rapid Shot: The archer’s penalty to hit while Rapid Shot is active is reduced to -2.
-– 18th level: Sniper: The archer's ranged attacks while stealthed or invisible are guaranteed critical hits.
+精准射击：接下来10秒内，所有成功命中的远程攻击除造成正常伤害外，还将根据游荡射手的等级叠加以下效果：
+ 4级：目标的零级命中值（THAC0）受-1惩罚。
+ 8级：目标的法术豁免检定受-1惩罚。
+ 12级：目标的力量属性受-1惩罚。
+ 16级：伤害掷骰获得+2加值。
 
-Disadvantages:
-– May not use Backstab ability.KIT_DISADV_1~
+–12级：精通速射：速射状态下的命中惩罚降低至-2。
+–18级：狙击：潜行或隐形状态下，射手的远程攻击必定暴击。
+
+职业限制：
+–无法使用背刺能力。KIT_DISADV_1~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~7000~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Crippling Strike.~
+–无法使用「致残打击」。~
 
 END
 
@@ -78,13 +78,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 4
 	
-    mixed         = RESOLVE_STR_REF(~Rogue Archer~)
+    mixed         = RESOLVE_STR_REF(~游荡射手~)
 	
-    lower         = RESOLVE_STR_REF(~rogue archer~)
+    lower         = RESOLVE_STR_REF(~游荡射手~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~ROGUE ARCHER: Many rogues choose the use of ranged weapons out of pragmatism, choosing to approach combat from a safe distance. Rogue Archers are experienced enough with such weapons to become a match for any warrior from a distance, taking down their foes with deadly missiles without ever needing to put themselves within threat range.~)
+    briefdesc     = RESOLVE_STR_REF(~游荡射手：许多游荡者出于务实考量选择使用远程武器，习惯于在安全距离外接战。游荡射手精于此道，远距交锋时不逊于任何战士，无需身犯险境，便能以致命的投射物击倒敌人。~)
   STR_VAR
     kit_name      = ~C0ADVENT~
 	

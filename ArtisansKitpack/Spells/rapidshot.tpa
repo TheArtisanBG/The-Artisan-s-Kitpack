@@ -17,23 +17,23 @@ END
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~C0ARC03.SPL~ BEGIN
 COPY ~%MOD_FOLDER%/spells/rapidshot~ ~OVERRIDE~
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Rapid Shot~) STR_VAR bam_file = C0ARC03I RET C0ARC03I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~快速射击~) STR_VAR bam_file = C0ARC03I RET C0ARC03I = icon END
 
 COPY_EXISTING C0ARC03.SPL OVERRIDE
-SAY NAME1 ~Rapid Shot~
-SAY UNIDENTIFIED_DESC ~Rapid Shot
-The user may make an additional ranged attack per round at a -4 penalty to hit. From 12th level onwards, the penalty is reduced to -2.~
+SAY NAME1 ~快速射击~
+SAY UNIDENTIFIED_DESC ~快速射击
+使用者每回合可额外进行一次远程攻击，攻击检定受-4减值。12级起，攻击减值降至-2。~
 
 COPY_EXISTING C0ARC03b.SPL OVERRIDE
-LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~Rapid Shot Active~) END
-LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~Improved Rapid Shot Active~) END
+LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~快速射击（生效）~) END
+LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~精通快速射击（生效）~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0ARC03I END
 
 COPY_EXISTING C0ARC03z.SPL OVERRIDE
-LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~Rapid Shot Inactive~) END
-LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~Improved Rapid Shot Inactive~) END
+LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~快速射击（未生效）~) END
+LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~精通快速射击（未生效）~) END
 
 COPY_EXISTING C0ARC03v.SPL OVERRIDE
-LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~Rapid Shot Inactive~) END
-LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~Improved Rapid Shot Inactive~) END
+LPF ALTER_EFFECT INT_VAR header = 0 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~快速射击（未生效）~) END
+LPF ALTER_EFFECT INT_VAR header = 1 match_opcode = 330 opcode = 330 parameter1 = RESOLVE_STR_REF (~精通快速射击（未生效）~) END
 END

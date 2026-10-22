@@ -12,53 +12,53 @@ COPY_EXISTING ~K_SH_H.2DA~ ~OVERRIDE/K_SH_D.2DA~
 END
 
 ACTION_IF MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~1005~ THEN BEGIN
-OUTER_SPRINT warhorn_rage_desc ~WARHORN SHAMAN: Northern shamans who are also skilled warriors, Warhorn Shamans are capable of calling upon spirits of warriors from planes such as Valhalla or Warrior's Rest. Many of these shamans worship Tempus, the Lord of Battles, and often are just as capable in battle as they are in shamanic magic.
+OUTER_SPRINT warhorn_rage_desc ~战号萨满：出身北方的萨满同时也是娴熟的战士，战号萨满能召唤来自英灵殿、战士安息所等位的战士之灵。他们中许多人信奉战争之主坦帕斯，战斗能力与萨满魔法造诣不相上下。
 
-Advantages:
-– Hit Die: d10
-– May be of any non-Lawful alignment.
-– May specialize in all weapons that are usable by shamans.
-– May fully specialize in all weapon styles.
-– Gains immediate access to a number of unique spells, which can be cast like any other: Battle Ardor, Rallying Cry, Fury of the Winds, Storm Barrier, Stormbound Axes, Wrath of the Skies, Undying Fervor
-– May use Rage ability once per day. Gains one use at level 1 and an additional use every 6 levels thereafter.
+职业优势：
+-生命骰：d10
+-阵营可为任意非守序阵营。
+-萨满可用的所有武器均可达到专精级。
+-所有战斗风格均可达到满专精。
+-直接掌握数种独特法术，可与其他法术一样正常施放：战焰、战嚎、风怒、风暴屏障、雷缚战斧、天怒、不灭狂热
+-每日可使用一次「狂暴」能力。1级获得1次，之后每提升6级额外获得1次。
 
-RAGE: The enraged status lasts for 5 rounds and provides a +4 bonus to Strength and Constitution and a +2 bonus to Saving Throws vs. Spell. However, the caster incurs a -2 penalty to Armor Class. Additionally, activating Rage restores any drained levels from the caster and protects them from subsequent level drain effects for the duration. When the rage expires, the caster becomes fatigued and suffers a -2 penalty to Strength, Dexterity, Armor Class and Movement Rate for 5 rounds. The caster cannot use Rage until this duration is over.
+狂暴：狂暴状态持续5回合，力量与体质+4，法术豁免+2，但护甲等级受-2惩罚。此外，激活狂暴会恢复施法者被吸取的等级，且持续期间免疫后续的等级吸取效果。狂暴结束后，施法者陷入疲劳状态，力量、敏捷、护甲等级与移动速度受-2惩罚，持续5回合，期间无法再次使用狂暴。
 
-– Shamanic Dance summons the following creatures:
-  Level 1: Warrior Spirits (long sword, longbow), up to 2 spirits at the same time.
-  Level 6: Berserker Spirits (dual axes, two-handed sword), up to 3 spirits at the same time.
-  Level 12: Ancestral Spirits (fighter/clerics), up to 4 spirits at the same time.
-  Level 18: Valkyries (archer, shieldmaiden), up to 5 spirits at the same time.
+-萨满之舞可召唤以下生物：
+  1级：战士之灵（装备长剑、长弓），同时最多存在2只。
+  6级：狂战士之灵（双持战斧、双手剑），同时最多存在3只。
+  12级：先祖之灵（战士/牧师），同时最多存在4只。
+  18级：女武神（弓箭手、盾卫），同时最多存在5只。
 
-Disadvantages:
-– Only has one half the normal Detect Illusions score.
-– May not cast normal shaman-exclusive spells.
-– May cast one fewer spell per level per day.~
+职业限制：
+-识破幻术的技能分值仅为正常水平的一半。
+-无法施放普通的萨满专属法术。
+-每个法术环级的每日施法次数减少1次。~
 END
 
 ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~1005~ THEN BEGIN
-OUTER_SPRINT warhorn_rage_desc ~WARHORN SHAMAN: Northern shamans who are also skilled warriors, Warhorn Shamans are capable of calling upon spirits of warriors from planes such as Valhalla or Warrior's Rest. Many of these shamans worship Tempus, the Lord of Battles, and often are just as capable in battle as they are in shamanic magic.
+OUTER_SPRINT warhorn_rage_desc ~战号萨满：出身北方的萨满同时也是娴熟的战士，战号萨满能召唤来自英灵殿、战士安息所等位的战士之灵。他们中许多人信奉战争之主坦帕斯，战斗能力与萨满魔法造诣不相上下。
 
-Advantages:
-– Hit Die: d10
-– May be of any non-Lawful alignment.
-– May specialize in all weapons that are usable by shamans.
-– May fully specialize in all weapon styles.
-– Gains immediate access to a number of unique spells, which can be cast like any other: Battle Ardor, Rallying Cry, Fury of the Winds, Storm Barrier, Stormbound Axes, Wrath of the Skies, Undying Fervor
-– May use Rage ability once per day. Gains one use at level 1 and an additional use every 6 levels thereafter.
+职业优势：
+-生命骰：d10
+-阵营可为任意非守序阵营。
+-萨满可用的所有武器均可达到专精级。
+-所有战斗风格均可达到满专精。
+-直接掌握数种独特法术，可与其他法术一样正常施放：战焰、战嚎、风怒、风暴屏障、雷缚战斧、天怒、不灭狂热
+-每日可使用一次「狂暴」能力。1级获得1次，之后每提升6级额外获得1次。
 
-RAGE: The character is enraged for 5 rounds, which grants <PRO_HIMHER> a +4 bonus to Strength and Constitution, a -2 penalty to Armor Class, and a +2 bonus to Saving Throws vs. Spell, as well as immunity to all charm, hold, fear, maze, stun, sleep, confusion, and level drain spells.
+狂暴：狂暴状态持续5回合，<PRO_HIMHER>获得力量+4、体质+4、护甲等级-2、法术豁免+2，同时免疫所有魅惑、定身、恐惧、迷宫、震慑、睡眠、困惑与等级吸取法术。
 
-– Shamanic Dance summons the following creatures:
-  Level 1: Warrior Spirits (long sword, longbow), up to 2 spirits at the same time.
-  Level 6: Berserker Spirits (dual axes, two-handed sword), up to 3 spirits at the same time.
-  Level 12: Ancestral Spirits (fighter/clerics), up to 4 spirits at the same time.
-  Level 18: Valkyries (archer, shieldmaiden), up to 5 spirits at the same time.
+-萨满之舞可召唤以下生物：
+  1级：战士之灵（装备长剑、长弓），同时最多存在2只。
+  6级：狂战士之灵（双持战斧、双手剑），同时最多存在3只。
+  12级：先祖之灵（战士/牧师），同时最多存在4只。
+  18级：女武神（弓箭手、盾卫），同时最多存在5只。
 
-Disadvantages:
-– Only has one half the normal Detect Illusions score.
-– May not cast normal shaman-exclusive spells.
-– May cast one fewer spell per level per day.~
+职业限制：
+-识破幻术的技能分值仅为正常水平的一半。
+-无法施放普通的萨满专属法术。
+-每个法术环级的每日施法次数减少1次。~
 END
 
 LAF ADD_KIT_EX
@@ -86,13 +86,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 21
 	
-    mixed         = RESOLVE_STR_REF(~Warhorn Shaman~)
+    mixed         = RESOLVE_STR_REF(~战号萨满~)
 	
-    lower         = RESOLVE_STR_REF(~warhorn shaman~)
+    lower         = RESOLVE_STR_REF(~战号萨满~)
 	
     help          = RESOLVE_STR_REF(~%warhorn_rage_desc%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~WARHORN SHAMAN: Northern shamans who are also skilled warriors, Warhorn Shamans are capable of calling upon spirits of warriors from planes such as Valhalla or Warrior's Rest. Many of these shamans worship Tempus, the Lord of Battles, and often are just as capable in battle as they are in shamanic magic.~)
+    briefdesc     = RESOLVE_STR_REF(~战号萨满：出身北方的战士萨满，能召唤战士之灵助战，信奉战争之主坦帕斯，战斗与施法能力同样出众。~)
 	
 	// fallen = 0
 	
@@ -197,50 +197,50 @@ COMPILE ~%MOD_FOLDER%/Shaman/WarShaman/BAF/IWDEE/C0WSHPR.BAF~
 END
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/CRE/C0WSPIR1.cre~ ~override~
-SAY NAME1 ~Spirit Warrior~
-SAY NAME2 ~Spirit Warrior~
+SAY NAME1 ~战士之灵~
+SAY NAME2 ~战士之灵~
 WRITE_ASCII 0x248 ~BDSHUNSU~  #8  // override
 WRITE_ASCII 0x268 ~C0WSHPR~  #8  // default
 WRITE_ASCII 0x280 ~C0WSPIR1~ #32 // death variable
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/CRE/C0WSPIR2.cre~ ~override~
-SAY NAME1 ~Spirit Archer~
-SAY NAME2 ~Spirit Archer~
+SAY NAME1 ~射手之灵~
+SAY NAME2 ~射手之灵~
 WRITE_ASCII 0x248 ~BDSHUNSU~  #8  // override
 WRITE_ASCII 0x268 ~C0WSHPR~  #8  // default
 WRITE_ASCII 0x280 ~C0WSPIR2~ #32 // death variable
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/CRE/C0WSPIR3.cre~ ~override~
-SAY NAME1 ~Spirit Berserker~
-SAY NAME2 ~Spirit Berserker~
+SAY NAME1 ~狂战士之灵~
+SAY NAME2 ~狂战士之灵~
 WRITE_ASCII 0x248 ~BDSHUNSU~  #8  // override
 WRITE_ASCII 0x268 ~C0WSHPR~  #8  // default
 WRITE_ASCII 0x280 ~C0WSPIR3~ #32 // death variable
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/CRE/C0WSPIR4.cre~ ~override~
-SAY NAME1 ~Spirit Berserker~
-SAY NAME2 ~Spirit Berserker~
+SAY NAME1 ~狂战士之灵~
+SAY NAME2 ~狂战士之灵~
 WRITE_ASCII 0x248 ~BDSHUNSU~  #8  // override
 WRITE_ASCII 0x268 ~C0WSHPR~  #8  // default
 WRITE_ASCII 0x280 ~C0WSPIR4~ #32 // death variable
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/CRE/C0WSPIR5.cre~ ~override~
-SAY NAME1 ~Ancestral Spirit~
-SAY NAME2 ~Ancestral Spirit~
+SAY NAME1 ~先祖之灵~
+SAY NAME2 ~先祖之灵~
 WRITE_ASCII 0x248 ~BDSHUNSU~  #8  // override
 WRITE_ASCII 0x268 ~C0WSHPR~  #8  // default
 WRITE_ASCII 0x280 ~C0WSPIR5~ #32 // death variable
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/CRE/C0WSPIR6.cre~ ~override~
-SAY NAME1 ~Valkyrie Archer~
-SAY NAME2 ~Valkyrie Archer~
+SAY NAME1 ~女武神射手~
+SAY NAME2 ~女武神射手~
 WRITE_ASCII 0x248 ~BDSHUNSU~  #8  // override
 WRITE_ASCII 0x268 ~C0WSHPR~  #8  // default
 WRITE_ASCII 0x280 ~C0WSPIR6~ #32 // death variable
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/CRE/C0WSPIR7.cre~ ~override~
-SAY NAME1 ~Valkyrie Shieldmaiden~
-SAY NAME2 ~Valkyrie Shieldmaiden~
+SAY NAME1 ~女武神盾卫~
+SAY NAME2 ~女武神盾卫~
 WRITE_ASCII 0x248 ~BDSHUNSU~  #8  // override
 WRITE_ASCII 0x268 ~C0WSHPR~  #8  // default
 WRITE_ASCII 0x280 ~C0WSPIR7~ #32 // death variable
@@ -250,118 +250,118 @@ LPF ALTER_EFFECT
 	INT_VAR
 		match_opcode = 139
 		match_parameter1 = 103121
-		parameter1 = RESOLVE_STR_REF (~A warrior spirit answers your call.~)
+		parameter1 = RESOLVE_STR_REF (~战士之灵回应了你的召唤。~)
 END
 LPF ALTER_EFFECT
 	INT_VAR
 		match_opcode = 139
 		match_parameter1 = 103122
-		parameter1 = RESOLVE_STR_REF (~A berserker spirit answers your call.~)
+		parameter1 = RESOLVE_STR_REF (~狂战士之灵回应了你的召唤。~)
 END
 LPF ALTER_EFFECT
 	INT_VAR
 		match_opcode = 139
 		match_parameter1 = 103123
-		parameter1 = RESOLVE_STR_REF (~An ancestral spirit answers your call.~)
+		parameter1 = RESOLVE_STR_REF (~先祖之灵回应了你的召唤。~)
 END
 LPF ALTER_EFFECT
 	INT_VAR
 		match_opcode = 139
 		match_parameter1 = 103124
-		parameter1 = RESOLVE_STR_REF (~A valkyrie spirit answers your call.~)
+		parameter1 = RESOLVE_STR_REF (~女武神之灵回应了你的召唤。~)
 END
 LPF ALTER_EFFECT
 	INT_VAR
 		match_opcode = 139
 		match_parameter1 = 103120
-		parameter1 = RESOLVE_STR_REF (~No spirits answer your call.~)
+		parameter1 = RESOLVE_STR_REF (~没有灵体回应你的召唤。~)
 END
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/SPL/C0WSHS1.SPL~ ~OVERRIDE~
-SAY NAME1 ~Battle Ardor~
-SAY UNIDENTIFIED_DESC ~Battle Ardor
-(Alteration)
+SAY NAME1 ~战焰~
+SAY UNIDENTIFIED_DESC ~战焰
+(变化系)
 
-Level: 1
-Sphere: Combat
-Range: 0
-Duration: 2 turns
-Casting Time: 1
-Area of Effect: The caster
-Saving Throw: None 
+等级：1
+领域：战斗
+射程：自身
+持续时间：2回合
+施法时间：1
+影响范围：施法者自身
+豁免：无
 
-With this spell, the caster becomes empowered by the borrowed strength of ancient warrior spirits. For the duration of the spell, the caster gains a non-cumulative +2 bonus to THAC0 and damage, with an additional +1 bonus per 10 caster levels thereafter.~
+施法者借古代战士之灵的力量获得强化。法术持续期间，施法者零级命中值与伤害获得非叠加的+2加值，之后每10级额外+1。~
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/SPL/C0WSHS2.SPL~ ~OVERRIDE~
-SAY NAME1 ~Rallying Cry~
-SAY UNIDENTIFIED_DESC ~Rallying Cry
-(Abjuration)
+SAY NAME1 ~战嚎~
+SAY UNIDENTIFIED_DESC ~战嚎
+(防护系)
 
-Level: 2
-Sphere: Charm 
-Range: 30 ft. 
-Duration: 1 hour
-Casting Time: 1 
-Area of Effect: 15-ft. radius
-Saving Throw: None 
+等级：2
+领域：魅惑
+射程：30尺
+持续时间：1小时
+施法时间：1
+影响范围：15尺半径
+豁免：无
 
-The caster lets out an inspiring battlecry towards <PRO_HISHER> companions, raising their morale to the highest and granting a non-cumulative +2 bonus to Armor Class and THAC0. The recipients' morale will gradually reset to normal as the duration runs out. If the recipients are affected by magical fear, this is negated.~
+施法者向<PRO_HISHER>同伴发出鼓舞人心的战吼，将士气提升至最高，护甲与零级命中值获得非叠加的+2加值。持续时间结束后，受术者士气会逐渐恢复正常。若受术者正受魔法恐惧影响，该效果会被抵消。~
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/SPL/C0WSHS3.SPL~ ~OVERRIDE~
-SAY NAME1 ~Fury of the Winds~
-SAY UNIDENTIFIED_DESC ~Fury of the Winds
-(Enchantment/Charm)
+SAY NAME1 ~风怒~
+SAY UNIDENTIFIED_DESC ~风怒
+(附魔系/魅惑系)
 
-Level: 3
-Sphere: Elemental, Combat 
-Range: Self
-Duration: 1 turn
-Casting Time: 1 
-Area of Effect: The caster
-Saving Throw: None 
+等级：3
+领域：元素、战斗
+射程：自身
+持续时间：1回合
+施法时间：1
+影响范围：施法者自身
+豁免：无
 
-The caster imbues the power of the northern winds and storms into <PRO_HISHER> weapons. For the duration of the spell, those weapons deal additional cold and electrical damage and are treated as having a +3 enchantment for the purposes of determining what they can hit. The amount of bonus damage dealt is as follows:
+施法者将北方风雪的力量灌注到<PRO_HISHER>武器中。法术持续期间，武器额外造成寒冷与电击伤害，且在判定可击中目标时视为+3附魔武器。额外伤害数值如下：
 
-   Level 8 and below: 1d4 cold, 1d4 electrical
-   Level 9-11: 1d6 cold, 1d6 electrical
-   Level 12-14: 1d8 cold, 1d8 electrical
-   Level 15-17: 1d10 cold, 1d10 electrical
-   Level 18+ 2d6 cold, 2d6 electrical
-   
-Additionally, due to the caster's weapons being imbued with the power of wind, <PRO_HESHE> is hasted for the duration.~
+   8级及以下：1d4寒冷，1d4电击
+   9-11级：1d6寒冷，1d6电击
+   12-14级：1d8寒冷，1d8电击
+   15-17级：1d10寒冷，1d10电击
+   18级及以上：2d6寒冷，2d6电击
+
+此外，由于武器灌注了风之力，<PRO_HESHE>在持续期间获得加速效果。~
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/SPL/C0WSHS4.SPL~ ~OVERRIDE~
-SAY NAME1 ~Storm Barrier~
-SAY UNIDENTIFIED_DESC ~Storm Barrier
-(Evocation)
+SAY NAME1 ~风暴屏障~
+SAY UNIDENTIFIED_DESC ~风暴屏障
+(塑能系)
 
-Level: 4
-Sphere: Elemental
-Range: Self
-Duration: 3 rounds + 1 round/level
-Casting Time: 4
-Area of Effect: The caster 
-Saving Throw: None 
+等级：4
+领域：元素
+射程：自身
+持续时间：3回合+每等级1回合
+施法时间：4
+影响范围：施法者自身
+豁免：无
 
-The Storm Barrier protects the user from electrical damage by surrounding the caster with a shield of lightning. This shield not only grants the user 50% Electrical Resistance, but also protects the caster from attacks made within a 5-ft. radius around the caster. An opponent that hits the caster with any weapons or spells within this radius suffers 1d8+2 electrical damage.~
+风暴屏障以闪电之盾环绕施法者，保护其免受电击伤害。该护盾不仅为使用者提供50%电击抗性，还能保护施法者免受5尺范围内的攻击。任何在该半径内用武器或法术攻击施法者的对手，都会受到1d8+2点电击伤害。~
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/SPL/C0WSHS5.SPL~ ~OVERRIDE~
-SAY NAME1 ~Stormbound Axes~
-SAY UNIDENTIFIED_DESC ~Stormbound Axes
-(Evocation)
+SAY NAME1 ~雷缚战斧~
+SAY UNIDENTIFIED_DESC ~雷缚战斧
+(塑能系)
 
-Level: 5
-Sphere: Combat
-Range: Self
-Duration: Special
-Casting Time: 3
-Area of Effect: The caster
-Saving Throw: None
+等级：5
+领域：战斗
+射程：自身
+持续时间：特殊
+施法时间：3
+影响范围：施法者自身
+豁免：无
 
-This spell creates several axe-shaped bolts of lightning, one for each two experience levels the caster has obtained, which are held in the caster's hands in place of <PRO_HISHER> usual weapons. The axes can be hurled at targets up to 50 feet away and are treated as missiles with a +5 bonus to the attack rolls. Each axe deals 2d6+10 electrical damage plus an additional 10 magic damage and stunning the target for 3 rounds if they fail a Save vs. Spells at -2. The caster may hurl one axe per round.~
+此法术创造数道战斧形的闪电，每2个经验等级1道，由施法者持握以替代<PRO_HISHER>常规武器。战斧可投向50尺内的目标，视为远程武器，攻击检定获得+5加值。每道战斧造成2d6+10点电击伤害，外加10点魔法伤害；若目标法术豁免（难度-2）失败，还会被震慑3回合。施法者每回合可投掷1道战斧。~
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/ITM/C0WSHS5.ITM~ ~OVERRIDE~
-SAY NAME1 ~Stormbound Axes~
-SAY NAME2 ~Stormbound Axes~
+SAY NAME1 ~雷缚战斧~
+SAY NAME2 ~雷缚战斧~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/Shaman/WarShaman/PRO/C0WSHS6.PRO~ ~Wrath of the Skies~
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/SPL/C0WSHS6.SPL~ ~OVERRIDE~
@@ -371,31 +371,31 @@ SET "delta" = 0
 FOR (index = 0; index < abil_num; index = index + 1) BEGIN
 WRITE_SHORT (%abil_off% + (0x28 * %index%) + 0x26) ~%C0WSHS6%~
 END
-SAY NAME1 ~Wrath of the Skies~
-SAY UNIDENTIFIED_DESC ~Wrath of the Skies
-(Evocation)
+SAY NAME1 ~天怒~
+SAY UNIDENTIFIED_DESC ~天怒
+(塑能系)
 
-Level: 6
-Sphere: Elemental, Weather
-Range: 270 ft.
-Duration: 5 rounds
-Casting Time: 5
-Area of Effect: 15-ft. radius
-Saving Throw: None
+等级：6
+领域：元素、天气
+射程：270尺
+持续时间：5回合
+施法时间：5
+影响范围：15尺半径
+豁免：无
 
-This powerful spell causes an icy storm to rain down upon the caster's chosen location, dealing 2d10 damage per round (half cold, half magical) and reducing all enemies' Magic Resistance by 50% and Armor Class by 4 points for as long as they remain within the storm. This spell is not affected by Magic Resistance and does not affect allies.~
+这道强力法术召唤寒冰风暴降临施法者选定位置，每回合造成2d10点伤害（一半寒冷，一半魔法），并将所有留在风暴中的敌人的魔法抗性降低50%，护甲等级降低4点。此法术不受魔法抗性影响，且不会影响友军。~
 
 COPY ~%MOD_FOLDER%/Shaman/WarShaman/SPL/C0WSHS7.SPL~ ~OVERRIDE~
-SAY NAME1 ~Undying Fervor~
-SAY UNIDENTIFIED_DESC ~Undying Fervor
-(Alteration)
+SAY NAME1 ~不灭狂热~
+SAY UNIDENTIFIED_DESC ~不灭狂热
+(变化系)
 
-Level: 7
-Sphere: Combat
-Range: 0
-Duration: 3 rounds
-Casting Time: 1
-Area of Effect: The caster
-Saving Throw: None 
+等级：7
+领域：战斗
+射程：0
+持续时间：3回合
+施法时间：1
+影响范围：施法者自身
+豁免：无
 
-With this spell, the caster becomes empowered with a frenzy of such great strength that <PRO_HESHE> is unable to be killed for the duration. Additionally, <PRO_HESHE> deals 50% increased physical damage for the duration of the spell. However, after the effects of the spell have worn off, the caster becomes greatly fatigued, suffering a -6 penalty to Armor Class and halved movement rate for 3 rounds. During this time, the shaman cannot benefit from the effects of Undying Fervor again.~
+此法术让施法者陷入狂怒，力量强到在持续期间无法被杀死。此外，<PRO_HESHE>造成的物理伤害提升50%。但法术效果消退后，施法者会陷入重度疲劳，护甲等级受-6惩罚，移动速度减半，持续3回合。在此期间，萨满无法再次获得不灭狂热的效果。~

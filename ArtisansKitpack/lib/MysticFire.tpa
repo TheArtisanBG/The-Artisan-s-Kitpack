@@ -45,44 +45,44 @@ LAF ADD_KIT_EX
 	// Monk = 20
 	// Shaman = 21
     kit_class     = 6
-	
-    mixed         = RESOLVE_STR_REF(~Mystic Fire~)
-	
-    lower         = RESOLVE_STR_REF(~mystic fire~)
-	
-    help          = RESOLVE_STR_REF(~MYSTIC FIRE: Knights of the Mystic Fire are paladins dedicated to the church of Mystra, goddess of magic. They are proficient in martial combat as well as arcane magic. Aside from traditional virtues of paladinhood, Mystic Fire Knights devote part of their lives in the discovery and study of ancient magic.
 
-Advantages:
-– +2 bonus to Lore per level.
-– May cast two additional spells per level.
-– +1 to Saving Throws vs. Spells. Gains an additional +1 at level 5 and every 5 levels gained thereafter.
-– The Mystic Fire's spells are cast as though <PRO_HESHE> were a cleric of the same level.
-– May memorize a small selection of Mage spells:
- Level 1: Magic Missile, Shocking Grasp, Shield, Find Familiar
- Level 2: Mirror Image, Web, Agannazar's Scorcher, Invisibility
- Level 3: Fireball, Lightning Bolt, Haste, Minor Spell Deflection
- Level 4: Greater Malison, Fire Shield (Red), Stoneskin, Secret Word
+    mixed         = RESOLVE_STR_REF(~秘火骑士~)
+
+    lower         = RESOLVE_STR_REF(~秘火骑士~)
+
+    help          = RESOLVE_STR_REF(~秘火骑士：秘火骑士是侍奉魔法女神蜜斯特拉的圣武士。他们既精通近战格斗，也擅长奥术魔法。除了恪守圣武士的传统美德外，秘火骑士还将毕生精力投入到古老魔法的发掘与研习之中。
+
+职业优势：
+–每等级学识+2。
+–每等级可额外施展两个法术。
+–对抗法术的豁免检定+1。5级起每提升5级额外+1。
+–秘火骑士施法时，视为同等级的牧师。
+–可记诵少量法师法术：
+ 1环：魔法飞弹、电击掌、护盾术、召唤魔宠
+ 2环：镜像术、蛛网术、阿加纳扎灼击术、隐形术
+ 3环：火球术、闪电箭、加速术、初级法术偏转
+ 4环：高等厄运诅咒、火焰护盾·赤、石肤术、秘语术
 <MF_LEVEL5><MF_LEVEL6><MF_LEVEL7>
-– May use 'Shatter Spell' ability once per day and an additional use every 6 levels thereafter.
- 
-SHATTER SPELL: Knights of the Mystic Fire are able to smite spellcasters and disrupt their defensive spells as well as their ability to cast magic. The next attack made by the Mystic Fire within two rounds will dispel the target's combat protections. Additionally, if the target fails a save vs. spells at -2, they suffer 100% spell failure for two rounds.
+–每日可使用一次「破法术击」，之后每提升6级额外获得1次使用次数。
 
-– May use 'Spellblade' ability once per day from 5th level onwards.
+破法术击：秘火骑士可制裁施法者，扰乱其防御法术与施法能力。两回合内秘火骑士的下一次攻击会驱散目标的战斗防护效果。此外，若目标法术豁免失败（难度-2），则两回合内法术失败率为100%。
 
-SPELLBLADE: The Mystic Fire Knight enchants <PRO_HISHER> weapon for the next hour, giving it a +3 enchantment level and dealing 1d4 magic damage (+1d4 per five caster levels up to level 20) and reducing targets' magic resistance by 5% per hit for two turns. Enchantment bonus increases to +4 at 12th level and +5 at 18th level.
+–5级起，每日可使用一次「法术之刃」。
 
-– 12th level: Combat Casting: The Mystic Fire is skilled at casting spells in the midst of combat. If there is an enemy within 5-ft. of the Mystic Fire, they gain an increased casting speed of 2.
+法术之刃：秘火骑士为自身武器附魔一小时，武器获得+3附魔等级，额外造成1d4魔法伤害（每5级+1d4，20级上限），且每次命中降低目标5%魔法抗性，持续2回合。12级时附魔提升至+4，18级时提升至+5。
 
-Disadvantages:
-– Hit Die: d8
-– May not learn the following High Level Abilities: Greater Whirlwind Attack, Greater Deathblow, Smite, Hardiness
-– Does not gain Aura of Courage.
-– May not use Smite Evil.
-– May not use Protection From Evil.
-– May not Turn Undead.
-– May not use Lay on Hands.~)
-	
-    briefdesc     = RESOLVE_STR_REF(~MYSTIC FIRE: Knights of the Mystic Fire are paladins dedicated to the church of Mystra, goddess of magic. They are proficient in martial combat as well as arcane magic. Aside from traditional virtues of paladinhood, Mystic Fire Knights devote part of their lives in the discovery and study of ancient magic.~)
+–12级：战斗施法：秘火骑士精于战斗中施法。若5尺内存在敌人，施法速度+2。
+
+职业限制：
+–生命骰：d8
+–无法习得以下高阶能力：高等旋风攻击、高等致命一击、制裁、强健
+–不获得勇气光环。
+–无法使用破邪斩。
+–无法使用防护邪恶。
+–无法驱散不死生物。
+–无法使用圣疗术。~)
+
+    briefdesc     = RESOLVE_STR_REF(~秘火骑士：秘火骑士是侍奉魔法女神蜜斯特拉的圣武士。他们既精通近战格斗，也擅长奥术魔法，毕生致力于古老魔法的发掘与研习。~)
 	
 	// fallen = 1
 	
@@ -195,18 +195,18 @@ LPF patch_add_hla STR_VAR 2da_row = ~C0MF7~ ability = ~AP_C0MFHL7~ num_allowed =
 COPY_EXISTING ~SPWI112.SPL~ ~OVERRIDE/C0MF101.SPL~
 WRITE_SHORT 0X1C 2
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/SPELLS/C0MF102.SPL~ ~OVERRIDE~
-SAY NAME1 ~Shocking Grasp~
-SAY UNIDENTIFIED_DESC ~Shocking Grasp
-(Alteration)
+SAY NAME1 ~电击掌~
+SAY UNIDENTIFIED_DESC ~电击掌
+（变化系）
 
-Level: 1
-Range: Touch
-Duration: Special
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+等级：1
+射程：触碰
+持续时间：特殊
+施法时间：1
+影响范围：1个生物
+豁免检定：无
 
-This modified Shocking Grasp spell allows the Mystic Fire Knight to imbue a melee weapon instead of <PRO_HISHER> hand. When the Mystic Fire Knight touches a creature while this spell is in effect, an electrical charge will deal 1d8 points of damage plus 1 per level of the caster to the creature touched. In addition, the attack strikes as a +6 weapon. The Mystic Fire Knight only has one charge, and once an opponent has been touched, the spell's energies have been used. The Mystic Fire Knight has 1 round per level to touch the target creature.~
+这一改良版电击掌可让秘火骑士将能量贯注于近战武器而非手掌。法术生效期间，秘火骑士触碰生物时，电流会对目标造成1d8+每等级1点伤害。此外，该攻击视为+6武器。秘火骑士仅有一次充能，命中目标后法术能量即消耗完毕。秘火骑士有每等级1回合的时间来触碰目标。~
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/SPELLS/C0MF102a.SPL~ ~OVERRIDE~
 COPY_EXISTING ~SPWI114.SPL~ ~OVERRIDE/C0MF103.SPL~
 WRITE_SHORT 0X1C 2
@@ -262,32 +262,32 @@ COPY_EXISTING ~SPWI701.SPL~ ~OVERRIDE/C0MF704.SPL~
 WRITE_SHORT 0x1C 3
 
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mf01.spl~ ~override~
-SAY NAME1 ~Shatter Spell~
-SAY NAME2 ~Shatter Spell~
-SAY UNIDENTIFIED_DESC ~Shatter Spell
-Knights of the Mystic Fire are able to smite spellcasters and disrupt their defensive spells as well as their ability to cast magic. The next attack made by the Mystic Fire within two rounds will dispel the target's combat protections. Additionally, if the target fails a save vs. spells at -2, they suffer 100% spell failure for two rounds.~
+SAY NAME1 ~破法术击~
+SAY NAME2 ~破法术击~
+SAY UNIDENTIFIED_DESC ~破法术击
+秘火骑士可制裁施法者，扰乱其防御法术与施法能力。两回合内秘火骑士的下一次攻击会驱散目标的战斗防护效果。此外，若目标法术豁免失败（难度-2），则两回合内法术失败率为100%。~
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mf01a.spl~ ~override~
 	LPF ALTER_EFFECT
 		INT_VAR
 			match_opcode = 139
 			match_parameter2 = 1
-			parameter1 = RESOLVE_STR_REF (~Spell Protections Removed~)
+			parameter1 = RESOLVE_STR_REF (~法术防护已移除~)
 		END
 	LPF ALTER_EFFECT
 		INT_VAR
 			match_opcode = 139
 			match_parameter2 = 0
-			parameter1 = RESOLVE_STR_REF (~Miscast Magic~)
+			parameter1 = RESOLVE_STR_REF (~法术失控~)
 		END
  
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 
 COPY_EXISTING ~c0mf01.spl~ ~override~
-SAY UNIDENTIFIED_DESC ~Shatter Spell
-Knights of the Mystic Fire are able to smite spellcasters and disrupt their defensive spells as well as their ability to cast magic. The next attack made by the Mystic Fire within two rounds will dispel the target's combat protections. Additionally, if the target fails a save vs. spells at -2, they suffer 100% spell failure for two rounds.
+SAY UNIDENTIFIED_DESC ~破法术击
+秘火骑士可制裁施法者，扰乱其防御法术与施法能力。两回合内秘火骑士的下一次攻击会驱散目标的战斗防护效果。此外，若目标法术豁免失败（难度-2），则两回合内法术失败率为100%。
 
-The effects of Shatter Spell bypass all weapon protections, even if the attack itself is negated.~
- 
+破法术击的效果无视所有武器防护，即便攻击本身被招架也依然生效。~
+
 OUTER_SET mystic_fire_ids = IDS_OF_SYMBOL (~kit~ ~C0MF~)
   
 COPY ~%MOD_FOLDER%/lua/m_c0pal1.lua~      ~override~ // Lua file read by EEex, provided by Bubbs and further edited by myself
@@ -306,61 +306,61 @@ COPY ~%MOD_FOLDER%/lua/m_c0pal1.lua~      ~override~ // Lua file read by EEex, p
 END
 
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mf02.spl~ ~override~
-SAY NAME1 ~Spellblade~
-SAY NAME2 ~Spellblade~
-SAY UNIDENTIFIED_DESC ~Spellblade
-The Mystic Fire Knight enchants <PRO_HISHER> weapon for the next hour, giving it a +3 enchantment level and dealing 1d4 magic damage (+1d4 per five caster levels up to level 20) and reducing targets' magic resistance by 5% per hit for two turns. Enchantment bonus increases to +4 at 12th level and +5 at 18th level.~
+SAY NAME1 ~法术之刃~
+SAY NAME2 ~法术之刃~
+SAY UNIDENTIFIED_DESC ~法术之刃
+秘火骑士为自身武器附魔一小时，武器获得+3附魔等级，额外造成1d4魔法伤害（每5级+1d4，20级上限），且每次命中降低目标5%魔法抗性，持续2回合。12级时附魔提升至+4，18级时提升至+5。~
 
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mfhl1.spl~ ~override~
-SAY NAME1 ~Extra Level 1 Spell~
-SAY NAME2 ~Extra Level 1 Spell~
-SAY UNIDENTIFIED_DESC ~Extra Level 1 Spell
-Choosing this ability allows the Mystic Fire Knight to cast one additional Level 1 spell.~
- 
+SAY NAME1 ~额外1环法术~
+SAY NAME2 ~额外1环法术~
+SAY UNIDENTIFIED_DESC ~额外1环法术
+选择本能力可让秘火骑士额外施展一个1环法术。~
+
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mfhl2.spl~ ~override~
-SAY NAME1 ~Extra Level 2 Spell~
-SAY NAME2 ~Extra Level 2 Spell~
-SAY UNIDENTIFIED_DESC ~Extra Level 2 Spell
-Choosing this ability allows the Mystic Fire Knight to cast one additional Level 2 spell.
+SAY NAME1 ~额外2环法术~
+SAY NAME2 ~额外2环法术~
+SAY UNIDENTIFIED_DESC ~额外2环法术
+选择本能力可让秘火骑士额外施展一个2环法术。
 
-Requires: Extra Level 1 Spell~
- 
+需要：额外1环法术~
+
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mfhl3.spl~ ~override~
-SAY NAME1 ~Extra Level 3 Spell~
-SAY NAME2 ~Extra Level 3 Spell~
-SAY UNIDENTIFIED_DESC ~Extra Level 3 Spell
-Choosing this ability allows the Mystic Fire Knight to cast one additional Level 3 spell.
+SAY NAME1 ~额外3环法术~
+SAY NAME2 ~额外3环法术~
+SAY UNIDENTIFIED_DESC ~额外3环法术
+选择本能力可让秘火骑士额外施展一个3环法术。
 
-Requires: Extra Level 2 Spell~
- 
+需要：额外2环法术~
+
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mfhl4.spl~ ~override~
-SAY NAME1 ~Extra Level 4 Spell~
-SAY NAME2 ~Extra Level 4 Spell~
-SAY UNIDENTIFIED_DESC ~Extra Level 4 Spell
-Choosing this ability allows the Mystic Fire Knight to cast one additional Level 4 spell.
+SAY NAME1 ~额外4环法术~
+SAY NAME2 ~额外4环法术~
+SAY UNIDENTIFIED_DESC ~额外4环法术
+选择本能力可让秘火骑士额外施展一个4环法术。
 
-Requires: Extra Level 3 Spell~
+需要：额外3环法术~
 
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mfhl5.spl~ ~override~
-SAY NAME1 ~Arcane Knowledge I~
-SAY NAME2 ~Arcane Knowledge I~
-SAY UNIDENTIFIED_DESC ~Arcane Knowledge
-An experienced Mystic Fire Knight develops more knowledge of arcane spells closer to that of an actual wizard, gaining +1 to all Saving Throws and the ability to cast Cone of Cold, Spell Immunity, Oracle and Sunfire once per day.~
+SAY NAME1 ~奥术学识 I~
+SAY NAME2 ~奥术学识 I~
+SAY UNIDENTIFIED_DESC ~奥术学识
+资深秘火骑士对奥术的理解愈发接近真正的法师，获得所有豁免检定+1，并可每日施展一次寒冰锥、法术免疫、神谕术与阳炎术。~
 
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mfhl6.spl~ ~override~
-SAY NAME1 ~Arcane Knowledge II~
-SAY NAME2 ~Arcane Knowledge II~
-SAY UNIDENTIFIED_DESC ~Arcane Knowledge II
-An experienced Mystic Fire Knight develops more knowledge of arcane spells closer to that of an actual wizard, gaining -1 to casting time and the ability to cast Globe of Invulnerability, Improved Haste, Protection from Magical Weapons and Spell Turning once per day.
+SAY NAME1 ~奥术学识 II~
+SAY NAME2 ~奥术学识 II~
+SAY UNIDENTIFIED_DESC ~奥术学识 II
+资深秘火骑士对奥术的掌控愈发接近真正的法师，施法时间-1，并可每日施展一次无效结界、高级加速术、魔法武器防护与法术反转。
 
-Requires: Arcane Knowledge I~
+需要：奥术学识 I~
 
 COPY ~%MOD_FOLDER%/Paladin/MysticFire/spells/c0mfhl7.spl~ ~override~
-SAY NAME1 ~Arcane Knowledge III~
-SAY NAME2 ~Arcane Knowledge III~
-SAY UNIDENTIFIED_DESC ~Arcane Knowledge III
-An experienced Mystic Fire Knight develops more knowledge of arcane spells closer to that of an actual wizard, gaining +20% to spell duration and the ability to cast Limited Wish, Mordenkainen's Sword, Khelben's Warding Whip and Spell Turning once per day.
+SAY NAME1 ~奥术学识 III~
+SAY NAME2 ~奥术学识 III~
+SAY UNIDENTIFIED_DESC ~奥术学识 III
+秘火骑士对奥术的造诣已堪比真正的法师，法术持续时间+20%，并可每日施展一次有限祈愿术、魔邓肯之剑、凯尔本金的守护鞭与法术反转。
 
-Requires: Arcane Knowledge II~
+需要：奥术学识 II~
 
 INCLUDE ~%MOD_FOLDER%/lib/mystic_fire_spells.tpa~

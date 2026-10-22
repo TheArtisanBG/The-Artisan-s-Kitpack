@@ -64,45 +64,45 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 20
 	
-    mixed         = RESOLVE_STR_REF(~Brawler~)
+    mixed         = RESOLVE_STR_REF(~拳斗家~)
 	
-    lower         = RESOLVE_STR_REF(~brawler~)
+    lower         = RESOLVE_STR_REF(~拳斗家~)
 	
-    help          = RESOLVE_STR_REF(~BRAWLER: The brawler is a warrior who specialized in the simplest form of combat—using only their bare fists. Their fighting skills, honed by raw, brutal fighting, foregoes the technique and spiritual training of the monk, using only the barest amount of ki to enhance their blows, otherwise relying purely on strength and tenacity. Their weathered and callused bodies, trained to be tough as steel, are symbolic of their experience.
+    help          = RESOLVE_STR_REF(~拳斗家：这类战士专精于最朴素的战斗方式——仅凭赤手空拳作战。他们的格斗技艺在粗野而残酷的打斗中干锤百炼，摒弃了武僧的技法与灵修，仅以最微薄的气强化拳脚，其余全凭力量与韧性取胜。他们饱经风霜、布满老茧的身躯，被锤炼得如钢铁般强韧，正是其过往经历的写照。
 
-Advantages:
-– May be of any alignment.
-– +1 to hit and damage rolls with unarmed attacks every 4 levels.
-– +1 bonus to critical hit modifiers with unarmed attacks every 5 levels.
-– Fortitude: The Brawler is healed for one hit point each time they take damage.
-– Gains the Tenacity passive ability.
+职业优势：
+–无阵营限制。
+–每提升4级，徒手攻击的命中与伤害掷骰+1。
+–每提升5级，徒手攻击的暴击修正+1。
+–刚毅：拳斗家每次受到伤害时，回复1点生命值。
+–获得「坚韧」被动能力。
 
-TENACITY: The brawler gains 5% physical damage reduction. This bonus is doubled when the brawler falls below 50% maximum hit points.
+坚韧：拳斗家获得5%物理伤害减免。生命值低于最大生命值50%时，该加成翻倍。
 
-– May use the Brawling Stance ability once per day. Gains one use at level 1 and an additional use every 4 levels thereafter.
+–每日可使用一次「斗式」能力。1级时获得1次使用次数，之后每提升4级额外获得1次。
 
-BRAWLING STANCE: All successful attacks made by the brawler within the next 2 rounds deal maximum damage, but their Armor Class is penalized by 4 for the same duration. Additionally, the brawler is healed for two additional hit points each time they take damage.
+斗式：接下来2回合内，拳斗家所有成功的攻击都造成最大伤害，但同一时间内护甲等级受4点惩罚。此外，拳斗家每次受到伤害时，额外回复2点生命值。
 
-– 11th level: Tenacity base physical resistance increased to 10%. The brawler regenerates 1 hit point per three seconds when below 50% maximum hit points.
-– 14th level: Gains the Crushing Blow passive effect.
+–11级：坚韧的基础物理抗性提升至10%。生命值低于50%时，拳斗家每3秒回复1点生命值。
+–14级：获得「粉碎打击」被动效果。
 
-CRUSHING BLOW: The Brawler's critical hits reduce the target's crushing resistance by a cumulative 25% for 2 rounds and stun the target for 3 seconds.
+粉碎打击：拳斗家的暴击会使目标的钝击抗性累计降低25%，持续2回合，并使目标眩晕3秒。
 
-– 15th level: The brawler gains an additional attack per round whilst in Brawling Stance.
-– 16th level: Tenacity base physical resistance increased to 15%. Regeneration rate increased to 1 hit point per second.
-– 20th level: Gains a +4 bonus to damage with unarmed attacks.
-– Hit Die: d12
+–15级：处于斗式状态时，拳斗家每回合额外获得一次攻击。
+–16级：坚韧的基础物理抗性提升至15%。再生速率提升至每秒1点生命值。
+–20级：徒手攻击伤害获得+4加值。
+–生命骰：d12
 
-Disadvantage:
-– May not use thieving skills.
-– May not use Lay on Hands.
-– May not use Stunning Blow.
-– May not use Quivering Palm.
-– May not attain proficiency in ranged weapons.
-– Does not gain Magic Resistance.
-– Does not gain immunity to disease, slow, haste, charm, poison or non-magical weapons.~)
+职业限制：
+–无法使用游荡者技能
+–无法使用圣疗术能力
+–无法使用震眩拳
+–无法使用渗透劲
+–远程武器无法获得熟练等级
+–不获得魔法抗性
+–不免疫疾病、迟缓、加速、魅惑、毒素与非魔法武器~)
 	
-    briefdesc     = RESOLVE_STR_REF(~BRAWLER: The brawler is a warrior who specialized in the simplest form of combat—using only their bare fists. Their fighting skills, honed by raw, brutal fighting, foregoes the technique and spiritual training of the monk, using only the barest amount of ki to enhance their blows, otherwise relying purely on strength and tenacity. Their weathered and callused bodies, trained to be tough as steel, are symbolic of their experience.~)
+    briefdesc     = RESOLVE_STR_REF(~拳斗家：这类战士专精于最朴素的战斗方式——仅凭赤手空拳作战。他们的格斗技艺在粗野而残酷的打斗中干锤百炼，摒弃了武僧的技法与灵修，仅以最微薄的气强化拳脚，其余全凭力量与韧性取胜。他们饱经风霜、布满老茧的身躯，被锤炼得如钢铁般强韧，正是其过往经历的写照。~)
   STR_VAR
     kit_name      = ~C0_BRAWLER~
 	
@@ -189,9 +189,9 @@ Disadvantage:
 END
 
 COPY_EXISTING ~C0BRW01.SPL~ ~OVERRIDE~
-SAY NAME1 ~Brawling Stance~
-SAY UNIDENTIFIED_DESC ~Brawling Stance
-All successful attacks made by the brawler within the next 2 rounds deal maximum damage, but their Armor Class is penalized by 4 for the same duration. Additionally, the brawler is healed for two additional hit points each time they take damage. From 15th level onwards, the Brawler gains an additional attack per round.~
+SAY NAME1 ~斗式~
+SAY UNIDENTIFIED_DESC ~斗式
+接下来2回合内，拳斗家所有成功的攻击都造成最大伤害，但同一时间内护甲等级受4点惩罚。此外，拳斗家每次受到伤害时，额外回复2点生命值。15级起，拳斗家每回合额外获得一次攻击。~
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 

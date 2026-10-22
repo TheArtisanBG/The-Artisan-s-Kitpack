@@ -32,44 +32,44 @@ COPY_EXISTING ~CLABFI01.2DA~ ~OVERRIDE/CLABFI02.2DA~
 
   PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~BERSERKER: This is a warrior who is in tune with <PRO_HISHER> animalistic side and, during combat, can achieve an ecstatic state of mind that will enable <PRO_HIMHER> to fight longer, harder, and more savagely than any person has a right to. Berserkers tend to be barbarian-like in nature, but not always. Sometimes it is a conscious choice that a warrior in training makes. Regardless, opponents on the battlefield will be unsettled when they see the savage and inhuman elements of the Berserker's personality. This class is common amongst dwarves, known to them as the Battlerager.
+OUTER_SPRINT kit_description ~狂战士：这类战士深谙自身的兽性本能，战斗中能进入一种极致亢奋的精神状态，让自己比常人更持久、更凶猛、更狂野地战斗。狂战士的天性大多类同野蛮人，但并非一概如此——有时这是受训战士主动做出的选择。无论如何，当战场上的对手目睹狂战士性格中狂野、非人的一面时，都会心神不宁。该职业在矮人之中十分常见，他们称其为「战狂者」。
 
-Advantages:
-– Immunity to fear, morale failure and involuntary berserk effects.
-– Gains the In Extremis passive effect.
+职业优势：
+-免疫恐惧、士气崩溃与非自愿狂暴效果。
+-获得「死斗」被动效果。
 
-IN EXTREMIS: Berserkers revel in the thrill of carnage to a sadomasochistic degree, and fight harder when approaching death while most warriors would falter or retreat. While powerful, the berserker's technique is a double-edged sword – as the berserker accumulates more wounds in battle, their blows become increasingly deadly, yet their defense falters, becoming more vulnerable to further damage.
-  >75% Hit Points: +2 to melee THAC0 and Damage, -2 penalty to Armor Class
-  >50% Hit Points: +4 to melee THAC0 and Damage, -4 penalty to Armor Class
-  >25% Hit Points: +8 to melee THAC0 and Damage, -6 penalty to Armor Class
+死斗：狂战士嗜享厮杀的快感，近乎施虐受虐的程度；当大多数战士都会动摇或撤退的生死关头，他们反而越战越勇。这份力量虽强，却是双刃剑——战斗中受伤越重，攻势就越发致命，但防御也随之下降，更容易受到更多伤害。
+  生命值>75%：近战零级命中值与伤害+2，护甲等级-2
+  生命值>50%：近战零级命中值与伤害+4，护甲等级-4
+  生命值>25%：近战零级命中值与伤害+8，护甲等级-6
 
-– May use the Enrage ability once per day. Gains one use at level 1 and an additional use every 4 levels thereafter.
+-每日可使用一次「狂怒」能力。1级时获得1次使用次数，之后每提升4级额外获得1次。
 
-ENRAGE: The berserker taps into <PRO_HISHER> frenzy though sheer force of will. For the next two rounds, <PRO_HESHE> gains +15 maximum hit points, loses one hit point per second, and deals an additional +5% slashing, piercing and crushing damage for every 5% of their missing hit points (+100% at one hit point). If the remaining duration of Enrage is less than one round, melee attacks made by the berserker reset Enrage's duration to one round up to a maximum total duration of ten rounds. The hit point loss from Enrage will not reduce the berserker's hit points below one. The berserker cannot cast spells while Enraged.
+狂怒：狂战士仅凭纯粹的意志力引爆自身的狂乱。接下来2回合内，<PRO_HESHE>获得+15点最大生命值，每秒损失1点生命值，且每损失5%生命值，斩击、穿刺与钝击伤害便额外+5%（生命值仅剩1点时伤害+100%）。若狂怒剩余持续时间不足1回合，狂战士的近战攻击会将狂怒持续时间重置为1回合，总持续时间最长可达10回合。狂怒造成的生命值损失不会将狂战士的生命值降至1点以下。狂怒状态下，狂战士无法施法。
 
-– From 4th level onwards, may use the Reckless Frenzy ability at will.
+-4级起，可随意使用「鲁莽狂暴」能力。
 
-RECKLESS FRENZY: The berserker deliberately injures <HIMHER>self, instantly reducing <PRO_HISHER> hit points to 70%, 45% or 20% of <PRO_HISHER> maximum. This ability has no effect if used while the berserker is already below the selected value.
+鲁莽狂暴：狂战士故意伤及自身，立刻将<PRO_HISHER>生命值降至最大生命值的70%、45%或20%。若狂战士当前生命值已低于所选数值，本技能无效。
 
-– From 7th level onwards, the berserker gains +2/+4/+8 to <PRO_HISHER> movement rate while under the effects of In Extremis.
+-7级起，死斗状态下狂战士的移动速度获得+2/+4/+8加成。
 
-– From 10th level onwards, the berserker's trance-like state makes <PRO_HIMHER> more likely to shrug off debilitating effects, gaining +2/+4/+8 to all Saving Throws while under the effects of In Extremis.
+-10级起，狂战士的恍惚状态让<PRO_HIMHER>更易摆脱负面效果，死斗状态下所有豁免检定获得+2/+4/+8加成。
 
-– From 14th level onwards, the berserker gains +0.5/+1/+2 bonus attacks per round while under the effects of In Extremis.
+-14级起，死斗状态下狂战士每回合额外攻击次数获得+0.5/+1/+2加成。
 
-– From 20th level onwards, the berserker gains a +1/+3/+5 luck bonus to rolls on damage dealt and received while under the effects of In Extremis.
+-20级起，死斗状态下，狂战士造成与受到的伤害掷骰获得+1/+3/+5幸运加值。
 
-Disadvantages:
-– Becomes winded for five rounds after using Enrage, suffering a -2 penalty to Armor Class, to-hit rolls, and damage rolls. Additionally, the berserker is unable to Enrage or gain the benefits of In Extremis while winded.
-– May not Specialize in ranged weapons.KIT_DISADV_1
-– Alignment restricted to any non-lawful.~
+职业限制：
+-使用狂怒后会气喘吁吁5回合，期间护甲等级、命中掷骰与伤害掷骰受-2惩罚。此外，气喘吁吁状态下，狂战士无法使用狂怒，也无法获得死斗的增益。
+-无法精通远程武器。KIT_DISADV_1
+-仅限非守序阵营。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Expertise or Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.~
+-无法使用「武器娴熟」与「速射」。
+-16级时不会获得全武器专精。~
 
 END
 
@@ -101,19 +101,19 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~In Extremis~) STR_VAR bam_file = c0ber#ic RET c0ber#ic = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~死斗~) STR_VAR bam_file = c0ber#ic RET c0ber#ic = icon END
 
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#07.SPL~ ~OVERRIDE~
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#0X.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Winded~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~气喘吁吁~) END
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#00.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 206 parameter1 = RESOLVE_STR_REF (~The berserker is already enraged.~) STR_VAR match_resource = SPCL321 END
-SAY NAME1 ~Enrage~
-SAY UNIDENTIFIED_DESC ~Enrage
-The berserker taps into <PRO_HISHER> frenzy though sheer force of will. For the next two rounds, <PRO_HESHE> gains +15 maximum hit points, loses one hit point per second, and deals an additional +5% slashing, piercing and crushing damage for every 5% of their missing hit points (+100% at one hit point). If the remaining duration of Enrage is less than one round, melee attacks made by the berserker reset Enrage's duration to one round up to a maximum total duration of ten rounds. The hit point loss from Enrage will not reduce the berserker's hit points below one. The berserker cannot cast spells while Enraged.~
+LPF ALTER_EFFECT INT_VAR match_opcode = 206 parameter1 = RESOLVE_STR_REF (~狂战士正处于狂怒状态。~) STR_VAR match_resource = SPCL321 END
+SAY NAME1 ~狂怒~
+SAY UNIDENTIFIED_DESC ~狂怒
+狂战士仅凭纯粹的意志力引爆自身的狂乱。接下来2回合内，<PRO_HESHE>获得+15点最大生命值，每秒损失1点生命值，且每损失5%生命值，斩击、穿刺与钝击伤害便额外+5%（生命值仅剩1点时伤害+100%）。若狂怒剩余持续时间不足1回合，狂战士的近战攻击会将狂怒持续时间重置为1回合，总持续时间最长可达10回合。狂怒造成的生命值损失不会将狂战士的生命值降至1点以下。狂怒状态下，狂战士无法施法。~
 
 COPY ~%MOD_FOLDER%/SPELLS/C0KTNAME.EFF~ ~OVERRIDE/C0BER#00.EFF~
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Battlerager~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~战狂者~)
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#1x.SPL~ ~OVERRIDE~
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#2x.SPL~ ~OVERRIDE~
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#3x.SPL~ ~OVERRIDE~
@@ -129,18 +129,18 @@ LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0ber#ic END
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#04.SPL~ ~OVERRIDE~
 LPF ALTER_EFFECT INT_VAR match_opcode = 318 parameter2 = C0CURHP END
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#05.SPL~ ~OVERRIDE~
-SAY NAME1 ~Reckless Frenzy~
-SAY UNIDENTIFIED_DESC ~Reckless Frenzy
-The berserker deliberately injures <HIMHER>self, instantly reducing <PRO_HISHER> hit points to 70%, 45% or 20% of <PRO_HISHER> maximum. This ability has no effect if used while the berserker is already below the selected value.~
+SAY NAME1 ~鲁莽狂暴~
+SAY UNIDENTIFIED_DESC ~鲁莽狂暴
+狂战士故意伤及自身，立刻将<PRO_HISHER>生命值降至最大生命值的70%、45%或20%。若狂战士当前生命值已低于所选数值，本技能无效。~
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#5A.SPL~ ~OVERRIDE~
-SAY NAME1 ~Reckless Frenzy—70%~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Maximum Hit Points reduced to 70%~) END
+SAY NAME1 ~鲁莽狂暴—70%~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~最大生命值降至70%~) END
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#5B.SPL~ ~OVERRIDE~
-SAY NAME1 ~Reckless Frenzy—45%~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Maximum Hit Points reduced to 45%~) END
+SAY NAME1 ~鲁莽狂暴—45%~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~最大生命值降至45%~) END
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#5C.SPL~ ~OVERRIDE~
-SAY NAME1 ~Reckless Frenzy—20%~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Maximum Hit Points reduced to 20%~) END
+SAY NAME1 ~鲁莽狂暴—20%~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~最大生命值降至20%~) END
 
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#61.EFF~ ~OVERRIDE/C0BER#62.EFF~
 WRITE_ASCII 0x30 ~C0BER#62~
@@ -250,13 +250,13 @@ LPF ALTER_EFFECT INT_VAR match_opcode = 321 STR_VAR resource = C0BER#6J END
 		SET_2DA_ENTRY (%patch_row%) 1 cols ~C0BER~
 	  END
 	END
-	
-  
+
+
 COPY_EXISTING ~LUFI0.2da~ ~override/LUC0BER.2DA~
 LPF patch_remove_hla STR_VAR remove_ability = ~GA_SPCL907~ END
 LPF patch_add_hla STR_VAR 2da_row = ~C0BERS1~ ability = ~AP_C0BER#H1~ num_allowed = 1 END	
 
 COPY ~%MOD_FOLDER%/Fighter/Berserker/SPELLS/C0BER#H1.SPL~ ~OVERRIDE~
-SAY NAME1 ~Extend Rage~
-SAY UNIDENTIFIED_DESC ~Extend Rage
-The berserker's proficiency in their wild fighting style allows them to maintain the effects of their rage for longer, permanently extending the maximum total duration of Enrage to 20 rounds.~
+SAY NAME1 ~狂怒延绵~
+SAY UNIDENTIFIED_DESC ~狂怒延绵
+狂战士对狂野战斗风格的精通，让他们能更久地维持狂暴状态，永久将狂怒的最大总持续时间延长至20回合。~

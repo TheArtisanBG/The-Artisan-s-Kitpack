@@ -43,45 +43,44 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 12
 	
-    mixed         = RESOLVE_STR_REF(~Dark Hunter~)
+    mixed         = RESOLVE_STR_REF(~黑暗猎人~)
 	
-    lower         = RESOLVE_STR_REF(~dark hunter~)
+    lower         = RESOLVE_STR_REF(~黑暗猎人~)
 	
-    help          = RESOLVE_STR_REF(~DARK HUNTER: Dark Hunters use their skills in stealth and survival for the purposes of infiltration, espionage, and manhunting, though they are no less capable in direct combat when necessary. While regarded as rangers in name only by typical woodsmen, Dark Hunters tend to be more welcome in guilds and groups of power as assassins and intelligence gatherers.
+    help          = RESOLVE_STR_REF(~黑暗猎人：黑暗猎人将潜行与生存技艺用于渗透、谍报与追猎，必要时正面作战的能力也毫不逊色。在普通林间游侠眼中，他们不过是名义上的游侠；但在公会与权势集团中，作为刺客与情报搜集者的黑暗猎人往往更受欢迎。
 
-Dark Hunters, unlike typical rangers, may be of any alignment and, as their skills are not bestowed by a deity like typical rangers, will never fall.
+与普通游侠不同，黑暗猎人无阵营限制；且他们的力量并非神祇所赐，因此永远不会堕落。
 
-Advantages:
-– May use Backstab ability, although for a lower damage multiplier than Thieves:
-  Level 1-8: x2
-  Level 9-16: x3
-  Level 17+: x4
-– +2 to hit and damage against humanoids.
-– May set up to 6 traps per area.
-– May memorize a small selection of Mage spells:
-  Level 1: Charm Person, Infravision, Monster Summoning I, Reflected Image
-  Level 2: Blur, Invisibility, Knock, Monster Summoning II
-  Level 3: Detect Illusion, Ghost Armor, Hold Person, Monster Summoning III
-– May use the Poison Weapon ability once per day. Gains an additional use every 5 levels.
+职业优势：
+–可使用背刺能力，但伤害倍率低于盗贼：
+  1-8级：2倍
+  9-16级：3倍
+  17级及以上：4倍
+–对抗类人生物时，命中与伤害+2。
+–每个区域最多可布设6个陷阱。
+–可记忆少量法师法术：
+  1环：魅惑人类、夜视术、一级召唤怪物、镜像术
+  2环：模糊术、隐形术、敲击术、二级召唤怪物
+  3环：识破幻象、幽灵护甲、定身术、三级召唤怪物
+–每日可使用一次「淬毒武器」能力，每提升5级额外获得一次使用次数。
 
-POISON WEAPON: The dark hunter is capable of coating <PRO_HISHER> weapon for the next eight hours with a slow-acting but extremely potent poison. This poison deals damage and reduces the target's Constitution immediately and every following round for at least four rounds. After four rounds have passed, the target must make a Saving Throw vs. Death or remain poisoned for another four rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
-  1st level: Target suffers two poison damage and loses one point of Constitution. No save modifier.
-  6th level: Target suffers four poison damage and loses one point of Constitution. Save modifier of -1.
-  11th level: Target suffers six poison damage and loses two points of Constitution. Save modifier of -2.
-  16th level: Target suffers eight poison damage and loses two points of Constitution. Save modifier of -3.
-  21st level: Target suffers ten poison damage and loses three points of Constitution. Save modifier of -4.
+淬毒武器：黑暗猎人可为<PRO_HISHER>武器涂抹起效缓慢但药性猛毒的剧毒，持续8小时。该毒素造成伤害，并立即及之后每回合降低目标体质，至少持续4回合。4回合过后，目标必须进行一次死亡豁免，否则将再中毒4回合。因此只要目标未能成功豁免，毒素就有可能无限期持续。目标不会因毒素造成的体质流失而死亡。
+  1级：目标受到2点毒素伤害，损失1点体质。无豁免惩罚。
+  6级：目标受到4点毒素伤害，损失1点体质。豁免惩罚-1。
+  11级：目标受到6点毒素伤害，损失2点体质。豁免惩罚-2。
+  16级：目标受到8点毒素伤害，损失2点体质。豁免惩罚-3。
+  21级：目标受到10点毒素伤害，损失3点体质。豁免惩罚-4。
 
-- From 10th level onwards, may use the Set Manhunter Snare ability once per day.
+–10级起，每日可使用一次「猎者捕网陷阱」能力。
 
-SET MANHUNTER SNARE: The Manhunter is a powerful trap intended for crippling and tracking marks. This trap deals 10d10+20 missile damage and paralyzes the target on a failed Save vs. Death (-1 modifier penalty per 8 levels), or else greatly reduces the victim's movement rate, as well as causing them to bleed uncontrollably, dealing an additional 24 damage over 4 rounds. Additionally, the target is revealed for the bleed duration, remaining visible outside of allies' vision range and are unable to enter stealth or become invisible. The Manhunter's secondary effects do not apply against undead, elementals and non-corporeal beings.
-
-Disadvantages:
-– May not cast any druidic spells.
-– May not Dual-Class.
-– May not wear armor heavier than studded leather.
-– May not use the Charm Animal ability.~)
+猎者捕网陷阱：这是一种强力陷阱，用于致残并标记目标。陷阱造成10d10+20点远程伤害，若目标死亡豁免失败（每8级豁免惩罚-1）则陷入麻痹；否则目标移动速度大幅降低，且会不受控制地流血，4回合内额外造成24点伤害。此外，流血期间目标会被暴露，在友方视野外也保持可见，且无法进入潜行或隐形状态。猎者捕网陷阱的次级效果对不死生物、元素生物与虚体生物无效。
+职业限制：
+–无法施展任何德鲁伊法术。
+–无法兼职。
+–无法穿戴重于钉皮甲的护甲。
+–无法使用「魅惑动物」能力。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~DARK HUNTER: Dark Hunters use their skills in stealth and survival for the purposes of infiltration, espionage, and manhunting, though they are no less capable in direct combat when necessary. While regarded as rangers in name only by typical woodsmen, Dark Hunters tend to be more welcome in guilds and groups of power as assassins and intelligence gatherers.~)
+    briefdesc     = RESOLVE_STR_REF(~黑暗猎人：黑暗猎人将潜行与生存技艺用于渗透、谍报与追猎，必要时正面作战的能力也毫不逊色。在普通林间游侠眼中，他们不过是名义上的游侠；但在公会与权势集团中，作为刺客与情报搜集者的黑暗猎人往往更受欢迎。~)
 	
 	// fallen = 0
 	
@@ -250,9 +249,9 @@ LAF ADD_CLASS_SPELL STR_VAR resref=~C0DH304~ kit_include=~{'C0DHUNT', }~ END
 INCLUDE ~%MOD_FOLDER%/effects/poison_weapon.tpa~
 
 COPY_EXISTING ~C0DH#002.SPL~ ~OVERRIDE~
-SAY NAME1 ~Set Manhunter Snare~
-SAY UNIDENTIFIED_DESC ~Set Manhunter Snare
-The Manhunter is a powerful trap intended for crippling and tracking marks. This trap deals 10d10+20 missile damage and paralyzes the target on a failed Save vs. Death (-1 modifier penalty per 8 levels), or else greatly reduces the victim's movement rate, as well as causing them to bleed uncontrollably, dealing an additional 24 damage over 4 rounds. Additionally, the target is revealed for the bleed duration, remaining visible outside of allies' vision range and are unable to enter stealth or become invisible. The Manhunter's secondary effects do not apply against undead, elementals and non-corporeal beings.~
+SAY NAME1 ~猎者捕网陷阱~
+SAY UNIDENTIFIED_DESC ~猎者捕网陷阱
+这是一种强力陷阱，用于致残并标记目标。陷阱造成10d10+20点远程伤害，若目标死亡豁免失败（每8级豁免惩罚-1）则陷入麻痹；否则目标移动速度大幅降低，且会不受控制地流血，4回合内额外造成24点伤害。此外，流血期间目标会被暴露，在友方视野外也保持可见，且无法进入潜行或隐形状态。猎者捕网陷阱的次级效果对不死生物、元素生物与虚体生物无效。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~2000~ THEN BEGIN
 

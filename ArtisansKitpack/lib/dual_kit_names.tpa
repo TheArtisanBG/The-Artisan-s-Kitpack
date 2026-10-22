@@ -169,7 +169,7 @@ COPY ~ArtisansKitpack/spells/C0KT#NA.EFF~ ~override~
 
 COPY_EXISTING ~C0KT#NA.EFF~ ~override/%abil_new_name_c_f%.EFF~
 GET_STRREF %kit_mixed% kit_name
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Fighter / %kit_name%~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~战士 / %kit_name%~)
 WRITE_LONG 0x48 8
 
 COPY_EXISTING ~C0KT#NA.EFF~ ~override/%abil_new_name_c_r%.EFF~
@@ -189,7 +189,7 @@ WRITE_LONG 0x48 15
 
 COPY_EXISTING ~C0KT#NA.EFF~ ~override/%abil_new_name_c_f_m%.EFF~
 GET_STRREF %kit_mixed% kit_name
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Fighter / %mage_name% / %kit_name%~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~战士 / %mage_name% / %kit_name%~)
 WRITE_LONG 0x48 17
 
 COPY_EXISTING ~%abil_new_name%.SPL~ ~override~
@@ -220,7 +220,7 @@ COPY ~ArtisansKitpack/spells/C0KT#NA.EFF~ ~override~
 
 COPY_EXISTING ~C0KT#NA.EFF~ ~override/%abil_new_name_t_f%.EFF~
 GET_STRREF %kit_mixed% kit_name
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Fighter / %kit_name%~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~战士 / %kit_name%~)
 WRITE_LONG 0x48 9
 
 COPY_EXISTING ~C0KT#NA.EFF~ ~override/%abil_new_name_t_c%.EFF~
@@ -235,7 +235,7 @@ WRITE_LONG 0x48 13
 
 COPY_EXISTING ~C0KT#NA.EFF~ ~override/%abil_new_name_t_f_m%.EFF~
 GET_STRREF %kit_mixed% kit_name
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Fighter / %mage_name% / %kit_name%~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~战士 / %mage_name% / %kit_name%~)
 WRITE_LONG 0x48 10
 
 COPY_EXISTING ~%abil_new_name%.SPL~ ~override~
@@ -260,7 +260,7 @@ COPY ~ArtisansKitpack/spells/C0KT#NA.EFF~ ~override~
 
 COPY_EXISTING ~C0KT#NA.EFF~ ~override/%abil_new_name_d_f%.EFF~
 GET_STRREF %kit_mixed% kit_name
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Fighter / %kit_name%~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~战士 / %kit_name%~)
 WRITE_LONG 0x48 16
 
 COPY_EXISTING ~%abil_new_name%.SPL~ ~override~

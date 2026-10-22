@@ -23,52 +23,52 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 3
 	
-    mixed         = RESOLVE_STR_REF(~Sacred Fist~)
+    mixed         = RESOLVE_STR_REF(~神拳使~)
 	
-    lower         = RESOLVE_STR_REF(~sacred fist~)
+    lower         = RESOLVE_STR_REF(~神拳使~)
 	
-    help          = RESOLVE_STR_REF(~SACRED FIST: Sacred Fists are independent organizations found within many temples. Their ascetic members have turned their divine magic inward, bringing their bodies and wills into harmony. Sacred Fists have forsworn the use of weapons and heavy armor. They consider their bodies and minds gifts from their deity, and they believe that not developing those gifts to their fullest potential is a sin. Spellcasting does not dishonor them or their deity. Sacred Fists are strong in faith, will and body.
+    help          = RESOLVE_STR_REF(~神拳使：神拳使是诸多神殿中独立的修行组织。其苦行的修士将神圣魔法向内修炼，使身心与意志达成和谐。神拳使修士立誓弃绝武器与重甲，视自身的身心为神祇的恩赐，认为未能将这份天赋修至极致便是罪孽。施法并不会玷污他们或他们的神祇。神拳使修士在信仰、意志与体魄上都极为强大。
 
-Advantages:
-– Moves 2 points faster than other characters. Movement rate further improves by 1 every 5 levels.
-– May make 2 unarmed attacks per round. Gains an additional half attack per round at 9th and 18th level.
-– The Sacred Fist's empowered fists deal crushing damage and deal increase damage with level as follows:
-  Level 1-4: 1d4
-  Level 5-8: 1d6
-  Level 9-12: 1d8
-  Level 13-16: 1d10
-  Level 17-20: 1d12
-  Level 21+: 2d8
-  
-– Ki: The Sacred Fists's unarmed attacks are empowered with ki, which allows them to be treated as magical weapons of +1 enchantment at 4th level, +2 at 8th level, +3 at 12th level, +4 at 16th level and +5 at 20th level. From 7th level, they are treated as silver weapons.
-– The Sacred Fist gains a +1 bonus to base Armor Class per point of Wisdom above 12. They gain an additional +1 to AC at 7th level and every 7 levels thereafter.
-– May use Find Traps and Detect Illusions abilities.
-– Flurry of Blows: The Sacred Fist, while unarmed or wielding daggers, may make an additional attack at the same time as their first attack each round at the cost of a -5 penalty to THAC0. This extra attack is not subject to the attacks per round limit and may be toggled at will. THAC0 penalty decreases to -2 at 13th level.
-– May use the Stunning Blow ability once per day. Gains one use at level 1 and an additional use every 6 levels thereafter.
+职业优势：
+–移动速度比其他角色快2点。每提升5级，移动速度再提升1点。
+–每回合可进行2次徒手攻击。9级与18级时，每回合额外获得半次攻击。
+–神拳使修士的拳掌贯注神力，造成钝击伤害，伤害随等级提升：
+  1-4级：1d4
+  5-8级：1d6
+  9-12级：1d8
+  13-16级：1d10
+  17-20级：1d12
+  21级及以上：2d8
 
-STUNNING BLOW: The monk sacrifices four points of THAC0 and damage for their next successful attack within 10 seconds. When struck, the target must make a Save vs. Death (-1 modifier per point of Wisdom above 14) or be stunned for three rounds.
+–气：神拳使修士的徒手攻击贯注气劲，4级时视为+1附魔魔法武器，8级+2，12级+3，16级+4，20级+5。7级起，视为银质武器。
+–智慧每超过12点1点，神拳使修士基础护甲等级+1。7级起每提升7级，护甲等级额外+1。
+–可使用寻找陷阱与侦测幻象能力。
+–疾风连击：神拳使修士徒手或持匕首时，每回合首次攻击可额外追加一次攻击，零级命中值受-5惩罚。该额外攻击不受每回合攻击次数上限限制，且可自由切换开启。13级时，零级命中惩罚降低至-2。
+–每日可使用一次「震慑拳」。1级时获得1次，之后每提升6级额外获得1次使用次数。
 
-– 5th level: May use the Sacred Flames ability once per day. Extra uses are gained at 10th, 20th, 30th and 40th levels.
+震慑拳：修士在10秒内的下一次成功攻击，牺牲4点零级命中值与伤害。目标受击时必须进行死亡豁免（智慧每超过14点1点，豁免难度-1），失败则震慑3回合。
 
-SACRED FLAMES: The Sacred Fist invokes divine flames around <PRO_HISHER> hands and feet, adding 1d6 magic fire damage and 1d6 magic damage to their melee attacks for 1 turn.
+–5级：每日可使用一次「神圣焰击」。10级、20级、30级与40级时额外获得使用次数。
 
-– 14th level: Diamond Soul: The Sacred Fist gains base 10% + 2% Magic Resistance per level up to a maximum of 50% at 20th level.
-– 16th level: May use the Quivering Palm ability once per day.
+神圣焰击：神拳使修士在手脚周围召起神圣火焰，接下来1回合内，近战攻击额外造成1d6魔法火焰伤害与1d6魔法伤害。
 
-QUIVERING PALM: The most advanced of the monk's techniques. When used, the monk's next successful attack within 10 seconds sets up fatal vibrations within the target's body, instantly killing them unless a successful Save vs. Death (-1 modifier per point of Wisdom above 16) is made.
+–14级：金刚魂：神拳使修士获得基础10%+每等级2%的魔法抗性，20级时达到上限50%。
+–16级：每日可使用一次「渗透劲」。
 
-– 18th level: Inner Eye: The Sacred Fist becomes immune to critical hits while unarmed.
+渗透劲：修士的最高深技法。使用后，10秒内的下一次成功攻击会在目标体内引发致命震颤，目标死亡豁免失败则立即死亡（智慧每超过16点1点，豁免难度-1）。
 
-Disadvantages:
-– May only be of any Lawful alignment.
-– Casting level does not progress on 3rd, 7th, 11th and 15th levels.
-– May not wear armor heavier than studded leather.
-– May not use shields.
-– May only be humans, half-elves or half-orcs.
-– May only dual-class to Thief or Mage.
-– Suffers a -6 penalty to THAC0 when wielding any weapon.~)
-	
-    briefdesc     = RESOLVE_STR_REF(~SACRED FIST: Sacred Fists are independent organizations found within many temples. Their ascetic members have turned their divine magic inward, bringing their bodies and wills into harmony. Sacred Fists have forsworn the use of weapons and heavy armor. They consider their bodies and minds gifts from their deity, and they believe that not developing those gifts to their fullest potential is a sin. Spellcasting does not dishonor them or their deity. Sacred Fists are strong in faith, will and body.~)
+–18级：内眼：神拳使修士徒手时免疫暴击。
+
+职业限制：
+–必须为任意守序阵营。
+–3级、7级、11级与15级时，施法等级不提升。
+–无法穿戴比钉甲更重的护甲。
+–无法使用盾牌。
+–仅可为人类、半精灵或半兽人。
+–兼职仅可选择游荡者或法师。
+–持用任何武器时，零级命中值受-6惩罚。~)
+
+    briefdesc     = RESOLVE_STR_REF(~神拳使：神拳使是神殿中的苦行修行组织，修士将神圣魔法向内修炼，以求身心和谐。他们立誓弃绝武器与重甲，视身心为神祇恩赐，以将天赋修至极致为己任。~)
   STR_VAR
     kit_name      = ~C0_SACRED_FIST~
 	
@@ -183,11 +183,11 @@ COPY_EXISTING ~C0MOND1.SPL~ OVERRIDE
  LPF ADD_SPELL_EFFECT INT_VAR target = 2 timing = 9 opcode = 177 parameter1 = IDS_OF_SYMBOL (~CLASS~ ~THIEF_ALL~) parameter2 = 5 STR_VAR resource = C0SFFTH END
 
 COPY ~%MOD_FOLDER%/SPELLS/C0KTNAME.EFF~ ~OVERRIDE/C0SFFMA.EFF~
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Sacred Fist / Mage~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~神拳使/法师~)
 WRITE_LONG 0x48 14
 
 COPY ~%MOD_FOLDER%/SPELLS/C0KTNAME.EFF~ ~OVERRIDE/C0SFFTH.EFF~
-WRITE_LONG 0x1c RESOLVE_STR_REF (~Sacred Fist / Thief~)
+WRITE_LONG 0x1c RESOLVE_STR_REF (~神拳使/盗贼~)
 WRITE_LONG 0x48 15
 
 COPY_EXISTING ~LUCL0.2da~ ~override/LUC0SFF.2DA~
@@ -210,16 +210,16 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Sacred Flames~) STR_VAR bam_file = C0SFF1I RET C0SFF1I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~神圣焰击~) STR_VAR bam_file = C0SFF1I RET C0SFF1I = icon END
 
 COPY_EXISTING ~C0SFF1.SPL~ OVERRIDE
   LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0SFF1I END
-SAY NAME1 ~Sacred Flames~
-SAY UNIDENTIFIED_DESC ~Sacred Flames
-The Sacred Fist invokes divine flames around <PRO_HISHER> hands and feet, adding 1d6 magic fire damage and 1d6 magic damage to their melee attacks for 1 turn.~
+SAY NAME1 ~神圣焰击~
+SAY UNIDENTIFIED_DESC ~神圣焰击
+神拳使修士在手脚周围召起神圣火焰，接下来1回合内，近战攻击额外造成1d6魔法火焰伤害与1d6魔法伤害。~
 
 OUTER_SET sacred_fist_ids = IDS_OF_SYMBOL (~kit~ ~C0_SACRED_FIST~)
-  
+
 COPY ~%MOD_FOLDER%/lua/m_c0mnk1.lua~      ~override~ // Lua file read by EEex, provided by Bubbs and further edited by myself
 ///////////////////////////////////////////////////////////////////////////
 // Update lua file                                                       //

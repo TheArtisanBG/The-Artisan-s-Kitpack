@@ -1,45 +1,45 @@
 ACTION_IF FILE_EXISTS_IN_GAME ~C0ILMCL.2DA~ THEN BEGIN
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~C0ILM~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.
+STRING_SET_EVALUATE kit_strref ~殉道者：殉道者是苦难、坚韧与不屈之善神伊尔马特的信徒。伊尔马特教会的圣武士心怀慈悲，苦修自身以成为盟友的守护者，为他人减轻苦痛。
 
-Advantages:
-– May use Lay on Hands three times per day.
-– Gains 5% resistance to crushing, slashing, piercing, and missile damage every 5 levels to a maximum of 20% at level 20.
-– May use the Sacrifice ability once per day. Gains an additional use at 5th level and every 5 levels thereafter.
+职业优势：
+–每日可使用三次圣疗术。
+–每提升5级，钝击、挥砍、穿刺与远程伤害抗性+5%，20级时达到上限20%。
+–每日可使用一次「牺牲」能力。5级时额外获得1次，之后每提升5级再额外获得1次。
 
-SACRIFICE: The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.
+牺牲：殉道者将自身10点生命值+每等级2点转移给目标，20级时转移上限为50点。殉道者不会因此能力死亡——生命值若低于1，则改为陷入昏迷。
 
-– May use the Martyrdom ability once per day starting at level 5. Gains an additional use at 10th level and every 10 levels thereafter.
+–5级起，每日可使用一次「殉道」能力。10级时额外获得1次，之后每提升10级再额外获得1次。
 
-MARTYRDOM: The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr temporarily doubles their maximum hit points, gains +4 to Armor Class, +20% resistance to all damage and immunity to all displacement effects. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.
+殉道：殉道者摆出防御姿态守护战友。持续1回合，临时最大生命值翻倍，护甲等级+4，所有伤害抗性+20%，免疫所有位移效果。姿态期间伤害与移动速度减半，但有效控制范围大幅提升，5尺半径内生物无法穿过。持续时间结束后，殉道者陷入重度疲劳。本能力不可与「强健」同时使用。
 
-– 3rd level: Gains Aura of Protection.
+–3级：获得「庇护光环」。
 
-AURA OF PROTECTION: The martyr exudes a protective aura which shields their companions, granting all nearby allied creatures with in a 15-ft. radius bonuses to Armor Class and resistance to crushing, piercing, slashing and missile damage.
-  3rd - +1 to Armor Class.
-  11th - +2 to Armor Class and +5% resistance.
-  19th - +3 to Armor Class and +10% resistance.
+庇护光环：殉道者散发出庇护光环守护同伴，15尺范围内所有友军获得护甲等级与钝击、穿刺、挥砍、远程伤害抗性加成。
+  3级：护甲等级+1。
+  11级：护甲等级+2，抗性+5%。
+  19级：护甲等级+3，抗性+10%。
 
-– 8th level: Gains the Final Breath passive effect.
+–8级：获得「终末之息」被动效果。
 
-FINAL BREATH: The martyr's dauntless heroism and endurance keeps their allies motivated and safe, even in death. If the martyr is slain, all allies are healed for 50% of their maximum hit points and gain +4 to hit, damage and saving throws for two turns.
+终末之息：殉道者无畏的英勇与坚韧，即便身死也能激励并守护盟友。若殉道者被击杀，所有盟友回复最大生命值的50%，且2回合内命中、伤害与豁免检定+4。
 
-– 10th level: The martyr becomes immune to fatigue.
-– 15th level: May use the Ilmater's Grace ability once per day.
+–10级：殉道者免疫疲劳。
+–15级：每日可使用一次「伊尔马特的恩典」能力。
 
-ILMATER'S GRACE: The martyr may call upon a second wind in battle, instantly healing half of their maximum hit points. The martyr gradually regenerates an additional half of their maximum hit points over the next five rounds.
+伊尔马特的恩典：殉道者可在战斗中唤起第二次生机，立即回复最大生命值的一半。接下来5回合内，逐步回复另外一半最大生命值。
 
-– 20th level: Tribulations: The martyr permanently gains a 5% chance to negate incoming damage. If damage is negated, the martyr and the closest ally regenerate for 2 hit points per second for 5 seconds.
+–20级：苦难试炼：殉道者永久获得5%几率抵消受到的伤害。若伤害被抵消，殉道者与最近的友军每秒回复2点生命值，持续5秒。
 
-– Hit Die: d12
+–生命骰：d12
 
-Disadvantages:
-– Does not gain Charisma-based Divine Grace bonuses.
-– Does not gain Aura of Courage.
-– Incurs a -1 penalty to damage.
-– May not use Smite Evil.
-– May not Turn Undead.
-– May not use ranged weapons.~
+职业限制：
+–不获得基于魅力的神恩加值。
+–不获得勇气光环。
+–伤害受-1惩罚。
+–无法使用破邪斩。
+–无法驱散不死生物。
+–无法使用远程武器。~
 END
 
 COPY ~%MOD_FOLDER%/Paladin/Martyr/2DA~ ~OVERRIDE~
@@ -93,53 +93,53 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 6
 	
-    mixed         = RESOLVE_STR_REF(~Martyr~)
+    mixed         = RESOLVE_STR_REF(~殉道者~)
 	
-    lower         = RESOLVE_STR_REF(~martyr~)
+    lower         = RESOLVE_STR_REF(~殉道者~)
 	
-    help          = RESOLVE_STR_REF(~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.
+    help          = RESOLVE_STR_REF(~殉道者：殉道者是苦难、坚韧与不屈之善神伊尔马特的信徒。伊尔马特教会的圣武士心怀慈悲，苦修自身以成为盟友的守护者，为他人减轻苦痛。
 
-Advantages:
-– May use Lay on Hands three times per day.
-– Gains 5% resistance to crushing, slashing, piercing, and missile damage every 5 levels to a maximum of 20% at level 20.
-– May use the Sacrifice ability once per day. Gains an additional use at 5th level and every 5 levels thereafter.
+职业优势：
+–每日可使用三次圣疗术。
+–每提升5级，钝击、挥砍、穿刺与远程伤害抗性+5%，20级时达到上限20%。
+–每日可使用一次「牺牲」能力。5级时额外获得1次，之后每提升5级再额外获得1次。
 
-SACRIFICE: The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.
+牺牲：殉道者将自身10点生命值+每等级2点转移给目标，20级时转移上限为50点。殉道者不会因此能力死亡——生命值若低于1，则改为陷入昏迷。
 
-– May use the Martyrdom ability once per day starting at level 5. Gains an additional use at 10th level and every 10 levels thereafter.
+–5级起，每日可使用一次「殉道」能力。10级时额外获得1次，之后每提升10级再额外获得1次。
 
-MARTYRDOM: The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr temporarily doubles their maximum hit points, gains +4 to Armor Class, +20% resistance to all damage and immunity to all displacement effects. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.
+殉道：殉道者摆出防御姿态守护战友。持续1回合，临时最大生命值翻倍，护甲等级+4，所有伤害抗性+20%，免疫所有位移效果。姿态期间伤害与移动速度减半，但有效控制范围大幅提升，5尺半径内生物无法穿过。持续时间结束后，殉道者陷入重度疲劳。本能力不可与「强健」同时使用。
 
-– 3rd level: Gains Aura of Protection.
+–3级：获得「庇护光环」。
 
-AURA OF PROTECTION: The martyr exudes a protective aura which shields their companions, granting all nearby allied creatures with in a 15-ft. radius bonuses to Armor Class and resistance to crushing, piercing, slashing and missile damage.
-  3rd - +1 to Armor Class.
-  11th - +2 to Armor Class and +5% resistance.
-  19th - +3 to Armor Class and +10% resistance.
+庇护光环：殉道者散发出庇护光环守护同伴，15尺范围内所有友军获得护甲等级与钝击、穿刺、挥砍、远程伤害抗性加成。
+  3级：护甲等级+1。
+  11级：护甲等级+2，抗性+5%。
+  19级：护甲等级+3，抗性+10%。
 
-– 8th level: Gains the Final Breath passive effect.
+–8级：获得「终末之息」被动效果。
 
-FINAL BREATH: The martyr's dauntless heroism and endurance keeps their allies motivated and safe, even in death. If the martyr is slain, all allies are healed for 50% of their maximum hit points and gain +4 to hit, damage and saving throws for two turns.
+终末之息：殉道者无畏的英勇与坚韧，即便身死也能激励并守护盟友。若殉道者被击杀，所有盟友回复最大生命值的50%，且2回合内命中、伤害与豁免检定+4。
 
-– 10th level: The martyr becomes immune to fatigue.
-– 12th level: While Martyrdom is active, the martyr's melee attacks heal the closest ally within a 10-ft. radius for 1d6+2 hit points on hit.
-– 15th level: May use the Ilmater's Grace ability once per day.
+–10级：殉道者免疫疲劳。
+–12级：殉道姿态激活时，殉道者的近战攻击命中时，会治疗10尺范围内最近的友军1d6+2点生命值。
+–15级：每日可使用一次「伊尔马特的恩典」能力。
 
-ILMATER'S GRACE: The martyr may call upon a second wind in battle, instantly healing half of their maximum hit points. The martyr gradually regenerates an additional half of their maximum hit points over the next five rounds.
+伊尔马特的恩典：殉道者可在战斗中唤起第二次生机，立即回复最大生命值的一半。接下来5回合内，逐步回复另外一半最大生命值。
 
-– 20th level: Tribulations: The martyr permanently gains a 5% chance to negate incoming damage. If damage is negated, the martyr and the closest ally regenerate for 2 hit points per second for 5 seconds.
+–20级：苦难试炼：殉道者永久获得5%几率抵消受到的伤害。若伤害被抵消，殉道者与最近的友军每秒回复2点生命值，持续5秒。
 
-– Hit Die: d12
+–生命骰：d12
 
-Disadvantages:
-– Does not gain Charisma-based Divine Grace bonuses.
-– Does not gain Aura of Courage.
-– Incurs a -1 penalty to damage.
-– May not use Smite Evil.
-– May not Turn Undead.
-– May not use ranged weapons.~)
-	
-    briefdesc     = RESOLVE_STR_REF(~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.~)
+职业限制：
+–不获得基于魅力的神恩加值。
+–不获得勇气光环。
+–伤害受-1惩罚。
+–无法使用破邪斩。
+–无法驱散不死生物。
+–无法使用远程武器。~)
+
+    briefdesc     = RESOLVE_STR_REF(~殉道者：殉道者是苦难、坚韧与不屈之善神伊尔马特的信徒。伊尔马特教会的圣武士心怀慈悲，苦修自身以成为盟友的守护者，为他人减轻苦痛。~)
 	
 	// fallen = 1
 	
@@ -243,8 +243,8 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Aura of Protection~) STR_VAR bam_file = c0ilmi2i RET c0ilmi2i = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Martyrdom~) STR_VAR bam_file = c0ilms2i RET c0ilms2i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~庇护光环~) STR_VAR bam_file = c0ilmi2i RET c0ilmi2i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~殉道~) STR_VAR bam_file = c0ilms2i RET c0ilms2i = icon END
 
 // CURRENT HP CHECK
 APPEND ~splprot.2da~ ~C0CURHP%TAB%0%TAB%-1%TAB%0~
@@ -260,10 +260,10 @@ COPY_EXISTING ~splprot.2da~ ~override~
 	
 	
 COPY_EXISTING ~c0ilms1.spl~ ~override~
-SAY NAME1 ~Sacrifice~
-SAY NAME2 ~Sacrifice~
-SAY UNIDENTIFIED_DESC ~Sacrifice
-The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.~
+SAY NAME1 ~牺牲~
+SAY NAME2 ~牺牲~
+SAY UNIDENTIFIED_DESC ~牺牲
+殉道者将自身10点生命值+每等级2点转移给目标，20级时转移上限为50点。殉道者不会因此能力死亡——生命值若低于1，则改为陷入昏迷。~
 
 COPY_EXISTING ~c0ilms1a.spl~ ~override~
 	
@@ -282,14 +282,14 @@ COPY_EXISTING ~C0ilms2.spl~ ~override~
       match_opcode = 142
 	  parameter2 = c0ilms2i
 END
-SAY NAME1 ~Martyrdom~
-SAY NAME2 ~Martyrdom~
-SAY UNIDENTIFIED_DESC ~Martyrdom
-The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr gains a temporary +6 bonus to Armor Class, +30% resistance to all damage and immunity to all displacement effects. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued.
+SAY NAME1 ~殉道~
+SAY NAME2 ~殉道~
+SAY UNIDENTIFIED_DESC ~殉道
+殉道者摆出防御姿态守护战友。持续1回合，护甲等级临时+6，所有伤害抗性+30%，免疫所有位移效果。姿态期间伤害与移动速度减半，但有效控制范围大幅提升，5尺半径内生物无法穿过。持续时间结束后，殉道者陷入重度疲劳。
 
-From 12th level onwards, while Martyrdom is active, the martyr's melee attacks heal the closest ally within a 10-ft. range for 2d6+2 hit points on hit.
+12级起，殉道姿态激活时，殉道者的近战攻击命中时，会治疗10尺范围内最近的友军2d6+2点生命值。
 
-This ability may not be used in conjuction with Hardiness.~
+本能力不可与「强健」同时使用。~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/Paladin/Martyr/spells/c0ilms2a.PRO~ ~C0 Martyrdom~
 
@@ -300,22 +300,22 @@ COPY_EXISTING ~C0ilms3.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Regenerating~)
+	  parameter1 = RESOLVE_STR_REF (~再生中~)
 END
-SAY NAME1 ~Ilmater's Grace~
-SAY NAME2 ~Ilmater's Grace~
-SAY UNIDENTIFIED_DESC ~Ilmater's Grace
-The martyr may call upon a second wind in battle, instantly healing half of their maximum hit points. The martyr gradually regenerates an additional half of their maximum hit points over the next five rounds.~
+SAY NAME1 ~伊尔马特的恩典~
+SAY NAME2 ~伊尔马特的恩典~
+SAY UNIDENTIFIED_DESC ~伊尔马特的恩典
+殉道者可在战斗中唤起第二次生机，立即回复最大生命值的一半。接下来5回合内，逐步回复另外一半最大生命值。~
 
 COPY_EXISTING ~C0ilms5.spl~ ~override~
-SAY NAME1 ~Final Breath~
+SAY NAME1 ~终末之息~
 
 COPY_EXISTING ~C0ilms6b.spl~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR projectile = c0ilms2a END
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Incoming damage negated by Tribulations~)
+	  parameter1 = RESOLVE_STR_REF (~苦难试炼抵消了伤害~)
 END
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN

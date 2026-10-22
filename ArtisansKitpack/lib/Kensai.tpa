@@ -60,48 +60,48 @@ COPY_EXISTING ~splprot.2da~ ~override~
 	  END
 	END
 	
-OUTER_SPRINT kit_description ~KENSAI: This class's name, which means "sword saint" in the common tongue, refers to a warrior who has been specially trained to be one with their weapon. The kensai is deadly, fast, and trained to fight without the protection of armor. (Note: Despite its common name, a Kensai may use any melee weapon with which they are proficient.)
+OUTER_SPRINT kit_description ~剑圣：该职业之名在通用语中意为「剑之圣者」，指受过专门训练、与武器融为一体的战士。剑圣致命而迅捷，惯于无甲作战。（注：虽名称带「剑」，但剑圣可使用任何自身熟练的近战武器。）
 
-Advantages:
-– Base Armor Class of 8.
-– -1 bonus to Speed Factor every 4 levels.
-– Gains a +10% bonus to all physical damage dealt.
-– Gains the Ki Critical innate.
+职业优势：
+–基础护甲等级为8。
+–每提升4级，速度因子-1。
+–所有造成的物理伤害+10%。
+–获得「气之暴击」先天能力。
 
-KI CRITICAL: +2 bonus to critical hit rate. Gains an additional +2 at 10th level and +1 every 5 levels thereafter.
+气之暴击：暴击率+2。10级时额外+2，之后每提升5级再+1。
 
-– May use the Ki Focus ability once per day. Gains one use at level 1 and an additional use every 4 levels thereafter.
+–每日可使用一次「气之专注」能力。1级时获得1次，之后每提升4级额外获得1次。
 
-KI FOCUS: All successful attacks within the next 12 seconds will never miss and deal 20% increased physical damage.
+气之专注：接下来12秒内所有成功攻击必定命中，且物理伤害提升20%。
 
-– From 3rd level onwards, may use the Defensive Fighting modal ability.
+–3级起，可使用「防御架势」攻击模式。
 
-DEFENSIVE FIGHTING: The Kensai sets their base Armor Class to a value equal to 4 - (level/2 rounded up). This ability lasts indefinitely until deactivated. However, while Defensive Fighting is active, the Kensai loses his Ki Critical modifier, becomes unable to critically strike, and is unable to use Ki Strike or Ki Focus.
+防御架势：剑圣将基础护甲等级设为4 -（等级/2，向上取整）。本能力可持续至主动解除。但激活防御架势期间，剑圣失去气之暴击修正，无法造成暴击，也无法使用气之一击与气之专注。
 
-– From 5th level onwards, may use the Ki Strike ability once per round.
+–5级起，每回合可使用一次「气之一击」。
 
-KI STRIKE: The Kensai's next attack within one round of casting the ability has a doubled Ki Critical modifier and deals maximum damage. The Kensai incurs a cumulative fatigue penalty upon landing the attack, the amount of which decreases as the Kensai gains levels. Ki Strike will fail if the Kensai is overly fatigued.
+气之一击：使用本能力后一回合内，剑圣的下一次攻击气之暴击修正翻倍，且造成最大伤害。命中后剑圣会受到累积疲劳惩罚，惩罚数值随等级提升而降低。若疲劳过度，气之一击会失败。
 
-– From 10th level onwards, gains the Perfect Defense innate.
+–10级起，获得「完美防御」先天能力。
 
-PERFECT DEFENSE: When Defensive Fighting is active, the Kensai becomes immune to backstabs, and blocks the first instance of weapon damage they take each round. Additionally, the Kensai gains a cumulative +1 bonus to Armor Class for each enemy within a 15-ft. range.
+完美防御：防御架势激活时，剑圣免疫背刺，且每回合格挡首次受到的武器伤害。此外，15尺范围内每有一名敌人，剑圣的护甲等级累计+1。
 
-– From 15th level onwards, gains the Perfect Offense innate.
+–15级起，获得「完美攻势」先天能力。
 
-PERFECT OFFENSE: The Kensai will no longer critically miss on an attack roll of 1.
+完美攻势：剑圣攻击掷骰出1时不再失误。
 
-Disadvantages:KIT_DISADV_1
-– May not use any armor, helmets, gauntlets, bracers or shields.
-– May not use missile weapons.
-– Does not gain access to the Hardiness, Resist Magic or War Cry high level abilities.
-– Alignment restricted to any non-chaotic.~
+职业限制：KIT_DISADV_1
+–无法使用任何护甲、头盔、护手、护腕或盾牌。
+–无法使用远程武器。
+–无法获得「强健」「抵抗魔法」「战吼」等高阶能力。
+–阵营限制为所有非混乱阵营。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.~
+–无法使用「速射」。
+–16级时不获得全武器专精。~
 
 END
 
@@ -135,14 +135,14 @@ LPF patch_add_hla STR_VAR 2da_row = ~C0KN4~ ability = ~AP_C0KN#10~ num_allowed =
 REPLACE_TEXTUALLY ~GA_SPCL905~ ~GA_C0KN#07~
 
 COPY_EXISTING ~SPCL144.SPL~ ~OVERRIDE~
-SAY NAME1 ~Ki Focus~
-SAY UNIDENTIFIED_DESC ~KI FOCUS
-All successful attacks within the next 12 seconds will never miss and deal 20% increased physical damage.~
+SAY NAME1 ~气之专注~
+SAY UNIDENTIFIED_DESC ~气之专注
+接下来12秒内所有成功攻击必定命中，且物理伤害提升20%。~
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#03.SPL~ ~OVERRIDE~
-SAY NAME1 ~Defensive Fighting~
-SAY UNIDENTIFIED_DESC ~DEFENSIVE FIGHTING
-The Kensai sets <PRO_HISHER> base Armor Class to a value equal to 6 - (level/2 rounded up). This ability lasts indefinitely until deactivated. However, while Defensive Fighting is active, the Kensai loses his Ki Critical modifier, becomes unable to critically strike, and is unable to use Ki Strike or Ki Focus. When deactivated, the Kensai must wait one turn before Defensive Fighting may be reactivated.~
+SAY NAME1 ~防御架势~
+SAY UNIDENTIFIED_DESC ~防御架势
+剑圣将<PRO_HISHER>基础护甲等级设为6 -（等级/2，向上取整）。本能力可持续至主动解除。但激活防御架势期间，剑圣失去气之暴击修正，无法造成暴击，也无法使用气之一击与气之专注。解除后，剑圣必须等待一回合才能重新激活防御架势。~
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#03x.SPL~ ~OVERRIDE~
   LPF ALTER_EFFECT
@@ -150,7 +150,7 @@ COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#03x.SPL~ ~OVERRIDE~
       check_globals = 1
       check_headers = 1
 	  match_opcode = 206
-	  parameter1 = RESOLVE_STR_REF (~Ki Focus may not be used while in Defensive Fighting.~)
+	  parameter1 = RESOLVE_STR_REF (~防御架势状态下无法使用气之专注。~)
 	STR_VAR
 	  match_resource = spcl144
 END
@@ -159,12 +159,12 @@ END
       check_globals = 1
       check_headers = 1
 	  match_opcode = 206
-	  parameter1 = RESOLVE_STR_REF (~Ki Strike may not be used while in Defensive Fighting.~)
+	  parameter1 = RESOLVE_STR_REF (~防御架势状态下无法使用气之一击。~)
 	STR_VAR
 	  match_resource = c0kn#04
 END
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#03z.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Defensive Fighting Deactivated~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~防御架势已解除~) END
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#04.SPL~ ~OVERRIDE~
   LPF ALTER_EFFECT
@@ -174,42 +174,42 @@ COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#04.SPL~ ~OVERRIDE~
 	  match_opcode = 326
 	  parameter2 = %FATIGUEGTEQ%
 END
-SAY NAME1 ~Ki Strike~
-SAY UNIDENTIFIED_DESC ~KI STRIKE
-The Kensai's next attack within one round of casting the ability has a doubled Ki Critical modifier and deals maximum damage. The Kensai incurs a cumulative fatigue penalty upon landing the attack, the amount of which decreases as the Kensai gains levels. Ki Strike will fail if the Kensai is overly fatigued.~
+SAY NAME1 ~气之一击~
+SAY UNIDENTIFIED_DESC ~气之一击
+使用本能力后一回合内，剑圣的下一次攻击气之暴击修正翻倍，且造成最大伤害。命中后剑圣会受到累积疲劳惩罚，惩罚数值随等级提升而降低。若疲劳过度，气之一击会失败。~
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#04X.SPL~ ~OVERRIDE~
   LPF ALTER_EFFECT
     INT_VAR
       check_globals = 1
       check_headers = 1
 	  match_opcode = 206
-	  parameter1 = RESOLVE_STR_REF (~The Kensai is too fatigued to attempt a Ki Strike.~)
+	  parameter1 = RESOLVE_STR_REF (~剑圣疲劳过度，无法施展气之一击。~)
 END
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#05.SPL~ ~OVERRIDE~
-SAY NAME1 ~Deactivate Defensive Fighting~
-SAY UNIDENTIFIED_DESC ~Use this ability to deactivate Defensive Fighting.~
+SAY NAME1 ~解除防御架势~
+SAY UNIDENTIFIED_DESC ~使用本能力解除防御架势。~
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#07.SPL~ ~OVERRIDE~
-SAY NAME1 ~Improved Ki Critical~
-SAY UNIDENTIFIED_DESC ~The Kensai gains a permanent +4 bonus to their melee critical hit modifier.
+SAY NAME1 ~强化气之暴击~
+SAY UNIDENTIFIED_DESC ~剑圣的近战暴击修正永久+4。
 
-This skill qualifies as learning the Critical Strike ability in terms of other prerequisites.
+本技能在前置要求中等同于「暴击打击」能力。
 
-Requires: Power Attack~
+需要：猛力攻击~
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#08.SPL~ ~OVERRIDE~
-SAY NAME1 ~Overwhelming Critical~
-SAY UNIDENTIFIED_DESC ~The Kensai's critical hits reduce the target's physical resistances by a cumulative 5% for 4 rounds.~
+SAY NAME1 ~碾压暴击~
+SAY UNIDENTIFIED_DESC ~剑圣的暴击会使目标的物理抗性累计降低5%，持续4回合。~
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#09.SPL~ ~OVERRIDE~
-SAY NAME1 ~Second Wind~
-SAY UNIDENTIFIED_DESC ~The Kensai heals for 5% of <PRO_HISHER> maximum hit points and reduces a small amount of <PRO_HISHER> fatigue modifier upon landing a critical hit.
+SAY NAME1 ~回气~
+SAY UNIDENTIFIED_DESC ~剑圣造成暴击时，回复相当于最大生命值5%的生命，并减轻少量疲劳。
 
-Requires: Overwhelming Critical~
+需要：碾压暴击~
 
 COPY ~%MOD_FOLDER%/Fighter/Kensai/SPELLS/C0KN#10.SPL~ ~OVERRIDE~
-SAY NAME1 ~Devastating Critical~
-SAY UNIDENTIFIED_DESC ~The Kensai's critical hits kill the target instantly on a failed Saving Throw vs. Death. Creatures with 8 or lower HD die with no save.
+SAY NAME1 ~毁灭暴击~
+SAY UNIDENTIFIED_DESC ~剑圣的暴击若目标死亡豁免失败则直接秒杀。生命骰8及以下的生物无需豁免直接死亡。
 
-Requires: Second Wind~
+需要：回气~

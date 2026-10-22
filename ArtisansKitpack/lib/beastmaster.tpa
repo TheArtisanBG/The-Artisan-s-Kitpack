@@ -24,30 +24,30 @@ COPY_EXISTING ~CLABRN01.2DA~ ~OVERRIDE/CLABRN04.2DA~
  	PRETTY_PRINT_2DA
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~BEASTMASTER~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~BEAST MASTER: This Ranger is a wanderer and is not comfortable in civilized lands. Therefore, <PRO_HESHE> maintains a natural affinity for all beings of nature, from animals to beasts considered monsters by ordinary folk; they are <PRO_HISHER> friends and comrades-in-arms, and the Beast Master has a limited form of telepathic communication with them. 
+STRING_SET_EVALUATE kit_strref ~万兽王：这类游侠天性浪迹天涯，难以适应文明之地。因此，<PRO_HESHE>与所有自然生灵都有着天生的亲和——从寻常走兽到常人眼中的凶兽，皆是<PRO_HISHER>的挚友与战友。万兽王还能与它们进行有限的心灵感应。
 
-Advantages:
-– Beast Friend: The beast master gains a +2 bonus to Armor Class and Saving Throws against animals and monstrous creatures. Additionally, allied animals and monstrous creatures within visual range of the beast master gain a non-cumulative +2 bonus to Armor Class, Saving Throws, THAC0 and damage.
-– May use Find Familiar ability to summon a pseudo dragon (if lawful or neutral good) or fairy dragon (if chaotic good) companion.
-– May use an Enhanced version of Charm Animal.
+职业优势：
+–兽类之友：万兽王对抗动物与魔兽类生物时，护甲等级与豁免检定获得+2加值。此外，视野范围内的友方动物与魔兽类生物，会获得非叠加的+2护甲等级、豁免检定、零级命中值与伤害加成。
+–可使用「寻找魔宠」能力，召唤一只伪龙（守序或中立善良）或仙龙（混乱善良）作为伙伴。
+–可使用强化版「魅惑动物」。
 
-ENHANCED CHARM ANIMAL: This advanced version of Charm Animal is similar to the original ability, but the animal must make a Saving Throw vs. Spell at -6 instead. The ability may also affect monstrous creatures such as ankhegs, wyverns and umber hulks. After the regular 2 turns of the ability has expired, the animal remains friendly towards the beast master and will assist them against any enemies they see, but cannot be controlled.
+强化魅惑动物：这一进阶版魅惑动物与原版效果相近，但目标动物需进行-6难度的法术豁免。本能力也可影响安克赫格、双足飞龙、土巨怪等魔兽类生物。在常规2回合效果结束后，动物仍会对万兽王保持友善，并会协助攻击所见敌人，但不受操控。
 
-– 6th level: May cast Animal Rage as an ability once per day. Gains an additional use at 9th and 12th level.
+–6级：每日可使用一次「动物狂怒」能力，9级与12级各额外获得一次使用次数。
 
-ANIMAL RAGE: This spell imbues the target creature with animal ferocity. The target creature gains a Strength score of 19, +20 Hit Points, +20% movement rate, and a +2 bonus to all Saving Throws. The target loses the ability to cast spells while Animal Rage is in effect; when enemies are within sight, <PRO_HESHE> immediately attacks in melee, using whatever is in hand. While this spell is in effect, there is a 5% chance per round that the target will go berserk, attacking friend and foe alike.
+动物狂怒：本法术为目标生物注入野性狂怒。目标生物力量变为19，获得+20生命值、+20%移动速度，所有豁免检定+2。效果持续期间目标无法施法；视野内出现敌人时，<PRO_HESHE>会立即手持武器近战攻击。法术生效期间，每回合有5%几率目标陷入狂暴，不分敌我胡乱攻击。
 
-– 8th level: May cast Animal Summoning I as a 1st level divine spell.
-– 9th level: Greater Beast Friend: allied bonuses from Beast Friend increased to +4.
-– 10th level: May cast Animal Summoning II as a 2nd level divine spell.
-– 12th level: May cast Animal Summoning III as a 3rd level divine spell.
-– 14th level: May cast Wyvern Call as an innate ability twice per day. Gains an additional use at 17th and 20th level.
-– 15th level: Beast Guardian: allied bonuses from Beast Friend increased to +6.
+–8级：可将「一级召唤动物」作为1环神术施放。
+–9级：兽类之友强化：友方加成提升至+4。
+–10级：可将「二级召唤动物」作为2环神术施放。
+–12级：可将「三级召唤动物」作为3环神术施放。
+–14级：可将「翼龙召唤」作为天生能力，每日使用两次；17级与20级各额外获得一次使用次数。
+–15级：兽类守护：友方加成提升至+6。
 
-Disadvantages:
-– May only use the following weapon types: axes, daggers, clubs, spears, quarterstaves, crossbows, longbows, shortbows, darts, slings.
-– May only use non metal-based armors.
-– Incurs a -2 penalty to Charisma.~
+职业限制：
+–仅可使用以下武器类型：斧、匕首、棍棒、长矛、法杖、十字弓、长弓、短弓、飞镖、投石索。
+–仅可使用非金属护甲。
+–魅力属性受-2惩罚。~
 /*
 CALL OF THE WILD: The beast master calls upon the creatures of the wild, summoning 1d4 creatures to assist them in battle. The types of creature that can be summoned are dependent on the beast master’s level and the area in which the ability is used.
 
@@ -164,9 +164,9 @@ COPY_EXISTING ~C0BMA00A.SPL~ OVERRIDE
 END
 
 COPY_EXISTING C0BMA01.SPL OVERRIDE
-SAY NAME1 ~Enhanced Charm Animal~
-SAY UNIDENTIFIED_DESC ~Enhanced Charm Animal
-This advanced version of Charm Animal is similar to the original ability, but the animal must make a Saving Throw vs. Spell at -6 instead. The ability may also affect monstrous creatures such as ankhegs, wyverns and umber hulks. After the regular 2 turns of the ability has expired, the animal remains friendly towards the beast master and will assist them against any enemies they see, but cannot be controlled.~
+SAY NAME1 ~强化魅惑动物~
+SAY UNIDENTIFIED_DESC ~强化魅惑动物
+这一进阶版魅惑动物与原版效果相近，但目标动物需进行-6难度的法术豁免。本能力也可影响安克赫格、双足飞龙、土巨怪等魔兽类生物。在常规2回合效果结束后，动物仍会对万兽王保持友善，并会协助攻击所见敌人，但不受操控。~
 
 ACTION_IF FILE_EXISTS_IN_GAME ~SPPR522.SPL~ BEGIN
 COPY_EXISTING ~SPPR522.spl~ ~override/C0BMA02.spl~
@@ -201,19 +201,19 @@ END
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~SPPR522.SPL~ BEGIN
 COPY ~%MOD_FOLDER%/Ranger/Beastmaster/spells/sppr522~ ~override~
 COPY_EXISTING ~SPPR522.spl~ ~override~
-SAY NAME1 ~Animal Rage~
-SAY UNIDENTIFIED_DESC ~Animal Rage
-(Enchantment)
+SAY NAME1 ~动物狂怒~
+SAY UNIDENTIFIED_DESC ~动物狂怒
+（附魔系）
 
-Level: 5
-Sphere: Combat
-Range: Touch
-Duration: 15 rounds
-Casting Time: 8
-Area of Effect: 1 creature
-Saving Throw: None
+等级：5
+领域：战斗
+范围：触碰
+持续时间：15回合
+施法时间：8
+影响区域：1个生物
+豁免检定：无
 
-This spell imbues the target creature with animal ferocity. The target creature gains a Strength score of 19, +20 Hit Points, +20% movement rate, and a +2 bonus to all Saving Throws. The target loses the ability to cast spells while Animal Rage is in effect; when enemies are within sight, <PRO_HESHE> immediately attacks in melee, using whatever is in hand. While this spell is in effect, there is a 5% chance per round that the target will go berserk, attacking friend and foe alike.~
+本法术为目标生物注入野性狂怒。目标生物力量变为19，获得+20生命值、+20%移动速度，所有豁免检定+2。效果持续期间目标无法施法；视野内出现敌人时，<PRO_HESHE>会立即手持武器近战攻击。法术生效期间，每回合有5%几率目标陷入狂暴，不分敌我胡乱攻击。~
 END
 
 COPY ~%MOD_FOLDER%/Ranger/Beastmaster/spells/sppr522/sppr522.spl~ ~override/C0BMA02.spl~

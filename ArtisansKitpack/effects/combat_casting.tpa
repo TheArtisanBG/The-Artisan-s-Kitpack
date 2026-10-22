@@ -22,8 +22,8 @@ END
 
 COPY_EXISTING ~c0ekcci1.bam~ ~override/c0ekcci2.bam~
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Combat Casting~) STR_VAR bam_file = c0ekcci1 RET c0ekcci1 = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Improved Combat Casting~) STR_VAR bam_file = c0ekcci2 RET c0ekcci2 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~战斗施法~) STR_VAR bam_file = c0ekcci1 RET c0ekcci1 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~精通战斗施法~) STR_VAR bam_file = c0ekcci2 RET c0ekcci2 = icon END
 
 COPY ~%MOD_FOLDER%/effects/combat_casting/c0ekcc1.spl~ ~override~
   LPF ALTER_SPELL_HEADER

@@ -122,10 +122,10 @@ ACTION_FOR_EACH description IN
 
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0_ARCANE_TRICKSTER_SORC" BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_desc ~– Thieving Skills: Pick Pockets, Find Traps, Open Locks, Hide in Shadows, Move Silently, Detect Illusion.~
-          SPRINT new_desc ~– Thieving Skills: Pick Pockets, Find Traps, Open Locks, Hide in Shadows, Move Silently, Detect Illusion.
-– May wear armor up to studded leather.
-– May use the following weapons: long sword, short sword, katana, scimitar, dagger, club, quarterstaff, crossbow, shortbow, dart, sling.~
+          SPRINT old_desc ~–盗贼技能：扒窃、找寻并解除陷阱、开锁、阴影躲藏、无声行动、侦测幻象。~
+          SPRINT new_desc ~–盗贼技能：扒窃、找寻并解除陷阱、开锁、阴影躲藏、无声行动、侦测幻象。
+–可穿戴至多钉皮甲。
+–可使用以下武器：长剑、短剑、武士刀、弯刀、匕首、棍棒、法杖、十字弓、短弓、飞镖、投石索。~
           GET_STRREF %kit_desc% desc_text
           INNER_PATCH_SAVE desc_text ~%desc_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_desc%~ ~%new_desc%~

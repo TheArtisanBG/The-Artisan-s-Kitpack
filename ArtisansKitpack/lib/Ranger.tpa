@@ -69,38 +69,38 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~%CLASSTEXT%.2da~) BEGIN
 	  READ_2DA_ENTRY_FORMER rows row 0 ~text~ // read column value
 	  PATCH_IF ~%text%~ STRING_EQUAL_CASE ~RANGER~ BEGIN
 	    SET patch_row = %row%
-		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~RANGER: The Ranger is a warrior and a woods<PRO_MANWOMAN> who is skilled with weapons and is knowledgeable in the ways of the forest. The Ranger often protects and guides lost travelers and honest peasant-folk. A Ranger needs to be strong and wise to the ways of nature to live a full life.
+		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~游侠：游侠是精通武器、熟知林野之道的林中战士。游侠常为迷途的旅人与淳朴的乡民提供守护与指引。要在自然中安身立命，游侠必须体魄强健、通晓自然之道。
 
-CLASS FEATURES:
+职业特性：
 
-– May wear helmets.
-– May wear any armor and use any weapon.
-– May not exceed Specialization (two slots) in any weapon class.
-– May achieve Specialization (two slots) in any fighting style.
-– Begins Specialized (two slots) in Two-Weapon Style and may place a third slot into it. 
-– May select a racial enemy, which grants a +4 bonus to hit and damage rolls against the selected enemy race.
-– May use the Charm Animal ability once per day. Gains one use at level 1 and an additional use every 2 levels thereafter.
-– May use the Hide In Shadows ability while wearing no armor, leather armor, or studded leather armor.
-– Woodland Stride: The ranger's movement rate is increased by 2 while outdoors. From 5th level onward, the ranger becomes immune to Entangle and Web effects.
-– Camouflage: The ranger gains a 25% bonus to Hide in Shadows and Move Silently while outdoors.
-– Toughness: +4 maximum Hit Points at level 1, with an additional +1 per level.
-– May use the Set Snare ability once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
+–可以穿戴头盔。
+–可以穿戴任何种类的护甲、使用全部类别的武器。
+–不能对任何武器类别达到精通（2星）以上的水准。
+–可以精通（2星）任何战斗方式。
+–开始就精通（2星）双武器模式，并可投入至3星。
+–可以选择一个宿敌，在对抗宿敌时享有+4的命中和伤害奖励。
+–每提升2个等级，每天就可以多使用1次魅惑动物能力（等级为1时每天可使用1次）
+–在不穿盔甲或穿皮甲、皮环甲的状态下可以隐藏在阴影之中。
+–穿林：户外时游侠移动速度+2。5级起，游侠免疫纠缠术与蛛网术效果。
+–伪装：户外时，游侠隐匿阴影与潜行的技能检定获得+25%加值。
+–强健：1级时最大生命值+4，之后每等级+1。
+–每日可使用一次「设置陷阱」。1级时获得1次，之后每提升5级额外获得1次使用次数。
 
-SET SNARE: Set a trap in the chosen location when no hostile creatures are in sight. Traps grow more powerful with the Ranger's level and can only be triggered by enemies. The ranger may set up to a limit of 3 traps per area.
-  1st level: Deals 2d8+5 missile damage.
-  11th level: Deals 2d8+5 missile damage and additionally deals 2d6 poison damage per round for the next 3 rounds.
-  16th level: Deals 3d8+5 missile damage and 4d8+2 fire damage.
-  21st level: Deals 3d8+5 missile damage and 20 poison damage with no save; slays target if a Save vs. Death with a +4 bonus is failed.
-  
-– May use the Tracking modal ability while outdoors.
+设置陷阱：视野内无敌对生物时，在选定位置布置陷阱。陷阱威力随游侠等级提升，且仅会被敌人触发。每个区域游侠最多可布置3个陷阱。
+  1级：造成2d8+5点远程伤害。
+  11级：造成2d8+5点远程伤害，且接下来3回合每回合额外造成2d6点毒素伤害。
+  16级：造成3d8+5点远程伤害与4d8+2点火焰伤害。
+  21级：造成3d8+5点远程伤害与20点毒素伤害，无豁免；若目标死亡豁免（+4加值）失败则直接被斩杀。
 
-TRACKING: With an intimate knowledge of <PRO_HISHER> surroundings and the creatures that live within them, a ranger can use the Tracking ability to give <PRO_HIMHER>self a general idea of what creatures are in an area and which direction they are. All enemies within a 50 feet radius of the ranger will be revealed from within the fog of war. Tracking's range increases by an additional 25 feet radius at 9th and 18th level.
-  
-– May cast druidic spells starting at level 8.
-– Alignment restricted to good.
-– Hit Die: d10
+–户外时可使用「追踪」模式能力。
 
-Prime Requisites For Dual-Classing: Strength, Dexterity, Wisdom~)
+追踪：游侠对周遭环境与栖居其中的生物了如指掌，可使用追踪能力大致获知区域内的生物种类与方位。游侠50尺范围内的所有敌人都会在战争迷雾中显形。9级与18级时，追踪范围半径额外增加25尺。
+
+–自等级8开始能够施放德鲁伊法术。
+–必须为善良阵营。
+–生命骰：d10。
+
+主要兼职要求：力量、敏捷、智慧~)
 	  END
 	END
   BUT_ONLY
@@ -122,7 +122,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Woodland Stride~) STR_VAR bam_file = C0RNG00I RET C0RNG00I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~穿林~) STR_VAR bam_file = C0RNG00I RET C0RNG00I = icon END
 
 APPEND ~TRAPLIMT.2DA~ ~RANGER 3
 FERALAN 3
@@ -266,10 +266,10 @@ ACTION_FOR_EACH description IN
 														 )
                               BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_inspiration ~Disadvantages:~
-          SPRINT new_inspiration ~– Does not gain Toughness.~
+          SPRINT old_inspiration ~职业限制：~
+          SPRINT new_inspiration ~–无法获得强健。~
           SPRINT disadvantages_none ~
-– None.~
+–无。~
           GET_STRREF %kit_desc% desc_text
           INNER_PATCH_SAVE desc_text ~%desc_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_inspiration%~ ~%old_inspiration%
@@ -590,9 +590,9 @@ ACTION_FOR_EACH description IN
 //RANGER
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "RANGER" BEGIN
           READ_2DA_ENTRY index 4 col_count ranger_desc
-          SPRINT old_ranger ~– May use the Hide In Shadows ability while wearing no armor, leather armor, or studded leather armor.~
-          SPRINT new_ranger ~– May Detect Traps and Illusions.
-– May use the Hide In Shadows ability while wearing no armor, leather armor, or studded leather armor.~
+          SPRINT old_ranger ~–在不穿盔甲或穿皮甲、皮环甲的状态下可以隐藏在阴影之中。~
+          SPRINT new_ranger ~–可侦测陷阱与幻象。
+–在不穿盔甲或穿皮甲、皮环甲的状态下可以隐藏在阴影之中。~
           GET_STRREF %ranger_desc% ranger_text
           INNER_PATCH_SAVE ranger_text ~%ranger_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_ranger%~ ~%new_ranger%~

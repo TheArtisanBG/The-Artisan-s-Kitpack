@@ -620,7 +620,7 @@ THEN
   RESPONSE #100
         SetInterrupt(FALSE)
         SetGlobalTimer("OH_HIDE","LOCALS",ONE_ROUND)
-        DisplayStringHead(Myself,~*attempts to hide in shadows*~)
+        DisplayStringHead(Myself,~*试图躲入阴影之中*~)
         Hide()
         SetInterrupt(TRUE)
 END

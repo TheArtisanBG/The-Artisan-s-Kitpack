@@ -29,60 +29,60 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 19
 	
-    mixed         = RESOLVE_STR_REF(~Pale Master~)
+    mixed         = RESOLVE_STR_REF(~苍白之主~)
 	
-    lower         = RESOLVE_STR_REF(~pale master~)
+    lower         = RESOLVE_STR_REF(~苍白之主~)
 	
-    help          = RESOLVE_STR_REF(~PALE MASTER: Necromancy is usually a poor choice for arcane spellcasters—those who really want to master the deathless arts almost always pursue divine means. However, an alternative exists for those who desire power over undead but refuse to give up their arcane craft completely. Enter the pale master, who draws on a font of special lore that provides a macabre power all its own.
+    help          = RESOLVE_STR_REF(~苍白之主：对奥术施法者而言，死灵学派通常并非佳选——真正想要精通亡者之道的人，大多会投身神术之道。但对于那些渴望掌控亡灵之力、又不愿彻底放弃奥术技艺的人，另一条道路依然存在。这就是苍白之主，他们从禁忌秘典中汲取力量，掌握着独属于自身的可怖死灵之力。
 
-Advantages:
-– 1st level: Gains Boneskin.
+职业优势：
+–1级：获得「骨肤术」。
 
-BONESKIN: The pale master's tough, cadaverous flesh grants them a +1 bonus to Armor Class and +5% resistance to piercing, slashing, crushing and missile damage. This bonus increases to +2/+10% at 7th level and +3/+15% at 13th level.
+骨肤术：苍白之主坚韧如尸的身躯提供+1护甲等级，以及穿刺、挥砍、钝击与远程伤害抗性+5%。7级时提升至+2/+10%，13级时提升至+3/+15%。
 
-– 2nd level: May cast Animate Dead as a special ability once per day.
+–2级：每日可作为特殊能力施展一次「操纵死尸」。
 
-ANIMATE DEAD: As per the mage and cleric spell, summons an allied skeleton warrior to serve the caster.
+操纵死尸：效果同法师与牧师的同名法术，召唤一名同盟骷髅战士为施法者效力。
 
-– 3rd level: Gains Deathless Vigor.
+–3级：获得「不死活力」。
 
-DEATHLESS VIGOR: The pale master’s body becomes more akin to the undying flesh of his undead associates. The pale master permanently gains Infravision, immunity to all sleep effects, and a +1 bonus to Saving Throws vs. Paralysis/Poison/Death. The saving throw bonus increases to +2 at 8th level and +3 at 13th level.
+不死活力：苍白之主的躯体愈发趋近其亡灵仆从的不朽血肉。永久获得黑暗视觉，免疫所有睡眠效果，对抗麻痹/毒素/死亡的豁免检定+1。8级时豁免加值提升至+2，13级时提升至+3。
 
-– 6th level: The pale master gives in to terrible necrophiliac urges and surgically removes their right arm, replacing it with an undead prosthetic that may be skeletal in form, or preserved flesh stitched in place akin to that of a flesh golem. The prosthetic permanently grants the pale master a +2 bonus to Strength and allows them to use the Undead Graft ability three times per day.
+–6级：苍白之主屈从于可怖的死灵癖好，外科手术切除自己的右臂，替换为不死义肢——形态可能是枯骨，或是类似血肉魔偶般缝合的防腐血肉。义肢永久为苍白之主提供+2力量加值，并允许每日使用三次「不死义肢」能力。
 
-UNDEAD GRAFT: The pale master may make a touch attack on a single target at a +4 bonus to hit, forcing them to make a Save vs. Death or be afflicted with one random effect:
-  Paralyzing Touch: Target is paralyzed for 4 rounds.
-  Weakening Touch: Target suffers a -6 penalty to Strength for 8 rounds.
-  Degenerative Touch: Target is permanently drained of one level.
-  Destructive Touch: Target suffers a -6 penalty to Constitution for 8 rounds.
+不死义肢：苍白之主可对单一目标进行接触攻击，攻击检定+4，目标必须进行死亡豁免，失败则随机承受以下效果之一：
+  麻痹之触：目标麻痹4回合。
+  虚弱之触：目标力量-6，持续8回合。
+  退化之触：目标永久流失1个等级。
+  毁灭之触：目标体质-6，持续8回合。
 
-– 10th level: Undead Graft's saving throw modifier becomes -1.
-– 12th level: Gains Tough as Bone.
+–10级：不死义肢的豁免惩罚变为-1。
+–12级：获得「坚如白骨」。
 
-TOUGH AS BONE: The pale master becomes more and more like one of the implacable undead, permanently gaining mmunity to hold, stun and poison.
+坚如白骨：苍白之主愈发接近那些不可撼动的亡灵，永久免疫定身、震慑与毒素。
 
-– 14th level: Undead Graft's saving throw modifier becomes -2.
-– 16th level: Undead Mastery: The pale master empowers nearby allied undead creatures, granting them a +4 bonus to Strength and Dexterity and +30% maximum hit points.
-– 16th level: The pale master's Undead Graft becomes lethal, gaining the ability to use Deathless Master's Touch instead of its other abilities.
+–14级：不死义肢的豁免惩罚变为-2。
+–16级：「统御亡灵」：苍白之主强化附近的同盟亡灵生物，使其力量与敏捷+4，最大生命值+30%。
+–16级：苍白之主的不死义肢变为致命，可改用「不死君主之触」替代其他效果。
 
-DEATHLESS MASTER'S TOUCH: The pale master touches the target with a life-snuffing hand at a +4 bonus to hit, instantly killing them unless a Save vs. Death at -3 is made. Targets slain by this ability are raised as a vampire under the pale master's command for eight hours. The strength of the vampire is relative to that of the slain target.
+不死君主之触：苍白之主以攫命之手触碰目标，攻击检定+4，目标死亡豁免（难度-3）失败则立即死亡。被本能力击杀的目标会作为吸血鬼被唤起，受苍白之主操控8小时。吸血鬼的强度与被击杀目标的强度相关。
 
-– 18th level: Undead Graft's saving throw modifier becomes -3.
-– 18th level: Gains Deathless Mastery.
+–18级：不死义肢的豁免惩罚变为-3。
+–18级：获得「不死掌握」。
 
-DEATHLESS MASTERY: The pale master becomes practically an undead creature in all but name, permanently gaining immunity to critical hits, death magic and level drain. They also become subject to any spells or abilities that affect undead, whether beneficial or otherwise, with the exception of Undead Mastery bonuses.
+不死掌握：苍白之主除了名义之外，实质上已是亡灵生物，永久免疫暴击、死亡魔法与等级吸取。任何影响亡灵的法术或能力（无论有益有害）都对其生效，统御亡灵的加值效果除外。
 
-– Hit Die: d6
+–生命骰：d6
 
-Disadvantages:
-– Permanently loses use of their right hand ring slot.
-– May cast one fewer spell per level per day.
-– Alignment restricted to non-good.
-– Incurs a -4 penalty to Charisma.~)
+职业限制：
+–永久失去右手戒指位的使用。
+–每日每等级可施展的法术减少一个。
+–阵营限制为非善良。
+–魅力受-4惩罚。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~PALE MASTER: Necromancy is usually a poor choice for arcane spellcasters—those who really want to master the deathless arts almost always pursue divine means. However, an alternative exists for those who desire power over undead but refuse to give up their arcane craft completely. Enter the pale master, who draws on a font of special lore that provides a macabre power all its own.~)
+    briefdesc     = RESOLVE_STR_REF(~苍白之主：对奥术施法者而言死灵术通常并非佳选，但对那些渴望掌控亡灵之力、又不愿放弃奥术技艺的人，苍白之主便是另一条道路，他们从禁忌秘典中汲取独属于自身的可怖死灵之力。~)
 	
-	biography	  = RESOLVE_STR_REF(~Despite your foster father's many attempts to dissuade you, necromancy has always been your foremost fascination. Over the years, you have learned to focus the raw magic within you in ways that confound even the most sagacious priests of Oghma. The dead, you have often claimed, make for better company than the living, and when they speak to you now, they promise even greater power beyond the walls of Candlekeep.~)
+	biography	  = RESOLVE_STR_REF(~尽管养父多方劝阻，死灵术始终是你最沉迷的爱好。经年累月，你已学会以独到的方式引导体内的原始魔力，就连最睿智的欧格玛祭司也为之困惑。你常说，死者比活人更适合做伴，而如今它们对你低语，许诺在烛堡的高墙之外，还有更强大的力量等着你。~)
 	
 	// fallen = 0
 	
@@ -185,80 +185,80 @@ SET "num_abil" = ("%num_abil%" - 1)
 END
 
 COPY_EXISTING ~C0PMHN1.ITM~ ~OVERRIDE~
-SAY NAME2 ~Right Hand~
-SAY DESC ~The pale master's right hand is prepared to be surgically replaced with an undead graft upon gaining sufficient experience, and cannot be used to wear rings.~
+SAY NAME2 ~右手~
+SAY DESC ~苍白之主的右手预备在获得足够经验后，以外科手术替换为不死义肢，无法佩戴戒指。~
 
 COPY_EXISTING ~C0PMHN2.ITM~ ~OVERRIDE~
-SAY NAME2 ~Undead Graft~
-SAY DESC ~The pale master's right hand, charged with necrotic magic, has been surgically replaced with an undead appendage that moves under as much control as a living hand. The pale master permanently gains +2 to Strength so long as the appendage remains attached, and may use it to inflict a touch attack. However, it is unable to receive the properties of magical rings.~
+SAY NAME2 ~不死义肢~
+SAY DESC ~苍白之主的右手灌注了死灵魔法，已被外科替换为亡灵肢体，操控起来与生来的手掌无异。只要义肢仍连结，苍白之主永久获得+2力量，并可用于发动接触攻击。但它无法获得魔法戒指的属性加成。~
 
 COPY_EXISTING ~C0PMHN3.ITM~ ~OVERRIDE~
-SAY NAME2 ~Undead Graft~
-SAY DESC ~The pale master's right hand, charged with necrotic magic, has been surgically replaced with an undead appendage that moves under as much control as a living hand. The pale master permanently gains +2 to Strength so long as the appendage remains attached, and may use it to inflict a touch attack. However, it is unable to receive the properties of magical rings.~
+SAY NAME2 ~不死义肢~
+SAY DESC ~苍白之主的右手灌注了死灵魔法，已被外科替换为亡灵肢体，操控起来与生来的手掌无异。只要义肢仍连结，苍白之主永久获得+2力量，并可用于发动接触攻击。但它无法获得魔法戒指的属性加成。~
 
 COPY_EXISTING ~C0PMSP1A.SPL~ ~OVERRIDE~
-SAY NAME1 ~Undead Graft~
+SAY NAME1 ~不死义肢~
 
 COPY_EXISTING ~C0PMSP1B.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Paralyzed~) END
-SAY NAME1 ~Undead Graft~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~麻痹~) END
+SAY NAME1 ~不死义肢~
 
 COPY_EXISTING ~C0PMSP1C.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Strength Drained~) END
-SAY NAME1 ~Undead Graft~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~力量流失~) END
+SAY NAME1 ~不死义肢~
 
 COPY_EXISTING ~C0PMSP1D.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~One Level Drained~) END
-SAY NAME1 ~Undead Graft~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~等级流失~) END
+SAY NAME1 ~不死义肢~
 
 COPY_EXISTING ~C0PMSP1E.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Constitution Drained~) END
-SAY NAME1 ~Undead Graft~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~体质流失~) END
+SAY NAME1 ~不死义肢~
 
 COPY_EXISTING ~C0PMSP2.SPL~ ~OVERRIDE~
-SAY NAME1 ~Deathless Master's Touch~
+SAY NAME1 ~不死君主之触~
 
 COPY_EXISTING ~C0PMSP2A.SPL~ ~OVERRIDE~
-SAY NAME1 ~Deathless Master's Touch~
+SAY NAME1 ~不死君主之触~
 
 COPY_EXISTING ~C0PMVM1M.cre~ ~override~
-SAY NAME1 ~Vampire Fledgling~
-SAY NAME2 ~Vampire Fledgling~
+SAY NAME1 ~初拥吸血鬼~
+SAY NAME2 ~初拥吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 COPY_EXISTING ~C0PMVM1F.cre~ ~override~
-SAY NAME1 ~Vampire Fledgling~
-SAY NAME2 ~Vampire Fledgling~
+SAY NAME1 ~初拥吸血鬼~
+SAY NAME2 ~初拥吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 COPY_EXISTING ~C0PMVM2M.cre~ ~override~
-SAY NAME1 ~Vampire~
-SAY NAME2 ~Vampire~
+SAY NAME1 ~吸血鬼~
+SAY NAME2 ~吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 COPY_EXISTING ~C0PMVM2F.cre~ ~override~
-SAY NAME1 ~Vampire~
-SAY NAME2 ~Vampire~
+SAY NAME1 ~吸血鬼~
+SAY NAME2 ~吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 COPY_EXISTING ~C0PMVM3M.cre~ ~override~
-SAY NAME1 ~Vampire Elder~
-SAY NAME2 ~Vampire Elder~
+SAY NAME1 ~年长吸血鬼~
+SAY NAME2 ~年长吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 COPY_EXISTING ~C0PMVM3F.cre~ ~override~
-SAY NAME1 ~Vampire Elder~
-SAY NAME2 ~Vampire Elder~
+SAY NAME1 ~年长吸血鬼~
+SAY NAME2 ~年长吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 COPY_EXISTING ~C0PMVM4M.cre~ ~override~
-SAY NAME1 ~Ancient Vampire~
-SAY NAME2 ~Ancient Vampire~
+SAY NAME1 ~远古吸血鬼~
+SAY NAME2 ~远古吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 COPY_EXISTING ~C0PMVM4F.cre~ ~override~
-SAY NAME1 ~Ancient Vampire~
-SAY NAME2 ~Ancient Vampire~
+SAY NAME1 ~远古吸血鬼~
+SAY NAME2 ~远古吸血鬼~
 WRITE_ASCII 0x280 ~C0PMVM~ #32 // death variable
 
 

@@ -46,49 +46,49 @@ LAF ADD_KIT_EX
 	
 	visible = 0
 	
-    mixed         = RESOLVE_STR_REF(~Rashemi Berserker~)
+    mixed         = RESOLVE_STR_REF(~拉西曼狂战士~)
 	
-    lower         = RESOLVE_STR_REF(~rashemi berserker~)
+    lower         = RESOLVE_STR_REF(~拉西曼狂战士~)
 	
-    help          = RESOLVE_STR_REF(~RASHEMI BERSERKER: The distant land of Rashemen has a strong tradition of berserker warriors. The berserkers of Rashemen are organized into lodges named after local creatures, such as the Ice Dragon Berserker Lodge. True to their names, Rashemi berserkers are famed for their mighty rage, but also for their prowess in battle, sense of honor, and fierce loyalty to their land and rulers, the wychlaran. Newly inducted berserkers undertake a coming-of-age tradition known as 'dajemma', a journey far from their homeland to see and understand the world. Often, they travel alongside a wychlaran to whom they are sworn to defend with their lives. The berserkers of Rashemen are the mortal enemies of the Red Wizards of Thay, who they have been at war with for centuries.
-  
-Advantages:
-– Hit Die: d12
-– May achieve mastery in any melee weapon.
-– May use the Berserker Rage ability once per day. Gains one additional use at every 4th level.
+    help          = RESOLVE_STR_REF(~拉西曼狂战士：遥远的拉西曼之地有着悠久的狂战士传统。拉西曼的狂战士以当地生物命名分属各个战团，比如冰龙狂战士战团。名如其人，拉西曼狂战士不仅以狂暴之力闻名，更以战技精湛、荣誉感强烈，以及对故土与统治者巫女议会的赤胆忠心著称。新晋狂战士要经历名为「达杰玛」的成年传统：离开故土远行游历，去见识与理解世界。他们往往与一位立誓以命相护的巫女议会成员同行。拉西曼狂战士与塞伊红袍法师是死敌，双方已交战数百年。
 
-BERSERKER RAGE: The Rashemi berserker becomes Enraged for 1 turn. While Enraged, he gains a +2 bonus to his Strength, one bonus attack per round, and becomes immune to Charm, Confusion, Fear, Feeblemind, Hold, Level Drain, Maze, Stun, and Sleep. However, his Armor Class is penalized by 4 points while Enraged. The Rashemi berserker also gains 15 temporary Hit Points, which are taken away at the end of the berserk spree, possibly knocking him Unconscious. Additionally, the berserker is unable to perform any action aside from movement and attacking, such as spellcasting, using items, stealth or talking until the rage has ended. Bonuses to Strength increase to +4 at 12th level and +6 at 20th level.
+职业优势：
+–生命骰：d12
+–任意近战武器均可修习至宗师级。
+–每日可使用一次「狂战士之怒」能力。每提升4级额外获得一次使用次数。
 
-Once the duration has ended, the Rashemi berserker becomes Winded, reducing his THAC0, Armor Class and Damage by four points, and he is unable to become Enraged again for 5 rounds.
+狂战士之怒：拉西曼狂战士进入狂暴状态，持续1回合。狂暴期间，力量获得+2加值，每回合额外攻击一次，免疫魅惑、困惑、恐惧、弱智、定身、等级吸取、迷宫、眩晕与睡眠。但狂暴期间护甲等级受4点惩罚。拉西曼狂战士还会获得15点临时生命值，狂暴结束后扣除，可能导致其陷入昏迷。此外，狂暴结束前，狂战士除移动与攻击外无法进行任何行动，比如施法、使用物品、潜行或交谈。12级时力量加值提升至+4，20级时提升至+6。
 
-– 5th level: May use the Power Attack modal ability.
+效果结束后，拉西曼狂战士会陷入疲劳状态，零级命中值、护甲等级与伤害降低4点，且5回合内无法再次进入狂暴。
 
-POWER ATTACK: The Berserker forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Berserker must have 17 or greater Strength to activate this ability.
+–5级：可使用「强力攻击」攻击模式。
 
-– 8th level: Gains Unbreakable Will.
+强力攻击：狂战士牺牲精准度换取更重、更具杀伤力的打击，近战零级命中值降低3点，近战伤害提升3点。狂战士力量需达到17或以上才能激活此能力。
 
-UNBREAKABLE WILL: Rashemi berserkers have tremendous willpower. The berserker permanently gains +3 to Saves vs. Spells, which is doubled while Enraged. The Rashemi berserker also gains immunity to Psionics while Enraged.
+–8级：获得「不屈意志」。
 
-– 12th level: Gains Unstoppable Rage.
+不屈意志：拉西曼狂战士拥有惊人的意志力。狂战士的法术豁免永久获得+3加值，狂暴期间翻倍。狂暴期间，拉西曼狂战士还免疫灵能效果。
 
-UNSTOPPABLE RAGE: The Rashemi berserker has become a juggernaut while Enraged, truly a being to be feared. The berserker is immune to all movement-hindering effects and Imprisonment while Enraged.
+–12级：获得「狂怒不止」。
 
-– 14th level: May use Improved Power Attack, which provide 6 points to the original ability's bonuses and penalties.
-– 16th level: Gains Tireless Rage.
+狂怒不止：拉西曼狂战士狂暴时如同不可阻挡的战争机器，是真正令人畏惧的存在。狂暴期间，狂战士免疫所有阻碍移动的效果与监禁效果。
 
-TIRELESS RAGE: The Rashemi berserker is no longer Winded and will not suffer damage after his rage has ended.
+–14级：可使用「精通强力攻击」，将原能力的加成与惩罚提升至6点。
+–16级：获得「不倦狂怒」。
 
-– 18th level: Gains Deathless Frenzy.
+不倦狂怒：拉西曼狂战士不会再陷入疲劳，狂暴结束后也不会受到伤害。
 
-DEATHLESS FRENZY: The Rashemi berserker's rage is so great that it allows him to temporarily stave off death. From 18th level onwards, the Rashemi berserker is unable to die by any means within the first two rounds of being Enraged.
+–18级：获得「不死狂乱」。
 
-Disadvantages:
-– Alignment restricted to any non-lawful.
-– May cast one less priest spell per level.
-– May not Set Traps.
-– May not Specialize in ranged weapons.~)
+不死狂乱：拉西曼狂战士的狂怒之强，足以让其暂时抵挡死亡。18级起，拉西曼狂战士进入狂暴后的前2回合内，不会以任何方式死亡。
+
+职业限制：
+–仅限非守序阵营。
+–每个法术等级的牧师法术少施展1个。
+–无法设置陷阱。
+–无法精通远程武器。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~RASHEMI BERSERKER: The distant land of Rashemen has a strong tradition of berserker warriors. The berserkers of Rashemen are organized into lodges named after local creatures, such as the Ice Dragon Berserker Lodge. True to their names, Rashemi berserkers are famed for their mighty rage, but also for their prowess in battle, sense of honor, and fierce loyalty to their land and rulers, the wychlaran. Newly inducted berserkers undertake a coming-of-age tradition known as 'dajemma', a journey far from their homeland to see and understand the world. Often, they travel alongside a wychlaran to whom they are sworn to defend with their lives. The berserkers of Rashemen are the mortal enemies of the Red Wizards of Thay, who they have been at war with for centuries.~)
+    briefdesc     = RESOLVE_STR_REF(~拉西曼狂战士：遥远的拉西曼之地有着悠久的狂战士传统。拉西曼的狂战士以当地生物命名分属各个战团，比如冰龙狂战士战团。名如其人，拉西曼狂战士不仅以狂暴之力闻名，更以战技精湛、荣誉感强烈，以及对故土与统治者巫女议会的赤胆忠心著称。~)
 	
 	// fallen = 0
 	
@@ -196,29 +196,29 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Power Attack~) STR_VAR bam_file = C0FIG01I RET C0FIG01I = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Improved Power Attack~) STR_VAR bam_file = C0FIG01J RET C0FIG01J = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~强力攻击~) STR_VAR bam_file = C0FIG01I RET C0FIG01I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~精通强力攻击~) STR_VAR bam_file = C0FIG01J RET C0FIG01J = icon END
 
 COPY ~ArtisansKitpack/Fighter/2da/c0fig01a.2da~ ~OVERRIDE~
 COPY ~ArtisansKitpack/Fighter/2da/c0fig01b.2da~ ~OVERRIDE~
 
 COPY_EXISTING ~C0FIG01X.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Power Attack—Inadequate Strength~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~强力攻击——力量不足~) END
 COPY_EXISTING ~C0FIG01.SPL~ OVERRIDE
-SAY NAME1 ~Power Attack~
-SAY UNIDENTIFIED_DESC ~Power Attack
-The Fighter forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Fighter must have 17 or greater Strength to activate this ability.~
+SAY NAME1 ~强力攻击~
+SAY UNIDENTIFIED_DESC ~强力攻击
+狂战士牺牲精准度换取更重、更具杀伤力的打击，近战零级命中值降低3点，近战伤害提升3点。狂战士力量需达到17或以上才能激活此能力。~
 	
 COPY_EXISTING ~C0FIG01a.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Power Attack Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~强力攻击已激活~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 272 special = C0FIG01I END
 
 COPY_EXISTING ~C0FIG01b.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Improved Power Attack Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~精通强力攻击已激活~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 272 special = C0FIG01J END
 
 COPY_EXISTING ~C0FIG01c.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Power Attack Inactive~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~强力攻击已关闭~) END
 END
 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/spells/spin117.spl~ ~override~
@@ -226,31 +226,31 @@ COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/spells/spin117.spl~ ~override~
     INT_VAR
       match_opcode = 139 // display string
       match_parameter1 = 30788
- parameter1 = RESOLVE_STR_REF (~Despair not! I will inspire you by charging blindly on!~)
+ parameter1 = RESOLVE_STR_REF (~别绝望！我会悍然冲锋，为你助威！~)
 END
-SAY NAME1 ~Berserker Rage~
-SAY NAME2 ~Berserker Rage~
-SAY UNIDENTIFIED_DESC ~Berserker Rage
-The Rashemi berserker becomes enraged for 2 turns. While enraged, he gains a +2 bonus to his Strength and becomes immune to charm, confusion, fear, feeblemind, hold, level drain, maze, stun, and sleep. The Rashemi berserker also gains 15 temporary Hit Points, which are taken away at the end of the berserk spree, possibly knocking him unconscious. However, his armor class is penalized by 4 points while enraged. Additionally, the berserker is unable to perform any action aside from movement and attacking, such as spellcasting, using items, stealth or talking until the rage has ended. Bonuses to Strength increase to +4 at 12th level and +6 at 20th level.
+SAY NAME1 ~狂战士之怒~
+SAY NAME2 ~狂战士之怒~
+SAY UNIDENTIFIED_DESC ~狂战士之怒
+拉西曼狂战士进入狂暴状态，持续2回合。狂暴期间，力量获得+2加值，免疫魅惑、困惑、恐惧、弱智、定身、等级吸取、迷宫、眩晕与睡眠。拉西曼狂战士还会获得15点临时生命值，狂暴结束后扣除，可能导致其陷入昏迷。但狂暴期间护甲等级受4点惩罚。此外，狂暴结束前，狂战士除移动与攻击外无法进行任何行动，比如施法、使用物品、潜行或交谈。12级时力量加值提升至+4，20级时提升至+6。
 
-Once the duration has ended, the Rashemi berserker becomes winded, reducing his THAC0, armor class and damage by four points, and he is unable to go berserk again for one turn.
+效果结束后，拉西曼狂战士会陷入疲劳状态，零级命中值、护甲等级与伤害降低4点，且1回合内无法再次进入狂暴。
 
-8th level: Rashemi berserkers have tremendous willpower. The berserker permanently gains +3 to saves vs. spell, which is doubled while berserk. The Rashemi berserker also gains immunity to psionics while berserk.
+8级：拉西曼狂战士拥有惊人的意志力。狂战士的法术豁免永久获得+3加值，狂暴期间翻倍。狂暴期间，拉西曼狂战士还免疫灵能效果。
 
-12th level: The Rashemi berserker has become a juggernaut while enraged, truly a being to be feared. The berserker is immune to all movement-hindering effects and Imprisonment while berserk.
+12级：拉西曼狂战士狂暴时如同不可阻挡的战争机器，是真正令人畏惧的存在。狂暴期间，狂战士免疫所有阻碍移动的效果与监禁效果。
 
-16th level: The Rashemi berserker is no longer winded and will not suffer damage after his rage has ended.
+16级：拉西曼狂战士不会再陷入疲劳，狂暴结束后也不会受到伤害。
 
-18th level: The Rashemi berserker's rage is so great that it allows him to temporarily stave off death. From 18th level onwards, the Rashemi berserker is unable to die by any means within the first five rounds of entering rage.~
+18级：拉西曼狂战士的狂怒之强，足以让其暂时抵挡死亡。18级起，拉西曼狂战士进入狂暴后的前5回合内，不会以任何方式死亡。~
 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/spells/c0tbm3.spl~ ~override~
-SAY NAME1 ~Fatigue~
-SAY NAME2 ~Fatigue~
+SAY NAME1 ~疲劳~
+SAY NAME2 ~疲劳~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 206
       match_parameter1 = 0
- parameter1 = RESOLVE_STR_REF (~The berserker is too fatigued to enter a rage.~)
+ parameter1 = RESOLVE_STR_REF (~狂战士太过疲惫，无法进入狂暴状态。~)
 END
 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/spells/c0tbm4.spl~ ~override~
@@ -258,7 +258,7 @@ COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/spells/c0tbm4.spl~ ~override~
     INT_VAR
       match_opcode = 206
       match_parameter1 = 0
- parameter1 = RESOLVE_STR_REF (~The berserker is already in a rage.~)
+ parameter1 = RESOLVE_STR_REF (~狂战士正处于狂暴状态。~)
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~minsc.cre~ THEN BEGIN
@@ -414,8 +414,8 @@ ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
 // CREATURES
 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/creatures/c0mbear.cre~ ~override~
-SAY NAME1 ~Great Red Bear~
-SAY NAME2 ~Great Red Bear~
+SAY NAME1 ~巨红熊~
+SAY NAME2 ~巨红熊~
 
 // DIALOGUES
 
@@ -450,38 +450,38 @@ END
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/items/c0min01.bam~ ~override~ 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/items/c0min02.bam~ ~override~ 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/items/c0mskin.itm~ ~override~ 
-SAY NAME1 ~Red Bearskin~
-SAY NAME2 ~Red Bearskin~
-SAY DESC ~The thick hide is from an enormous bear, with an unusual reddish tint. It may make a serviceable suit of armor.
+SAY NAME1 ~红熊皮~
+SAY NAME2 ~红熊皮~
+SAY DESC ~这张厚皮取自一头巨熊，带着不寻常的淡红色调。可制成一套实用的护甲。
 
-STATISTICS:
+属性：
 
-Weight: 10~
+重量：10~
 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/items/c0mleat1.eff~ ~override~ 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/items/c0mleat1.spl~ ~override~ 
 COPY ~ArtisansKitpack/Ranger/BerserkerMinsc/items/c0mleat.itm~ ~override~ 
-SAY NAME1 ~Hide Armor~
-SAY NAME2 ~Red Bearskin Mail~
-SAY DESC ~This thick suit of armor is made from the skin of a giant bear. The reddish color of the bear's hide has somewhat faded from the process of tanning and shaping it into armor, but its toughness is close to the beast itself. The design of the armor resembles those worm by berserkers of the land of Rashemen.
+SAY NAME1 ~兽皮护甲~
+SAY NAME2 ~红熊皮甲~
+SAY DESC ~这套厚实护甲由巨熊之皮制成。熊皮的红色在鞣制与打造成甲的过程中略有褪去，但坚韧程度不输巨兽本身。护甲的款式效仿拉西曼之地狂战士的装束。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Open Locks: -10%
-– Find Traps: -10%
-– Pick Pockets: -10%
-– Move Silently: -20%
-– Melee Damage Resistance: +5% (+10% while enraged)
-– Missile Damage Resistance: +20% (+40% while enraged)
-– Regenerate one hit point per three rounds
-– While enraged, wearer moves at double their normal movement rate
+装备效果：
+–开锁：-10%
+–寻找陷阱：-10%
+–扒窃：-10%
+–静音移动：-20%
+–近战伤害抗性：+5%（狂暴期间+10%）
+–远程伤害抗性：+20%（狂暴期间+40%）
+–每3回合回复1点生命值
+–狂暴期间，穿戴者移动速度为正常的两倍
 
-Armor Class: 4 (6 vs. piercing and missile)
-Requires:
- 6 Strength
+护甲等级：4（对抗穿刺与远程攻击时为6）
+需求：
+ 力量6
 
-Weight: 40~
+重量：40~
 
 ACTION_IF FILE_EXISTS_IN_GAME ~shop03.sto~ THEN BEGIN
 COPY_EXISTING ~shop03.sto~ ~override~
@@ -563,10 +563,10 @@ ACTION_FOR_EACH description IN
 //MINSC
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0TBM" BEGIN
           READ_2DA_ENTRY index 4 col_count minsc_desc
-          SPRINT old_minsc ~Disadvantages:~
-          SPRINT new_minsc ~Disadvantages:
-– Only has one half the normal Find Traps score.
-– Detect Illusions does not improve with level.~
+          SPRINT old_minsc ~职业限制：~
+          SPRINT new_minsc ~职业限制：
+–寻找陷阱的技能等级仅为正常的一半。
+–识破幻象技能不会随等级提升。~
           GET_STRREF %minsc_desc% minsc_text
           INNER_PATCH_SAVE minsc_text ~%minsc_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_minsc%~ ~%new_minsc%~

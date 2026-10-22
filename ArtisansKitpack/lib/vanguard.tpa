@@ -1,27 +1,27 @@
 COPY_EXISTING ~clabfi06.2da~ ~override~
 
-OUTER_SPRINT kit_description ~VANGUARD: The vanguard is a frontline warrior trained to fight in the middle of enemy lines. Tough and durable, a vanguard is a reliable defender capable of holding the line and enduring blows that would fell a lesser man.
+OUTER_SPRINT kit_description ~先锋卫士：先锋卫士是受训于敌阵之中厮杀的前线战士。坚韧强健、耐打抗揍，是可靠的防御者，足以守住阵线，扛下常人难以承受的重击。
 
-Advantages:
-– May use Defensive Stance once per day. Gains one use at level 1, one use at level 4, and an additional use every 4 levels thereafter.
+职业优势：
+-每日可使用「防御姿态」。1级获得1次，4级再获得1次，之后每4级额外获得1次。
 
-DEFENSIVE STANCE: For 1 turn, the Vanguard gains +50% resistance to all forms of physical damage, a +2 bonus to Saving Throws, and a 50% movement rate penalty.
+防御姿态：持续1回合，先锋卫士获得所有物理伤害抗性+50%，豁免检定+2，但移动速度降低50%。
 
-– Gains 5% resistance to crushing, slashing, piercing, and missile damage every 5 levels to a maximum of 20% at level 20.
-– Hit Die: d12
+-每5级获得钝击、挥砍、穿刺、远程伤害抗性+5%，20级时达到最高20%。
+-生命骰：d12
 
-Disadvantages:KIT_DISADV_1
-– May not exceed High Mastery (four slots) in single-handed melee weapons.
-– May not exceed Specialization (two slots) in any other weapon.~
+职业限制：KIT_DISADV_1
+-单手近战武器的精通等级不得超过高级精通（4个熟练位）。
+-其他任意武器的精通等级不得超过专精级（2个熟练位）。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Improved Power Attack and Improved Expertise.
-– May not use Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.
-– Does not gain Improved Initiative.~
+-无法使用强化猛力攻击与强化武器专精。
+-无法使用快速射击。
+-16级时不会获得全武器专精。
+-不获得精通先攻。~
 
 END
 
@@ -63,13 +63,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 2
 	
-    mixed         = RESOLVE_STR_REF(~Vanguard~)
+    mixed         = RESOLVE_STR_REF(~先锋卫士~)
 	
-    lower         = RESOLVE_STR_REF(~vanguard~)
+    lower         = RESOLVE_STR_REF(~先锋卫士~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~VANGUARD: The vanguard is a frontline warrior trained to fight in the middle of enemy lines. Tough and durable, a vanguard is a reliable defender capable of holding the line and enduring blows that would fell a lesser man.~)
+    briefdesc     = RESOLVE_STR_REF(~先锋卫士：受训于敌阵之中厮杀的前线战士，坚韧耐打，是可靠的防线砥柱，足以扛下常人无法承受的重击。~)
 	
 	// fallen = 0
 	

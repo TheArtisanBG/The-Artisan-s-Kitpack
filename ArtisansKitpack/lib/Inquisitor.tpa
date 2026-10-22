@@ -38,59 +38,59 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Aura of Negation~) STR_VAR bam_file = c0inqi02 RET c0inqi02 = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~否定光环~) STR_VAR bam_file = c0inqi02 RET c0inqi02 = icon END
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~INQUISITOR~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~INQUISITOR: The Inquisitor has dedicated <PRO_HISHER> life to finding and eliminating practitioners of evil magic and defeating the forces of darkness, and <PRO_HISHER> god has provided <PRO_HIMHER> with special abilities toward that end.
+STRING_SET_EVALUATE kit_strref ~审判官：审判官毕生致力于搜寻并铲除邪术修习者、击溃黑暗势力，其神祇也为此赋予<PRO_HISHER>特殊的能力。
 
-Advantages:
-– Immune to Hold, Charm and Confusion effects.
-– 3rd level: Gains the Aura of Negation passive ability. 
+职业优势：
+–免疫定身、魅惑与困惑效果。
+–3级：获得「否定光环」被动能力。
 
-AURA OF NEGATION: The Inquisitor has innate Magic Resistance and grants half the amount to all allies within a 20-ft. radius, while slowing the casting speed of all enemies within the same radius. The magnitude of effects are as follows:
+否定光环：审判官拥有天生魔法抗性，并将一半抗性赋予20尺范围内的所有友军，同时减慢同范围内所有敌人的施法速度。效果强度如下：
 
-  3rd - 10% magic resistance, -1 casting speed
-  11th - 16% magic resistance, -1 casting speed
-  19th - 32% magic resistance, -2 casting speed
+  3级：10%魔法抗性，施法速度-1
+  11级：16%魔法抗性，施法速度-1
+  19级：32%魔法抗性，施法速度-2
 
-– Gains the Eyes of Truth passive ability.
+–获得「真理之眼」被动能力。
 
-EYES OF TRUTH: The inquisitor has a 20% + 2% per level chance of dispelling hostile illusions within a 20-ft. radius each round. Each individual target rolls separately.
+真理之眼：每回合，审判官有20%+每等级2%的几率驱散20尺范围内的敌方幻象。每个目标单独掷骰判定。
 
-– May use Smite Magic twice per day.
+–每日可使用两次「破魔术击」。
 
-SMITE MAGIC: The inquisitor's next successful attack inflicts a 100% chance of spell failure on the target for the next 10 seconds and applies a dispel effect equal to twice their level. Additionally, the target's casting level is reduced by 5, and the duration of spells cast halved, for the following 2 rounds.
+破魔术击：审判官的下一次成功攻击会使目标在接下来10秒内法术失败率为100%，并施加相当于自身等级两倍的驱散效果。此外，接下来2回合内目标的施法等级降低5，且施法持续时间减半。
 
-– May cast Spell Turning once per day. Gains one use at level 1 and an additional use every 7 levels thereafter.
+–每日可使用一次「法术反转」。1级时获得1次，之后每提升7级额外获得1次。
 
-– 15th level: Gains two additional uses of Smite Magic.
+–15级：额外获得两次「破魔术击」使用次数。
 
-Disadvantages:
-– Does not gain Charisma-based Divine Grace bonuses.
-– Does not gain Aura of Courage.
-– May not Turn Undead.
-– May not use the Lay On Hands ability. 
-– May not use the Smite Evil ability. 
-– May not cast Cure Disease.
-– May not cast priest spells.~
+职业限制：
+–不获得基于魅力的神恩加值。
+–不获得勇气光环。
+–无法驱散不死生物。
+–无法使用圣疗术。
+–无法使用破邪斩。
+–无法施展治病术。
+–无法施展牧师法术。~
 
 COPY_EXISTING ~C0INQ01.SPL~ OVERRIDE
   LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0inqi02 END
 
 COPY_EXISTING ~C0INQ03.SPL~ OVERRIDE
-  SAY NAME1 ~Smite Magic~
-  SAY UNIDENTIFIED_DESC ~Smite Magic
-The inquisitor's next successful attack inflicts a 100% chance of spell failure on the target for the next 10 seconds and applies a dispel effect equal to twice their level. Additionally, the target's casting level is reduced by 5, and the duration of spells cast halved, for the following 2 rounds.
+  SAY NAME1 ~破魔术击~
+  SAY UNIDENTIFIED_DESC ~破魔术击
+审判官的下一次成功攻击会使目标在接下来10秒内法术失败率为100%，并施加相当于自身等级两倍的驱散效果。此外，接下来2回合内目标的施法等级降低5，且施法持续时间减半。
 
-The effects of Smite Magic bypass all weapon protections, even if the attack itself is negated.~
+破魔术击的效果无视所有武器防护，即便攻击本身被招架也依然生效。~
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 
 COPY_EXISTING ~C0INQ03.spl~ ~override~
-SAY UNIDENTIFIED_DESC ~Smite Magic
-The inquisitor's next successful attack inflicts a 100% chance of spell failure on the target for the next 10 seconds and applies a dispel effect equal to twice their level. Additionally, the target's casting level is reduced by 5, and the duration of spells cast halved, for the following 2 rounds.
+SAY UNIDENTIFIED_DESC ~破魔术击
+审判官的下一次成功攻击会使目标在接下来10秒内法术失败率为100%，并施加相当于自身等级两倍的驱散效果。此外，接下来2回合内目标的施法等级降低5，且施法持续时间减半。
 
-The effects of Smite Magic bypass all weapon protections, even if the attack itself is negated.~
+破魔术击的效果无视所有武器防护，即便攻击本身被招架也依然生效。~
 
 COPY_EXISTING ~numwslot.2da~ ~override~
 	COUNT_2DA_COLS cols // amount of columns
@@ -131,7 +131,7 @@ COPY_EXISTING ~C0INQ02A.SPL~ OVERRIDE
 END
 
 COPY_EXISTING ~C0INQ03a.SPL~ OVERRIDE
- LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Dispel Effects~) END
+ LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~驱散效果~) END
 
 COPY_EXISTING ~C0INQ02a.SPL~ OVERRIDE
   LPF ALTER_EFFECT INT_VAR header = 1  probability1 = 24 END

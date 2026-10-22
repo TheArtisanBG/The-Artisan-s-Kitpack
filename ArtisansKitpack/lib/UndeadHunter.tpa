@@ -34,37 +34,37 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Aura of Sanctity~) STR_VAR bam_file = c0uhu01i RET c0uhu01i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~圣洁灵光~) STR_VAR bam_file = c0uhu01i RET c0uhu01i = icon END
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~UNDEAD_HUNTER~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~UNDEAD HUNTER: This holy avenger has honed <PRO_HISHER> abilities toward the destruction of the undead and other unnatural creatures and is immune to many of their most devastating abilities.
+STRING_SET_EVALUATE kit_strref ~亡灵猎手：这名神圣复仇者将<PRO_HISHER>的技艺磨砺至极致，专司毁灭亡灵与其他邪秽生物，且对亡灵许多最致命的能力免疫。
 
-Advantages:
-– +3 bonus to hit and damage rolls against undead creatures.
-– Immune to Hold, Level Drain and Death Magic.
-– Turn Undead's effectiveness is as a cleric of the same level.
-– May use Smite Undead three times per day.
+职业优势：
+-对亡灵生物的攻击检定与伤害掷骰获得+3加值。
+-免疫定身、等级吸取与即死魔法。
+-超度亡灵的效果等同于同等级牧师。
+-每日可使用三次「破亡斩」。
 
-SMITE UNDEAD: The undead hunter's next successful attack on an undead creature forces them to make a save vs. death or be destroyed. If the save is made, the target takes 1d6 + 1d6 additional damage per 3 levels of the undead hunter instead.
+破亡斩：亡灵猎手下一次对亡灵生物的成功攻击，会迫使目标进行一次死亡豁免，失败则直接被摧毁。若豁免成功，目标也会受到1d6点伤害，且亡灵猎手每提升3级，额外增加1d6点伤害。
 
-– 3rd level: Gains Aura of Sanctity.
+-3级：获得「圣洁灵光」。
 
-AURA OF SANCTITY: The undead hunter exudes an aura which protects their allies from undead and necromantic magic. All allies within visual range of the undead hunter gain a +2 bonus to Armor Class and Saving Throws vs. undead, in addition to scaling bonuses to hit and damage vs. undead and bonuses to saving throws vs. necromancy.
-  3rd - +3 to hit and damage vs. undead and save vs. necromancy.
-  11th - +3 to hit and damage vs. undead and save vs. necromancy. Allies become immune to hold.
-  19th - +3 to hit and damage vs. undead and save vs. necromancy. Allies become immune to hold and level drain.
+圣洁灵光：亡灵猎手散发出一道光环，保护友军免受亡灵与死灵魔法的侵害。视野范围内的所有友军，护甲等级与对抗亡灵的豁免检定获得+2加值；此外，对亡灵的攻击与伤害加值、对抗死灵法术的豁免加值还会随等级提升。
+  3级：对亡灵的攻击与伤害+3，对抗死灵法术豁免+3。
+  11级：对亡灵的攻击与伤害+3，对抗死灵法术豁免+3。友军免疫定身。
+  19级：对亡灵的攻击与伤害+3，对抗死灵法术豁免+3。友军免疫定身与等级吸取。
 
-– 5rd level: Smite Undead's save modifier reduced to -1.
-– 9th level: Smite Undead's save modifier reduced to -2.
-– 13th level: Smite Undead's save modifier reduced to -3.
-– 15th level: Gains three additional uses of Smite Undead.
-– 17th level: Smite Undead's save modifier reduced to -4.
+-5级：破亡斩的豁免惩罚降至-1。
+-9级：破亡斩的豁免惩罚降至-2。
+-13级：破亡斩的豁免惩罚降至-3。
+-15级：额外获得三次破亡斩使用次数。
+-17级：破亡斩的豁免惩罚降至-4。
 
-Disadvantages:
-– Does not gain Charisma-based Divine Grace bonuses.
-– Does not gain Aura of Courage.
-– May not use Lay on Hands.
-– May not use Smite Evil.~
+职业限制：
+-不获得基于魅力的神恩加值。
+-不获得勇气灵光。
+-无法使用圣疗术。
+-无法使用破邪斩。~
 
 COPY_EXISTING ~C0UHU01.spl~ ~override~
       LPF ADD_SPELL_EFFECT
@@ -76,9 +76,9 @@ COPY_EXISTING ~C0UHU01.spl~ ~override~
       END
 
 COPY_EXISTING ~C0UHU02.spl~ ~override~
-SAY NAME1 ~Smite Undead~
-SAY UNIDENTIFIED_DESC ~Smite Undead
-The undead hunter's next successful attack on an undead creature forces them to make a save vs. death or be destroyed. If the save is made, the target takes 1d6 + 1d6 additional damage per 3 levels of the undead hunter instead.~
+SAY NAME1 ~破亡斩~
+SAY UNIDENTIFIED_DESC ~破亡斩
+亡灵猎手下一次对亡灵生物的成功攻击，会迫使目标进行一次死亡豁免，失败则直接被摧毁。若豁免成功，目标也会受到1d6点伤害，且亡灵猎手每提升3级，额外增加1d6点伤害。~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/spells/C0INAREP.PRO~ ~C0 Instant Area Allies~
 

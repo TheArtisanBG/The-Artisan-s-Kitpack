@@ -26,44 +26,44 @@ COPY_EXISTING ~CLABTH01.2DA~ ~OVERRIDE/C0TRICKS.2DA~
 
  	PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~TRICKSTER: Perhaps the most complex and most difficult type of rogue to define, tricksters have few abilities to truly call their own. Rather than develop their skills through formal training, tricksters make use of their cleverness and strong memory to master the skills of other classes at a near-instant rate and use them as though with many years of practice—a talent often deridingly described as one part wit and two parts luck. Therefore, no two tricksters are truly alike. As a jack-of-all-trades, the trickster differs from the bard in that their skills are learned spontaneously rather through study. While versatile and quick to adapt, their lack of true specialization makes them slower to develop.
+OUTER_SPRINT kit_description ~模仿士：或许是最难定义、最复杂的盗贼类型，模仿士几乎没有真正属于自己的能力。他们不靠正规训练打磨技艺，而是凭借过人的智谋与强记能力，以近乎瞬发的速度掌握其他职业的技能，运用起来如同浸淫多年——这份天赋常被人嘲讽为一分机智两分运气。因此，绝无两个完全相同的模仿士。作为万事通，他们与吟游诗人的区别在于，其技艺全凭临场领悟而非系统修习。虽说应变灵活、上手极快，但缺乏真正的专精也让他们的成长更为缓慢。
 
-Advantages:
-– Luck: +1 bonus to Saving Throws, attack rolls, and minimum damage/healing rolls as well as +5% to all thieving skills.
-– Opportunist: The Trickster's critical hits reduce the target's Armor Class, THAC0 and damage by 1 for one round.
-– May use the Trickery ability once per day. Gains an extra use every 3 levels.
+职业优势：
+-幸运：所有豁免检定、攻击检定、最小伤害/治疗掷骰+1，所有盗贼技能+5%。
+-投机者：模仿士的暴击会使目标的护甲等级、零级命中值与伤害降低1点，持续1回合。
+-每日可使用一次「诡术」能力。每提升3级额外获得1次使用次数。
 
-TRICKERY: The Trickster uses masterful sleight of hand and quick movement to instantly replace themselves with a life-sized replica of themselves for one round, becoming invisible in the process. The trickster's next attack is an automatic critical hit. The deception is so great that illusion-dispelling magicks and even creatures that see through invisibility are fooled and will not attack the trickster while the replica is standing.
+诡术：模仿士以精妙的手法与迅捷的身法，瞬间用一尊与自身等大的替身替换自己，持续1回合，同时进入隐身状态。模仿士的下一次攻击必定暴击。这份障眼法极为逼真，哪怕是破除幻象的魔法、或是能看破隐形的生物也会被蒙骗，在替身存在期间不会攻击模仿士。
 
-– May use the Mimicry ability.
+-可使用「模仿」能力。
 
-MIMICRY: Whether through careful examination, learning through use, or natural talent, tricksters are able to imitate the skills of almost any profession and adapt them as their own. When used, this ability may be permanently exchanged for one ability or passive effect of another kit. If dual-classed, the trickster retains use of their learned abilities while their class is inactive.
+模仿：无论是细心观察、边用边学，还是天赋异禀，模仿士都能模仿几乎任何职业的技能，化为己用。使用后，可永久将该能力替换为另一职业套件的一项能力或被动效果。若为兼职职业，模仿士在该职业非激活状态下仍可使用已学会的能力。
 
-– 5th level: Gains one use of Mimicry.
-– 8th level: Opportunist penalties increased to 2.
-– 10th level: Passive Luck bonus is doubled. Gains one use of Mimicry.
-– 15th level: Opportunist penalties increased to 3. Gains one use of Mimicry.
-– 20th level: Passive Luck bonus is tripled. Gains one use of Mimicry.
-– 25th level: Gains one use of Mimicry.
-– 30th level: Opportunist penalties increased to 4. Gains one use of Mimicry.
-– 35th level: Gains one use of Mimicry.
-– 40th level: Passive Luck bonus is quadrupled. Gains one use of Mimicry.
+-5级：获得1次模仿使用次数。
+-8级：投机者减益效果提升至2点。
+-10级：幸运被动加值翻倍。获得1次模仿使用次数。
+-15级：投机者减益效果提升至3点。获得1次模仿使用次数。
+-20级：幸运被动加值变为三倍。获得1次模仿使用次数。
+-25级：获得1次模仿使用次数。
+-30级：投机者减益效果提升至4点。获得1次模仿使用次数。
+-35级：获得1次模仿使用次数。
+-40级：幸运被动加值变为四倍。获得1次模仿使用次数。
 
-Disadvantages:
-– Backstab progression is significantly weaker than a normal Thief's:
-  Level 1-8: x2
-  Level 9+: x3
-– May not be of Lawful alignment.KIT_DISADV_1
-– Overconfidence: -1 penalty to Armor Class.
-– May only distribute 20 skill points per level among thieving skills.
-– Only receives 90% of all experience earned as a trickster.~
+职业限制：
+-背刺伤害倍率远低于普通盗贼：
+  1-8级：2倍
+  9级及以上：3倍
+-阵营不得为守序。KIT_DISADV_1
+-自负：护甲等级受-1惩罚。
+-每等级仅可分配20点技能点至盗贼技能。
+-作为模仿士，仅能获得90%的经验值。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~7000~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Crippling Strike.
-– Does not gain Epic Precision.~
+-无法使用致残打击。
+-不获得史诗精准。~
 
 END
 
@@ -100,13 +100,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 4
 	
-    mixed         = RESOLVE_STR_REF(~Trickster~)
+    mixed         = RESOLVE_STR_REF(~模仿士~)
 	
-    lower         = RESOLVE_STR_REF(~trickster~)
+    lower         = RESOLVE_STR_REF(~模仿士~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~TRICKSTER: Perhaps the most complex and most difficult type of rogue to define, tricksters have few abilities to truly call their own. Rather than develop their skills through formal training, tricksters make use of their cleverness and strong memory to master the skills of other classes at a near-instant rate and use them as though with many years of practice—a talent often deridingly described as one part wit and two parts luck. Therefore, no two tricksters are truly alike. As a jack-of-all-trades, the trickster differs from the bard in that their skills are learned spontaneously rather through study. While versatile and quick to adapt, their lack of true specialization makes them slower to develop.~)
+    briefdesc     = RESOLVE_STR_REF(~模仿士：或许是最难定义、最复杂的盗贼类型，模仿士几乎没有真正属于自己的能力。他们不靠正规训练打磨技艺，而是凭借过人的智谋与强记能力，以近乎瞬发的速度掌握其他职业的技能，运用起来如同浸淫多年。因此绝无两个完全相同的模仿士，应变灵活但专精不足。~)
 	
 	// fallen = 0
 	
@@ -236,15 +236,15 @@ ACTION_FOR_EACH description IN
 //TRICKSTER
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0TRICKS" BEGIN
           READ_2DA_ENTRY index 4 col_count trickster_desc
-          SPRINT old_trickster1 ~– 25th level: Gains one use of Mimicry.~
-          SPRINT new_trickster1 ~– 25th level: Gains one use of Mimicry and may Use Any Items.~
-          SPRINT old_trickster2 ~– 30th level: Opportunist penalties increased to 4. Gains one use of Mimicry.~
-          SPRINT new_trickster2 ~– 30th level: Opportunist penalties increased to 4. Gains one use of Mimicry.
-– 30th level: Gains one use of Mastery, which may be used to permanently learn Esoteric Swordplay or Easy as Breathing.
+          SPRINT old_trickster1 ~-25级：获得1次模仿使用次数。~
+          SPRINT new_trickster1 ~-25级：获得1次模仿使用次数，且可使用「万物皆用」。~
+          SPRINT old_trickster2 ~-30级：投机者减益效果提升至4点。获得1次模仿使用次数。~
+          SPRINT new_trickster2 ~-30级：投机者减益效果提升至4点。获得1次模仿使用次数。
+-30级：获得1次「精通」使用次数，可用于永久习得「秘传剑术」或「易如呼吸」。
 
-ESOTERIC SWORDPLAY: The Trickster's experience in observing and mimicking countless warriors has granted them a cohesive understanding of many fighting styles. Upon learning this ability, the Trickster permanently gains one and a half extra attacks per round.
+秘传剑术：模仿士观察模仿过无数战士，对诸多战斗风格形成了融会贯通的理解。习得此能力后，模仿士永久获得每回合额外1.5次攻击。
 
-EASY AS BREATHING: The Trickster's proficiency with their Mimicry allows them to use their arsenal of techniques with alarming speed and efficiency. Upon learning this ability, the Trickster gains permanent Aura Cleansing.~
+易如呼吸：模仿士对模仿技艺的精通，让他们能以惊人的速度与效率运用自身的技艺库。习得此能力后，模仿士永久获得「光环净化」效果。~
           GET_STRREF %trickster_desc% trickster_text
           INNER_PATCH_SAVE trickster_text ~%trickster_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_trickster%~ ~%new_trickster%~
@@ -264,19 +264,19 @@ END
 
 // MIMICRY
 COPY_EXISTING ~C0TR#02.SPL~ OVERRIDE
-SAY NAME1 ~Trickery~
-SAY UNIDENTIFIED_DESC ~The Trickster uses masterful sleight of hand and quick movement to instantly replace themselves with an immobile life-sized replica of themselves for one round, becoming invisible in the process. The replica has one hit point. The trickster's next attack will remove the decoy, but is an automatic critical hit. The deception is so great that illusion-dispelling magicks and even creatures that see through invisibility are fooled and will not attack the trickster while the replica is standing.~
+SAY NAME1 ~诡术~
+SAY UNIDENTIFIED_DESC ~模仿士以精妙的手法与迅捷的身法，瞬间用一尊与自身等大的静止替身替换自己，持续1回合，同时进入隐身状态。替身仅有1点生命值。模仿士的下一次攻击会消除诱饵，但必定暴击。这份障眼法极为逼真，哪怕是破除幻象的魔法、或是能看破隐形的生物也会被蒙骗，在替身存在期间不会攻击模仿士。~
 
 COPY_EXISTING ~C0TR#04Y.SPL~ OVERRIDE
-SAY NAME1 ~Mimicry I~
-SAY UNIDENTIFIED_DESC ~Whether through careful examination, learning through use, or natural talent, tricksters are able to imitate the skills of almost any profession and adapt them as their own. When used, this ability may be permanently exchanged for one ability or passive effect of another kit. If dual-classed, the trickster retains use of their learned abilities while their class is inactive.~
+SAY NAME1 ~模仿 I~
+SAY UNIDENTIFIED_DESC ~无论是细心观察、边用边学，还是天赋异禀，模仿士都能模仿几乎任何职业的技能，化为己用。使用后，可永久将该能力替换为另一职业套件的一项能力或被动效果。若为兼职职业，模仿士在该职业非激活状态下仍可使用已学会的能力。~
 
 COPY_EXISTING ~C0TR#04.SPL~ ~OVERRIDE/C0TR#05.SPL~
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#05Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#05Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#05Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#002 END
-SAY NAME1 ~Mimicry II~
+SAY NAME1 ~模仿 II~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#05Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#05 END
 
@@ -285,7 +285,7 @@ LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#06Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#06Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#06Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#003 END
-SAY NAME1 ~Mimicry III~
+SAY NAME1 ~模仿 III~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#06Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#06 END
 
@@ -294,7 +294,7 @@ LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#07Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#07Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#07Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#004 END
-SAY NAME1 ~Mimicry IV~
+SAY NAME1 ~模仿 IV~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#07Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#07 END
 
@@ -303,7 +303,7 @@ LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#08Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#08Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#08Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#005 END
-SAY NAME1 ~Mimicry V~
+SAY NAME1 ~模仿 V~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#08Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#08 END
 
@@ -312,7 +312,7 @@ LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#09Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#09Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#09Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#006 END
-SAY NAME1 ~Mimicry VI~
+SAY NAME1 ~模仿 VI~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#09Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#09 END
 
@@ -321,7 +321,7 @@ LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#10Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#10Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#10Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#007 END
-SAY NAME1 ~Mimicry VII~
+SAY NAME1 ~模仿 VII~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#10Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#10 END
 
@@ -330,7 +330,7 @@ LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#11Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#11Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#11Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#008 END
-SAY NAME1 ~Mimicry VIII~
+SAY NAME1 ~模仿 VIII~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#11Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#11 END
 
@@ -339,88 +339,88 @@ LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Y resource = C0TR#12Y END
 LPF ALTER_EFFECT STR_VAR match_resource = C0TR#04Z resource = C0TR#12Z END
 COPY_EXISTING ~C0TR#04Y.SPL~ ~OVERRIDE/C0TR#12Y.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#009 END
-SAY NAME1 ~Mimicry IX~
+SAY NAME1 ~模仿 IX~
 COPY_EXISTING ~C0TR#04Z.SPL~ ~OVERRIDE/C0TR#12Z.SPL~
 LPF ALTER_EFFECT STR_VAR resource = C0TR#12 END
 
 COPY_EXISTING ~C0TR#10A.SPL~ OVERRIDE
-SAY NAME1 ~Mimic: Berserker: Enrage~
+SAY NAME1 ~模仿：狂战士：狂怒~
 COPY_EXISTING ~C0TR#11A.SPL~ OVERRIDE
-SAY NAME1 ~Mimic: Wizard Slayer: +5% Magic Resistance~
+SAY NAME1 ~模仿：巫师杀手：魔法抗性+5%~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#12A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL144 END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL144 END
-SAY NAME1 ~Mimic: Kensai: Kai~
+SAY NAME1 ~模仿：剑圣：居合~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#13A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPDWD02B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPDWD02 END
-SAY NAME1 ~Mimic: Dwarven Defender: Defensive Stance~
+SAY NAME1 ~模仿：矮人卫士：防御姿态~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#14A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL121B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL121 END
-SAY NAME1 ~Mimic: Archer: Called Shot~
+SAY NAME1 ~模仿：弓箭手：呼号射击~
 COPY_EXISTING ~C0TR#15A.SPL~ OVERRIDE
-SAY NAME1 ~Mimic: Stalker: +15% Hide in Shadows and Move Silently~
+SAY NAME1 ~模仿：潜行者：隐匿阴影与潜行+15%~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#16A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPPR402B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = C0TR#16Z END
-SAY NAME1 ~Mimic: Beast Master: Animal Summoning~
+SAY NAME1 ~模仿：兽主：召唤动物~
 COPY_EXISTING ~C0TR#16Z.SPL~ OVERRIDE
-SAY NAME1 ~Animal Summoning~
-SAY UNIDENTIFIED_DESC ~The trickster casts the beastmaster's Animal Summoning priest spell. The spell cast depends on the trickster's level:
+SAY NAME1 ~召唤动物~
+SAY UNIDENTIFIED_DESC ~模仿士施展兽主的召唤动物牧师法术。法术强度取决于模仿士等级：
 
-1st-9th level: Animal Summoning I
-10th-19th level: Animal Summoning II
-20th level+: Animal Summoning III~
+1-9级：召唤动物 I
+10-19级：召唤动物 II
+20级及以上：召唤动物 III~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#17A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL222B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL222 END
-SAY NAME1 ~Mimic: Cavalier: Remove Fear~
+SAY NAME1 ~模仿：骑士：移除恐惧~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#18A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPPR303B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL231 END
-SAY NAME1 ~Mimic: Inquisitor: Dispel Magic~
+SAY NAME1 ~模仿：审判者：解除魔法~
 COPY_EXISTING ~C0TR#19A.SPL~ OVERRIDE
-SAY NAME1 ~Mimic: Undead Hunter Undead Bane~
+SAY NAME1 ~模仿：亡灵猎手：亡灵祸祟~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#20A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPWI119B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL102 END
-SAY NAME1 ~Mimic: Blackguard: Absorb Health~
+SAY NAME1 ~模仿：黑卫：吸取生命~
 
 ACTION_IF FILE_EXISTS ~C0BG#00.spl~ THEN BEGIN
 COPY_EXISTING ~C0TR#20A.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER STR_VAR icon = C0BG#02 END
-SAY NAME1 ~Mimic: Blackguard: Life Drain~
+SAY NAME1 ~模仿：黑卫：生命汲取~
 END
 
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#21A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL741B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL741 END
-SAY NAME1 ~Mimic: Priest of Lathander: Boon of Lathander~
+SAY NAME1 ~模仿：洛山达牧师：洛山达恩赐~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#22A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL731B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL731 END
-SAY NAME1 ~Mimic: Priest of Helm: Seeking Sword~
+SAY NAME1 ~模仿：亥姆牧师：寻觅之剑~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#23A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL721B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL721 END
-SAY NAME1 ~Mimic: Priest of Talos: Storm Shield~
+SAY NAME1 ~模仿：塔洛斯牧师：风暴护盾~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#24A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = OHTYR1B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = OHTYR1 END
-SAY NAME1 ~Mimic: Priest of Tyr: Exaltation~
+SAY NAME1 ~模仿：提尔牧师：升阶术~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#25A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = OHTMPS2B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = OHTMPS2 END
-SAY NAME1 ~Mimic: Priest of Tempus: Chaos of Battle~
+SAY NAME1 ~模仿：坦帕斯牧师：战场混乱~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#26A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL621B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL621 END
-SAY NAME1 ~Mimic: Totemic Druid: Summon Spirit Animal~
+SAY NAME1 ~模仿：图腾德鲁伊：召唤灵兽~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#27A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPIN155B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL643 END
-SAY NAME1 ~Mimic: Shapeshifter: Shapeshift Werewolf~
+SAY NAME1 ~模仿：变形者：变形狼人~
 
 ACTION_IF FILE_EXISTS_IN_GAME ~c0ss-fh.spl~ THEN BEGIN
 COPY_EXISTING ~C0TR#27A.SPL~ ~override~
@@ -430,179 +430,179 @@ END
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#28A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = PLYBASSB END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL634 END
-SAY NAME1 ~Mimic: Avenger: Shapeshift Fire Salamander~
+SAY NAME1 ~模仿：复仇者：变形火蜥蜴~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#29A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = C0TR#29B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = C0TR#29Z END
-SAY NAME1 ~Mimic: Arcane Spellcasting~
+SAY NAME1 ~模仿：奥术施法~
 COPY_EXISTING ~C0TR#29Z.SPL~ OVERRIDE
-SAY NAME1 ~Mimicry: Spellcasting~
-SAY UNIDENTIFIED_DESC ~The trickster casts a level 1 arcane spell of choice. Level 2 spells may be cast from 6th level, level 3 from 11th level and level 4 from 16th level onwards.~
+SAY NAME1 ~模仿：施法~
+SAY UNIDENTIFIED_DESC ~模仿士施展一个选定的1环奥术法术。6级起可施展2环，11级起可施展3环，16级起可施展4环。~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#30A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL423B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL423 END
-SAY NAME1 ~Mimic: Assassin: Poison Weapon~
+SAY NAME1 ~模仿：刺客：武器淬毒~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#31A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL414B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL414 END
-SAY NAME1 ~Mimic: Bounty Hunter: Set Special Snare~
+SAY NAME1 ~模仿：赏金猎人：特制陷阱~
 COPY_EXISTING ~C0TR#32A.SPL~ OVERRIDE
-SAY NAME1 ~Mimic: Swashbuckler: +2 to Off-Hand THAC0~
+SAY NAME1 ~模仿：剑客：副手武器零级命中值+2~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#33A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPSD02B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPSD02 END
-SAY NAME1 ~Mimic: Shadowdancer: Shadowstep~
+SAY NAME1 ~模仿：影舞者：影步~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#34A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL522B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL522 END
-SAY NAME1 ~Mimic: Blade: Defensive Spin~
+SAY NAME1 ~模仿：刀锋：防御旋斩~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#35A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = C0TR#35B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = C0TR#35Z END
-SAY NAME1 ~Mimic: Jester: Fool's Gambit~
+SAY NAME1 ~模仿：弄臣：愚者赌局~
 COPY_EXISTING ~C0TR#35Z.SPL~ OVERRIDE
-SAY NAME1 ~Fool's Gambit~
-SAY UNIDENTIFIED_DESC ~The trickster imitates the jester's bard song, applying its effects for 3 rounds. The trickster may act freely within the duration without breaking the effect.~
+SAY NAME1 ~愚者赌局~
+SAY UNIDENTIFIED_DESC ~模仿士模仿弄臣的吟游诗曲，施加效果持续3回合。持续期间模仿士可自由行动，不会打破效果。~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#36A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = C0TR#36B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = C0TR#36Z END
-SAY NAME1 ~Mimic: Skald: War Chant~
+SAY NAME1 ~模仿：吟游诗人：战歌~
 COPY_EXISTING ~C0TR#36Z.SPL~ OVERRIDE
-SAY NAME1 ~War Chant~
-SAY UNIDENTIFIED_DESC ~The trickster imitates the skald's bard song, applying its effects for 3 rounds. The trickster may act freely within the duration without breaking the effect.~
+SAY NAME1 ~战歌~
+SAY UNIDENTIFIED_DESC ~模仿士模仿吟游诗人的战歌，施加效果持续3回合。持续期间模仿士可自由行动，不会打破效果。~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#37A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPWI117B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = C0TR#37Z END
-SAY NAME1 ~Mimic: Dark Moon Monk: Frozen Fist~
+SAY NAME1 ~模仿：暗月僧侣：冰寒之拳~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#38A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL238B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = C0TR#38Z END
-SAY NAME1 ~Mimic: Sun Soul Monk: Flaming Fists~
+SAY NAME1 ~模仿：日魂僧侣：烈焰之拳~
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#39A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPDD03B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPDD03 END
-SAY NAME1 ~Mimic: Dragon Disciple: Breath Weapon~
+SAY NAME1 ~模仿：龙裔信徒：吐息武器~
 
 COPY_EXISTING ~C0TR#40.SPL~ OVERRIDE
-SAY NAME1 ~Greater Mimicry I~
-SAY UNIDENTIFIED_DESC ~The trickster may permanently exchange this ability for one of the following High Level Abilities:
+SAY NAME1 ~高等模仿 I~
+SAY UNIDENTIFIED_DESC ~模仿士可永久将此能力替换为以下任一高阶能力：
 
-– Power Attack
-– Critical Strike
-– Deathblow
-– Whirlwind Attack
-– War Cry
-– Hardiness
-– Resist Magic
-– Tracking
-– Shadow Form
-– Shadow Maze
-– Shadow Twin
-– Assassination
-– Magic Flute~
+-猛力攻击
+-致命一击
+-致死打击
+-旋风攻击
+-战吼
+-强健
+-魔法抗性
+-追踪
+-暗影形态
+-暗影迷宫
+-暗影双生
+-刺杀
+-魔法长笛~
 
 COPY_EXISTING ~C0TR#40.SPL~ ~OVERRIDE/C0TR#41.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#H02 END
-SAY NAME1 ~Greater Mimicry II~
+SAY NAME1 ~高等模仿 II~
 
 COPY_EXISTING ~C0TR#40.SPL~ ~OVERRIDE/C0TR#42.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 214 STR_VAR resource = C0TR#H03 END
-SAY NAME1 ~Greater Mimicry III~
+SAY NAME1 ~高等模仿 III~
 
 COPY_EXISTING ~C0TR#10A.SPL~ ~OVERRIDE/C0TR#43A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL906B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 172 STR_VAR resource = C0TR#40 END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL906 END
-SAY NAME1 ~Mimic: Power Attack~
+SAY NAME1 ~模仿：猛力攻击~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#44A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL905B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL905 END
-SAY NAME1 ~Mimic: Critical Strike~
+SAY NAME1 ~模仿：致命一击~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#45A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL902B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL902 END
-SAY NAME1 ~Mimic: Deathblow~
+SAY NAME1 ~模仿：致死打击~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#46A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL900B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL900 END
-SAY NAME1 ~Mimic: Whirlwind Attack~
+SAY NAME1 ~模仿：旋风攻击~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#47A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL908B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL908 END
-SAY NAME1 ~Mimic: War Cry~
+SAY NAME1 ~模仿：战吼~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#48A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL907B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL907 END
-SAY NAME1 ~Mimic: Hardiness~
+SAY NAME1 ~模仿：强健~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#49A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL904B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL904 END
-SAY NAME1 ~Mimic: Resist Magic~
+SAY NAME1 ~模仿：魔法抗性~
 
 ACTION_IF FILE_EXISTS_IN_GAME ~C0CL922.SPL~ THEN BEGIN
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#50A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL920B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL922 END
-SAY NAME1 ~Mimic: Tracking~
+SAY NAME1 ~模仿：追踪~
 END ELSE BEGIN
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#50A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL920B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = C0CL922 END
-SAY NAME1 ~Mimic: Tracking~
+SAY NAME1 ~模仿：追踪~
 
 	END
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#51A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL938B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL938 END
-SAY NAME1 ~Mimic: Shadow Form~
+SAY NAME1 ~模仿：暗影形态~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#52A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL937B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL937 END
-SAY NAME1 ~Mimic: Shadow Maze~
+SAY NAME1 ~模仿：暗影迷宫~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#53A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL936B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL936 END
-SAY NAME1 ~Mimic: Shadow Twin~
+SAY NAME1 ~模仿：暗影双生~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#54A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL916B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL916 END
-SAY NAME1 ~Mimic: Assassination~
+SAY NAME1 ~模仿：刺杀~
 
 COPY_EXISTING ~C0TR#43A.SPL~ ~OVERRIDE/C0TR#55A.SPL~
 LPF ALTER_SPELL_HEADER STR_VAR icon = SPCL921B END
 LPF ALTER_EFFECT INT_VAR match_opcode = 171 STR_VAR resource = SPCL921 END
-SAY NAME1 ~Mimic: Magic Flute~
+SAY NAME1 ~模仿：魔法长笛~
 
 COPY_EXISTING ~C0TR#HL.SPL~ ~OVERRIDE~
-SAY NAME1 ~Mastery~
-SAY UNIDENTIFIED_DESC ~This ability may be used once to learn either Esoteric Swordplay or Easy as Breathing.
+SAY NAME1 ~精通~
+SAY UNIDENTIFIED_DESC ~此能力可使用一次，用于习得「秘传剑术」或「易如呼吸」。
 
-ESOTERIC SWORDPLAY: The Trickster's experience in observing and mimicking countless warriors has granted them a cohesive understanding of many fighting styles. Upon learning this ability, the Trickster permanently gains one and a half extra attacks per round.
+秘传剑术：模仿士观察模仿过无数战士，对诸多战斗风格形成了融会贯通的理解。习得此能力后，模仿士永久获得每回合额外1.5次攻击。
 
-EASY AS BREATHING: The Trickster's proficiency with their Mimicry allows them to use their arsenal of techniques with alarming speed and efficiency. Upon learning this ability, the Trickster gains permanent Aura Cleansing.~
+易如呼吸：模仿士对模仿技艺的精通，让他们能以惊人的速度与效率运用自身的技艺库。习得此能力后，模仿士永久获得「光环净化」效果。~
 
 COPY_EXISTING ~C0TR#H1.SPL~ ~OVERRIDE~
-SAY NAME1 ~Esoteric Swordplay~
-SAY UNIDENTIFIED_DESC ~The Trickster's experience in observing and mimicking countless warriors has granted them a cohesive understanding of many fighting styles. Upon learning this ability, the Trickster permanently gains one and a half extra attacks per round.
+SAY NAME1 ~秘传剑术~
+SAY UNIDENTIFIED_DESC ~模仿士观察模仿过无数战士，对诸多战斗风格形成了融会贯通的理解。习得此能力后，模仿士永久获得每回合额外1.5次攻击。
 
-This ability is mutually exclusive with Easy as Breathing.~
+本能力与「易如呼吸」互斥。~
 
 COPY_EXISTING ~C0TR#H2.SPL~ ~OVERRIDE~
-SAY NAME1 ~Easy as Breathing~
-SAY UNIDENTIFIED_DESC ~The Trickster's proficiency with their Mimicry allows them to use their arsenal of techniques with alarming speed and efficiency. Upon learning this ability, the Trickster gains permanent Aura Cleansing.
+SAY NAME1 ~易如呼吸~
+SAY UNIDENTIFIED_DESC ~模仿士对模仿技艺的精通，让他们能以惊人的速度与效率运用自身的技艺库。习得此能力后，模仿士永久获得「光环净化」效果。
 
-This ability is mutually exclusive with Esoteric Swordplay.~
+本能力与「秘传剑术」互斥。~
 
  ACTION_FOR_EACH mimics IN 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 BEGIN
 	COPY_EXISTING ~C0TR#%mimics%A.SPL~ ~override/C0TR#%mimics%B.SPL~

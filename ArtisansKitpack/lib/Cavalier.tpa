@@ -29,38 +29,38 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Aura of Chivalry~) STR_VAR bam_file = c0cav01i RET c0cav01i = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Heroic Inspiration~) STR_VAR bam_file = c0cav02i RET c0cav02i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~侠义光环~) STR_VAR bam_file = c0cav01i RET c0cav01i = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~英勇鼓舞~) STR_VAR bam_file = c0cav02i RET c0cav02i = icon END
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~CAVALIER~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~CAVALIER: This class represents the most common picture of the knight: the chivalrous warrior who epitomizes honor, courage, and loyalty. The Cavalier is specialized in battling "classical" evil monsters such as demons and dragons.
+STRING_SET_EVALUATE kit_strref ~侠义骑士：该职业是最经典的骑士形象——恪守荣誉、勇气与忠诚的侠义战士。侠义骑士专于对抗恶魔、巨龙等「经典」邪恶怪物。
 
-Advantages:
-– Immunity to Charm, Poison, Fear and Morale Failure.
-– +3 bonus to hit and damage rolls against all fiendish and draconic creatures.
-– May use the Challenge ability once per day. Gains an additional use every 8th level.
+职业优势：
+–免疫魅惑、毒素、恐惧与士气崩溃。
+–对抗所有邪系与龙类生物时，命中与伤害掷骰+3。
+–每日可使用一次「挑战」能力。每提升8级额外获得一次使用次数。
 
-CHALLENGE: The cavalier marks a targeted creature with a Challenge, reducing both the target's and the cavalier's own Armor Class by 10 for the next three rounds. The cavalier deals additional unmitigated magic damage to the Challenged target. Additionally, the Challenged target can be seen within the fog of war and cannot turn invisible for the duration.
-  1st-11th level: 1d6 damage
-  12th-19th level: 2d6 damage
-  20th+ level: 4d6 damage
+挑战：侠义骑士向目标发起挑战，接下来3回合内，目标与自身的护甲等级均降低10点。侠义骑士对被挑战目标造成额外的无视护甲魔法伤害。此外，被挑战目标在战争迷雾中可见，且持续期间无法隐形。
+  1-11级：1d6点伤害
+  12-19级：2d6点伤害
+  20级及以上：4d6点伤害
 
-– 3rd level: Gains Aura of Chivalry.
+–3级：获得「侠义光环」。
 
-AURA OF CHIVALRY: The cavalier exudes an aura which inspires their allies to fight at the best of their ability. All allies within visual range of the cavalier become immune to fear and morale failure and gain bonuses in combat.
-  3rd - +1 to THAC0.
-  11th - +1 to THAC0 and Damage.
-  19th - +2 to THAC0 and Damage, +1 to Luck
+侠义光环：侠义骑士散发出光环，激励友军全力作战。视野范围内的所有友军免疫恐惧与士气崩溃，并获得战斗加成。
+  3级：零级命中值+1。
+  11级：零级命中值与伤害+1。
+  19级：零级命中值与伤害+2，幸运+1。
 
-– 9th level: Gains Heroic Inspiration.
+–9级：获得「英勇鼓舞」。
 
-HEROIC INSPIRATION: When the cavalier's maximum hit points falls below 50%, all allies (except the cavalier) within visual range gain an additional +1 bonus to hit, damage and saving throws.
+英勇鼓舞：当侠义骑士的最大生命值降至50%以下时，视野范围内的所有友军（自身除外）额外获得+1命中、伤害与豁免检定加成。
 
-Disadvantages:
-– Does not gain Charisma-based Divine Grace bonuses.
-– Does not gain Aura of Courage.
-– May not Turn Undead.
-– May not use ranged weapons and incurs a -4 penalty to hit if wielding a melee/ranged weapon in ranged mode.~
+职业限制：
+–不获得基于魅力的神恩加值。
+–不获得勇气光环。
+–无法驱散不死生物。
+–无法使用远程武器；若将近战/远程武器作远程使用，命中受-4惩罚。~
 
 COPY_EXISTING ~C0CAV01.spl~ ~override~
       LPF ADD_SPELL_EFFECT
@@ -83,19 +83,19 @@ COPY_EXISTING ~C0CAV02.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Gained Passive Ability: Heroic Inspiration~)
+	  parameter1 = RESOLVE_STR_REF (~获得被动能力：英勇鼓舞~)
 END
 
 COPY_EXISTING ~C0CAV02A.spl~ ~override~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Heroic Inspiration: +1 to THAC0, Damage and Saving Throws to all allies~)
+	  parameter1 = RESOLVE_STR_REF (~英勇鼓舞：所有友军零级命中值、伤害与豁免检定+1~)
 END
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 267
-	  parameter1 = RESOLVE_STR_REF (~Heroic Inspiration: +1 to THAC0, Damage and Saving Throws to all allies~)
+	  parameter1 = RESOLVE_STR_REF (~英勇鼓舞：所有友军零级命中值、伤害与豁免检定+1~)
 END
   LPF ALTER_EFFECT
     INT_VAR
@@ -108,16 +108,16 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~C0CAV03.SPL~ BEGIN
 COPY ~%MOD_FOLDER%/spells/challenge~ ~override~
 
 COPY_EXISTING ~C0CAV03.spl~ ~override~
-SAY NAME1 ~Challenge!~
-SAY UNIDENTIFIED_DESC ~Challenge
-The user marks a targeted creature with a Challenge, reducing both the target's and the user's own Armor Class by 10 for the next three rounds. The user deals additional unmitigated magic damage to the Challenged target. Additionally, the Challenged target can be seen within the fog of war and cannot turn invisible for the duration.
-  1st-11th level: 1d6 damage
-  12th-19th level: 2d6 damage
-  20th+ level: 4d6 damage~
+SAY NAME1 ~挑战！~
+SAY UNIDENTIFIED_DESC ~挑战
+使用者向目标发起挑战，接下来3回合内，目标与自身的护甲等级均降低10点。使用者对被挑战目标造成额外的无视护甲魔法伤害。此外，被挑战目标在战争迷雾中可见，且持续期间无法隐形。
+  1-11级：1d6点伤害
+  12-19级：2d6点伤害
+  20级及以上：4d6点伤害~
   LPF ALTER_EFFECT
     INT_VAR
       match_opcode = 139
-	  parameter1 = RESOLVE_STR_REF (~Challenged~)
+	  parameter1 = RESOLVE_STR_REF (~已受挑战~)
 END
 
 END

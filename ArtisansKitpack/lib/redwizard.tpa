@@ -28,24 +28,24 @@ LAF ADD_KIT_EX
 	
 	visible = 0
 	
-    mixed         = RESOLVE_STR_REF(~Red Wizard (Conjurer)~)
+    mixed         = RESOLVE_STR_REF(~红袍法师（咒术师）~)
 	
-    lower         = RESOLVE_STR_REF(~red wizard~)
+    lower         = RESOLVE_STR_REF(~红袍法师~)
 	
-    help          = RESOLVE_STR_REF(~RED WIZARD: The Red Wizards are the masters of Thay, the conquerors of that land’s native Rashemi, and the would-be magical overlords of Faerûn. They focus on a school of magic more intently than any specialist, achieving incredible mastery of magic within a very narrow focus. Seen as cruel and evil tyrants by people across Toril, a few choose to leave their region, assume secret identities, and practice magic without having to worry about political alliances and possible slave uprisings.
+    help          = RESOLVE_STR_REF(~红袍法师：红袍法师是塞伊的主宰者，是当地拉希米人的征服者，也是费伦大陆潜在的魔法霸主。他们比任何专精法师都更专注于单一魔法学派，在极窄的领域中达到了惊人的魔法造诣。托瑞尔各地的民众视他们为残暴邪恶的暴君，少数红袍法师选择离开故土，隐瞒身份，在不必顾虑政治同盟与奴隶起义的地方研习魔法。
 
-Advantages:
-– Enhanced Specialization: Upon becoming a Red Wizard, a character increases his devotion to his wizard school of specialization, gaining various bonuses towards their chosen school.
-– All enemies within a 30-ft. radius of the Red Wizard suffer a -4 penalty when making Saving Throws against spells from the specialist's chosen school from all sources in place of the specialist's normal modifier on spells cast.
-– May cast one extra spell per level in addition to the bonus gained by specialization.
-– Spell Power: The Red Wizard's arcane spells are cast as though one level higher than their actual level. This bonus increases by +1 at 3rd, 6th, 9th and 12th level.
-– Specialist Defense: The Red Wizard gains an additional +1 bonus to saving throws against spells from his specialist school. This bonus increases by +1 at 4th, 8th, 12th and 16th level.
+职业优势：
+–专精强化：成为红袍法师后，角色会进一步投入自身的法师专精学派，获得对应学派的多种加成。
+–红袍法师30尺范围内的所有敌人，对抗其专精学派法术的豁免检定受-4惩罚，取代原本专精的法术施法修正。
+–每等级可额外施展一个法术，数量在专精加成之外。
+–法术强效：红袍法师的奥术法术视为比自身实际等级高1级施展。3级、6级、9级与12级时，该加值各提升1级。
+–专精学派防御：红袍法师对抗自身专精学派法术的豁免检定额外+1。4级、8级、12级与16级时，该加值各提升1级。
 
-Disadvantages:
-– Must be of any non-good alignment.
-– In exchange for Enhanced Specialization, the Red Wizard must choose an additional prohibited school. Edwin's additional prohibited school is Illusion.~)
+职业限制：
+–必须为非善良阵营。
+–作为专精强化的代价，红袍法师必须额外选择一个禁学学派。艾德温的额外禁学学派为幻术系。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~RED WIZARD: The Red Wizards are the masters of Thay, the conquerors of that land’s native Rashemi, and the would-be magical overlords of Faerûn. They focus on a school of magic more intently than any specialist, achieving incredible mastery of magic within a very narrow focus. Seen as cruel and evil tyrants by people across Toril, a few choose to leave their region, assume secret identities, and practice magic without having to worry about political alliances and possible slave uprisings.~)
+    briefdesc     = RESOLVE_STR_REF(~红袍法师：红袍法师是塞伊的主宰者，专注单一魔法学派的造诣远超普通专精法师。他们被托瑞尔各地视为残暴的暴君，少数人选择离开故土、隐瞒身份在外修行。~)
 	
 	// fallen = 0
 	
@@ -135,12 +135,12 @@ Disadvantages:
 END
 
 COPY ~ArtisansKitpack/Mage/RedWizard/items/misc89.itm~ ~override~
-SAY NAME1 ~Edwin's Amulet~
-SAY DESC ~This is Edwin's birthright, inlaid with his family stone.
+SAY NAME1 ~艾德温的护符~
+SAY DESC ~这是艾德温的祖传之物，镶嵌着他的家族宝石。
 
-STATISTICS:
+属性：
 
-Weight: 1~
+重量：1~
 
  ACTION_FOR_EACH edwin IN edwin edwin2 edwin4 edwin6 edwin7 edwin9 edwin11 edwin12 edwin13 edwin15 BEGIN
 	ACTION_IF FILE_EXISTS_IN_GAME ~%edwin%.cre~ THEN BEGIN

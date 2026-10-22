@@ -225,9 +225,9 @@ ACTION_PHP_EACH	DMG_ARRAY_100 AS one => two	BEGIN
 END
 
 COPY_EXISTING ~C0A_A01.SPL~ OVERRIDE
-SAY NAME1 ~Analyze~
-SAY UNIDENTIFIED_DESC ~Analyze
-With this ability, the user carefully observes the target and identifies their strengths and weaknesses, revealing their attributes, Hit Die, Saving Throws, Magic Resistance, Damage Resistance and vulnerability to Poison and Backstabs. This ability may be used an unlimited number of times, but only one target may be analyzed at once.~
+SAY NAME1 ~洞察分析~
+SAY UNIDENTIFIED_DESC ~洞察分析
+使用此能力后，使用者将仔细观察目标，识别其优势与弱点，揭示目标的属性、生命骰、豁免检定、魔法抗性、伤害抗性，以及对毒素与背刺的易伤程度。该能力可无限制使用，但每次只能分析一个目标。~
 
 COPY_EXISTING ~C0A_A000.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 parameter2 = ANALYZE_LEVEL END

@@ -20,7 +20,7 @@ BUT_ONLY
 
  ACTION_PHP_EACH cleric_spell AS num => cleric BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%cleric%.spl~ BEGIN
-	PRINT ~%cleric% is a cleric spell~
+	PRINT ~%cleric% 是牧师法术~
 LAF ADD_CLASS_SPELL STR_VAR resref=EVAL ~%cleric%~ class_include = ~{'CLERIC_ALL', 'PALADIN', }~ kit_include=~{'C0_FAVORED_SOUL', }~ END
   END
  END
@@ -39,7 +39,7 @@ BUT_ONLY
 
  ACTION_PHP_EACH druid_spell AS num => druid BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%druid%.spl~ BEGIN
-	PRINT ~%druid% is a druid spell~
+	PRINT ~%druid% 是德鲁伊法术~
     LAF ADD_CLASS_SPELL STR_VAR resref= EVAL ~%druid%~ class_include = ~{'SHAMAN', 'DRUID_ALL', 'RANGER_ALL',}~ kit_exclude=~{'C0_FAVORED_SOUL', }~ END
   END
  END
@@ -68,19 +68,19 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
   PATCH_IF (SOURCE_SIZE > 0x71) BEGIN // avoid crashing on empty items
         LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 319 match_parameter1 = 21 match_parameter2 = 5 parameter1 = IDS_OF_SYMBOL (~KIT~ ~C0_FAVORED_SOUL~) parameter2 = 9 match_power = 1 power = 0 END
         LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 319 match_parameter1 = 21 match_parameter2 = 5 opcode = 0 parameter1 = 0 parameter2 = 0 special = 0 power = 0 STR_VAR resource = C0HTD_NM END
-        LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 319 match_parameter2 = C0_MONK_EQUIPMENT parameter1 = IDS_OF_SYMBOL (~KIT~ ~C0_FAVORED_SOUL~) parameter2 = 9 timing = 2 power = 0 special = RESOLVE_STR_REF (~Favored Soul~) END
+        LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 319 match_parameter2 = C0_MONK_EQUIPMENT parameter1 = IDS_OF_SYMBOL (~KIT~ ~C0_FAVORED_SOUL~) parameter2 = 9 timing = 2 power = 0 special = RESOLVE_STR_REF (~天佑者~) END
         LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 319 match_parameter1 = 21 match_parameter2 = 5 target = 1 parameter1 = 0 parameter2 = IS_FAVORED_SOUL timing = 2 power = 2 match_power = 0 END
     READ_BYTE    0x1E cleric //reads the byte containing the fighter usability flag
     READ_BYTE    0x21 druid //reads the byte containing the fighter usability flag
     PATCH_IF ((cleric BAND 0b10000000) = 0b10000000) BEGIN 
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = IDS_OF_SYMBOL (~KIT~ ~C0_FAVORED_SOUL~) parameter2 = 9 timing = 2 power = 0 special = RESOLVE_STR_REF (~Favored Soul~) END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = IDS_OF_SYMBOL (~KIT~ ~C0_FAVORED_SOUL~) parameter2 = 9 timing = 2 power = 0 special = RESOLVE_STR_REF (~天佑者~) END
   END
     PATCH_IF ((cleric BAND 0b10000000) = 0b00000000) AND ((druid BAND 0b01000000) = 0b01000000) BEGIN 
       READ_SHORT    0x1C type //reads the byte containing item type
       READ_BYTE    0x21 row4
         WRITE_BYTE    0x21 (row4 BAND 0b10111111)
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = 0 parameter2 = IS_FAVORED_SOUL timing = 2 power = 2 special = RESOLVE_STR_REF (~Druid
-Shaman~) END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = 0 parameter2 = IS_FAVORED_SOUL timing = 2 power = 2 special = RESOLVE_STR_REF (~德鲁伊
+萨满~) END
   END
     END
 BUT_ONLY

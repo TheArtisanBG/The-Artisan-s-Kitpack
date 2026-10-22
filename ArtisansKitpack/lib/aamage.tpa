@@ -1,49 +1,48 @@
 
-OUTER_SPRINT kit_description ~ARCANE ARCHER/MAGE: This character can use the abilities of an Arcane Archer and a Mage, though they cannot cast spells while wearing armor.
+OUTER_SPRINT kit_description ~魔射手/法师：该角色可同时使用魔射手与法师的能力，但身着护甲时无法施展法术。
 
-ARCANE ARCHER: Master of the elven warbands, the arcane archer is a warrior skilled in using magic to supplement their combat prowess. Beyond the woods, arcane archers gain renown throughout entire kingdoms for their supernatural accuracy with a bow and their ability to imbue their arrows with magic. In a group, they can strike fear into an entire enemy army.
+魔射手：精灵战团的精锐，魔射手是擅长以魔法辅弼战技的战士。走出森林之外，魔射手凭借超凡的弓术与附魔箭矢的能力，在诸国间声名远扬。队伍之中，他们足以令整支敌军闻风丧胆。
 
-Advantages:
+职业优势：
+–可将长弓、短弓或十字弓修习至宗师级。
+–1级起，所有远程武器命中+1，之后每提升5级再+1。
+–获得「强化箭矢」能力。
 
-– May achieve grandmastery in longbows, shortbows or crossbows.
-– +1 to hit with any missile weapon at level 1 and every 5 levels thereafter.
-– Gains the Enhance Arrow ability.
+强化箭矢：魔射手被动为<PRO_HISHER>箭矢注入魔力。其射出的投射物始终视为+1附魔武器，并额外造成1点魔法伤害；每提升5级，附魔等级与魔法伤害各+1，20级时达到最高+5附魔与5点魔法伤害。额外伤害受目标魔法抗性减免。
 
-ENHANCE ARROW: The arcane archer passively imbues <PRO_HISHER> arrows with magic. Projectiles launched by the arcane archer are always treated as weapons of +1 enchantment and deal one extra point of magic damage, increasing by one for every five levels gained to a maximum of +5 enchantment and five magic damage at 20th level. Additional damage is affected by the target's magic resistance.
+–3级：每日可使用一次「熵光护盾」。
 
-– 3rd level: May use Entropic Shield once per day.
+熵光护盾：魔射手周身浮现出五彩辉光的魔法力场，免疫普通远程武器，并对远程武器的护甲等级获得-2加值，持续时长为每等级1轮。10级时加值提升至-4，17级时提升至-6。
 
-ENTROPIC SHIELD: A magical field glowing with a multicolored hue appears around the arcane archer, providing immunity to normal missiles and a –2 bonus to armor class against missile weapons for 1 round per level. This bonus increases to –4 at 10th level and –6 at 17th level.
+–5级：每日可使用三次「魔爆箭矢」能力。
 
-– 5th level: May use Imbue Arrow ability three times per day.
+魔爆箭矢：魔射手以奥术魔法为<PRO_HISHER>下一轮内射出的下一发箭矢附魔，使其命中后爆炸，每5级额外造成1d6点火焰范围伤害。
 
-IMBUE ARROW: Using arcane magic, the arcane archer enchants <PRO_HISHER> next missile within one round to explode, dealing 1d6 additional fire damage for every five levels gained thereafter in an area of effect.
+–9级：每日可使用一次「觅心箭矢」能力。
 
-– 9th level: May use Seeker Arrow ability once per day.
+觅心箭矢：技艺精湛的魔射手可为<PRO_HISHER>箭矢附魔，使其必中目标。<PRO_HISHER>下一轮内的下一次远程攻击必定暴击，且每提升5级额外造成2点伤害。
 
-SEEKER ARROW: A skilled arcane archer can enchant <PRO_HISHER> arrows to strike its target unerringly. <PRO_HISHER> next missile attack within one round is a guaranteed critical hit and deals two points of extra damage for every five levels gained thereafter.
+–13级：每日可使用一次「相位箭矢」能力。
 
-– 13th level: May use Phase Arrow ability once per day.
+相位箭矢：经验丰富的魔射手可为<PRO_HISHER>下一轮内的下一发箭矢附魔，使其化为虚体投射物穿透护甲，目标的远程抗性降低50%，同时对远程武器的护甲等级每5级降低2点。
 
-PHASE ARROW: An experienced arcane archer can enchant <PRO_HISHER> next arrow within one round to become an incorporeal missile that penetrates armor, reducing the target's missile resistance by 50% as well as their armor class vs. missiles by two points for every five levels gained thereafter.
+–17级：每日可使用一次「死亡箭矢」能力。
 
-– 17th level: May use Arrow of Death ability once per day.
+死亡箭矢：魔射手大师可为<PRO_HISHER>下一轮内的下一发箭矢附魔，目标若未通过死亡豁免即被即刻斩杀。每提升5级，目标的豁免惩罚增加1点。
 
-ARROW OF DEATH: A master arcane archer can enchant <PRO_HISHER> next arrow within one round to instantly slay <PRO_HISHER> foe on a failed save vs. death. Target's saving throw penalty is increased by one for every 5 levels gained thereafter.
-
-Disadvantages:
-– THAC0 penalty of 3 when wielding a melee weapon.
-– Race restricted to elf or half–elf.KIT_DISADV_1
-– May not exceed proficiency (one slot) in weapons other than longbows, shortbows and crossbows.
-– May not exceed proficiency (one slot) in any weapon style.
-– May not wear armor heavier than elven chain mail.~
+职业限制：
+–手持近战武器时，零级命中值（THAC0）受-3惩罚。
+–仅限精灵或半精灵种族。KIT_DISADV_1
+–除长弓、短弓与十字弓外，其他武器的熟练等级不得超过入门级（1点熟练槽）。
+–所有武器风格的熟练等级不得超过入门级（1点熟练槽）。
+–不得穿戴比精灵锁甲更重的护甲。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Power Attack or Expertise.
-– Does not gain Specialization in all weapons at 16th level.~
+–无法使用「猛力攻击」与「武器娴熟」。
+–16级时不会获得全武器专精。~
 
 END
 
@@ -80,13 +79,13 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 7
 	
-    mixed         = RESOLVE_STR_REF(~Arcane Archer / Mage~)
+    mixed         = RESOLVE_STR_REF(~魔射手 / 法师~)
 	
-    lower         = RESOLVE_STR_REF(~arcane archer / mage~)
+    lower         = RESOLVE_STR_REF(~魔射手 / 法师~)
 	
     help          = RESOLVE_STR_REF(~%kit_description%~)
 	
-    briefdesc     = RESOLVE_STR_REF(~ARCANE ARCHER/MAGE: This character can use the abilities of an Arcane Archer and a Mage, though they cannot cast spells while wearing armor.~)
+    briefdesc     = RESOLVE_STR_REF(~魔射手/法师：该角色可同时使用魔射手与法师的能力，但身着护甲时无法施展法术。~)
   STR_VAR
     kit_name      = ~C0AA2~
 	
@@ -233,7 +232,7 @@ COPY_EXISTING ~C0AAZX.SPL~ ~OVERRIDE~
  LPF ALTER_EFFECT INT_VAR match_opcode = 177 parameter1 = IDS_OF_SYMBOL (~KIT~ ~C0AA2~) END
 
 COPY_EXISTING ~C0AAINN.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~Arcane Archer~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~魔射手~) END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~C0FIG04.SPL~ THEN BEGIN
 COPY_EXISTING ~C0FIG04.SPL~ ~OVERRIDE~

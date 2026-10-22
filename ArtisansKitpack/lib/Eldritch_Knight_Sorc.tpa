@@ -38,39 +38,39 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 19
 	
-    mixed         = RESOLVE_STR_REF(~Eldritch Knight~)
+    mixed         = RESOLVE_STR_REF(~奥法骑士~)
 	
-    lower         = RESOLVE_STR_REF(~eldritch knight~)
+    lower         = RESOLVE_STR_REF(~奥法骑士~)
 	
-    help          = RESOLVE_STR_REF(~ELDRITCH KNIGHT: Studying the martial and arcane arts to equal degree, the eldritch knight is a versatile combatant who can cast fireball on their foes or charge them with sword drawn. The eldritch knight takes pride in their ability to use the right technique for the job: spells against physically tough foes and force of arms against spellcasting enemies. Eldritch knights split their time between physical training to become better soldiers and arcane study to learn more powerful spells. They tend to be driven individuals, because simultaneously perfecting their spellcasting and combat prowess requires immense time and effort.
+    help          = RESOLVE_STR_REF(~奥法骑士：兼修武道与奥术，造诣不相上下，是攻守兼备的多面战士。既能向敌人轰出火球术，也能拔剑冲锋。奥法骑士引以为傲的是，总能因敌制宜：对阵肉身强悍的敌人便用法术，对阵施法者便以兵刃相向。他们将时间平分在体能训练与奥术研习之间，前者让他们成为更优秀的战士，后者让他们学会更强的法术。奥法骑士往往都是坚毅执着之人——要同时精进施法与战技，需要付出海量的时间与心血。
 
-Advantages:
-– May wear any armor.
-– THAC0 progresses as though a Fighter of the same level.
-– Martial Training: The Eldritch Knight automatically becomes Specialized in any weapon or style they put proficiency points into.
-– Armored Caster: The Eldritch Knight may cast spells while wearing up to studded leather.
-– Combat Casting: The Eldritch Knight is skilled at casting spells in the midst of combat. If there is an enemy within 5-ft. of the Eldritch Knight, they gain an increased casting speed of 2.
-– 3rd level: May use the Eldritch Strike ability once per day. Gains extra uses at levels 6, 9, 12 and 15.
+职业优势：
+–可穿戴任意护甲。
+–零级命中值（THAC0）成长等同于同等级战士。
+–武道训练：奥法骑士在投入熟练点的任意武器或战斗风格上，自动达到专精级。
+–护甲施法：奥法骑士身着至多钉皮甲时仍可施法。
+–战斗施法：奥法骑士擅长在激战中施法。5尺范围内有敌人时，施法速度+2。
+–3级：每日可使用一次「奥术打击」能力。6、9、12、15级各额外获得一次使用次数。
 
-ELDRITCH STRIKE: The Eldritch Knight empowers <PRO_HISHER> next successful attack to weaken their opponent's resistance to their spells, reducing their Saving Throws by 2 and Magic Resistance by 25% for three rounds. This effect is non-cumulative on the same target.
+奥术打击：奥法骑士为<PRO_HISHER>下一次成功的攻击注入魔力，削弱目标对自身法术的抗性，使其豁免检定-2，魔法抗性降低25%，持续3回合。同一目标身上该效果不可叠加。
 
-– 6th level: Eldritch Strike reduces Saving Throws by 3 and Magic Resistance by 50%.
-– 10th level: May cast Dimension Door twice per day.
+–6级：奥术打击的豁免惩罚提升至-3，魔法抗性降低50%。
+–10级：每日可施展两次「任意门」。
 
-DIMENSION DOOR: This spell transports the caster to any place within the visual range of the caster. When the spell is cast, a dimensional portal opens up in front of the caster, who immediately steps through it. Upon passing through the portal, the caster finds <PRO_HIMHER>self at <PRO_HISHER> chosen destination.
+任意门：本法术将施法者传送至视野范围内的任意地点。施法时，施法者面前会开启一道次元传送门，随即跨步而入。穿过传送门后，<PRO_HIMHER>便会出现在<PRO_HISHER>选定的目的地。
 
-– 12th level: Battle Caster: The Eldritch Knight may cast spells while wearing any armor.
-– 12th level: Eldritch Strike reduces Saving Throws by 4 and Magic Resistance by 100%.
-– 16th level: Improved Combat Casting: Bonus to casting speed increased to 4.
+–12级：战地施法：奥法骑士身着任意护甲时均可施法。
+–12级：奥术打击的豁免惩罚提升至-4，魔法抗性降低100%。
+–16级：精通战斗施法：施法速度加成提升至4。
 
-– Hit Die: d8
+–生命骰：d8
 
-Disadvantages:
-– May cast two fewer spells per level per day.
-– -1 penalty to casting level starting from 2nd level.
-– -1 penalty to casting speed when outside of Combat Casting range.~)
+职业限制：
+–每个法术等级每日可施展的法术数量减少2个。
+–从2环起，施法等级受-1惩罚。
+–超出战斗施法范围时，施法速度受-1惩罚。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~ELDRITCH KNIGHT: Studying the martial and arcane arts to equal degree, the eldritch knight is a versatile combatant who can cast fireball on their foes or charge them with sword drawn. The eldritch knight takes pride in their ability to use the right technique for the job: spells against physically tough foes and force of arms against spellcasting enemies. Eldritch knights split their time between physical training to become better soldiers and arcane study to learn more powerful spells. They tend to be driven individuals, because simultaneously perfecting their spellcasting and combat prowess requires immense time and effort.~)
+    briefdesc     = RESOLVE_STR_REF(~奥法骑士：兼修武道与奥术，造诣不相上下，是攻守兼备的多面战士。既能向敌人轰出火球术，也能拔剑冲锋。奥法骑士引以为傲的是，总能因敌制宜：对阵肉身强悍的敌人便用法术，对阵施法者便以兵刃相向。他们将时间平分在体能训练与奥术研习之间，前者让他们成为更优秀的战士，后者让他们学会更强的法术。奥法骑士往往都是坚毅执着之人——要同时精进施法与战技，需要付出海量的时间与心血。~)
 	
 	// fallen = 0
 	

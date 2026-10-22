@@ -34,7 +34,7 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
       PATCH_IF (itemtype = 35) OR (itemtype = 11) BEGIN
         WRITE_BYTE    0x20 (row3 BAND 0b11101111)
       END
-        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = 0 parameter2 = C0_MYSTIC_FIRE_EQUIPMENT timing = 2 power = 2 special = RESOLVE_STR_REF (~Paladin~) END
+        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = 0 parameter2 = C0_MYSTIC_FIRE_EQUIPMENT timing = 2 power = 2 special = RESOLVE_STR_REF (~圣武士~) END
     END
   END
 BUT_ONLY
@@ -74,9 +74,9 @@ ACTION_FOR_EACH description IN
 
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0MF" BEGIN
           READ_2DA_ENTRY index 4 col_count kit_desc
-          SPRINT old_desc ~Advantages:~
-          SPRINT new_desc ~Advantages:
-– May use Mage wands and scrolls.~
+          SPRINT old_desc ~职业优势：~
+          SPRINT new_desc ~职业优势：
+–可使用法师法杖与卷轴。~
           GET_STRREF %kit_desc% desc_text
           INNER_PATCH_SAVE desc_text ~%desc_text%~ BEGIN
             REPLACE_TEXTUALLY EXACT_MATCH ~%old_desc%~ ~%new_desc%~

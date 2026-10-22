@@ -102,10 +102,10 @@ ACTION_FOR_EACH description IN
 //BERSERKER
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "BERSERKER" BEGIN
           READ_2DA_ENTRY index 4 col_count berserker_desc
-          SPRINT old_berserker ~– May not Specialize in ranged weapons.~
-          SPRINT new_berserker ~– May not use Expertise or Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.
-– May not Specialize in ranged weapons.~
+          SPRINT old_berserker ~-无法精通远程武器。~
+          SPRINT new_berserker ~-无法使用寓守于攻与快速射击。
+-16级时不会获得全武器专精。
+-无法精通远程武器。~
           GET_STRREF %berserker_desc% berserker_text
           INNER_PATCH_SAVE berserker_text ~%berserker_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_berserker%~ ~%new_berserker%~
@@ -117,9 +117,9 @@ ACTION_FOR_EACH description IN
 //WIZARDSLAYER
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "WIZARD_SLAYER" BEGIN
           READ_2DA_ENTRY index 4 col_count wizardslayer_desc
-          SPRINT old_wizardslayer ~Disadvantages:~
-          SPRINT new_wizardslayer ~Disadvantages:
-– Does not gain Specialization in all weapons at 16th level.~
+          SPRINT old_wizardslayer ~职业限制：~
+          SPRINT new_wizardslayer ~职业限制：
+–16级时不会获得全武器专精。~
           GET_STRREF %wizardslayer_desc% wizardslayer_text
           INNER_PATCH_SAVE wizardslayer_text ~%wizardslayer_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_wizardslayer%~ ~%new_wizardslayer%~
@@ -131,10 +131,10 @@ ACTION_FOR_EACH description IN
 //KENSAI
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "KENSAI" BEGIN
           READ_2DA_ENTRY index 4 col_count kensai_desc
-          SPRINT old_kensai ~Disadvantages:~
-          SPRINT new_kensai ~Disadvantages:
-– May not use Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.~
+          SPRINT old_kensai ~职业限制：~
+          SPRINT new_kensai ~职业限制：
+–无法使用快速射击。
+–16级时不会获得全武器专精。~
           GET_STRREF %kensai_desc% kensai_text
           INNER_PATCH_SAVE kensai_text ~%kensai_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_kensai%~ ~%new_kensai%~
@@ -146,12 +146,12 @@ ACTION_FOR_EACH description IN
 //DWARVEN_DEFENDER
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "DWARVEN_DEFENDER" BEGIN
           READ_2DA_ENTRY index 4 col_count dwarvendefender_desc
-          SPRINT old_dwarvendefender ~– Race restricted to dwarf.~
-          SPRINT new_dwarvendefender ~– Race restricted to dwarf.
-– May not use Improved Power Attack and Improved Expertise.
-– May not use Rapid Shot.
-– Does not gain Specialization in all weapons at 16th level.
-– Does not gain Improved Initiative.~
+          SPRINT old_dwarvendefender ~–种族必须是矮人~
+          SPRINT new_dwarvendefender ~–种族必须是矮人
+–无法使用精通猛力攻击与精通寓守于攻。
+–无法使用快速射击。
+–16级时不会获得全武器专精。
+–不会获得精通先攻。~
           GET_STRREF %dwarvendefender_desc% dwarvendefender_text
           INNER_PATCH_SAVE dwarvendefender_text ~%dwarvendefender_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_dwarvendefender%~ ~%new_dwarvendefender%~
@@ -164,18 +164,18 @@ ACTION_FOR_EACH description IN
 //BARBARIAN
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "BARBARIAN" BEGIN
           READ_2DA_ENTRY index 4 col_count barbarian_desc
-          SPRINT old_barbarian ~– 11th level: Gains 10% resistance to crushing, slashing, piercing, and missile damage. An additional 5% is gained at levels 15 and 19.~
-          SPRINT new_barbarian ~– 5th level: May use the Power Attack modal ability.
+          SPRINT old_barbarian ~-11级：获得10%的钝击、挥砍、穿刺和远程伤害抗性。在15级和19级时，各额外获得5%抗性。~
+          SPRINT new_barbarian ~-5级：可使用猛力攻击模式能力。
 
-POWER ATTACK: The Barbarian forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Barbarian must have 17 or greater Strength to activate this ability.
+猛力攻击：野蛮人牺牲命中精度以换取更重的伤害，每轮近战命中降低3点，近战伤害提升3点。野蛮人力量需达到17点及以上才能激活此能力。
 
-– 6th level: May use the Rapid Shot modal ability.
+-6级：可使用快速射击模式能力。
 
-RAPID SHOT: The Barbarian may make an additional ranged attack per round at a -4 penalty to hit.
+快速射击：野蛮人每轮可额外进行一次远程攻击，但命中判定受到-4减值。
 
-– 11th level: Gains 10% resistance to crushing, slashing, piercing, and missile damage. An additional 5% is gained at levels 15 and 19.
-– 12th level: Improved Rapid Shot: The Barbarian’s penalty to hit while Rapid Shot is active is reduced to -2.
-– 14th level: May use Improved Power Attack, which provide 6 points to the original ability's bonuses and penalties.~
+-11级：获得10%的钝击、挥砍、穿刺和远程伤害抗性。在15级和19级时，各额外获得5%抗性。
+-12级：精通快速射击：快速射击激活时的命中减值降低至-2。
+-14级：可使用精通猛力攻击，原能力的加成与减值均提升至6点。~
 
           GET_STRREF %barbarian_desc% barbarian_text
           INNER_PATCH_SAVE barbarian_text ~%barbarian_text%~ BEGIN
@@ -202,32 +202,32 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~%CLASSTEXT%.2da~) BEGIN
 	  READ_2DA_ENTRY_FORMER rows row 0 ~text~ // read column value
 	  PATCH_IF ~%text%~ STRING_EQUAL_CASE ~FIGHTER~ BEGIN
 	    SET patch_row = %row%
-		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~FIGHTER: The Fighter is a champion, swords<PRO_MANWOMAN>, soldier, and brawler who lives or dies by <PRO_HISHER> knowledge of weapons and tactics. Fighters can be found at the front of any battle, contesting toe-to-toe with monsters and villains. Through extensive training and experience, a Fighter may master many weapons throughout <PRO_HISHER> lifetime. A good Fighter needs to be strong and healthy if <PRO_HESHE> hopes to survive.
+		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~战士：战士是战场的勇士、剑术<PRO_MANWOMAN>、军人与格斗者，凭借对武器与战术的掌握决定生死。无论何种战场，战士都身先士卒，与怪物和敌人正面交锋。通过严苛的训练与丰富的经验，战士可在一生中精通多种武器。优秀的战士必须强健壮硕，才能在战场上存活。
 
-CLASS FEATURES: 
+职业特性：
 
-– May wear helmets.
-– May wear any armor and use any weapon.
-– May achieve Grand Mastery (five slots) with any weapon class.
-– May achieve Specialization (two slots) in any fighting style and allocate three slots in Two-Weapon Style.
-– 5th level: May use the Power Attack and Expertise modal abilities. Only one of the two may be activated at any time.
+–可以穿戴头盔。
+–可以穿戴任何种类的盔甲、使用全部类别的武器。
+–可以对任何武器种类达到大宗师级别（5星）精通等级。
+–可以精通（2星）任何战斗方式，双持武器可分配3点。
+–5级：可使用猛力攻击与寓守于攻模式能力，同一时间仅可激活其中一种。
 
-POWER ATTACK: The Fighter forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Fighter must have 17 or greater Strength to activate this ability.
+猛力攻击：战士牺牲命中精度以换取更重的伤害，每轮近战命中降低3点，近战伤害提升3点。战士力量需达到17点及以上才能激活此能力。
 
-EXPERTISE: The Fighter focuses on defense at the expense of accuracy, sacrificing 3 points of THAC0 to increase their Armor Class by 3. The Fighter must have 15 or greater Intelligence to activate this ability.
+寓守于攻：战士专注于防御，牺牲命中精度来提升护甲等级，每轮命中降低3点，护甲等级提升3点。战士智力需达到15点及以上才能激活此能力。
 
-– 6th level: May use the Rapid Shot modal ability.
+–6级：可使用快速射击模式能力。
 
-RAPID SHOT: The Fighter may make an additional ranged attack per round at a -4 penalty to hit.
+快速射击：战士每轮可额外进行一次远程攻击，但命中判定受到-4减值。
 
-– 12th level: Improved Rapid Shot: The Fighter’s penalty to hit while Rapid Shot is active is reduced to -2.
-– 14th level: May use Improved Power Attack and Improved Expertise, which provide 6 points to the original abilities' bonuses and penalties.
-– 16th level: Gains Specialization in all weapons that the Fighter is not already Specialized or greater in.
-– 20th level: Improved Initiative: The Fighter gains a bonus half attack per round.
+–12级：精通快速射击：快速射击激活时的命中减值降低至-2。
+–14级：可使用精通猛力攻击与精通寓守于攻，原能力的加成与减值均提升至6点。
+–16级：所有尚未达到专精及以上熟练度的武器，自动获得专精。
+–20级：精通先攻：战士每轮额外获得半次攻击次数。
 
-– Hit Die: d10
+–生命骰：d10
 
-Prime Requisites For Dual-Classing: Strength~)
+主要兼职要求：力量~)
 	  END
 	END
   BUT_ONLY
@@ -436,46 +436,46 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Power Attack~) STR_VAR bam_file = C0FIG01I RET C0FIG01I = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Improved Power Attack~) STR_VAR bam_file = C0FIG01J RET C0FIG01J = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Expertise~) STR_VAR bam_file = C0FIG02I RET C0FIG02I = icon END
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Improved Expertise~) STR_VAR bam_file = C0FIG02J RET C0FIG02J = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~猛力攻击~) STR_VAR bam_file = C0FIG01I RET C0FIG01I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~精通猛力攻击~) STR_VAR bam_file = C0FIG01J RET C0FIG01J = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~寓守于攻~) STR_VAR bam_file = C0FIG02I RET C0FIG02I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~精通寓守于攻~) STR_VAR bam_file = C0FIG02J RET C0FIG02J = icon END
 
 COPY_EXISTING ~C0FIG01X.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Power Attack—Inadequate Strength~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~猛力攻击—力量不足~) END
 COPY_EXISTING ~C0FIG01.SPL~ OVERRIDE
-SAY NAME1 ~Power Attack~
-SAY UNIDENTIFIED_DESC ~Power Attack
-The Fighter forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Fighter must have 17 or greater Strength to activate this ability.~
+SAY NAME1 ~猛力攻击~
+SAY UNIDENTIFIED_DESC ~猛力攻击
+战士牺牲命中精度以换取更重的伤害，每轮近战命中降低3点，近战伤害提升3点。战士力量需达到17点及以上才能激活此能力。~
 	
 COPY_EXISTING ~C0FIG01a.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Power Attack Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~猛力攻击 激活~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 272 special = C0FIG01I END
 
 COPY_EXISTING ~C0FIG01b.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Improved Power Attack Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~精通猛力攻击 激活~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 272 special = C0FIG01J END
 
 COPY_EXISTING ~C0FIG01c.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Power Attack Inactive~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~猛力攻击 未激活~) END
 
 COPY_EXISTING ~C0FIG02X.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Expertise—Inadequate Intelligence~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~寓守于攻—智力不足~) END
 COPY_EXISTING ~C0FIG02.SPL~ OVERRIDE
-SAY NAME1 ~Expertise~
-SAY UNIDENTIFIED_DESC ~Expertise
-The Fighter focuses on defense at the expense of accuracy, sacrificing 3 points of THAC0 to increase their Armor Class by 3. The Fighter must have 15 or greater Intelligence to activate this ability.~
+SAY NAME1 ~寓守于攻~
+SAY UNIDENTIFIED_DESC ~寓守于攻
+战士专注于防御，牺牲命中精度来提升护甲等级，每轮命中降低3点，护甲等级提升3点。战士智力需达到15点及以上才能激活此能力。~
 
 COPY_EXISTING ~C0FIG02a.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Expertise Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~寓守于攻 激活~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 272 special = C0FIG02I END
 
 COPY_EXISTING ~C0FIG02b.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Improved Expertise Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~精通寓守于攻 激活~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 272 special = C0FIG02J END
 
 COPY_EXISTING ~C0FIG02c.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~Expertise Inactive~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 opcode = 330 parameter1 = RESOLVE_STR_REF (~寓守于攻 未激活~) END
 
 INCLUDE ~%MOD_FOLDER%/spells/rapidshot.tpa~
 

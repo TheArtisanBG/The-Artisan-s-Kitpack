@@ -61,7 +61,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Spellslayer Strike~) STR_VAR bam_file = C0WSL11I RET C0WSL11I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~破法斩~) STR_VAR bam_file = C0WSL11I RET C0WSL11I = icon END
 
 //	Array of Restistance / Stat#
 ACTION_DEFINE_ASSOCIATIVE_ARRAY	MRES_DMG_ARRAY_0_9	BEGIN
@@ -118,29 +118,29 @@ ACTION_PHP_EACH	MRES_DMG_ARRAY_50_128 AS one => two	BEGIN
 	LAF	ADD_SPLPROT	INT_VAR	stat = 260	value = min	relation = 	max	RET	EVAL ~%one%~ = new_row	END
 END
 
-OUTER_SPRINT kit_description ~WIZARD SLAYER: This warrior has been specially trained by <PRO_HISHER> sect to excel in hunting and combating spellcasters of all kinds, developing an innate power to nullify and disrupt magical energies of all kinds. Under specific situations, the Wizard Slayer may even use this power more offensively, unleashing powerful blows against non-magic users. This energy, however, has the unfortunate side-effect of negating the benefits of many magical items, rendering them useless in <PRO_HISHER> hands.
+OUTER_SPRINT kit_description ~屠法者：这名战士受其教派的专门训练，精于狩猎与对抗各类施法者，练就了消解、扰乱各类魔法能量的天赋。在特定情形下，屠法者甚至能将这份力量用于进攻，对非魔法使用者释放强力一击。但这份能量也有弊端：它会抵消许多魔法物品的增益，让它们在<PRO_HISHER>手中形同虚设。
 
-Advantages:
-– Each successful hit made by the Wizard Slayer bestows a cumulative chance of spell failure on the target equal to their 10% + 1% per level for 15 rounds.
-– Gains Magic Resistance equal to 10% + 1% per level.
-– 4th level: May use the Spellslayer Strike ability twice per day, gaining an additional use every two levels thereafter.
+职业优势：
+-屠法者每次成功命中会使目标累积施法失败几率，数值为10%+每等级1%，持续15回合。
+-获得魔法抗性，数值为10%+每等级1%。
+-4级：每日可使用两次「破法斩」，之后每提升2级额外获得1次使用次数。
 
-SPELLSLAYER STRIKE: The Wizard Slayer expends some of their anti-magical energy to perform a charged attack, temporarily sacrificing a chosen amount of Magic Resistance to increase their THAC0 and deal bonus unmitigated damage equal to the same amount while also removing combat protection effects from the target. The Wizard Slayer regains their Magic Resistance after two turns have passed.
+破法斩：屠法者消耗部分反魔法能量发动一次蓄力攻击，临时牺牲指定数值的魔法抗性，以提升自身零级命中值，并造成等额的额外真实伤害，同时移除目标的战斗防护效果。两回合后，屠法者恢复自身魔法抗性。
 
-– 8th level: May use the Antimagic Field ability once per day. Gains an additional use at levels 10 and 12.
+-8级：每日可使用一次「反魔法力场」。10级与12级各额外获得1次使用次数。
 
-ANTIMAGIC FIELD: The Wizard Slayer extends their innate Magic Resistance to all nearby allies within a 15-ft. radius, granting them half of the Wizard Slayer's base amount. This effect lasts for five rounds, and the Wizard Slayer loses their own innate Magic Resistance for the duration and may not use Spellslayer Strike while the effect is active.
+反魔法力场：屠法者将自身的天赋魔法抗性延伸至15尺范围内的所有友军，为其提供自身基础魔法抗性的一半。效果持续5回合，期间屠法者失去自身的天赋魔法抗性，且无法使用破法斩。
 
-– 16th level: Spell Barrier: The Wizard Slayer absorbs the effects of the first spell targeted at them of any spell level. This does not prevent the effects of area effect spells and clouds that do not target the Wizard Slayer. The Spell Barrier is restored after one turn has passed.
+-16级：法术屏障：屠法者可吸收首个以自身为目标的任意环级法术的效果。该效果无法抵挡不以屠法者为目标的区域法术与云雾效果。一回合后法术屏障恢复。
 
-Disadvantages:KIT_DISADV_1
-– May not use any magic items that do not have a Magic Resistance component apart from weapons and armor.~
+职业限制：KIT_DISADV_1
+-除武器与护甲外无法使用任何魔法物品。~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– Does not gain Specialization in all weapons at 16th level.~
+-16级时不会获得全武器专精。~
 
 END
 
@@ -200,35 +200,35 @@ LPF ALTER_EFFECT INT_VAR match_opcode = 326 match_special = 3 parameter2 = MRES_
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 match_special = 4 parameter2 = MRES_DMG_ARRAY_30_39 END
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 match_special = 5 parameter2 = MRES_DMG_ARRAY_40_49 END
 LPF ALTER_EFFECT INT_VAR match_opcode = 326 match_special = 6 parameter2 = MRES_DMG_ARRAY_50_128 END
-SAY NAME1 ~Spellslayer Strike~
-SAY UNIDENTIFIED_DESC ~Spellslayer Strike
-The Wizard Slayer expends some of their anti-magical energy to perform a charged attack, temporarily sacrificing a chosen amount of Magic Resistance to increase their THAC0 and deal bonus unmitigated damage equal to the same amount while also removing combat protection effects from the target. The Wizard Slayer regains their Magic Resistance after two turns have passed.
+SAY NAME1 ~破法斩~
+SAY UNIDENTIFIED_DESC ~破法斩
+屠法者消耗部分反魔法能量发动一次蓄力攻击，临时牺牲指定数值的魔法抗性，以提升自身零级命中值，并造成等额的额外真实伤害，同时移除目标的战斗防护效果。两回合后，屠法者恢复自身魔法抗性。
 
-The effects of Spellslayer Strike bypass all weapon protections, even if the attack itself is negated.~
+破法斩的效果无视所有武器防护，即便攻击本身被抵消也依然生效。~
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 
 COPY_EXISTING ~C0WSL01.spl~ ~override~
-SAY UNIDENTIFIED_DESC ~Spellslayer Strike
-The Wizard Slayer expends some of their anti-magical energy to perform a charged attack, temporarily sacrificing a chosen amount of Magic Resistance to increase their THAC0 and deal bonus unmitigated damage equal to the same amount while also removing combat protection effects from the target. The Wizard Slayer regains their Magic Resistance after two turns have passed.
+SAY UNIDENTIFIED_DESC ~破法斩
+屠法者消耗部分反魔法能量发动一次蓄力攻击，临时牺牲指定数值的魔法抗性，以提升自身零级命中值，并造成等额的额外真实伤害，同时移除目标的战斗防护效果。两回合后，屠法者恢复自身魔法抗性。
 
-The effects of Spellslayer Strike bypass all weapon protections, even if the attack itself is negated.~
+破法斩的效果无视所有武器防护，即便攻击本身被抵消也依然生效。~
  
 END
 
 COPY_EXISTING ~C0WSL011.SPL~ OVERRIDE
-SAY NAME1 ~Spellslayer Strike—10% Magic Resistance~
+SAY NAME1 ~破法斩 — 10%魔法抗性~
 COPY_EXISTING ~C0WSL012.SPL~ OVERRIDE
-SAY NAME1 ~Spellslayer Strike—20% Magic Resistance~
+SAY NAME1 ~破法斩 — 20%魔法抗性~
 COPY_EXISTING ~C0WSL013.SPL~ OVERRIDE
-SAY NAME1 ~Spellslayer Strike—30% Magic Resistance~
+SAY NAME1 ~破法斩 — 30%魔法抗性~
 COPY_EXISTING ~C0WSL014.SPL~ OVERRIDE
-SAY NAME1 ~Spellslayer Strike—40% Magic Resistance~
+SAY NAME1 ~破法斩 — 40%魔法抗性~
 COPY_EXISTING ~C0WSL015.SPL~ OVERRIDE
-SAY NAME1 ~Spellslayer Strike—50% Magic Resistance~
+SAY NAME1 ~破法斩 — 50%魔法抗性~
 
 COPY_EXISTING ~C0WSL01v.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Inadequate Magic Resistance~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~魔法抗性不足~) END
 
 COPY_EXISTING ~C0WSL011.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0WSL11I END
@@ -246,6 +246,6 @@ COPY_EXISTING ~C0WSL015.SPL~ OVERRIDE
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0WSL11I END
 
 COPY_EXISTING ~C0WSL02.SPL~ OVERRIDE
-SAY NAME1 ~Antimagic Field~
-SAY UNIDENTIFIED_DESC ~Antimagic Field
-The Wizard Slayer extends their innate Magic Resistance to all nearby allies within a 15-ft. radius, granting them half of the Wizard Slayer's base amount. This effect lasts for five rounds, and the Wizard Slayer loses their own innate Magic Resistance for the duration and may not use Spellslayer Strike while the effect is active.~
+SAY NAME1 ~反魔法力场~
+SAY UNIDENTIFIED_DESC ~反魔法力场
+屠法者将自身的天赋魔法抗性延伸至15尺范围内的所有友军，为其提供自身基础魔法抗性的一半。效果持续5回合，期间屠法者失去自身的天赋魔法抗性，且无法使用破法斩。~

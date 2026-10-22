@@ -35,49 +35,48 @@ COPY_EXISTING ~CLABDR01.2DA~ ~OVERRIDE/CLABDR04.2DA~
 
   PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~AVENGER: A member of a special sect within the druidic order, a Druid of this type is dedicated to fighting those who would defile nature. Avengers have powers the average Druid does not—additional abilities that have been earned through extensive rituals, a process that is very physically draining.
+OUTER_SPRINT kit_description ~复仇者：德鲁伊教团内的特殊分支成员，这类德鲁伊献身于讨伐亵渎自然的恶徒。复仇者拥有普通德鲁伊没有的力量——这些额外能力得自繁复的仪式，整个过程会极大损耗身体。
 
-Advantages:
-– +1 bonus to Wisdom.KIT_ADV_1
-– Nature's Renewal: The avenger, when under the effects of Barkskin, Stoneskin or Iron Skins, regenerates for 12% of their maximum hit points every round.
-– 3rd level: May select one of three Pacts of Nature, each providing permanent bonuses and penalties. Each pact may only be selected once.
+职业优势：
+–智慧属性+1。KIT_ADV_1
+–自然复苏：复仇者处于树肤术、石肤术或铁皮术效果下时，每回合回复最大生命值的12%。
+–3级：可从三项自然誓约中选择一项，每项提供永久加成与代价。每项誓约只能选择一次。
 
-PACT OF NATURE'S FURY: The avenger's attacks deal one additional unmitigated piercing damage to unnatural creatures such as undead, outsiders and abberations.
-   The damage bonus increases to two at 9th level and three at 15th level.
-   The avenger loses four points of Dexterity after selecting this Pact.
+自然之怒誓约：复仇者的攻击对不死生物、异界生物、畸变体等非自然生物额外造成1点无视护甲穿刺伤害。
+   9级时伤害加成提升至2点，15级时提升至3点。
+   选择此誓约后，复仇者失去4点敏捷。
 
-PACT OF NATURE'S SECRETS: The avenger gains the use of certain arcane spells, and a +1 bonus to casting speed.
-   1st level: Chromatic Orb, Spook
-   2nd level: Invisibility, Horror
-   3rd level: Slow, Vampiric Touch
-   4th level: Improved Invisibility, Polymorph Self
-   5th level: Chaos, Lower Resistance
-   6th level: Flesh to Stone, Wyvern Call
-   7th level: Mass Invisibility, Sphere of Chaos
-   The casting speed bonus increases to +2 at 9th level and +3 at 15th level.
-   The avenger loses four points of Strength after selecting this Pact.
+自然之秘誓约：复仇者可使用部分奥术法术，且施法速度+1。
+   1级：七彩飞弹、惊吓术
+   2级：隐形术、恐惧术
+   3级：迟缓术、吸血之触
+   4级：高等隐形术、变形术（自身）
+   5级：混沌术、降低抗力
+   6级：石化术、翼龙召唤
+   7级：群体隐形术、混沌法球
+   9级时施法速度加成提升至+2，15级时提升至+3。
+   选择此誓约后，复仇者失去4点力量。
 
-PACT OF NATURE'S HARVEST: The avenger gains a x2 backstab multiplier. Additionally, backstabs made by the avenger entangle the target for up to three rounds. At the end of each round, the target will lose 5% of their current hit points and their resistances, including Magic Resistance, which are transferred to the avenger for one turn. The target may not make a Saving Throw for the first round of entanglement, but may make a Saving Throw vs. Spells at -3 and -1 respectively for the following two rounds to break free and resist the draining effect.
-   The avenger's backstab multiplier increases to x3 at 9th level and x4 at 15th level.
-   The avenger loses four points of Constitution after selecting this Pact.
+自然之丰收誓约：复仇者获得2倍背刺倍率。此外，复仇者的背刺会纠缠目标最多3回合。每回合结束时，目标损失当前生命值的5%，其抗性（包括魔法抗性）会转移给复仇者，持续1回合。目标在纠缠的第1回合无法进行豁免检定，后续两回合可分别以-3和-1难度的法术豁免挣脱并抵抗吸取效果。
+   9级时复仇者的背刺倍率提升至3倍，15级时提升至4倍。
+   选择此誓约后，复仇者失去4点体质。
+–7级：除正常变形能力外，还可变形为剑蛛、幼翼龙、火蜥蜴。
+–8级：自然复苏的每回合回复量提升至最大生命值的18%。
+–9级：可再选择一项自然誓约。
+–14级：自然复苏的每回合回复量提升至最大生命值的24%。
+–15级：可再选择一项自然誓约。
+–19级：额外获得一次变形术使用次数。
 
-– 7th level: May Shapeshift into the form of a sword spider, baby wyvern, and fire salamander, in addition to the normal shapeshifting abilities.
-– 8th level: Nature's Renewal now regenerates for 18% maximum hit points per round.
-– 9th level: May select another Pact of Nature.
-– 14th level: Nature's Renewal now regenerates for 24% maximum hit points per round.
-– 15th level: May select another Pact of Nature.
-– 19th level: Gains an additional use of Shapeshift.
-
-Disadvantages:
-– May not wear heavier armor than leather.
-– Upon selecting any Pact of Nature, the avenger permanently loses the ability to receive direct healing from most sources, with certain exceptions such as healing from damage dealt, regeneration, and Nature's Renewal.~
+职业限制：
+–不得穿戴比皮甲更重的护甲。
+–选择任何自然誓约后，复仇者永久失去从多数来源获得直接治疗的能力，但伤害转化治疗、再生、自然复苏等效果除外。~
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_ADV_1~ ~
-– Camouflage: The avenger gains a 25% bonus to Hide in Shadows and Move Silently while outdoors.
-– May use Hide in Shadows.~
+–伪装：复仇者在户外时，阴影躲藏与无声行动获得25%加值。
+–可使用阴影躲藏。~
 
 END
 
@@ -443,7 +442,7 @@ LPF ADD_SPELL_EFFECT INT_VAR opcode = 324 target = 2 timing = 9 STR_VAR resource
 END
 
 COPY_EXISTING ~C0D4_A61.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Nature's Harvest: Hit Points and Resistances drained~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~自然之丰收：生命值与抗性已吸取~) END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_CRUSH_GT STR_VAR resource = C0D4_5_A END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_ACID_GT  STR_VAR resource = C0D4_5_B END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_COLD_GT  STR_VAR resource = C0D4_5_C END
@@ -505,7 +504,7 @@ LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 1 p
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 1 parameter2 = C0_MCOLD_EQUALS STR_VAR resource = C0D4_1_L END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 1 parameter2 = C0_MRES_EQUALS  STR_VAR resource = C0D4_1_M END
 COPY_EXISTING ~C0D4_A62.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Nature's Harvest: Hit Points and Resistances drained~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~自然之丰收：生命值与抗性已吸取~) END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_CRUSH_GT savebonus = (0 - 3) savetype = 1 STR_VAR resource = C0D4_5_A END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_ACID_GT  savebonus = (0 - 3) savetype = 1 STR_VAR resource = C0D4_5_B END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_COLD_GT  savebonus = (0 - 3) savetype = 1 STR_VAR resource = C0D4_5_C END
@@ -567,7 +566,7 @@ LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 1 p
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 1 parameter2 = C0_MCOLD_EQUALS savebonus = (0 - 3) savetype = 1 STR_VAR resource = C0D4_1_L END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 1 parameter2 = C0_MRES_EQUALS  savebonus = (0 - 3) savetype = 1 STR_VAR resource = C0D4_1_M END
 COPY_EXISTING ~C0D4_A63.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Nature's Harvest: Hit Points and Resistances drained~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~自然之丰收：生命值与抗性已吸取~) END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_CRUSH_GT savebonus = (0 - 1) savetype = 1 STR_VAR resource = C0D4_5_A END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_ACID_GT  savebonus = (0 - 1) savetype = 1 STR_VAR resource = C0D4_5_B END
 LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 2 timing = 1 parameter1 = 4 parameter2 = C0_COLD_GT  savebonus = (0 - 1) savetype = 1 STR_VAR resource = C0D4_5_C END
@@ -741,150 +740,151 @@ COPY_EXISTING ~C0D4_1_A.SPL~ ~OVERRIDE/C0D4_1_M.SPL~
 LPF ALTER_EFFECT INT_VAR opcode = 166 END
 
 COPY_EXISTING ~C0D4_5.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature I~
-SAY UNIDENTIFIED_DESC ~Pact of Nature
-The avenger may select one of three Pacts of Nature, each providing permanent bonuses and penalties. Each pact may only be selected once.
+SAY NAME1 ~自然誓约 I~
+SAY UNIDENTIFIED_DESC ~自然誓约
+复仇者可从三项自然誓约中选择一项，每项均提供永久加成与相应代价。每项誓约仅可选择一次。
 
-PACT OF NATURE'S FURY: The avenger's attacks deal one additional unmitigated piercing damage to unnatural creatures such as undead, outsiders and abberations.
-   The damage bonus increases to two at 9th level and three at 15th level.
-   The avenger loses four points of Dexterity after selecting this Pact.
+自然之怒誓约：复仇者的攻击对不死生物、异界生物、畸变体等非自然生物额外造成1点无视护甲穿刺伤害。
+   9级时伤害加成提升至2点，15级时提升至3点。
+   选择此誓约后，复仇者失去4点敏捷属性。
 
-PACT OF NATURE'S SECRETS: The avenger gains the use of certain arcane spells, and a +1 bonus to casting speed.
-   1st level: Chromatic Orb, Spook
-   2nd level: Invisibility, Horror
-   3rd level: Slow, Vampiric Touch
-   4th level: Improved Invisibility, Polymorph Self
-   5th level: Chaos, Lower Resistance
-   6th level: Flesh to Stone, Wyvern Call
-   7th level: Mass Invisibility, Sphere of Chaos
-   The casting speed bonus increases to +2 at 9th level and +3 at 15th level.
-   The avenger loses four points of Strength after selecting this Pact.
+自然之秘誓约：复仇者可使用部分奥术法术，且施法速度获得+1加值。
+   1级：七彩飞弹、惊吓术
+   2级：隐形术、恐惧术
+   3级：迟缓术、吸血之触
+   4级：高等隐形术、变形术（自身）
+   5级：混沌术、降低抗力
+   6级：石化术、翼龙召唤
+   7级：群体隐形术、混沌法球
+   9级时施法速度加成提升至+2，15级时提升至+3。
+   选择此誓约后，复仇者失去4点力量属性。
 
-PACT OF NATURE'S HARVEST: The avenger gains a x2 backstab multiplier. Additionally, backstabs made by the avenger entangle the target for up to three rounds. At the end of each round, the target will lose 5% of their current hit points and their resistances, including Magic Resistance, which are transferred to the avenger for one turn. The target may not make a Saving Throw for the first round of entanglement, but may make a Saving Throw vs. Spells at -3 and -1 respectively for the following two rounds to break free and resist the draining effect.
-   The avenger's backstab multiplier increases to x3 at 9th level and x4 at 15th level.
-   The avenger loses four points of Constitution after selecting this Pact.~
+自然之丰收誓约：复仇者获得2倍背刺倍率。此外，复仇者的背刺会纠缠目标最多3回合。每回合结束时，目标损失当前生命值的5%，其抗性（包括魔法抗性）会转移给复仇者，持续1回合。目标在纠缠的第1回合无法进行豁免检定，后续两回合可分别以-3和-1难度的法术豁免挣脱并抵抗吸取效果。
+   9级时复仇者的背刺倍率提升至3倍，15级时提升至4倍。
+   选择此誓约后，复仇者失去4点体质属性。~
 
 COPY_EXISTING ~C0D4_6.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature II~
-SAY UNIDENTIFIED_DESC ~Pact of Nature
-The avenger may select one of three Pacts of Nature, each providing permanent bonuses and penalties. Each pact may only be selected once.
+SAY NAME1 ~自然誓约 II~
+SAY UNIDENTIFIED_DESC ~自然誓约
+复仇者可从三项自然誓约中选择一项，每项均提供永久加成与相应代价。每项誓约仅可选择一次。
 
-PACT OF NATURE'S FURY: The avenger's attacks deal one additional unmitigated piercing damage to unnatural creatures such as undead, outsiders and abberations.
-   The damage bonus increases to two at 9th level and three at 15th level.
-   The avenger loses four points of Dexterity after selecting this Pact.
+自然之怒誓约：复仇者的攻击对不死生物、异界生物、畸变体等非自然生物额外造成1点无视护甲穿刺伤害。
+   9级时伤害加成提升至2点，15级时提升至3点。
+   选择此誓约后，复仇者失去4点敏捷属性。
 
-PACT OF NATURE'S SECRETS: The avenger gains the use of certain arcane spells, and a +1 bonus to casting speed.
-   1st level: Chromatic Orb, Spook
-   2nd level: Invisibility, Horror
-   3rd level: Slow, Vampiric Touch
-   4th level: Improved Invisibility, Polymorph Self
-   5th level: Chaos, Lower Resistance
-   6th level: Flesh to Stone, Wyvern Call
-   7th level: Mass Invisibility, Sphere of Chaos
-   The casting speed bonus increases to +2 at 9th level and +3 at 15th level.
-   The avenger loses four points of Strength after selecting this Pact.
+自然之秘誓约：复仇者可使用部分奥术法术，且施法速度获得+1加值。
+   1级：七彩飞弹、惊吓术
+   2级：隐形术、恐惧术
+   3级：迟缓术、吸血之触
+   4级：高等隐形术、变形术（自身）
+   5级：混沌术、降低抗力
+   6级：石化术、翼龙召唤
+   7级：群体隐形术、混沌法球
+   9级时施法速度加成提升至+2，15级时提升至+3。
+   选择此誓约后，复仇者失去4点力量属性。
 
-PACT OF NATURE'S HARVEST: The avenger gains a x2 backstab multiplier. Additionally, backstabs made by the avenger entangle the target for up to three rounds. At the end of each round, the target will lose 5% of their current hit points and their resistances, including Magic Resistance, which are transferred to the avenger for one turn. The target may not make a Saving Throw for the first round of entanglement, but may make a Saving Throw vs. Spells at -3 and -1 respectively for the following two rounds to break free and resist the draining effect.
-   The avenger's backstab multiplier increases to x3 at 9th level and x4 at 15th level.
-   The avenger loses four points of Constitution after selecting this Pact.~
+自然之丰收誓约：复仇者获得2倍背刺倍率。此外，复仇者的背刺会纠缠目标最多3回合。每回合结束时，目标损失当前生命值的5%，其抗性（包括魔法抗性）会转移给复仇者，持续1回合。目标在纠缠的第1回合无法进行豁免检定，后续两回合可分别以-3和-1难度的法术豁免挣脱并抵抗吸取效果。
+   9级时复仇者的背刺倍率提升至3倍，15级时提升至4倍。
+   选择此誓约后，复仇者失去4点体质属性。~
 
 COPY_EXISTING ~C0D4_7.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature III~
-SAY UNIDENTIFIED_DESC ~Pact of Nature
-The avenger may select one of three Pacts of Nature, each providing permanent bonuses and penalties. Each pact may only be selected once.
+SAY NAME1 ~自然誓约 III~
+SAY UNIDENTIFIED_DESC ~自然誓约
+复仇者可从三项自然誓约中选择一项，每项均提供永久加成与相应代价。每项誓约仅可选择一次。
 
-PACT OF NATURE'S FURY: The avenger's attacks deal one additional unmitigated piercing damage to unnatural creatures such as undead, outsiders and abberations.
-   The damage bonus increases to two at 9th level and three at 15th level.
-   The avenger loses four points of Dexterity after selecting this Pact.
+自然之怒誓约：复仇者的攻击对不死生物、异界生物、畸变体等非自然生物额外造成1点无视护甲穿刺伤害。
+   9级时伤害加成提升至2点，15级时提升至3点。
+   选择此誓约后，复仇者失去4点敏捷属性。
 
-PACT OF NATURE'S SECRETS: The avenger gains the use of certain arcane spells, and a +1 bonus to casting speed.
-   1st level: Chromatic Orb, Spook
-   2nd level: Invisibility, Horror
-   3rd level: Slow, Vampiric Touch
-   4th level: Improved Invisibility, Polymorph Self
-   5th level: Chaos, Lower Resistance
-   6th level: Flesh to Stone, Wyvern Call
-   7th level: Mass Invisibility, Sphere of Chaos
-   The casting speed bonus increases to +2 at 9th level and +3 at 15th level.
-   The avenger loses four points of Strength after selecting this Pact.
+自然之秘誓约：复仇者可使用部分奥术法术，且施法速度获得+1加值。
+   1级：七彩飞弹、惊吓术
+   2级：隐形术、恐惧术
+   3级：迟缓术、吸血之触
+   4级：高等隐形术、变形术（自身）
+   5级：混沌术、降低抗力
+   6级：石化术、翼龙召唤
+   7级：群体隐形术、混沌法球
+   9级时施法速度加成提升至+2，15级时提升至+3。
+   选择此誓约后，复仇者失去4点力量属性。
 
-PACT OF NATURE'S HARVEST: The avenger gains a x2 backstab multiplier. Additionally, backstabs made by the avenger entangle the target for up to three rounds. At the end of each round, the target will lose 5% of their current hit points and their resistances, including Magic Resistance, which are transferred to the avenger for one turn. The target may not make a Saving Throw for the first round of entanglement, but may make a Saving Throw vs. Spells at -3 and -1 respectively for the following two rounds to break free and resist the draining effect.
-   The avenger's backstab multiplier increases to x3 at 9th level and x4 at 15th level.
-   The avenger loses four points of Constitution after selecting this Pact.~
+自然之丰收誓约：复仇者获得2倍背刺倍率。此外，复仇者的背刺会纠缠目标最多3回合。每回合结束时，目标损失当前生命值的5%，其抗性（包括魔法抗性）会转移给复仇者，持续1回合。目标在纠缠的第1回合无法进行豁免检定，后续两回合可分别以-3和-1难度的法术豁免挣脱并抵抗吸取效果。
+   9级时复仇者的背刺倍率提升至3倍，15级时提升至4倍。
+   选择此誓约后，复仇者失去4点体质属性。~
 
 COPY_EXISTING ~C0D4_A4A.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Fury~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S FURY: The avenger's attacks deal one additional unmitigated piercing damage to unnatural creatures such as undead, outsiders and abberations.
-   The damage bonus increases to two at 9th level and three at 15th level.
-   The avenger loses four points of Dexterity after selecting this Pact.~
+SAY NAME1 ~自然之怒誓约~
+SAY UNIDENTIFIED_DESC ~自然之怒誓约：复仇者的攻击对不死生物、异界生物、畸变体等非自然生物额外造成1点无视护甲穿刺伤害。
+   9级时伤害加成提升至2点，15级时提升至3点。
+   选择此誓约后，复仇者失去4点敏捷属性。~
 
 COPY_EXISTING ~C0D4_A4B.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Fury~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S FURY: The avenger's attacks deal one additional unmitigated piercing damage to unnatural creatures such as undead, outsiders and abberations.
-   The damage bonus increases to two at 9th level and three at 15th level.
-   The avenger loses four points of Dexterity after selecting this Pact.~
+SAY NAME1 ~自然之怒誓约~
+SAY UNIDENTIFIED_DESC ~自然之怒誓约：复仇者的攻击对不死生物、异界生物、畸变体等非自然生物额外造成1点无视护甲穿刺伤害。
+   9级时伤害加成提升至2点，15级时提升至3点。
+   选择此誓约后，复仇者失去4点敏捷属性。~
 
 COPY_EXISTING ~C0D4_A4C.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Fury~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S FURY: The avenger's attacks deal one additional unmitigated piercing damage to unnatural creatures such as undead, outsiders and abberations.
-   The damage bonus increases to two at 9th level and three at 15th level.
-   The avenger loses four points of Dexterity after selecting this Pact.~
+SAY NAME1 ~自然之怒誓约~
+SAY UNIDENTIFIED_DESC ~自然之怒誓约：复仇者的攻击对不死生物、异界生物、畸变体等非自然生物额外造成1点无视护甲穿刺伤害。
+   9级时伤害加成提升至2点，15级时提升至3点。
+   选择此誓约后，复仇者失去4点敏捷属性。~
 
 COPY_EXISTING ~C0D4_A5A.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Secrets~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S SECRETS: The avenger gains the use of certain arcane spells, and a +1 bonus to casting speed.
-   1st level: Chromatic Orb, Spook
-   2nd level: Invisibility, Horror
-   3rd level: Slow, Vampiric Touch
-   4th level: Improved Invisibility, Polymorph Self
-   5th level: Chaos, Lower Resistance
-   6th level: Flesh to Stone, Wyvern Call
-   7th level: Mass Invisibility, Sphere of Chaos
-   The casting speed bonus increases to +2 at 9th level and +3 at 15th level.
-   The avenger loses four points of Strength after selecting this Pact.~
+SAY NAME1 ~自然之秘誓约~
+SAY UNIDENTIFIED_DESC ~自然之秘誓约：复仇者可使用部分奥术法术，且施法速度获得+1加值。
+   1级：七彩飞弹、惊吓术
+   2级：隐形术、恐惧术
+   3级：迟缓术、吸血之触
+   4级：高等隐形术、变形术（自身）
+   5级：混沌术、降低抗力
+   6级：石化术、翼龙召唤
+   7级：群体隐形术、混沌法球
+   9级时施法速度加成提升至+2，15级时提升至+3。
+   选择此誓约后，复仇者失去4点力量属性。~
 
 COPY_EXISTING ~C0D4_A5B.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Secrets~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S SECRETS: The avenger gains the use of certain arcane spells, and a +1 bonus to casting speed.
-   1st level: Chromatic Orb, Spook
-   2nd level: Invisibility, Horror
-   3rd level: Slow, Vampiric Touch
-   4th level: Improved Invisibility, Polymorph Self
-   5th level: Chaos, Lower Resistance
-   6th level: Flesh to Stone, Wyvern Call
-   7th level: Mass Invisibility, Sphere of Chaos
-   The casting speed bonus increases to +2 at 9th level and +3 at 15th level.
-   The avenger loses four points of Strength after selecting this Pact.~
+SAY NAME1 ~自然之秘誓约~
+SAY UNIDENTIFIED_DESC ~自然之秘誓约：复仇者可使用部分奥术法术，且施法速度获得+1加值。
+   1级：七彩飞弹、惊吓术
+   2级：隐形术、恐惧术
+   3级：迟缓术、吸血之触
+   4级：高等隐形术、变形术（自身）
+   5级：混沌术、降低抗力
+   6级：石化术、翼龙召唤
+   7级：群体隐形术、混沌法球
+   9级时施法速度加成提升至+2，15级时提升至+3。
+   选择此誓约后，复仇者失去4点力量属性。~
 
 COPY_EXISTING ~C0D4_A5C.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Secrets~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S SECRETS: The avenger gains the use of certain arcane spells, and a +1 bonus to casting speed.
-   1st level: Chromatic Orb, Spook
-   2nd level: Invisibility, Horror
-   3rd level: Slow, Vampiric Touch
-   4th level: Improved Invisibility, Polymorph Self
-   5th level: Chaos, Lower Resistance
-   6th level: Flesh to Stone, Wyvern Call
-   7th level: Mass Invisibility, Sphere of Chaos
-   The casting speed bonus increases to +2 at 9th level and +3 at 15th level.
-   The avenger loses four points of Strength after selecting this Pact.~
+SAY NAME1 ~自然之秘誓约~
+SAY UNIDENTIFIED_DESC ~自然之秘誓约：复仇者可使用部分奥术法术，且施法速度获得+1加值。
+   1级：七彩飞弹、惊吓术
+   2级：隐形术、恐惧术
+   3级：迟缓术、吸血之触
+   4级：高等隐形术、变形术（自身）
+   5级：混沌术、降低抗力
+   6级：石化术、翼龙召唤
+   7级：群体隐形术、混沌法球
+   9级时施法速度加成提升至+2，15级时提升至+3。
+   选择此誓约后，复仇者失去4点力量属性。~
 
 COPY_EXISTING ~C0D4_A6A.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Harvest~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S HARVEST: The avenger gains a x2 backstab multiplier. Additionally, backstabs made by the avenger entangle the target for up to three rounds. At the end of each round, the target will lose 5% of their current hit points and their resistances, including Magic Resistance, which are transferred to the avenger for one turn. The target may not make a Saving Throw for the first round of entanglement, but may make a Saving Throw vs. Spells at -3 and -1 respectively for the following two rounds to break free and resist the draining effect.
-   The avenger's backstab multiplier increases to x3 at 9th level and x4 at 15th level.
-   The avenger loses four points of Constitution after selecting this Pact.~
+SAY NAME1 ~自然之丰收誓约~
+SAY UNIDENTIFIED_DESC ~自然之丰收誓约：复仇者获得2倍背刺倍率。此外，复仇者的背刺会纠缠目标最多3回合。每回合结束时，目标损失当前生命值的5%，其抗性（包括魔法抗性）会转移给复仇者，持续1回合。目标在纠缠的第1回合无法进行豁免检定，后续两回合可分别以-3和-1难度的法术豁免挣脱并抵抗吸取效果。
+   9级时复仇者的背刺倍率提升至3倍，15级时提升至4倍。
+   选择此誓约后，复仇者失去4点体质属性。~
 
 COPY_EXISTING ~C0D4_A6B.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Harvest~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S HARVEST: The avenger gains a x2 backstab multiplier. Additionally, backstabs made by the avenger entangle the target for up to three rounds. At the end of each round, the target will lose 5% of their current hit points and their resistances, including Magic Resistance, which are transferred to the avenger for one turn. The target may not make a Saving Throw for the first round of entanglement, but may make a Saving Throw vs. Spells at -3 and -1 respectively for the following two rounds to break free and resist the draining effect.
-   The avenger loses four points of Constitution after selecting this Pact.~
+SAY NAME1 ~自然之丰收誓约~
+SAY UNIDENTIFIED_DESC ~自然之丰收誓约：复仇者获得2倍背刺倍率。此外，复仇者的背刺会纠缠目标最多3回合。每回合结束时，目标损失当前生命值的5%，其抗性（包括魔法抗性）会转移给复仇者，持续1回合。目标在纠缠的第1回合无法进行豁免检定，后续两回合可分别以-3和-1难度的法术豁免挣脱并抵抗吸取效果。
+   9级时复仇者的背刺倍率提升至3倍，15级时提升至4倍。
+   选择此誓约后，复仇者失去4点体质属性。~
 
 COPY_EXISTING ~C0D4_A6C.SPL~ ~OVERRIDE~
-SAY NAME1 ~Pact of Nature's Harvest~
-SAY UNIDENTIFIED_DESC ~PACT OF NATURE'S HARVEST: The avenger gains a x2 backstab multiplier. Additionally, backstabs made by the avenger entangle the target for up to three rounds. At the end of each round, the target will lose 5% of their current hit points and their resistances, including Magic Resistance, which are transferred to the avenger for one turn. The target may not make a Saving Throw for the first round of entanglement, but may make a Saving Throw vs. Spells at -3 and -1 respectively for the following two rounds to break free and resist the draining effect.
-   The avenger's backstab multiplier increases to x3 at 9th level and x4 at 15th level.
-   The avenger loses four points of Constitution after selecting this Pact.~
+SAY NAME1 ~自然之丰收誓约~
+SAY UNIDENTIFIED_DESC ~自然之丰收誓约：复仇者获得2倍背刺倍率。此外，复仇者的背刺会纠缠目标最多3回合。每回合结束时，目标损失当前生命值的5%，其抗性（包括魔法抗性）会转移给复仇者，持续1回合。目标在纠缠的第1回合无法进行豁免检定，后续两回合可分别以-3和-1难度的法术豁免挣脱并抵抗吸取效果。
+   9级时复仇者的背刺倍率提升至3倍，15级时提升至4倍。
+   选择此誓约后，复仇者失去4点体质属性。~
 
 ACTION_IF (MOD_IS_INSTALLED ~EEEX/EEEX.TP2~ ~0~) THEN BEGIN
 

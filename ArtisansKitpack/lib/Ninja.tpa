@@ -26,68 +26,67 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 20
 	
-    mixed         = RESOLVE_STR_REF(~Ninja~)
+    mixed         = RESOLVE_STR_REF(~忍者~)
 	
-    lower         = RESOLVE_STR_REF(~ninja~)
+    lower         = RESOLVE_STR_REF(~忍者~)
 	
-    help          = RESOLVE_STR_REF(~NINJA: The ninja is a stealthy, acrobatic warrior who moves through the shadows to strike down their unwary foes. Trained in the use of weapons, martial arts, and thievery, ninjas originate from the eastern lands and serve as loyal enforcers of their clans, serving as warriors, assassins and spies.
+    help          = RESOLVE_STR_REF(~忍者：忍者是潜行矫健的战士，穿行于暗影之中，出其不意地击倒毫无防备的敌人。忍者精通武器、武道与窃术，来自东方国度，是氏族忠诚的执行者，身兼战士、刺客与密探。
+
+职业特性：
+–无法穿戴任何护甲。
+–仅可使用盗贼职业可用的武器。
+–任意战斗风格可达到专精级（2个熟练位），双武器战斗可分配3个熟练位。
+–每等级可获得20点（1级时30点）盗贼技能点数，可分配于：开锁、扒窃、找寻并解除陷阱、无声行动、阴影躲藏、侦测幻象、设置陷阱。
+–移动速度比其他角色快2点。每提升5级，移动速度再提升1点。
+–每回合可进行2次徒手攻击。
+–可以通过使用背刺能力提高伤害。
+  1-8级：2倍
+  9-16级：3倍
+  17级及以上：4倍
+–忍者的拳头造成钝击伤害，伤害随等级提升：
+  1-2级：1d4
+  3-4级：1d6
+  5-6级：1d8
+  7-9级：1d10
+  10-14级：1d12
+  15-19级：2d8
+  20-24级：2d10
+  25级及以上：2d12
+–气：忍者的徒手攻击贯注气劲，4级时视为+1附魔魔法武器，8级+2，12级+3，16级+4，20级+5。7级起，视为银质武器。
+–所有豁免检定+1。5级起每提升5级额外+1。
+–感知每超过12点1点，忍者基础护甲等级+1。5级起每提升5级护甲等级额外+1。
+–御箭：每3级，忍者对抗远程攻击的护甲等级+1。
+–每日可使用一次「烟雾弹」「设置陷阱」与「淬毒武器」。1级时获得1次，之后每提升6级额外获得1次使用次数。
+
+烟雾弹：在目标位置生成一片烟幕，范围内所有生物致盲且移动速度减半，只要留在烟幕中效果持续。忍者免疫自身烟幕的致盲效果，且只要留在烟幕中就处于隐形状态，可从任意方向发动背刺。烟幕持续2回合，每6级额外持续1回合。
+
+设置陷阱：视野内无敌对生物时，在选定位置布置陷阱。陷阱威力随游荡者等级提升，且仅会被敌人触发。
+  1级：造成2d8+5点远程伤害。
+  11级：造成2d8+5点远程伤害，且接下来3回合每回合额外造成2d6点毒素伤害。
+  16级：造成3d8+5点远程伤害与4d8+2点火焰伤害。
+  21级：造成3d8+5点远程伤害与20点毒素伤害，无豁免；若目标死亡豁免（+4加值）失败则直接被斩杀。
+
+淬毒武器：忍者可在武器上涂抹一种发作缓慢但剧毒的毒素，持续8小时。毒素立即并在之后每回合造成伤害并降低目标体质，至少持续4回合。4回合后，目标必须进行死亡豁免，失败则再中毒4回合。因此只要目标未成功豁免，毒素就有可能无限持续。目标不会因毒素造成的体质流失而死亡。
+  1级：目标受到2点毒素伤害，损失1点体质。无豁免惩罚。
+  6级：目标受到4点毒素伤害，损失1点体质。豁免惩罚-1。
+  11级：目标受到6点毒素伤害，损失2点体质。豁免惩罚-2。
+  16级：目标受到8点毒素伤害，损失2点体质。豁免惩罚-3。
+  21级：目标受到10点毒素伤害，损失3点体质。豁免惩罚-4。
+
+–6级：每次使用烟雾弹可投掷2枚。
+–11级：金刚体：忍者永久免疫毒素。
+–12级：每次使用烟雾弹可投掷3枚。
+–14级：每日可使用两次「空灵体」。、
+
+空灵体：忍者可隐入无形，获得每等级1回合的半隐形效果。攻击忍者的攻击掷骰受-4惩罚，忍者的豁免检定获得+4加值。除非能看破隐形，否则生物无法以法术锁定忍者。
+
+–15级：内眼：忍者徒手时免疫暴击。
+–18级：忍者在自身烟幕中时移动速度翻倍。
+–22级：忍者在自身烟幕中时，背刺倍率额外+1倍。
+
+–生命骰：d6~)
 	
-CLASS FEATURES:
-
-– May not wear any armor.
-– May only use weapons available to the Thief class.
-– May achieve Specialization (two slots) in any fighting style and allocate three slots in Two-Weapon Style.
-– May distribute 20 points per level (30 at level 1) in thieving abilities: Open Locks, Pick Pockets, Find Traps, Move Silently, Hide In Shadows, Detect Illusion, Set Traps
-– Moves 2 points faster than other characters. Movement rate further improves by 1 every 5 levels.
-– May make 2 unarmed attacks per round.
-– May backstab for increased damage:
-  Level 1-8: x2
-  Level 9-16: x3
-  Level 17+: x4
-– The ninja's fists deal crushing damage and deal increase damage with level as follows:
-  Level 1-2: 1d4
-  Level 3-4: 1d6
-  Level 5-6: 1d8
-  Level 7-9: 1d10
-  Level 10-14: 1d12
-  Level 15-19: 2d8
-  Level 20-24: 2d10
-  Level 25+: 2d12
-– Ki: The ninja's unarmed attacks are empowered with ki, which allows them to be treated as magical weapons of +1 enchantment at 4th level, +2 at 8th level, +3 at 12th level, +4 at 16th level and +5 at 20th level. From 7th level, they are treated as silver weapons.
-– Receives a +1 bonus to all Saving Throws. An additional +1 is gained at 5th level and every 5 levels thereafter.
-– The ninja gains a +1 bonus to base Armor Class per point of Wisdom above 12. They gain an additional +1 to AC at 5th level and every 5 levels thereafter.
-– Deflect Missiles: The ninja receives a +1 bonus to AC vs. missile attacks every 3 levels.
-– May use the Smoke Bomb, Set Snare and Poison Weapon abilities once per day. Gains one use at level 1 and an additional use every 6 levels thereafter.
-
-SMOKE BOMB: Creates a Smoke Cloud at the targeted location, blinding and halving the movement rate of all creatures within the area for as long as they remain within the cloud. The ninja is immune to the blindness effect of their own Smoke Cloud and are invisible and able to backstab from any direction so long as they remain within it. The cloud lasts for 2 rounds + 1 round per 6 levels.
-
-SET SNARE: Set a trap in the chosen location when no hostile creatures are in sight. Traps grow more powerful with the Thief's level and can only be triggered by enemies.
-  1st level: Deals 2d8+5 missile damage.
-  11th level: Deals 2d8+5 missile damage and additionally deals 2d6 poison damage per round for the next 3 rounds.
-  16th level: Deals 3d8+5 missile damage and 4d8+2 fire damage.
-  21st level: Deals 3d8+5 missile damage and 20 poison damage with no save; slays target if a Save vs. Death with a +4 bonus is failed.
-
-POISON WEAPON: The ninja is capable of coating <PRO_HISHER> weapon for the next eight hours with a slow-acting but extremely potent poison. This poison deals damage and reduces the target's Constitution immediately and every following round for at least four rounds. After four rounds have passed, the target must make a Saving Throw vs. Death or remain poisoned for another four rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
-  1st level: Target suffers two poison damage and loses one point of Constitution. No save modifier.
-  6th level: Target suffers four poison damage and loses one point of Constitution. Save modifier of -1.
-  11th level: Target suffers six poison damage and loses two points of Constitution. Save modifier of -2.
-  16th level: Target suffers eight poison damage and loses two points of Constitution. Save modifier of -3.
-  21st level: Target suffers ten poison damage and loses three points of Constitution. Save modifier of -4.
-
-– 6th level: The ninja may now throw two Smoke Bombs per use of the ability.
-– 11th level: Diamond Body: The ninja permanently becomes immune to poison.
-– 12th level: The ninja may now throw three Smoke Bombs per use of the ability.
-– 14th level: May use Empty Body twice per day.
-
-EMPTY BODY: The ninja gains the ability to fade from sight, granting them partial invisibility for one round per level. Attacks against the ninja suffer a -4 penalty to attack rolls, and the ninja's Saving Throws are made with a +4 bonus. The ninja also cannot be targeted by spells from creatures unless they can see through invisibility.
-
-– 15th level: Inner Eye: The ninja becomes immune to critical hits while unarmed.
-– 18th level: The ninja moves at twice their movement rate whilst within their Smoke Cloud.
-– 22nd level: The ninja gains a x1 additional bonus to their Backstab multiplier whilst within their Smoke Cloud.
-
-– Hit Die: d6~)
-	
-    briefdesc     = RESOLVE_STR_REF(~NINJA: The ninja is a stealthy, acrobatic warrior who moves through the shadows to strike down their unwary foes. Trained in the use of weapons, martial arts, and thievery, ninjas originate from the eastern lands and serve as loyal enforcers of their clans, serving as warriors, assassins and spies.~)
+    briefdesc     = RESOLVE_STR_REF(~忍者：忍者是潜行矫健的战士，穿行于暗影之中，出其不意地击倒敌人。忍者精通武器、武道与窃术，来自东方国度，身兼战士、刺客与密探。~)
 
   STR_VAR
   
@@ -232,15 +231,15 @@ LPF ALTER_SPELL_HEADER INT_VAR header = 6 projectile = C0NINJP6 END
 LPF ALTER_SPELL_HEADER INT_VAR header = 7 projectile = C0NINJP7 END
 LPF ALTER_SPELL_HEADER INT_VAR header = 8 projectile = C0NINJP8 END
 LPF ALTER_SPELL_HEADER INT_VAR header = 9 projectile = C0NINJP9 END
-SAY NAME1 ~Smoke Bomb~
-SAY UNIDENTIFIED_DESC ~Smoke Bomb
-Creates a smoke cloud at the targeted location, halving the visual range and movement rate of all creatures within the area for as long as they remain within the cloud. The ninja is immune to the negative effects of their own smoke cloud and are invisible so long as they remain within it. The cloud lasts for 2 rounds + 1 round per 6 levels.~
+SAY NAME1 ~烟雾弹~
+SAY UNIDENTIFIED_DESC ~烟雾弹
+在目标位置生成一片烟幕，范围内所有生物视野减半、移动速度减半，只要留在烟幕中效果持续。忍者免疫自身烟幕的负面效果，且只要留在烟幕中就处于隐形状态。烟幕持续2回合，每6级额外持续1回合。~
 
 COPY_EXISTING ~C0NINJ2.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~Elite Ninja~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~精英忍者~) END
 
 COPY_EXISTING ~C0NINJ3.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~Master Ninja~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 290 parameter1 = RESOLVE_STR_REF (~大师忍者~) END
 
 
 COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files

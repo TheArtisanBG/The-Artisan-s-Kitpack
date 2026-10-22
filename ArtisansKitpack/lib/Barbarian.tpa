@@ -28,51 +28,51 @@ APPEND ~STATE.IDS~ // STUN, PANIC, BERSERK, CHARM, FEEBLEMIND, CONFUSED
   ~0x8010202f C0_BARB_STATUS~
   UNLESS ~C0_BARB_STATUS~
   
-OUTER_SPRINT kit_description ~BARBARIAN: A Barbarian can be an excellent warrior. While not as disciplined or as skilled as a Fighter, the Barbarian can willingly throw <PRO_HIMHER>self into a berserker rage, becoming a tougher and stronger opponent.
+OUTER_SPRINT kit_description ~野蛮人：野蛮人是出色的战士。尽管不像战士那般训练有素、技艺精湛，但野蛮人能主动陷入狂暴状态，成为更强悍、更凶猛的对手。
 
-CLASS FEATURES:
+职业特性：
 
-– May not wear armor heavier than splint mail.
-– May not exceed Specialization (two slots) with any weapon class.
-– May achieve Specialization (two slots) in any fighting style and allocate three slots in Two-Weapon Style.
-– Moves 2 points faster than other characters.
-– Immune to backstab.
-– Iron Will: The barbarian gains +1 to all Saving Throws for every 4 points of Constitution greater than 9.
-– Gains the Tenacity passive ability.
+–不得穿戴比锁子甲更重的护甲。
+–任何武器类别的熟练等级不得超过专精级（2点熟练槽）。
+–任意战斗风格都可达到专精级（2点熟练槽），双武器风格可分配3点熟练槽。
+–移动速度比其他角色快2点。
+–免疫背刺。
+–钢铁意志：体质每超过9点4点，野蛮人所有豁免检定+1。
+–获得「坚韧」被动能力。
 
-TENACITY: The barbarian gains 5% physical damage resistance. This bonus is doubled when the barbarian falls below 50% maximum hit points.
+坚韧：野蛮人获得5%物理伤害抗性。当野蛮人生命值低于最大生命值50%时，该加成翻倍。
 
-– May use the Rage ability once per day. Gains one use at level 1 and an additional use every 4 levels thereafter.
+–每日可使用一次「狂暴」能力。1级时获得1次使用次数，之后每提升4级额外获得1次。
 
-RAGE: The enraged status lasts for 5 rounds and provides a +4 bonus to Strength and Constitution and a +2 bonus to Saving Throws vs. Spell. However, the barbarian incurs a -2 penalty to Armor Class. Additionally, activating Rage restores any drained levels from the barbarian and protects them from subsequent level drain effects for the duration. When the rage expires, the barbarian becomes fatigued and suffers a -2 penalty to Strength, Dexterity, Armor Class and Movement Rate for 5 rounds. The barbarian cannot use Rage until this duration is over.
+狂暴：狂暴状态持续5回合，提供+4力量与体质加成，以及+2法术豁免加值。但野蛮人会受到-2护甲等级惩罚。此外，激活狂暴会恢复野蛮人所有被吸取的等级，并在持续期间免疫后续的等级吸取效果。狂暴结束后，野蛮人会进入疲劳状态，力量、敏捷、护甲等级与移动速度受-2惩罚，持续5回合。在此期间野蛮人无法使用狂暴。
 KIT_SKILL_1
-– 8th level: Gains the Indomitable Will passive ability.
+–8级：获得「不屈意志」被动能力。
 
-INDOMITABLE WILL: When the barbarian is afflicted with any of the following afflictions: berserk, charm, hold, fear, stun, sleep, feeblemind, confusion, <PRO_HESHE> has a 20% (+2% per level gained) chance each round to break free of their affliction.
+不屈意志：当野蛮人陷入以下任意负面状态：狂暴、魅惑、定身、恐惧、眩晕、睡眠、弱智、困惑时，每回合有20%（每提升1级+2%）的几率挣脱负面效果。
 
-– 10th level: Rage bonuses to Strength and Constitution increased to +6.
-– 11th level: Tenacity base physical resistance increased to 10%. The barbarian regenerates 1 hit point per three seconds when below 50% maximum hit points.KIT_SKILL_2
-– 18th level: The barbarian no longer suffers fatigue penalties after Rage.
-– 20th level: Tenacity base physical resistance increased to 15%. Regeneration rate increased to 1 hit point per second.
-– 22nd level: Deathless Frenzy: The barbarian becomes unable to die for one round after Rage.
-– 24th level: Rage bonuses to Strength and Constitution increased to +8. Saving Throws vs. Spell bonus increased to +4.
-– Hit Die: d12~
+–10级：狂暴的力量与体质加成提升至+6。
+–11级：坚韧的基础物理抗性提升至10%。生命值低于最大生命值50%时，野蛮人每3秒回复1点生命值。KIT_SKILL_2
+–18级：野蛮人狂暴结束后不再承受疲劳惩罚。
+–20级：坚韧的基础物理抗性提升至15%。再生速率提升至每秒1点生命值。
+–22级：不死狂怒：野蛮人在狂暴结束后的1回合内不会死亡。
+–24级：狂暴的力量与体质加成提升至+8。法术豁免加值提升至+4。
+–生命骰：d12~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~1100~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_SKILL_1~ ~
-– 5th level: May use the Power Attack modal ability.
+–5级：可使用「猛力攻击」攻击模式。
 
-POWER ATTACK: The Barbarian forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Barbarian must have 17 or greater Strength to activate this ability.
+猛力攻击：野蛮人牺牲精准度换取更重、更具杀伤力的打击，近战零级命中值降低3点，近战伤害增加3点。野蛮人力量需达到17或以上才能激活此能力。
 
-– 6th level: May use the Rapid Shot modal ability.
+–6级：可使用「速射」攻击模式。
 
-RAPID SHOT: The Barbarian may make an additional ranged attack per round at a -4 penalty to hit.
+速射：野蛮人每轮可额外进行一次远程攻击，但命中受-4惩罚。
 ~
   REPLACE_TEXTUALLY ~KIT_SKILL_2~ ~
-– 12th level: Improved Rapid Shot: The Barbarian’s penalty to hit while Rapid Shot is active is reduced to -2.
-– 14th level: May use Improved Power Attack, which provide 6 points to the original ability's bonuses and penalties.~
+–12级：精通速射：速射状态下的命中惩罚降低至-2。
+–14级：可使用「精通猛力攻击」，将原能力的加成与惩罚提升至6点。~
 
 END
 
@@ -91,24 +91,24 @@ STRING_SET_EVALUATE kit_strref ~%kit_description%~
 COPY ~%MOD_FOLDER%/Fighter/Barbarian/spells/c0bar#03.eff~ ~override~
 WRITE_SHORT 0x1c IDS_OF_SYMBOL (~STATE~ ~C0_BARB_STATUS~)
 COPY ~%MOD_FOLDER%/Fighter/Barbarian/spells/c0bar#06.spl~ ~override~
-SAY NAME1 ~Mighty Blow: Active~
-SAY NAME2 ~Mighty Blow: Active~
-SAY UNIDENTIFIED_DESC ~Mighty Blow
+SAY NAME1 ~猛击：激活~
+SAY NAME2 ~猛击：激活~
+SAY UNIDENTIFIED_DESC ~猛击
 
-The barbarian may choose to forsake accuracy for more power, reducing his THAC0 by 4 but dealing 4 extra points of damage per hit (melee only). THAC0 and damage modifiers increase to 8 from level 20 onwards.~
+野蛮人可选择牺牲精准度换取更强的威力，零级命中值降低4点，但每次命中额外造成4点伤害（仅近战）。20级起，零级命中值与伤害修正提升至8点。~
 
 COPY ~%MOD_FOLDER%/Fighter/Barbarian/spells/c0bar#07.spl~ ~override~
-SAY NAME1 ~Mighty Blow: Inactive~
-SAY NAME2 ~Mighty Blow: Inactive~
-SAY UNIDENTIFIED_DESC ~Use this ability to deactivate Mighty Blow at will.~
+SAY NAME1 ~猛击：关闭~
+SAY NAME2 ~猛击：关闭~
+SAY UNIDENTIFIED_DESC ~使用本能力可随时关闭猛击。~
 
 COPY ~%MOD_FOLDER%/Fighter/Barbarian/SPELLS/SPCL152.SPL~ ~OVERRIDE~
-SAY NAME1 ~Barbarian Rage~
-SAY UNIDENTIFIED_DESC ~Barbarian Rage
-The enraged status lasts for 5 rounds and provides a +4 bonus to Strength and Constitution and a +2 bonus to Saving Throws vs. Spell. However, the barbarian incurs a -2 penalty to Armor Class. Additionally, activating Rage restores any drained levels from the barbarian and protects them from subsequent level drain effects for the duration. When the rage expires, the barbarian becomes fatigued and suffers a -2 penalty to Strength, Dexterity, Armor Class and Movement Rate for 5 rounds. The barbarian cannot use Rage until this duration is over. From 10th level, Strength and Constitution bonuses are increased to +6, and from 24th level, they are increased to +8.~
+SAY NAME1 ~野蛮人狂暴~
+SAY UNIDENTIFIED_DESC ~野蛮人狂暴
+狂暴状态持续5回合，提供+4力量与体质加成，以及+2法术豁免加值。但野蛮人会受到-2护甲等级惩罚。此外，激活狂暴会恢复野蛮人所有被吸取的等级，并在持续期间免疫后续的等级吸取效果。狂暴结束后，野蛮人会进入疲劳状态，力量、敏捷、护甲等级与移动速度受-2惩罚，持续5回合。在此期间野蛮人无法使用狂暴。10级起，力量与体质加成提升至+6；24级起，加成提升至+8。~
 
 COPY ~%MOD_FOLDER%/Fighter/Barbarian/SPELLS/SPCL152a.SPL~ ~OVERRIDE~
-  LPF ALTER_EFFECT INT_VAR match_opcode = 206 parameter1 = RESOLVE_STR_REF (~You must wait for the current duration of Rage to expire.~) STR_VAR match_resource = spcl152 END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 206 parameter1 = RESOLVE_STR_REF (~需等待当前狂暴效果结束。~) STR_VAR match_resource = spcl152 END
   
 COPY ~%MOD_FOLDER%/Fighter/Barbarian/SPELLS/C0BAR#05.SPL~ ~OVERRIDE~
-SAY NAME1 ~Indomitable Will~
+SAY NAME1 ~不屈意志~

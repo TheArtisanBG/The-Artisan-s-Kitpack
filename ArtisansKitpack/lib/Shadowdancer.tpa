@@ -24,55 +24,55 @@ COPY_EXISTING ~CLABTH01.2DA~ ~OVERRIDE/CLABTH05.2DA~
 
  	PRETTY_PRINT_2DA
 
-OUTER_SPRINT kit_description ~SHADOWDANCER: Operating in the border between light and darkness, Shadowdancers are nimble artists of deception. They are mysterious and unknown, never completely trusted but always inducing wonder when met. Shadowdancers can harness the power of magic to increase their stealth abilities. Enigmatic and dangerous, these uniquely skilled Thieves are able to blend seamlessly into the shadows in ways that a normal Thief cannot, striking without warning—sometimes with supernatural speed. Despite their link with shadows and trickery, shadowdancers are as often good as evil.
+OUTER_SPRINT kit_description ~影舞者：影舞者游走于光暗交界，是灵巧狡黠的欺诈大师。他们神秘莫测、行迹难寻，从不为人全然信任，却总能引得旁人惊叹。影舞者能驾驭魔法之力强化潜行本领。这些技艺独特的盗贼诡谲而致命，能以普通盗贼无法企及的方式融入暗影，出手毫无征兆——有时甚至带着超自然的速度。尽管与暗影和诡计相伴，影舞者的阵营可善可恶。
 
-Advantages:
-– +15% bonus to Hide In Shadows and Move Silently.
-– Hide In Plain Sight: A Shadowdancer may hide in shadows even while being observed so long as they have not been attacked within the last round.
-– May cast Shadowstep once per day. Gains one use at level 1 and an additional use every 5th level.
+职业优势：
+–+15%阴影躲藏与无声行动能力
+-凭空消失：只要上一回合内未受到攻击，影舞者即便在被注视的情况下也能隐入阴影。
+-每日可使用一次「暗影步」。1级时获得1次，之后每提升5级额外获得1次使用次数。
 
-SHADOWSTEP: Step into the Shadow Plane and move for 7 seconds while others are frozen in time. The Shadowdancer cannot attack or cast spells while in the Shadow Plane.
+暗影步：踏入暗影位面，在时间停滞的7秒内自由移动。影舞者在暗影位面中无法攻击或施法。
 
-– 2nd level: Gains permanent Infravision.
-– 3rd level: May cast Summon Shadow once per day.
+-2级：永久获得黑暗视觉。
+-3级：每日可使用一次「召唤幽影」。
 
-SUMMON SHADOW: The Shadowdancer may summon a creature from the Plane of Shadow to assist them in combat for two turns. The shadow possesses the abilities of a Shadowdancer and increases in power as the summoner gains in Shadowdancer levels.
+召唤幽影：影舞者可从暗影位面召唤一只生物协助战斗，持续2回合。幽影具备影舞者的能力，威力随召唤者的影舞者等级提升。
 
-– 5th level: May cast Shadow Daze once per day. Gains an additional use every 10th level.
+-5级：每日可使用一次「暗影眩晕」。每提升10级额外获得1次使用次数。
 
-SHADOW DAZE: The Shadowdancer inflicts an illusory daze (-10 penalty to AC and unable to act, but effects are removed when attacked) upon the target for five rounds on a failed Save vs. Spells at -3.
+暗影眩晕：目标法术豁免（难度-3）失败则陷入幻象眩晕5回合：护甲等级-10且无法行动，受到攻击后效果立即解除。
 
-– 10th level: May cast Shadow Evade three times per day.
+-10级：每日可使用三次「暗影闪避」。
 
-SHADOW EVADE: The Shadowdancer may conceal themselves in shadow. For the next three rounds, the Shadowdancer is only partially visible and may not be targeted by spells unless by creatures that can see through invisibility. As long as they are in the partially visible state, they gain a +5% bonus to physical resistances and a +1 bonus to Armor Class. These bonuses increase by the base amount at levels 15, 20 and 25.
+暗影闪避：影舞者将自身隐入暗影。接下来3回合内，影舞者处于半隐形状态，除非生物能看破隐形，否则无法以法术锁定。处于半隐形状态时，物理抗性+5%，护甲等级+1。15级、20级与25级时，该加值会在原有基础上再提升一倍。
 
-– 10th level: Gains Defensive Roll.
+-10级：获得「防御翻滚」。
 
-DEFENSIVE ROLL: When the Shadowdancer takes damage that would be lethal to them, they instead survive with one hit point, immediately turning invisible while being protected from all damage for the next round. This does not protect them from instant death effects or death by means other than damage. This effect may only occur once per eight hours.
+防御翻滚：当影舞者受到足以致命的伤害时，改为仅剩1点生命值存活，并立即进入隐形状态，下回合免疫所有伤害。本效果无法防护即死效果或非伤害类死亡效果。每8小时最多触发一次。
 
-– 12th level: The Shadowdancer becomes immune to backstab.
-– 15th level: Gains Slippery Mind.
+-12级：免疫背刺。
+-15级：获得「心智灵活」。
 
-SLIPPERY MIND: When the Shadowdancer is affected by a mind-affecting spell or effect, they may make a Saving Throw vs. Spells at -4 for every round that they are under the effect to immediately be freed of it.
+心智灵活：影舞者受到影响心灵的法术或效果时，效果持续期间每回合都可进行一次法术豁免检定（难度-4），成功则立即摆脱该效果。
 
-– 20th level: The Shadowdancer may Hide in Plain Sight even after being attacked.
+-20级：即便受到攻击后，影舞者也可使用凭空消失。
 
-Disadvantages:KIT_DISADV_1
-– Backstab progression is significantly weaker than a normal Thief's:
-  Level 1-4: x1 (no multiplier)
-  Level 5-8: x2
-  Level 9-12: x3
-– May only distribute 15 skill points per level among thieving skills.
-– May not use the Set Snare ability.
+职业限制：KIT_DISADV_1
+-背刺伤害倍率远低于普通盗贼：
+  1-4级：1倍（无额外倍率）
+  5-8级：2倍
+  9-12级：3倍
+–每等级只能在盗贼技能上投入15技能点数
+–不能使用设置陷阱能力
 
-Prime Requisites For Dual-Classing: Strength, Dexterity, Charisma~
+兼职主属性要求：力量、敏捷、魅力~
 
 ACTION_IF MOD_IS_INSTALLED ~Setup-ArtisansKitpack.tp2~ ~7000~ THEN BEGIN
 
 OUTER_PATCH_SAVE kit_description ~%kit_description%~ BEGIN
   REPLACE_TEXTUALLY ~KIT_DISADV_1~ ~
-– May not use Crippling Strike.
-– Does not gain Epic Precision.~
+-无法使用致残打击。
+-不获得史诗精准。~
 
 END
 
@@ -104,7 +104,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Defensive Roll~) STR_VAR bam_file = C0SD-3I RET C0SD-3I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~防御翻滚~) STR_VAR bam_file = C0SD-3I RET C0SD-3I = icon END
 
 // PROFICIENCIES
 
@@ -133,31 +133,31 @@ COPY_EXISTING ~C0SD-3A.SPL~ ~OVERRIDE~
       END
 
 COPY_EXISTING ~C0SD-3C.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Defensive Roll made to avoid lethal damage~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~防御翻滚规避致命伤害~) END
 
 COPY_EXISTING ~C0SD-5A.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Slippery Mind made to break enchantment~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~心智灵活挣脱附魔~) END
 
 COPY_EXISTING ~C0SD-A1.SPL~ ~OVERRIDE~
-SAY NAME1 ~Summon Shadow~
-SAY UNIDENTIFIED_DESC ~Summon Shadow
-The Shadowdancer may summon a creature from the Plane of Shadow to assist them in combat for two turns. The shadow possesses the abilities of a Shadowdancer and increases in power as the summoner gains in Shadowdancer levels.~
+SAY NAME1 ~召唤幽影~
+SAY UNIDENTIFIED_DESC ~召唤幽影
+影舞者可从暗影位面召唤一只生物协助战斗，持续2回合。幽影具备影舞者的能力，威力随召唤者的影舞者等级提升。~
 
 COMPILE ~%MOD_FOLDER%/Thief/Shadowdancer/scripts/C0SD-A1A.BAF~
 
 COPY_EXISTING ~C0SD-A1C.CRE~ ~OVERRIDE~
-SAY NAME1 ~Shadow~
-SAY NAME2 ~Shadow~
+SAY NAME1 ~幽影~
+SAY NAME2 ~幽影~
   WRITE_ASCII SCRIPT_OVERRIDE ~C0SD-A1A~ #8 // override
   WRITE_ASCII DEATHVAR ~C0SD-A1A~ #8 // death variable
 
 COPY_EXISTING ~C0SD-A2.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Dazed~) END
-SAY NAME1 ~Shadow Daze~
-SAY UNIDENTIFIED_DESC ~Shadow Daze
-The Shadowdancer inflicts an illusory daze (-10 penalty to AC and unable to act, but effects are removed when attacked) upon the target for five rounds on a failed Save vs. Spells at -3.~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~眩晕~) END
+SAY NAME1 ~暗影眩晕~
+SAY UNIDENTIFIED_DESC ~暗影眩晕
+目标法术豁免（难度-3）失败则陷入幻象眩晕5回合：护甲等级-10且无法行动，受到攻击后效果立即解除。~
 
 COPY_EXISTING ~C0SD-A3.SPL~ ~OVERRIDE~
-SAY NAME1 ~Shadow Evade~
-SAY UNIDENTIFIED_DESC ~Shadow Evade
-The Shadowdancer may conceal themselves in shadow. For the next three rounds, the Shadowdancer is only partially visible and may not be targeted by spells unless by creatures that can see through invisibility. As long as they are in the partially visible state, they gain a +5% bonus to physical resistances and a +1 bonus to Armor Class. These bonuses increase by the base amount at levels 15, 20 and 25.~
+SAY NAME1 ~暗影闪避~
+SAY UNIDENTIFIED_DESC ~暗影闪避
+影舞者将自身隐入暗影。接下来3回合内，影舞者处于半隐形状态，除非生物能看破隐形，否则无法以法术锁定。处于半隐形状态时，物理抗性+5%，护甲等级+1。15级、20级与25级时，该加值会在原有基础上再提升一倍。~

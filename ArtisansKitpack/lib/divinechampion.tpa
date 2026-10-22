@@ -37,34 +37,34 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 6
 	
-    mixed         = RESOLVE_STR_REF(~Divine Champion~)
+    mixed         = RESOLVE_STR_REF(~神圣斗士~)
 	
-    lower         = RESOLVE_STR_REF(~divine champion~)
+    lower         = RESOLVE_STR_REF(~神圣斗士~)
 	
-    help          = RESOLVE_STR_REF(~DIVINE CHAMPION: The divine champion is the strong right arm of their deity. They serve as a guardian of holy sites, a protector of pilgrims and a leader of crusades. Though paladins fill these roles in many good-aligned churches, a divine champion can take up the banner of any deity, regardless of alignment or ethos. These holy warriors are loved by their patron's worshipers and hated by the church's enemies in equal measure.
-  
-Divine Champions may be of any alignment and will never fall, regardless of alignment or reputation.
+    help          = RESOLVE_STR_REF(~神圣斗士：神圣斗士是其神祇的坚实右臂。他们担任圣所守护者、朝圣者保护者与十字军领袖。在诸多善良阵营的教会中，这些职责多由圣武士承担，但神圣斗士可以举起任何神祇的战旗，无关阵营或信条。这些圣战者受其信奉者爱戴的程度，与被教会仇敌憎恨的程度不相上下。
 
-Advantages:
-– May achieve High Mastery (4 slots) in any weapon.
-– Gains +1 to all Saving Throws at level 5 and every 5 levels gained thereafter.
-– 2nd Level: May use the Smite Infidel ability once per day, gaining an additional use every 2 levels gained.
+神圣斗士无阵营限制，且无论阵营与声望如何，永远不会堕落。
 
-SMITE INFIDEL: The divine champion's next attack within two rounds deals 1d4 points of magic damage per 2 levels to any creature of a different moral (good, neutral, evil) alignment to the caster.
+职业优势：
+–任意武器均可达到高阶精通（4个熟练位）。
+–5级起所有豁免检定+1，之后每提升5级再+1。
+–2级：每日可使用一次「惩戒异端」能力，每提升2级额外获得一次使用次数。
 
-– 5th level: May use the Divine Wrath ability once per day.
+惩戒异端：接下来2回合内，神圣斗士的下一次攻击对任何道德阵营（善良、中立、邪恶）与自身不同的生物，造成每2等级1d4点魔法伤害。
 
-DIVINE WRATH: The divine champion channels a portion of their deity’s power, gaining a +4 bonus to hit, damage and Saving Throws, +25% to all resistances, and an additional +2 bonus to Armor Class and Saving Throws against all creatures of a different moral alignment (good, neutral, evil) to their own. This ability lasts for one turn plus an additional round for each level gained.
+–5级：每日可使用一次「神怒」能力。
 
-Disadvantages:
-– Does not gain additional Saving Throws with Charisma.
-– Does not gain Aura of Courage.
-– May not Turn Undead.
-– May not use Smite Evil.
-– May not use Cure Disease.
-– May not cast priest spells.~)
+神怒：神圣斗士引导其神祇的部分力量，获得命中、伤害与豁免检定+4，所有抗性+25%，且对抗所有道德阵营与自身不同的生物时，护甲等级与豁免检定额外+2。本能力持续1回合，每提升1级额外持续1回合。
+
+职业限制：
+–不获得基于魅力的额外豁免。
+–不获得勇气光环。
+–无法驱散不死生物。
+–无法使用破邪斩。
+–无法使用治病术。
+–无法施展牧师法术。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~DIVINE CHAMPION: The divine champion is the strong right arm of their deity. They serve as a guardian of holy sites, a protector of pilgrims and a leader of crusades. Though paladins fill these roles in many good-aligned churches, a divine champion can take up the banner of any deity, regardless of alignment or ethos. These holy warriors are loved by their patron's worshipers and hated by the church's enemies in equal measure.~)
+    briefdesc     = RESOLVE_STR_REF(~神圣斗士：神圣斗士是其神祇的坚实右臂。他们担任圣所守护者、朝圣者保护者与十字军领袖。在诸多善良阵营的教会中，这些职责多由圣武士承担，但神圣斗士可以举起任何神祇的战旗，无关阵营或信条。~)
 	
 	fallen = 0
 	
@@ -177,21 +177,21 @@ ACTION_FOR_EACH description IN
 //divinechampion
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0DC" BEGIN
           READ_2DA_ENTRY index 4 col_count divinechampion_desc
-          SPRINT old_divinechampion ~Disadvantages:~
-          SPRINT new_divinechampion ~– 5th level: May use the Power Attack and Expertise modal abilities. Only one of the two may be activated at any time.
+          SPRINT old_divinechampion ~职业限制：~
+          SPRINT new_divinechampion ~–5级：可使用「强力攻击」与「武器娴熟」攻击模式，同一时间仅可激活其中一种。
 
-POWER ATTACK: The Divine Champion forgoes accuracy for heavier, more damaging blows, sacrificing 3 points of melee THAC0 to increase their melee damage by 3. The Divine Champion must have 17 or greater Strength to activate this ability.
+强力攻击：神圣斗士牺牲精准度换取更重、更具杀伤力的打击，近战零级命中值降低3点，近战伤害提升3点。神圣斗士力量需达到17或以上才能激活此能力。
 
-EXPERTISE: The Divine Champion focuses on defense at the expense of accuracy, sacrificing 3 points of THAC0 to increase their Armor Class by 3. The Divine Champion must have 15 or greater Intelligence to activate this ability.
+武器娴熟：神圣斗士专注于防御，以精准为代价，零级命中值降低3点，护甲等级提升3点。神圣斗士智力需达到15或以上才能激活此能力。
 
-– 6th level: May use the Rapid Shot modal ability.
+–6级：可使用「速射」攻击模式。
 
-RAPID SHOT: The Divine Champion may make an additional ranged attack per round at a -4 penalty to hit.
+速射：神圣斗士每回合可额外进行一次远程攻击，命中受-4惩罚。
 
-– 12th level: Improved Rapid Shot: The Divine Champion’s penalty to hit while Rapid Shot is active is reduced to -2.
-– 14th level: May use Improved Power Attack and Improved Expertise, which provide 6 points to the original abilities' bonuses and penalties.
+–12级：精通速射：速射激活时，神圣斗士的命中惩罚降低至-2。
+–14级：可使用「精通强力攻击」与「精通武器娴熟」，将原能力的加成与惩罚提升至6点。
 
-Disadvantages:~
+职业限制：~
           GET_STRREF %divinechampion_desc% divinechampion_text
           INNER_PATCH_SAVE divinechampion_text ~%divinechampion_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_divinechampion%~ ~%new_divinechampion%~
@@ -209,16 +209,16 @@ Disadvantages:~
 COPY ~%MOD_FOLDER%/Paladin/DivineChampion/c0dc01.spl~ ~override~
 COPY ~%MOD_FOLDER%/Paladin/DivineChampion/c0dc02a.eff~ ~override~
 COPY ~%MOD_FOLDER%/Paladin/DivineChampion/c0dc02a.spl~ ~override~
-SAY NAME1 ~Smite Infidel~
+SAY NAME1 ~惩戒异端~
 COPY ~%MOD_FOLDER%/Paladin/DivineChampion/c0dc02.spl~ ~override~
-SAY NAME1 ~Smite Infidel~
-SAY UNIDENTIFIED_DESC ~Smite Infidel
-The divine champion's next attack within two rounds deals 1d4 points of magic damage per 2 levels to any creature of a different moral (good, neutral, evil) alignment to the caster.~
+SAY NAME1 ~惩戒异端~
+SAY UNIDENTIFIED_DESC ~惩戒异端
+接下来2回合内，神圣斗士的下一次攻击对任何道德阵营（善良、中立、邪恶）与自身不同的生物，造成每2等级1d4点魔法伤害。~
 
 COPY ~%MOD_FOLDER%/Paladin/DivineChampion/c0dc03.spl~ ~override~
-SAY NAME1 ~Divine Wrath~
-SAY UNIDENTIFIED_DESC ~Divine Wrath
-The divine champion channels a portion of their deity’s power, gaining a +4 bonus to hit, damage and Saving Throws, +25% to all resistances, and an additional +2 bonus to Armor Class and Saving Throws against all creatures of a different moral alignment (good, neutral, evil) to their own. This ability lasts for one turn plus an additional round for each level gained.~
+SAY NAME1 ~神怒~
+SAY UNIDENTIFIED_DESC ~神怒
+神圣斗士引导其神祇的部分力量，获得命中、伤害与豁免检定+4，所有抗性+25%，且对抗所有道德阵营与自身不同的生物时，护甲等级与豁免检定额外+2。本能力持续1回合，每提升1级额外持续1回合。~
 
 COPY ~%MOD_FOLDER%/Paladin/DivineChampion/c0dc04.spl~ ~override~
 

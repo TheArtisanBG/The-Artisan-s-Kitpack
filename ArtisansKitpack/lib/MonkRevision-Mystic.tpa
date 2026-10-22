@@ -145,56 +145,56 @@ COPY_EXISTING ~C0MN#T1.SPL~ ~OVERRIDE/C0MN#TD.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 206 STR_VAR match_resource = C0MN#ZD resource = C0MN#Z1 END
 
 COPY_EXISTING ~C0MFIST1.ITM~ OVERRIDE
-SAY NAME2 ~Fist~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d4 crushing damage.~
+SAY NAME2 ~拳头~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d4点钝击伤害。~
 
 COPY_EXISTING ~C0MFIST2.ITM~ OVERRIDE
-SAY NAME2 ~Fist +1~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d4+1 crushing damage and strike as a +1 weapon.~
+SAY NAME2 ~拳头+1~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d4+1点钝击伤害，视为+1武器。~
 
 COPY_EXISTING ~C0MFIST3.ITM~ OVERRIDE
-SAY NAME2 ~Fist +1~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d6+1 crushing damage and strike as a +1 weapon.~
+SAY NAME2 ~拳头+1~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d6+1点钝击伤害，视为+1武器。~
 
 COPY_EXISTING ~C0MFIST4.ITM~ OVERRIDE
-SAY NAME2 ~Fist +1~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d6+1 crushing damage and strike as a +1 silver weapon.~
+SAY NAME2 ~拳头+1~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d6+1点钝击伤害，视为+1银质武器。~
 
 COPY_EXISTING ~C0MFIST5.ITM~ OVERRIDE
-SAY NAME2 ~Fist +2~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d6+2 crushing damage and strike as a +2 silver weapon.~
+SAY NAME2 ~拳头+2~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d6+2点钝击伤害，视为+2银质武器。~
 
 COPY_EXISTING ~C0MFIST6.ITM~ OVERRIDE
-SAY NAME2 ~Fist +2~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d8+2 crushing damage and strike as a +2 silver weapon.~
+SAY NAME2 ~拳头+2~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d8+2点钝击伤害，视为+2银质武器。~
 
 COPY_EXISTING ~C0MFIST7.ITM~ OVERRIDE
-SAY NAME2 ~Fist +3~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d8+3 crushing damage and strike as a +3 silver weapon.~
+SAY NAME2 ~拳头+3~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d8+3点钝击伤害，视为+3银质武器。~
 
 COPY_EXISTING ~C0MFIST8.ITM~ OVERRIDE
-SAY NAME2 ~Fist +3~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d10+3 crushing damage and strike as a +3 silver weapon.~
+SAY NAME2 ~拳头+3~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d10+3点钝击伤害，视为+3银质武器。~
 
 COPY_EXISTING ~C0MFIST9.ITM~ OVERRIDE
-SAY NAME2 ~Fist +4~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d10+4 crushing damage and strike as a +4 silver weapon.~
+SAY NAME2 ~拳头+4~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d10+4点钝击伤害，视为+4银质武器。~
 
 COPY_EXISTING ~C0MFISTA.ITM~ OVERRIDE
-SAY NAME2 ~Fist +4~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d12+4 crushing damage and strike as a +4 silver weapon.~
+SAY NAME2 ~拳头+4~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d12+4点钝击伤害，视为+4银质武器。~
 
 COPY_EXISTING ~C0MFISTB.ITM~ OVERRIDE
-SAY NAME2 ~Fist +4~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d12+4 crushing damage and strike as a +4 silver weapon.~
+SAY NAME2 ~拳头+4~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d12+4点钝击伤害，视为+4银质武器。~
 
 COPY_EXISTING ~C0MFISTC.ITM~ OVERRIDE
-SAY NAME2 ~Fist +5~
-SAY UNIDENTIFIED_DESC ~These fists deal 1d12+5 crushing damage and strike as a +5 silver weapon.~
+SAY NAME2 ~拳头+5~
+SAY UNIDENTIFIED_DESC ~这对拳头造成1d12+5点钝击伤害，视为+5银质武器。~
 
 COPY_EXISTING ~C0MFISTD.ITM~ OVERRIDE
-SAY NAME2 ~Fist +5~
-SAY UNIDENTIFIED_DESC ~These fists deal 2d8+5 crushing damage and strike as a +5 silver weapon.~
+SAY NAME2 ~拳头+5~
+SAY UNIDENTIFIED_DESC ~这对拳头造成2d8+5点钝击伤害，视为+5银质武器。~
 
 INCLUDE ~%MOD_FOLDER%/lib/replace_multiline.tpa~
 
@@ -419,7 +419,7 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all item files
         WRITE_BYTE    0x20 (row3 BAND 0b11111011)
         LPF DELETE_EFFECT INT_VAR match_opcode = 319 match_parameter2 = C0_MONK_EQUIPMENT END
         LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 parameter1 = 0 parameter2 = C0_MONK_EQUIPMENT timing = 2 power = 2 END
-      	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 timing = 2 power = 0 parameter1 = 0 parameter2 = 2 special = RESOLVE_STR_REF (~Monk~) END
+      	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 319 target = 1 timing = 2 power = 0 parameter1 = 0 parameter2 = 2 special = RESOLVE_STR_REF (~武僧~) END
     END
   END
 BUT_ONLY

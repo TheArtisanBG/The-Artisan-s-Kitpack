@@ -125,13 +125,13 @@ ACTION_FOR_EACH description IN
 //BRAWLER
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "C0_BRAWLER" BEGIN
           READ_2DA_ENTRY index 4 col_count brawler_desc
-          SPRINT old_brawler_1 ~– May not use Lay on Hands.~
-          SPRINT new_brawler_1 ~– May not use Wholeness of Body.~
-          SPRINT old_brawler_2 ~– Does not gain Magic Resistance.
-– Does not gain immunity to disease, slow, haste, charm, poison or non-magical weapons.~
-          SPRINT new_brawler_2 ~– Does not gain Wisdom bonuses to Armor Class.
-– Does not gain bonus Saving Throws.
-– Does not gain Still Mind, Purity of Body, Diamond Body, Diamond Soul or Perfect Self.~
+          SPRINT old_brawler_1 ~–无法使用圣疗术能力~
+          SPRINT new_brawler_1 ~–无法使用混元体~
+          SPRINT old_brawler_2 ~–不获得魔法抗性
+–不免疫疾病、迟缓、加速、魅惑、毒素与非魔法武器~
+          SPRINT new_brawler_2 ~–不获得感知带来的护甲等级加值
+–不获得额外豁免检定
+–不获得心如止水、肉身纯净、钻石身、金刚魂与超凡入圣~
           GET_STRREF %brawler_desc% brawler_text
           INNER_PATCH_SAVE brawler_text ~%brawler_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_brawler_1%~ ~%new_brawler_1%~
@@ -321,61 +321,61 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~%CLASSTEXT%.2da~) BEGIN
 	  READ_2DA_ENTRY_FORMER rows row 0 ~text~ // read column value
 	  PATCH_IF ~%text%~ STRING_EQUAL_CASE ~MONK~ BEGIN
 	    SET patch_row = %row%
-		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~MONK: Monks are warriors who pursue perfection through contemplation as well as action. They are versatile fighters, especially skilled in combat without weapons or armor. Though Monks cannot cast spells, they have a unique magic of their own: They channel a subtle energy, called ki, which allows them to perform amazing feats. The Monk's best known feat is their ability to stun an opponent with an unarmed blow.
+		SET_2DA_ENTRY (%patch_row%) 4 cols RESOLVE_STR_REF (~武僧：武僧是透过沉思和实际行动来追求完美境界的战士。他们是多才多艺的战士，尤其擅长于不穿戴护甲的徒手格斗。虽然武僧无法施法，但他们有专属的特殊法力。这种无形的能量称之为“气”，可透过它的运行展现出惊人的绝技。武僧最广为人知的绝招就是在空手格斗中击晕震慑住对手。
 
-CLASS FEATURES:
+职业特性：
 
-– May not wear any armor.
-– May only use weapons available to the Thief class.
-– May achieve Grandmastery (five slots) in Quarterstaves.
-– May only become Proficient (one slot) in any weapon class.
-– May become Proficient (one slot) in Two-Handed Weapon Style, Single-Weapon Style and Two-Weapon Style.
-– May use the Hide In Shadows and Find Trap abilities (but may not disarm traps)
-– Moves 2 points faster than other characters. Movement rate further improves by 1 every 5 levels.
-– May make 2 attacks per round while unarmed or when wielding a quarterstaff.
-– -1 to Speed Factor per 3 levels.
+–武僧不能穿戴任何护甲。
+–只能选用盗贼职业所使用的武器。
+–手杖可达到宗师级精通（5星）。
+–其他任意武器类最多仅能达到熟练级（1星）。
+–双武器战斗、单武器战斗、双武器风格可达到熟练级（1星）。
+–可使用「阴影躲藏」与「寻找陷阱」能力（但无法解除陷阱）。
+–移动速度比其他角色快2点。每提升5级，移动速度再提升1点。
+–徒手或持手杖时，每回合可攻击2次。
+–每3级攻击速度-1。
 
-– Flurry of Blows: The monk, while unarmed or wielding daggers or darts, may make an additional attack at the same time as their first attack each round at the cost of a -5 penalty to THAC0. This extra attack is not subject to the attacks per round limit and may be toggled at will. THAC0 penalty decreases to -2 at 13th level.
+–疾风连击：武僧徒手、持匕首或飞镖时，每回合首次攻击可额外追加一次攻击，零级命中值受-5惩罚。该额外攻击不受每回合攻击次数上限限制，且可自由切换开启。13级时，零级命中惩罚降低至-2。
 
-– The monk's fists deal crushing damage and deal increase damage with level as follows:
-  Level 1-2: 1d4
-  Level 3-4: 1d6
-  Level 5-6: 1d8
-  Level 7-9: 1d10
-  Level 10-14: 1d12
-  Level 15-19: 2d8
-  Level 20-24: 2d10
-  Level 25+: 2d12
-  
-– Ki: The monk's unarmed attacks are empowered with ki, which allows them to be treated as magical weapons of +1 enchantment at 4th level, +2 at 8th level, +3 at 12th level, +4 at 16th level and +5 at 20th level. From 7th level, they are treated as silver weapons.
-– Receives a +1 bonus to all Saving Throws. An additional +1 is gained at 5th level and every 5 levels thereafter.
-– The monk gains a +1 bonus to base Armor Class per point of Wisdom above 12. They gain an additional +1 to AC at 5th level and every 5 levels thereafter.
-– Deflect Missiles: The monk receives a +1 bonus to AC vs. missile attacks every 3 levels.
-– May use the Stunning Blow ability once per day. Gains one use at level 1 and an additional use every 4 levels thereafter.
+–武僧的拳头造成钝击伤害，伤害随等级提升：
+  1-2级：1d4
+  3-4级：1d6
+  5-6级：1d8
+  7-9级：1d10
+  10-14级：1d12
+  15-19级：2d8
+  20-24级：2d10
+  25级及以上：2d12
 
-STUNNING BLOW: The monk sacrifices four points of THAC0 and damage for their next successful attack within 10 seconds. When struck, the target must make a Save vs. Death (-1 modifier per point of Wisdom above 14) or be stunned for three rounds.
+–气：武僧的徒手攻击贯注气之力，4级时视为+1附魔魔法武器，8级+2，12级+3，16级+4，20级+5。7级起，视为银质武器。
+–所有豁免检定+1。5级起每提升5级额外+1。
+–智力每超过12点1点，武僧基础护甲等级+1。5级起每提升5级护甲等级额外+1。
+–御箭：每3级，武僧对抗远程攻击的护甲等级+1。
+–每日可使用一次「震眩拳」。1级时获得1次，之后每提升4级额外获得1次。
 
-– 3rd level: Still Mind: The monk receives a +2 bonus to Saving Throws vs. Enchantment spells.
-– 5th level: Purity of Body: The monk gains permanent Free Action and immunity to all diseases.
-– 7th level: May use Wholeness of Body once per day.
+震眩拳：武僧在10秒内的下一次成功攻击，牺牲4点零级命中值与伤害。目标受击时必须进行死亡豁免（智力每超过14点1点，豁免难度-1），失败则震慑3回合。
 
-WHOLENESS OF BODY: The monk instantly heals themself for three hit points per monk level.
+–3级：心如止水：武僧对抗附魔系法术的豁免检定+2。
+–5级：肉身纯净：武僧获得永久自由行动，且免疫所有疾病。
+–7级：每日可使用一次「混元体」。
 
-– 8th level: Greater Flurry: The monk now makes an additional second attack per round while Flurry of Blows is active.
-– 11th level: Diamond Body: The monk permanently becomes immune to poison.
-– 12th level: Diamond Soul: The monk gains base 10% + 2% Magic Resistance per monk level up to a maximum of 70% at 30th level.
-– 13th level: May use the Quivering Palm ability once per day.
+混元体：武僧立即回复自身每等级3点生命值。
 
-QUIVERING PALM: The most advanced of the monk's techniques. When used, the monk's next successful attack within 10 seconds sets up fatal vibrations within the target's body, instantly killing them unless a successful Save vs. Death (-1 modifier per point of Wisdom above 16) is made.
+–8级：疾风连打：疾风连击激活时，武僧每回合可额外进行第二次攻击。
+–11级：钻石身：武僧永久免疫毒素。
+–12级：金刚魂：武僧获得基础10%+每等级2%的魔法抗性，30级时达到上限70%。
+–13级：每日可使用一次「渗透劲」。
 
-– 14th level: May use Empty Body twice per day.
+渗透劲：武僧的最高深技法。使用后，10秒内的下一次成功攻击会在目标体内引发致命震颤，目标死亡豁免失败则立即死亡（智力每超过16点1点，豁免难度-1）。
 
-EMPTY BODY: The monk gains the ability to fade from sight, granting them partial invisibility for one round per level. Attacks against the monk suffer a -4 penalty to attack rolls, and the monk's Saving Throws are made with a +4 bonus. The monk also cannot be targeted by spells from creatures unless they can see through invisibility.
+–14级：每日可使用两次「空灵体」。
 
-– 15th level: Inner Eye: The monk becomes immune to critical hits while unarmed.
-– 20th level: Perfect Self: The monk gains permanent immunity to Charm, Domination, Command, Sleep, Maze, Imprisonment, Confusion, Psionics and all weapons of +1 enchantment and below.
-– Alignment restricted to lawful.
-– Hit Die: d8~)
+空灵体：武僧可隐入无形，获得每等级1回合的半隐形效果。攻击武僧的攻击掷骰受-4惩罚，武僧的豁免检定获得+4加值。除非能看破隐形，否则生物无法以法术锁定武僧。
+
+–15级：内眼：武僧徒手时免疫暴击。
+–20级：超凡入圣：武僧永久免疫魅惑、支配、命令、睡眠、迷宫、监禁、困惑、灵能，以及所有+1及以下附魔武器。
+–阵营限制为守序。
+–生命骰：d8~)
 	  END
 	END
   BUT_ONLY
@@ -383,81 +383,81 @@ EMPTY BODY: The monk gains the ability to fade from sight, granting them partial
 	END
   
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~DARK_MOON~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~DARK MOON MONK: The Order of the Dark Moon is a secretive monastic order that follows the teachings of the dark goddess Shar. Monks of the Dark Moon use physical prowess, dark magic, and many different forms of deception to mask their activities and strike with deadly precision.
+STRING_SET_EVALUATE kit_strref ~暗月武僧：暗月教团是信奉黑暗女神莎尔的隐秘僧侣教派。暗月武僧运用肉身技艺、黑暗魔法与种种欺瞒手段掩盖行踪，出手精准致命。
 
-Advantages:
-– +10% to Detect Illusion.
-– May invest points into the Detect Illusion skill.
-– May achieve Mastery in Daggers.
-– May place 3 slots into Two-Weapon Style.
-– May use Sorcerous Lineage once per day. Gains extra uses at 6th and 12th levels.
+职业优势：
+–侦测幻像+10%
+–可为侦测幻像技能投入点数
+–匕首可达到精通级（3个熟练位）。
+–双武器战斗可投入3个熟练位。
+–每日可使用一次「术士血脉」。6级与12级时各额外获得1次使用次数。
 
-SORCEROUS LINEAGE: Disciples of the Order of the Dark Moon must display some sort of sorcerous power during their initiation. As such, All Dark Moon Monks have a minor level of magical ability. This ability allows the Dark Moon Monk to cast a level 1 Invocation, Illusion or Necromancy spell of choice once per day. As the Dark Moon Monk gains in levels, stronger spells may be chosen, gaining level 2 spells at 5th level, level 3 spells at 9th level, level 4 spells at 13th level and level 5 spells at 17th level.
+术士血脉：暗月教团的信徒入门时必须展现出某种法术天赋。因此所有暗月武僧都具备微弱的施法能力。本能力允许暗月武僧每日选择施展一个1环的塑能、幻术或死灵系法术。随着等级提升，可选择更强的法术：5级可选用2环，9级3环，13级4环，17级5环。
 
-– 5th level: May cast Chilling Palm once per day.
+–5级：每日可使用一次「冰霜拳」。
 
-CHILLING PALM: The Dark Moon Monk channels unearthly energy into their unarmed attacks, granting their fists an additional 1d4 magical cold damage (+1 per point of Wisdom above 14) for 1 round per 5 levels.
+冰霜拳：暗月武僧将幽寒能量贯注于徒手攻击中，接下来每5等级1回合内，拳头额外造成1d4魔法寒冷伤害（智力每超过14点1点，额外+1）。
 
-– 8th level: May cast Viperous Strike once per day. 
+–8级：每日可使用一次「毒蛇击」。
 
-VIPEROUS STRIKE: The Dark Moon Monk strikes with a vicious blow that channels corruptive ki into their victim's body. Their next unarmed attack poisons the target. This poison deals damage and reduces the target's Constitution immediately and every following round for at least four rounds. After four rounds have passed, the target must make a Saving Throw vs. Death or remain poisoned for another four rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
+毒蛇击：暗月武僧打出狠厉一击，将腐化之气注入敌人体内。下一次徒手攻击会使目标中毒。毒素立即并在之后每回合造成伤害并降低目标体质，至少持续4回合。4回合后，目标必须进行死亡豁免，失败则再中毒4回合。因此只要目标未成功豁免，毒素就有可能无限持续。目标不会因毒素造成的体质流失而死亡。
 
-1st level: Target suffers two poison damage and loses one point of Constitution. No save modifier.
-6th level: Target suffers four poison damage and loses one point of Constitution. Save modifier of -1.
-11th level: Target suffers six poison damage and loses two points of Constitution. Save modifier of -2.
-16th level: Target suffers eight poison damage and loses two points of Constitution. Save modifier of -3.
-21st level: Target suffers ten poison damage and loses three points of Constitution. Save modifier of -4.
+1级：目标受到2点毒素伤害，损失1点体质。无豁免惩罚。
+6级：目标受到4点毒素伤害，损失1点体质。豁免惩罚-1。
+11级：目标受到6点毒素伤害，损失2点体质。豁免惩罚-2。
+16级：目标受到8点毒素伤害，损失2点体质。豁免惩罚-3。
+21级：目标受到10点毒素伤害，损失3点体质。豁免惩罚-4。
 
-– 13th level: May cast Crushing Darkness once per day.
+–13级：每日可使用一次「黯影碾压」。
 
-CRUSHING DARKNESS: The Dark Moon Monk unleashes ki in a wave of psychic energy that assaults all creatures within a 15-ft. radius with an overwhelming despair, dealing 10d6 magical damage and draining them of two levels. For each target slain by this ability, the Dark Moon Monk is healed for 15% of their maximum hit points and temporarily gains +2 to THAC0 and Damage for six rounds.
+黯影碾压：暗月武僧释放气劲，形成心灵能量波席卷15尺范围内所有生物，施以压倒性绝望，造成10d6魔法伤害并吸取2个等级。每被本能力击杀一个目标，暗月武僧回复最大生命值的15%，并临时获得零级命中值与伤害+2，持续6回合。
 
-– 17th level: May cast Eclipse once per day.
+–17级：每日可使用一次「月蚀」。
 
-ECLIPSE: The Dark Moon Monk becomes wreathed in a cold shroud for one turn, gaining immunity to cold damage and +4 to Strength, Dexterity and Constitution. Any opponent who hits the Dark Moon Monk with any weapons or spells within this radius suffers 1d8+1 points of cold damage and must make a save vs. spells or be sapped, suffering an additional 1d6 magic damage and one point of THAC0 which is temporarily transferred to the Dark Moon Monk for two rounds.
+月蚀：暗月武僧周身环绕寒雾一回合，免疫寒冷伤害，力量、敏捷、体质+4。任何在范围内以武器或法术击中暗月武僧的对手，受到1d8+1点寒冷伤害，且必须进行法术豁免，失败则被吸取，额外受到1d6魔法伤害与1点零级命中值，该值临时转移给暗月武僧，持续2回合。
 
-– 20th level: Bringer of Despair: After casting Crushing Darkness, the Dark Moon Monk is empowered from the pain of their victims, gaining an additional +4 bonus to damage for three rounds. Additionally, killing any creature within the given three rounds grants the Dark Moon Monk the same effects as deaths caused by Crushing Darkness and refreshes the empowered duration.
+–20级：绝望使者：施放黯影碾压后，暗月武僧从受害者的痛苦中汲取力量，接下来3回合伤害额外+4。此外，在这3回合内击杀任何生物，都能获得与黯影碾压击杀相同的效果，并刷新强化持续时间。
 
-Disadvantages:
-– Alignment restricted to lawful evil.
-– May not learn Solar or Storm Stance.
-– May not use the Stunning Blow ability.
-– May not use the Quivering Palm ability.
-– May not use the Wholeness of Body ability.~
+职业限制：
+–阵营限制为守序邪恶。
+–无法习得日耀或雷霆架势。
+–无法使用「震眩拳」能力。
+–无法使用「渗透劲」能力。
+–无法使用「混元体」能力。~
 
 LAF ~GET_KIT_STRREF~ STR_VAR kit_name = ~SUN_SOUL~ RET kit_strref END
-STRING_SET_EVALUATE kit_strref ~SUN SOUL MONK: Sun Soul Monks were once worshippers of Amaunator in the time of the Netheril, but today their worship is divided between Lathander, Selûne, and Sune. Sun Soul Monks adhere strictly to the law, using their martial arts and magical abilities to drive out darkness and corruption wherever they find it.
+STRING_SET_EVALUATE kit_strref ~日魂武僧：日魂武僧曾是耐瑟瑞尔时代阿曼纳塔的信徒，如今他们分奉洛山达、塞伦涅与苏伦。日魂武僧严守律法，以武道与魔法之力驱逐所见之处的黑暗与腐化。
 
-Advantages:
-– Immune to Blindness and Level Drain.
-– May cast Radiant Sunbolts once per day. Gains an extra use at 5th level and every 5 levels thereafter.
+职业优势：
+–免疫目盲与等级吸取。
+–每日可使用一次「日魂射线」。5级起每提升5级额外获得1次使用次数。
 
-RADIANT SUNBOLTS: The Sun Soul Monk can create bolts of energy that flare with radiant light. These bolts can be thrown as a projectile with a +5 bonus to attack rolls. Each bolt deals 1d4+1 points of magical damage and 3 extra points of magical fire damage (10 against undead) and strike as +4 weapons. The Sun Soul Monk produces 5 missiles (+1 additional bolt per 5 monk levels) and may hurl up to five missiles per round.
+日魂射线：日魂武僧可凝聚能量形成耀眼光矢。光矢可作为远程投掷物，攻击掷骰+5。每发造成1d4+1点魔法伤害与3点额外魔法火焰伤害（对亡灵为10点），视为+4武器。日魂武僧可生成5发（每5级武僧等级额外+1发），每回合最多投掷5发。
 
-– 5th level: May cast Blazing Fists once per day.
+–5级：每日可使用一次「燃烧之拳」。
 
-BLAZING FISTS: The Sun Soul Monk channels their inner light into their unarmed attacks, turning their fists into flaming weapons that deal an additional 1d4 magical fire damage (+1 per point of Wisdom above 14) for 1 round per 5 levels.
+燃烧之拳：日魂武僧将内在光芒贯注于徒手攻击中，将双拳化为烈焰武器，接下来每5等级1回合内，额外造成1d4魔法火焰伤害（智力每超过14点1点，额外+1）。
 
-– 8th level: May cast Searing Arc Strike once per day.
+–8级：每日可使用一次「灼炎弧击」。
 
-SEARING ARC STRIKE: The Sun Soul Monk gathers ki within their fists and shapes them into searing waves of white-hot flames. The monk's next successful melee attack unleashes a 90-degree cone of flame which deals 5d6 magical fire damage and severely burns all targets, reducing their Armor Class, THAC0 and Damage by 4 points and dealing an additional 1d6 magical fire damage per round for one turn unless a successful Save vs. Spells is made. Additionally, all invisible targets lose their invisibility with no save.
+灼炎弧击：日魂武僧在拳中聚气，凝成白热焰浪。武僧下一次成功近战攻击释放出90度锥形火焰，造成5d6魔法火焰伤害并严重灼伤所有目标，使其护甲等级、零级命中值与伤害降低4点，且每回合额外受到1d6魔法火焰伤害，持续1回合，法术豁免成功则无效。此外，所有隐形目标破除隐形，无豁免。
 
-– 13th level: May cast Searing Sunburst once per day.
+–13级：每日可使用一次「日魂光束」。
 
-SEARING SUNBURST: The Sun Soul Monk unleashes their ki in a massive pillar of light, dealing 10d6 magical damage to all enemies and blinding them for one round. Undead creatures must make a save vs. spells or be instantly destroyed.
+日魂光束：日魂武僧以光之巨柱释放气劲，对所有敌人造成10d6魔法伤害，并致盲1回合。亡灵生物必须进行法术豁免，失败则直接被摧毁。
 
-– 17th level: May cast Solar Shield once per day.
+–17级：每日可使用一次「圣日术」。
 
-SOLAR SHIELD: The Sun Soul Monk becomes wreathed in a luminous mantle, gaining immunity to fire damage and dealing 30% increased fire damage from all sources for 1 turn. Any opponent who hits the Sun Soul Monk with any weapons or spells within this radius suffers 1d8+1 points of magical fire damage and must make a save vs. spells or take an additional 1d8 magical fire damage and be blinded for one round.
+圣日术：日魂武僧周身环绕光焰一回合，免疫火焰伤害，所有来源造成的火焰伤害提升30%。任何在范围内以武器或法术击中日魂武僧的对手，受到1d8+1点魔法火焰伤害，且必须进行法术豁免，失败则额外受到1d8魔法火焰伤害并致盲1回合。
 
-– 20th level: Avatar of the Sun: After casting Searing Sunburst, the Sun Soul monk continues to radiate light for three rounds, gaining a +6 bonus to Armor Class and +30% bonus to resistance to slashing, piercing, crushing and missile damage. All enemies within 15-ft. of the Sun Soul monk take 1d6 magical damage each round and must make a save vs. spells at -2 or be blinded for one round.
+–20级：阳炎化身：施放日魂光束后，日魂武僧持续散发光芒3回合，护甲等级+6，挥砍、穿刺、钝击与远程伤害抗性+30%。15尺范围内的所有敌人每回合受到1d6魔法伤害，且必须进行-2惩罚的法术豁免，失败则致盲1回合。
 
-Disadvantages:
-– Alignment restricted to lawful good.
-– May not learn Lunar or Shadow Stance.
-– May not use Stunning Blow ability.
-– May not use Quivering Palm ability.
-– May not use Empty Body ability.~
+职业限制：
+–阵营限制为守序善良。
+–无法习得月辉或暗影架势。
+–无法使用「震眩拳」能力。
+–无法使用「渗透劲」能力。
+–无法使用「空灵体」能力。~
 
 DEFINE_ACTION_FUNCTION cd_new_portrait_icon
   INT_VAR string = 0
@@ -474,7 +474,7 @@ DEFINE_ACTION_FUNCTION cd_new_portrait_icon
 
 END
 
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Flurry of Blows~) STR_VAR bam_file = C0MN#04I RET C0MN#04I = icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~疾风连击~) STR_VAR bam_file = C0MN#04I RET C0MN#04I = icon END
 
 COPY_EXISTING ~clswpbon.2da~ ~override~
   COUNT_2DA_COLS numCols
@@ -499,41 +499,41 @@ COPY_EXISTING ~clasiskl.2da~ ~override~
   BUT_ONLY
   
 COPY_EXISTING ~MFIST1.ITM~ OVERRIDE
-SAY NAME1 ~Fist~
-SAY NAME2 ~Fist~
+SAY NAME1 ~拳头~
+SAY NAME2 ~拳头~
 COPY_EXISTING ~MFIST2.ITM~ OVERRIDE
-SAY NAME1 ~Fist~
-SAY NAME2 ~Fist~
+SAY NAME1 ~拳头~
+SAY NAME2 ~拳头~
 COPY_EXISTING ~MFIST3.ITM~ OVERRIDE
-SAY NAME1 ~Fist +1~
-SAY NAME2 ~Fist +1~
+SAY NAME1 ~拳头+1~
+SAY NAME2 ~拳头+1~
 COPY_EXISTING ~MFIST4.ITM~ OVERRIDE
-SAY NAME1 ~Fist +1~
-SAY NAME2 ~Fist +1~
+SAY NAME1 ~拳头+1~
+SAY NAME2 ~拳头+1~
 COPY_EXISTING ~MFIST5.ITM~ OVERRIDE
-SAY NAME1 ~Fist +1~
-SAY NAME2 ~Fist +1~
+SAY NAME1 ~拳头+1~
+SAY NAME2 ~拳头+1~
 COPY_EXISTING ~MFIST6.ITM~ OVERRIDE
-SAY NAME1 ~Fist +2~
-SAY NAME2 ~Fist +2~
+SAY NAME1 ~拳头+2~
+SAY NAME2 ~拳头+2~
 COPY_EXISTING ~MFIST7.ITM~ OVERRIDE
-SAY NAME1 ~Fist +2~
-SAY NAME2 ~Fist +2~
+SAY NAME1 ~拳头+2~
+SAY NAME2 ~拳头+2~
 COPY_EXISTING ~MFIST8.ITM~ OVERRIDE
-SAY NAME1 ~Fist +3~
-SAY NAME2 ~Fist +3~
+SAY NAME1 ~拳头+3~
+SAY NAME2 ~拳头+3~
 COPY_EXISTING ~MFIST9.ITM~ OVERRIDE
-SAY NAME1 ~Fist +3~
-SAY NAME2 ~Fist +3~
+SAY NAME1 ~拳头+3~
+SAY NAME2 ~拳头+3~
 COPY_EXISTING ~MFIST10.ITM~ OVERRIDE
-SAY NAME1 ~Fist +4~
-SAY NAME2 ~Fist +4~
+SAY NAME1 ~拳头+4~
+SAY NAME2 ~拳头+4~
 COPY_EXISTING ~MFIST11.ITM~ OVERRIDE
-SAY NAME1 ~Fist +5~
-SAY NAME2 ~Fist +5~
+SAY NAME1 ~拳头+5~
+SAY NAME2 ~拳头+5~
 COPY_EXISTING ~MFIST12.ITM~ OVERRIDE
-SAY NAME1 ~Fist +5~
-SAY NAME2 ~Fist +5~
+SAY NAME1 ~拳头+5~
+SAY NAME2 ~拳头+5~
 
 COPY_EXISTING ~C0MN#041.EFF~ ~OVERRIDE~
 WRITE_SHORT 0x1c IDS_OF_SYMBOL (~ANIMATE~ ~MONK_MALE_HUMAN_1~)
@@ -578,36 +578,36 @@ WRITE_BYTE 0x58 0
 WRITE_ASCII 0x94 ~C0MN#048~
 
 COPY_EXISTING ~C0MN#04.SPL~ OVERRIDE
-SAY NAME1 ~Flurry of Blows~
-SAY UNIDENTIFIED_DESC ~Flurry of Blows
-The monk, while unarmed or wielding daggers or darts, may make an additional attack at the same time as their first attack each round at the cost of a -5 penalty to THAC0. This extra attack is not subject to the attacks per round limit and may be toggled at will. THAC0 penalty decreases to -2 at 13th level.~
+SAY NAME1 ~疾风连击~
+SAY UNIDENTIFIED_DESC ~疾风连击
+武僧徒手、持匕首或飞镖时，每回合首次攻击可额外追加一次攻击，零级命中值受-5惩罚。该额外攻击不受每回合攻击次数上限限制，且可自由切换开启。13级时，零级命中惩罚降低至-2。~
 
 COPY_EXISTING ~C0MN#04B.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~Flurry of Blows Active~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~疾风连击已激活~) END
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0MN#04I END
 
 ACTION_IF (opcode_342_eeex = 1) THEN BEGIN
   COPY ~%MOD_FOLDER%/MonkRevision/eeex/C0MN#04B.SPL~ ~override~
-  LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~Flurry of Blows Active~) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~疾风连击已激活~) END
   LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = C0MN#04I END
   COPY ~%MOD_FOLDER%/MonkRevision/eeex/C0MN#04X.SPL~ ~override~
 END
 
 COPY_EXISTING ~C0MN#04Y.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~Flurry of Blows Inactive~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~疾风连击已解除~) END
 COPY_EXISTING ~C0MN#04Y.SPL~ ~OVERRIDE/C0MN#04V.SPL~
 COPY_EXISTING ~C0MN#04Z.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~Flurry of Blows Inactive~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 330 parameter1 = RESOLVE_STR_REF (~疾风连击已解除~) END
 
 COPY_EXISTING ~C0MN#05.SPL~ OVERRIDE
-SAY NAME1 ~Empty Body~
-SAY UNIDENTIFIED_DESC ~Empty Body
-The monk gains the ability to fade from sight, granting them partial invisibility for one round per level. Attacks against the monk suffer a -4 penalty to attack rolls, and the monk's Saving Throws are made with a +4 bonus. The monk also cannot be targeted by spells from creatures unless they can see through invisibility.~
+SAY NAME1 ~空灵体~
+SAY UNIDENTIFIED_DESC ~空灵体
+武僧可隐入无形，获得每等级1回合的半隐形效果。攻击武僧的攻击掷骰受-4惩罚，武僧的豁免检定获得+4加值。除非能看破隐形，否则生物无法以法术锁定武僧。~
 
 COPY_EXISTING ~SPCL811.SPL~ OVERRIDE
-SAY NAME1 ~Stunning Blow~
-SAY UNIDENTIFIED_DESC ~Stunning Blow
-The monk sacrifices four points of THAC0 and damage for their next successful attack within 10 seconds. When struck, the target must make a Save vs. Death (-1 modifier per point of Wisdom above 14) or be stunned for three rounds.~
+SAY NAME1 ~震眩拳~
+SAY UNIDENTIFIED_DESC ~震眩拳
+武僧在10秒内的下一次成功攻击，牺牲4点零级命中值与伤害。目标受击时必须进行死亡豁免（智力每超过14点1点，豁免难度-1），失败则震慑3回合。~
 
 COPY_EXISTING ~C0MN#00A.SPL~ ~OVERRIDE/C0MN#00B.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 0 parameter1 = 8 END
@@ -694,7 +694,7 @@ COPY_EXISTING ~C0MN#01A.SPL~ ~OVERRIDE/C0MN#01M.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 248 STR_VAR resource = C0MN#01M END
 
 COPY_EXISTING ~C0MN#01Z.SPL~ OVERRIDE
-LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Stunned~) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~震慑~) END
 
 COPY_EXISTING ~C0MN#02A.SPL~ ~OVERRIDE/C0MN#02B.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 248 STR_VAR resource = C0MN#02B END
@@ -724,187 +724,187 @@ COPY_EXISTING ~C0MN#02A.SPL~ ~OVERRIDE/C0MN#02J.SPL~
 LPF ALTER_EFFECT INT_VAR match_opcode = 248 STR_VAR resource = C0MN#02J END
 
 COPY_EXISTING ~SPCL815.SPL~ OVERRIDE
-SAY NAME1 ~Wholeness of Body~
-SAY UNIDENTIFIED_DESC ~Wholeness of Body
-The monk instantly heals themselves for three hit points per monk level.~
+SAY NAME1 ~混元体~
+SAY UNIDENTIFIED_DESC ~混元体
+武僧立即回复自身每等级3点生命值。~
 
 COPY_EXISTING ~SPCL820.SPL~ OVERRIDE
-SAY NAME1 ~Quivering Palm~
-SAY UNIDENTIFIED_DESC ~Quivering Palm
-The most advanced of the monk's techniques. When used, the monk's next successful attack within 10 seconds sets up fatal vibrations within the target's body, instantly killing them unless a successful Save vs. Death (-1 modifier per point of Wisdom above 16) is made.~
+SAY NAME1 ~渗透劲~
+SAY UNIDENTIFIED_DESC ~渗透劲
+武僧的最高深技法。使用后，10秒内的下一次成功攻击会在目标体内引发致命震颤，目标死亡豁免失败则立即死亡（智力每超过16点1点，豁免难度-1）。~
 
 COPY_EXISTING ~SPCL821.SPL~ OVERRIDE
-SAY NAME1 ~Perfect Self~
+SAY NAME1 ~超凡入圣~
 
 COPY_EXISTING ~C0MN#H01.SPL~ OVERRIDE
-SAY NAME1 ~Solar Stance~
-SAY UNIDENTIFIED_DESC ~Solar Stance
-The monk harnesses their ki into a fiery blaze, unleashing a burst of white-hot flame. All targets within a 15-ft. radius of the monk suffer 1d8 crushing and 12d6 fire damage (Save vs. Spells for half) and are sent flying and briefly knocked unconscious. The monk is shrouded in flame afterwards, granting them 2d6+1 bonus fire damage on their unarmed attacks for five rounds. Attacks made towards the monk within a 5-ft. radius also inflict 2d6+1 fire damage to the attacker.
+SAY NAME1 ~日耀架势~
+SAY UNIDENTIFIED_DESC ~日耀架势
+武僧将气劲化为炽热烈焰，爆发出白炙火浪。15尺范围内的所有目标受到1d8钝击伤害与12d6火焰伤害（法术豁免减半），并被击飞短暂震晕。之后武僧身裹烈焰，接下来5回合徒手攻击额外造成2d6+1火焰伤害。5尺内攻击武僧的对手也会受到2d6+1火焰伤害。
 
-Only one Stance may be active at any given time. Using another Stance will override the effects of the precedent one.~
+同一时间仅可激活一种架势。使用其他架势会覆盖先前架势的效果。~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/MonkRevision/projectiles/c0mn#h1p.PRO~
 COPY_EXISTING ~C0MN#H1A.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER INT_VAR projectile = c0mn#h1p END
 
 COPY_EXISTING ~C0MN#H02.SPL~ OVERRIDE
-SAY NAME1 ~Lunar Stance~
-SAY UNIDENTIFIED_DESC ~Lunar Stance
-The monk unleashes their ki in an illuminating wave of moonlight. All enemies within vision range of the monk must make a Save vs. Death at -5 or be blinded for five rounds. Targets who make their save are still blinded for one round. The remnants of light cloak the monk afterward, making them appear blurred and translucent. The monk gains a +10 bonus to Armor Class vs. all weapon types and all Saving Throws, partial invisibility and +50% resistance to all damage for five rounds.
+SAY NAME1 ~月辉架势~
+SAY UNIDENTIFIED_DESC ~月辉架势
+武僧释放气劲，化作月华光浪。武僧视野范围内的所有敌人必须进行-5惩罚的死亡豁免，失败则致盲5回合。豁免成功的目标也仍会致盲1回合。残光萦绕武僧周身，使其身形朦胧半透。接下来5回合，武僧对抗所有武器的护甲等级与所有豁免检定+10，获得半隐形，所有伤害抗性+50%。
 
-Only one Stance may be active at any given time. Using another Stance will override the effects of the precedent one.~
+同一时间仅可激活一种架势。使用其他架势会覆盖先前架势的效果。~
 
 COPY_EXISTING ~C0MN#H03.SPL~ OVERRIDE
-SAY NAME1 ~Shadow Stance~
-SAY UNIDENTIFIED_DESC ~Shadow Stance
-The monk channels their ki throughout their body, turning themself completely invisible and intangible for five rounds. In this state, the monk cannot be damaged or targeted, even by creatures that can see through invisibility. The monk's next attack removes them from their intangible state and strikes at a weak point, dealing damage as a backstab with a bonus multiplier of 3. The target also suffers 5d10 additional magical damage and has their Armor Class reduced by 10 for one turn.
+SAY NAME1 ~暗影架势~
+SAY UNIDENTIFIED_DESC ~暗影架势
+武僧将气劲遍布全身，进入完全隐形与空灵体状态，持续5回合。此状态下武僧不会受到伤害，也无法被锁定，即便能看破隐形的生物也不行。武僧的下一次攻击会解除空灵体状态，并瞄准弱点造成3倍背刺伤害。目标还会额外受到5d10魔法伤害，且护甲等级降低10，持续1回合。
 
-Only one Stance may be active at any given time. Using another Stance will override the effects of the precedent one.~
+同一时间仅可激活一种架势。使用其他架势会覆盖先前架势的效果。~
 
 COPY_EXISTING ~C0MN#H04.SPL~ OVERRIDE
-SAY NAME1 ~Storm Stance~
-SAY UNIDENTIFIED_DESC ~Storm Stance
-The monk shapes their ki into mystical lightning, unleashing it in a devastating storm upon their foes. All enemies with a 15-ft. radius of the monk are struck with lightning, dealing 4d6 electrical damage. The lightning then chains to nearby foes, dealing an additional 2d6 electrical damage. For the next five rounds, the monk's unarmed attacks erupt with a cone of energy dealing 2d6 electrical damage and dispelling effects at the monk's level on all targets.
+SAY NAME1 ~雷霆架势~
+SAY UNIDENTIFIED_DESC ~雷霆架势
+武僧将气劲化为神秘闪电，化作毁灭性雷暴席卷敌人。15尺范围内的所有敌人被闪电击中，受到4d6电击伤害。闪电随即跳向附近敌人，额外造成2d6电击伤害。接下来5回合，武僧的徒手攻击会迸出能量锥，造成2d6电击伤害，并以武僧等级驱散目标身上的效果。
 
-Only one Stance may be active at any given time. Using another Stance will override the effects of the precedent one.~
+同一时间仅可激活一种架势。使用其他架势会覆盖先前架势的效果。~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/MonkRevision/projectiles/c0mn#h4p.PRO~
 COPY_EXISTING ~C0MN#H4A.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER INT_VAR projectile = c0mn#h4p END
 
 COPY_EXISTING ~C0MN#H05.SPL~ OVERRIDE
-SAY NAME1 ~Dragon Fist~
-SAY UNIDENTIFIED_DESC ~Dragon Fist
-The monk channels a focused amount of ki into their fists, allowing them to strike unerringly for a limited time. With this ability, every attack roll while unarmed made in the next round is a natural 20, a critical hit.~
+SAY NAME1 ~龙拳~
+SAY UNIDENTIFIED_DESC ~龙拳
+武僧将集中的气劲贯注双拳，短时间内攻击精准无匹。使用本能力后，下回合所有徒手攻击掷骰均视为自然20，必定暴击。~
 
 COPY_EXISTING ~C0MN#H06.SPL~ OVERRIDE
-SAY NAME1 ~Tiger Strike~
-SAY UNIDENTIFIED_DESC ~Tiger Strike
-The monk prepares their ki for a mighty leaping strike that resembles the pounce of a tiger. The monk's next unarmed attack within one round is an automatic critical hit and knocks the target away, stunning them for three rounds. The monk's movement rate is doubled until the attack is spent.
+SAY NAME1 ~猛虎击~
+SAY UNIDENTIFIED_DESC ~猛虎击
+武僧蓄气准备猛虎扑击般的强力跳击。一回合内的下一次徒手攻击必定暴击，并将目标击飞震慑3回合。攻击用尽前，武僧移动速度翻倍。
 
-Requires: Dragon Fist~
+需要：龙拳~
 
 COPY_EXISTING ~C0MN#H07.SPL~ OVERRIDE
-SAY NAME1 ~Thousand Hands~
-SAY UNIDENTIFIED_DESC ~Thousand Hands
-This ability allows the monk to unleash a blindingly fast barrage of unarmed blows faster than the eye can match. For the next two rounds, the monk's attacks per round while unarmed are set to 10.~
+SAY NAME1 ~千手~
+SAY UNIDENTIFIED_DESC ~千手
+本能力让武僧爆发出肉眼难辨的极速徒手连打。接下来2回合，武僧徒手状态下每回合攻击次数变为10次。~
 
 COPY_EXISTING ~C0MN#H08.SPL~ OVERRIDE
-SAY NAME1 ~Faster than the Eye~
-SAY UNIDENTIFIED_DESC ~Faster than the Eye
-This ability allows the monk to use their ki to move to a specific point within view at a rate so fast, one could mistake them for teleporting. Once learned, this ability may be used an unlimited times per day.~
+SAY NAME1 ~瞬身步~
+SAY UNIDENTIFIED_DESC ~瞬身步
+本能力让武僧以气劲催动身形，快到近乎瞬移般移动到视野内指定位置。习得后每日可无限制使用。~
 
 COPY_EXISTING ~C0MN#H15.SPL~ OVERRIDE
-SAY NAME1 ~Path of the Grandmaster~
-SAY UNIDENTIFIED_DESC ~Path of the Grandmaster
-The monk has perfected the fundamentals of their technique, gaining access to an ultimate ability which is dictated by their moral alignment. Good-aligned monks learn Pacifying Palm, neutral-aligned monks learn Equilibrium Strike, and evil-aligned monks learn Hand of Murder.
+SAY NAME1 ~宗师之道~
+SAY UNIDENTIFIED_DESC ~宗师之道
+武僧已将基础技法修至化境，可习得一项由自身道德阵营决定的终极能力。善良阵营武僧习得「宁神掌」，中立阵营习得「衡平击」，邪恶阵营习得「杀戮之手」。
 
-Pacifying Palm
-A technique intended to subdue rather than kill. The monk's next successful unarmed attack within 10 seconds disrupts the target's cognitive abilities briefly, rendering them unable to act as though under a Feeblemind spell for two rounds. After the duration is over, all damage dealt by the target for the next four rounds is reduced by 66%.
+宁神掌
+旨在制敌而非杀生的技法。武僧10秒内的下一次成功徒手攻击会短暂扰乱目标认知，使其2回合内无法行动，效果同「愚钝术」。持续时间结束后，目标接下来4回合造成的所有伤害降低66%。
 
-Equilibrium Strike
-The monk channels his ki into an empowered attack that enforces a state of balance upon both themselves and the target. The monk's next successful unarmed attack within 10 seconds deals damage to both the monk and the target equal to half of their remaining hit points. This damage cannot be reduced by any means.
+衡平击
+武僧引导气劲发动制衡一击，对自身与目标同时施加平衡状态。武僧10秒内的下一次成功徒手攻击，对自身与目标各造成相当于其剩余生命值一半的伤害。该伤害无法以任何方式减免。
 
-Hand of Murder
-A brutal, specialized advancement of the Quivering Palm technique that can be mastered only by the truly heartless. The monk's next successful unarmed attack within 10 seconds forces the target to make a successful Save vs. Death (-1 modifier per point of Wisdom above 16) or die. The monk gains temporary hit points equal to the amount of hit points the target had remaining before death for one turn.~
+杀戮之手
+渗透劲技法的残暴进阶版，唯有冷酷无情者方能掌握。武僧10秒内的下一次成功徒手攻击，目标必须进行死亡豁免（智力每超过16点1点，豁免难度-1），失败则死亡。武僧获得临时生命值，数值等于目标死亡前剩余的生命值，持续1回合。~
 
 COPY_EXISTING ~C0MN#H09.SPL~ OVERRIDE
-SAY NAME1 ~Pacifying Palm~
-SAY UNIDENTIFIED_DESC ~Pacifying Palm
-A technique intended to subdue rather than kill. The monk's next successful unarmed attack within 10 seconds disrupts the target's cognitive abilities briefly, rendering them unable to act as though under a Feeblemind spell for two rounds. After the duration is over, all damage dealt by the target for the next four rounds is reduced by 66%.~
+SAY NAME1 ~宁神掌~
+SAY UNIDENTIFIED_DESC ~宁神掌
+旨在制敌而非杀生的技法。武僧10秒内的下一次成功徒手攻击会短暂扰乱目标认知，使其2回合内无法行动，效果同「愚钝术」。持续时间结束后，目标接下来4回合造成的所有伤害降低66%。~
 
 COPY_EXISTING ~C0MN#H10.SPL~ OVERRIDE
-SAY NAME1 ~Equilibrium Strike~
-SAY UNIDENTIFIED_DESC ~Equilibrium Strike
-The monk channels his ki into an empowered attack that enforces a state of balance upon both themselves and the target. The monk's next successful unarmed attack within 10 seconds deals damage to both the monk and the target equal to half of their remaining hit points. This damage cannot be reduced by any means.~
+SAY NAME1 ~衡平击~
+SAY UNIDENTIFIED_DESC ~衡平击
+武僧引导气劲发动制衡一击，对自身与目标同时施加平衡状态。武僧10秒内的下一次成功徒手攻击，对自身与目标各造成相当于其剩余生命值一半的伤害。该伤害无法以任何方式减免。~
 
 COPY_EXISTING ~C0MN#H11.SPL~ OVERRIDE
-SAY NAME1 ~Hand of Murder~
-SAY UNIDENTIFIED_DESC ~Hand of Murder
-A brutal, specialized advancement of the Quivering Palm technique that can be mastered only by the truly heartless. The monk's next successful unarmed attack within 10 seconds forces the target to make a successful Save vs. Death (-1 modifier per point of Wisdom above 16) or die. The monk gains temporary hit points equal to the amount of hit points the target had remaining before death for one turn.~
+SAY NAME1 ~杀戮之手~
+SAY UNIDENTIFIED_DESC ~杀戮之手
+渗透劲技法的残暴进阶版，唯有冷酷无情者方能掌握。武僧10秒内的下一次成功徒手攻击，目标必须进行死亡豁免（智力每超过16点1点，豁免难度-1），失败则死亡。武僧获得临时生命值，数值等于目标死亡前剩余的生命值，持续1回合。~
 
 COPY_EXISTING ~C0MN#H12.SPL~ OVERRIDE
-SAY NAME1 ~Improved Diamond Soul~
-SAY UNIDENTIFIED_DESC ~Improved Diamond Soul
-The monk's mastery of ki allows them to negate even the strongest of magical effects. Each time this ability is chosen, the monk permanently gains +5% Magic Resistance and +1 to Saving Throws.
+SAY NAME1 ~强化金刚魂~
+SAY UNIDENTIFIED_DESC ~强化金刚魂
+武僧对气劲的掌握足以抵挡更强的魔法效果。每选择一次本能力，武僧永久获得+5%魔法抗性与+1豁免检定。
 
-Improved Diamond Soul may be taken up to a maximum of two times.~
+强化金刚魂最多可选择2次。~
 
 COPY_EXISTING ~C0MN#H13.SPL~ OVERRIDE
-SAY NAME1 ~Timeless Body~
-SAY UNIDENTIFIED_DESC ~Timeless Body
-The monk's ki has developed to such an advanced level that it has become capable of permanently sustaining them. With this ability, the monk effectively becomes a timeless being, requiring neither food nor rest. As a result, the monk's movement rate is doubled, they gain permanent Aura Cleansing, and they can no longer become fatigued.~
+SAY NAME1 ~无垢之身~
+SAY UNIDENTIFIED_DESC ~无垢之身
+武僧的气劲已修至极高深境界，足以永久维持自身生机。习得本能力后，武僧实质上成为不灭之躯，无需进食也无需休息。因此武僧移动速度翻倍，获得永久灵气净化，且再也不会疲劳。~
 
 COPY_EXISTING ~C0MN#H14.SPL~ OVERRIDE
-SAY NAME1 ~Extra Quivering Palm~
-SAY UNIDENTIFIED_DESC ~Extra Quivering Palm
-The monk gains an additional daily use of Quivering Palm. This ability may be taken up to three times.~
+SAY NAME1 ~额外渗透劲~
+SAY UNIDENTIFIED_DESC ~额外渗透劲
+武僧每日可额外使用一次渗透劲。本能力最多可选择3次。~
 
 COPY_EXISTING ~C0DMM01.SPL~ OVERRIDE
-SAY NAME1 ~Sorcerous Lineage~
-SAY UNIDENTIFIED_DESC ~Sorcerous Lineage
-Disciples of the Order of the Dark Moon must display some sort of sorcerous power during their initiation. As such, All Dark Moon Monks have a minor level of magical ability. This ability allows the Dark Moon Monk to cast a level 1 Invocation, Illusion or Necromancy spell of choice once per day. As the Dark Moon Monk gains in levels, stronger spells may be chosen, gaining level 2 spells at 5th level, level 3 spells at 9th level, level 4 spells at 13th level and level 5 spells at 17th level.~
+SAY NAME1 ~术士血脉~
+SAY UNIDENTIFIED_DESC ~术士血脉
+暗月教团的信徒入门时必须展现出某种法术天赋。因此所有暗月武僧都具备微弱的施法能力。本能力允许暗月武僧每日选择施展一个1环的塑能、幻术或死灵系法术。随着等级提升，可选择更强的法术：5级可选用2环，9级3环，13级4环，17级5环。~
 
 COPY_EXISTING ~C0DMM02.SPL~ OVERRIDE
-SAY NAME1 ~Chilling Palm~
-SAY UNIDENTIFIED_DESC ~Chilling Palm
-The Dark Moon Monk channels unearthly energy into their unarmed attacks, granting their fists an additional 1d4 cold damage (+1 per point of Wisdom above 14) for 1 round per 5 levels.~
+SAY NAME1 ~冰霜拳~
+SAY UNIDENTIFIED_DESC ~冰霜拳
+暗月武僧将幽寒能量贯注于徒手攻击中，接下来每5等级1回合内，拳头额外造成1d4寒冷伤害（智力每超过14点1点，额外+1）。~
 
 COPY_EXISTING ~C0DMM03.SPL~ OVERRIDE
-SAY NAME1 ~Viperous Strike~
-SAY UNIDENTIFIED_DESC ~Viperous Strike
-The Dark Moon Monk strikes with a vicious blow that channels corruptive ki into their victim's body. Their next unarmed attack poisons the target. This poison deals damage and reduces the target's Constitution immediately and every following round for at least four rounds. After four rounds have passed, the target must make a Saving Throw vs. Death or remain poisoned for another four rounds. Therefore, the poison has the potential to last indefinitely as long as the target does not make a successful Saving Throw. The target may not die of Constitution loss caused by the poison.
+SAY NAME1 ~毒蛇击~
+SAY UNIDENTIFIED_DESC ~毒蛇击
+暗月武僧打出狠厉一击，将腐化之气注入敌人体内。下一次徒手攻击会使目标中毒。毒素立即并在之后每回合造成伤害并降低目标体质，至少持续4回合。4回合后，目标必须进行死亡豁免，失败则再中毒4回合。因此只要目标未成功豁免，毒素就有可能无限持续。目标不会因毒素造成的体质流失而死亡。
 
-1st level: Target suffers two poison damage and loses one point of Constitution. No save modifier.
-6th level: Target suffers four poison damage and loses one point of Constitution. Save modifier of -1.
-11th level: Target suffers six poison damage and loses two points of Constitution. Save modifier of -2.
-16th level: Target suffers eight poison damage and loses two points of Constitution. Save modifier of -3.
-21st level: Target suffers ten poison damage and loses three points of Constitution. Save modifier of -4.~
+1级：目标受到2点毒素伤害，损失1点体质。无豁免惩罚。
+6级：目标受到4点毒素伤害，损失1点体质。豁免惩罚-1。
+11级：目标受到6点毒素伤害，损失2点体质。豁免惩罚-2。
+16级：目标受到8点毒素伤害，损失2点体质。豁免惩罚-3。
+21级：目标受到10点毒素伤害，损失3点体质。豁免惩罚-4。~
 
 COPY_EXISTING ~C0DMM04.SPL~ OVERRIDE
-SAY NAME1 ~Crushing Darkness~
-SAY UNIDENTIFIED_DESC ~Crushing Darkness
-The Dark Moon Monk unleashes ki in a wave of psychic energy that assaults all creatures within a 15-ft. radius with an overwhelming despair, dealing 10d6 magical damage and draining them of two levels. For each target slain by this ability, the Dark Moon Monk is healed for 15% of their maximum hit points and temporarily gains +2 to THAC0 and Damage for six rounds.~
+SAY NAME1 ~黯影碾压~
+SAY UNIDENTIFIED_DESC ~黯影碾压
+暗月武僧释放气劲，形成心灵能量波席卷15尺范围内所有生物，施以压倒性绝望，造成10d6魔法伤害并吸取2个等级。每被本能力击杀一个目标，暗月武僧回复最大生命值的15%，并临时获得零级命中值与伤害+2，持续6回合。~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/MonkRevision/projectiles/c0dmm04p.PRO~
 COPY_EXISTING ~C0DMM04D.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER INT_VAR projectile = c0dmm04p END
 
 COPY_EXISTING ~C0DMM05.SPL~ OVERRIDE
-SAY NAME1 ~Eclipse~
-SAY UNIDENTIFIED_DESC ~Eclipse
-The Dark Moon Monk becomes wreathed in a cold shroud for one turn, gaining immunity to cold damage and +4 to Strength, Dexterity and Constitution. Any opponent who hits the Dark Moon Monk with any weapons or spells within this radius suffers 1d8+1 points of cold damage and must make a save vs. spells or be sapped, suffering an additional 1d6 magic damage and one point of THAC0 which is temporarily transferred to the Dark Moon Monk for two rounds.~
+SAY NAME1 ~月蚀~
+SAY UNIDENTIFIED_DESC ~月蚀
+暗月武僧周身环绕寒雾一回合，免疫寒冷伤害，力量、敏捷、体质+4。任何在范围内以武器或法术击中暗月武僧的对手，受到1d8+1点寒冷伤害，且必须进行法术豁免，失败则被吸取，额外受到1d6魔法伤害与1点零级命中值，该值临时转移给暗月武僧，持续2回合。~
 
 COPY_EXISTING ~C0SSM01.SPL~ OVERRIDE
-SAY NAME1 ~Radiant Sunbolts~
-SAY UNIDENTIFIED_DESC ~Radiant Sunbolts
-The Sun Soul Monk can create bolts of energy that flare with radiant light. These bolts can be thrown as a projectile with a +5 bonus to attack rolls. Each bolt deals 1d4+1 points of magical damage and 3 extra points of magic fire damage (10 against undead) and strike as +4 weapons. The Sun Soul Monk produces 5 missiles (+1 additional bolt per 5 monk levels) and may hurl up to five missiles per round.~
+SAY NAME1 ~日魂射线~
+SAY UNIDENTIFIED_DESC ~日魂射线
+日魂武僧可凝聚能量形成耀眼光矢。光矢可作为远程投掷物，攻击掷骰+5。每发造成1d4+1点魔法伤害与3点额外魔法火焰伤害（对亡灵为10点），视为+4武器。日魂武僧可生成5发（每5级武僧等级额外+1发），每回合最多投掷5发。~
 
 COPY_EXISTING ~C0SSMBO1.SPL~ OVERRIDE
-SAY NAME1 ~Radiant Sunbolts~
-SAY NAME2 ~Radiant Sunbolts~
+SAY NAME1 ~日魂射线~
+SAY NAME2 ~日魂射线~
 
 COPY_EXISTING ~C0SSM02.SPL~ OVERRIDE
-SAY NAME1 ~Blazing Fists~
-SAY UNIDENTIFIED_DESC ~Blazing Fists
-The Sun Soul Monk channels their inner light into their unarmed attacks, turning their fists into flaming weapons that deal an additional 1d4 fire damage (+1 per point of Wisdom above 14) for 1 round per 5 levels.~
+SAY NAME1 ~燃烧之拳~
+SAY UNIDENTIFIED_DESC ~燃烧之拳
+日魂武僧将内在光芒贯注于徒手攻击中，将双拳化为烈焰武器，接下来每5等级1回合内，额外造成1d4火焰伤害（智力每超过14点1点，额外+1）。~
 
 COPY_EXISTING ~C0SSM03.SPL~ OVERRIDE
-SAY NAME1 ~Searing Arc Strike~
-SAY UNIDENTIFIED_DESC ~Searing Arc Strike
-The Sun Soul Monk gathers ki within their fists and shapes them into searing waves of white-hot flames. The monk's next successful melee attack unleashes a 140-degree cone of flame which deals 5d6 magical fire damage and severely burns all targets, reducing their Armor Class, THAC0 and Damage by 4 points and dealing an additional 1d6 fire damage per round for one turn unless a successful Save vs. Spells is made. Additionally, all invisible targets lose their invisibility with no save.~
+SAY NAME1 ~灼炎弧击~
+SAY UNIDENTIFIED_DESC ~灼炎弧击
+日魂武僧在拳中聚气，凝成白热焰浪。武僧下一次成功近战攻击释放出90度锥形火焰，造成5d6魔法火焰伤害并严重灼伤所有目标，使其护甲等级、零级命中值与伤害降低4点，且每回合额外受到1d6火焰伤害，持续1回合，法术豁免成功则无效。此外，所有隐形目标破除隐形，无豁免。~
 
 ADD_PROJECTILE ~%MOD_FOLDER%/MonkRevision/projectiles/c0ssm04p.PRO~
 COPY_EXISTING ~C0SSM04.SPL~ OVERRIDE
 LPF ALTER_SPELL_HEADER INT_VAR projectile = c0ssm04p END
-SAY NAME1 ~Searing Sunburst~
-SAY UNIDENTIFIED_DESC ~Searing Sunburst
-The Sun Soul Monk unleashes their ki in a massive pillar of light, dealing 10d6 magical damage to all enemies and blinding them for one round. Undead creatures must make a save vs. spells or be instantly destroyed.~
+SAY NAME1 ~日魂光束~
+SAY UNIDENTIFIED_DESC ~日魂光束
+日魂武僧以光之巨柱释放气劲，对所有敌人造成10d6魔法伤害，并致盲1回合。亡灵生物必须进行法术豁免，失败则直接被摧毁。~
 
 COPY_EXISTING ~C0SSM05.SPL~ OVERRIDE
-SAY NAME1 ~Solar Shield~
-SAY UNIDENTIFIED_DESC ~Solar Shield
-The Sun Soul Monk becomes wreathed in a luminous mantle, gaining immunity to fire damage and dealing 30% increased fire damage from all sources for 1 turn. Any opponent who hits the Sun Soul Monk with any weapons or spells within this radius suffers 1d8+1 points of magical fire damage and must make a save vs. spells or take an additional 1d8 magical fire damage and be blinded for one round.~
+SAY NAME1 ~圣日术~
+SAY UNIDENTIFIED_DESC ~圣日术
+日魂武僧周身环绕光焰一回合，免疫火焰伤害，所有来源造成的火焰伤害提升30%。任何在范围内以武器或法术击中日魂武僧的对手，受到1d8+1点魔法火焰伤害，且必须进行法术豁免，失败则额外受到1d8魔法火焰伤害并致盲1回合。~
 
 INCLUDE ~%MOD_FOLDER%/effects/poison_weapon.tpa~
 
@@ -970,12 +970,12 @@ ACTION_FOR_EACH description IN
 //dark_moon
         PATCH_IF "%row_name%" STRING_EQUAL_CASE "DARK_MOON" BEGIN
           READ_2DA_ENTRY index 4 col_count dark_moon_desc
-          SPRINT old_dark_moon ~SORCEROUS LINEAGE: Disciples of the Order of the Dark Moon must display some sort of sorcerous power during their initiation. As such, All Dark Moon Monks have a minor level of magical ability. This ability allows the Dark Moon Monk to cast a level 1 Invocation, Illusion or Necromancy spell of choice once per day. As the Dark Moon Monk gains in levels, stronger spells may be chosen, gaining level 2 spells at 5th level, level 3 spells at 9th level, level 4 spells at 13th level and level 5 spells at 17th level.~
-          SPRINT new_dark_moon ~SORCEROUS LINEAGE: Disciples of the Order of the Dark Moon must display some sort of sorcerous power during their initiation. As such, All Dark Moon Monks have a minor level of magical ability, giving them the ability to cast a limited selection of spells of the Invocation, Illusion and Necromancy schools as a mage would. The Dark Moon Monk gains more powerful spells as they level up, gaining level 2 spells at 5th level, level 3 spells at 9th level and level 4 spells at 13th level. The spells learned are as follows:
-  Level 1: Blindness, Magic Missile, Reflected Image, Spook
-  Level 2: Blur, Mirror Image, Horror, Deafness
-  Level 3: Invisibility 10' Radius, Lightning Bolt, Vampiric Touch, Wraithform
-  Level 4: Fireshield (Blue), Improved Invisibility, Contagion, Spirit Armor~
+          SPRINT old_dark_moon ~术士血脉：暗月教团的信徒入门时必须展现出某种法术天赋。因此所有暗月武僧都具备微弱的施法能力。本能力允许暗月武僧每日选择施展一个1环的塑能、幻术或死灵系法术。随着等级提升，可选择更强的法术：5级可选用2环，9级3环，13级4环，17级5环。~
+          SPRINT new_dark_moon ~术士血脉：暗月教团的信徒入门时必须展现出某种法术天赋。因此所有暗月武僧都具备微弱的施法能力，可像法师一样施展有限的塑能、幻术与死灵学派法术。暗月武僧随等级提升获得更强力的法术：5级可选用2环，9级3环，13级4环。习得法术如下：
+  1环：目盲术、魔法飞弹、镜像术、惊恐术
+  2环：模糊术、造影术、恐慌术、耳聋术
+  3环：群体隐形、闪电箭、吸血之触、幽魂形态
+  4环：火焰护盾（冰）、高级隐形、疫病术、灵魂护甲~
           GET_STRREF %dark_moon_desc% dark_moon_text
           INNER_PATCH_SAVE dark_moon_text ~%dark_moon_text%~ BEGIN
             REPLACE_TEXTUALLY ~%old_dark_moon%~ ~%new_dark_moon%~
