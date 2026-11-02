@@ -1,0 +1,19 @@
+COPY ~%MOD_FOLDER%/Sorcerer/Arcane_Trickster/2das~ ~override~
+
+// The sorcerer's BACKSTAB.2DA row already defines its reduced multiplier.
+// Its old -1 effects reduced that row again, to x1 at levels 1-9 and 13-17.
+// Keep these passives private: the mage/thief also uses C0ATR00/C0ATR03.
+ACTION_BASH_FOR ~%MOD_FOLDER%/Sorcerer/Arcane_Trickster/spells~ ~.*~ BEGIN
+  ACTION_IF NOT (~%BASH_FOR_FILE%~ STRING_EQUAL_CASE ~c0atr00.spl~)
+        AND NOT (~%BASH_FOR_FILE%~ STRING_EQUAL_CASE ~c0atr03.spl~) BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+END
+COPY ~%MOD_FOLDER%/Sorcerer/Arcane_Trickster/spells/c0atr00.spl~ ~override/c0ats00.spl~
+  LPF DELETE_EFFECT INT_VAR match_opcode = 263 match_parameter1 = (0 - 1) match_parameter2 = 0 END
+COPY ~%MOD_FOLDER%/Sorcerer/Arcane_Trickster/spells/c0atr03.spl~ ~override/c0ats03.spl~
+  LPF DELETE_EFFECT INT_VAR match_opcode = 263 match_parameter1 = (0 - 1) match_parameter2 = 0 END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 321 STR_VAR match_resource = ~C0ATR03~ resource = ~C0ATS03~ END
+COPY_EXISTING ~C0ATRSO.2DA~ ~override~
+  REPLACE_TEXTUALLY ~AP_C0ATR00~ ~AP_C0ATS00~
+  REPLACE_TEXTUALLY ~AP_C0ATR03~ ~AP_C0ATS03~
